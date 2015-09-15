@@ -1,6 +1,5 @@
 /*
-!/.config
-/.config/*
-!/.config/user-dirs.dirs
-!/.gitignore
-!/bin
+!/bin/
+!/.config/
+!/.gitignore/
+!/lib/
