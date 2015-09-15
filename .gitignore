@@ -7,4 +7,5 @@
 !/.latexmkrc
 !/lib/
 !/.local/
+!/.tmux.conf
 !/.vimrc
