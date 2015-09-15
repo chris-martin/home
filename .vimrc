@@ -25,6 +25,8 @@ set shiftwidth=2
 " <tab> inserts 4 spaces
 set tabstop=2
 
+set backspace=indent,eol,start
+
 " keystrokes which may wrap around lines:
 "   b          backspace
 "   s          space
