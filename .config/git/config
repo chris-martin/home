@@ -1,0 +1,26 @@
+[user]
+  email = ch.martin@gmail.com
+  name = Chris Martin
+[core]
+  excludesfile = .config/git/ignore
+  editor = emacs -nw
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+  interactive = auto
+[alias]
+  st = "!bash -c 'if [[ $(which gitst) ]]; then gitst; else git status; fi'"
+  co = checkout
+  ci = commit
+  llog = log --date=local
+  br = "!bash -c 'gitbr'"
+[log]
+  date = local
+[format]
+  pretty = %C(yellow)%h%Creset%Cblue%d%Creset %Cgreen%an%Creset %Cred%cr%Creset %C(magenta)(%ci)%Creset%n%B
+[merge]
+  tool = vimdiff
+[push]
+  default = tracking

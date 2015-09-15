@@ -1,0 +1,4 @@
+*.ipr
+*.swp
+.idea
+*.iml
