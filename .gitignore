@@ -4,6 +4,7 @@
 !/.emacs
 !/.emacs.d/
 !/.gitignore/
+!/.latexmkrc
 !/lib/
 !/.local/
 !/.vimrc
