@@ -1,0 +1,10 @@
+git status
+IFS=$(echo -en "\n\b")
+todo=$(git diff HEAD --name-only -Gtodo)
+if [[ -z $todo ]]; then exit; fi
+echo '#'
+echo '# Todo:'
+echo '#'
+c=$(echo -e '\e[0;34m')
+r=$(echo -e '\e[0m')
+echo "$todo" | sed "s/.*/#       $c&$r/"
