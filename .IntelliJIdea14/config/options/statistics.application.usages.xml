@@ -1,0 +1,37 @@
+<application>
+  <component name="StatisticsApplicationUsages">
+    <group name="JavaScript versions">
+      <project id="chris" values="DEFAULT" collectionTime="1442302843080" />
+      <project id="cardforcoin" values="DEFAULT" collectionTime="1442300409254" />
+    </group>
+    <group name="module type">
+      <project id="chris" values="JAVA_MODULE" collectionTime="1442302842927" />
+      <project id="cardforcoin" values="PYTHON_MODULE" collectionTime="1442300409198" />
+    </group>
+    <group name="vcs">
+      <project id="chris" values="Git" collectionTime="1442302842926" />
+      <project id="cardforcoin" values="Git" collectionTime="1442300409197" />
+    </group>
+    <group name="file-type">
+      <project id="chris" values="ARCHIVE,ESLint,SourceMap,Properties,JavaScript,HTML,Less,CLASS,ActionScript,JAVA,PATCH,CoffeeScript,IDEA_MODULE,SWF,SQLite Database,UNKNOWN,Images,PLAIN_TEXT,SCSS,SQL,TypeScript,C#,JSON,Groovy,C++,SBT,Python,Native,Perl,XML,CSS,JSP,YAML,HOCON" collectionTime="1442302842993" />
+      <project id="cardforcoin" values="YAML,SourceMap,Less,HTML,IDEA_MODULE,PLAIN_TEXT,HOCON,ESLint,Python,JSON,XML,UNKNOWN,CSS,JavaScript,Images" collectionTime="1442300409232" />
+    </group>
+    <group name="javaScript Scope Usages">
+      <project id="chris" values="Project,Project" collectionTime="1442302843080" />
+      <project id="cardforcoin" values="Project,Project" collectionTime="1442300409254" />
+    </group>
+    <group name="frameworks">
+      <project id="cardforcoin" values="django" collectionTime="1442300409198" />
+    </group>
+    <group name="language-level">
+      <project id="chris" values="JDK_1_6" collectionTime="1442302843002" />
+      <project id="cardforcoin" values="JDK_1_6" collectionTime="1442300409252" />
+    </group>
+  </component>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="ideaapp.started" count="4" />
+      <entry feature="welcome.screen.WelcomeScreen.OpenProject" count="1" />
+    </counts>
+  </component>
+</application>
