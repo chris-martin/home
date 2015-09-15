@@ -1,6 +1,8 @@
 /*
 !/bin/
 !/.config/
+!/.emacs
+!/.emacs.d/
 !/.gitignore/
 !/lib/
 !/.local/
