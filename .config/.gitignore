@@ -1,0 +1,7 @@
+/*
+!/.gitignore
+!/fish/
+/fish/*
+!/fish/config.fish
+!/git/
+!/user-dirs.dirs

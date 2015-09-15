@@ -1,0 +1,8 @@
+/*
+!/.gitignore
+!/share/
+/share/*
+!/share/backgrounds/
+!/share/backgrounds/*
+!/share/fonts/
+!/share/fonts/*
