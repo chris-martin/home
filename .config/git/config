@@ -2,7 +2,7 @@
   email = ch.martin@gmail.com
   name = Chris Martin
 [core]
-  excludesfile = .config/git/ignore
+  excludesfile = ~/.config/git/ignore
   editor = emacs -nw
 [color]
   diff = auto
