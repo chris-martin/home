@@ -1,3 +1,0 @@
-#!/usr/bin/env fish
-cd "$HOME/lib/intellij/ultimate/latest/bin"
-./idea.sh

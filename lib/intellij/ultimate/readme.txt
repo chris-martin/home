@@ -1,1 +1,0 @@
-IntelliJ ultimate edition
