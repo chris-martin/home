@@ -1,4 +1,4 @@
-<keymap version="1" name="Default copy" parent="$default">
+<keymap version="1" name="Chris Martin" parent="$default">
   <action id="Compare.SameVersion">
     <keyboard-shortcut first-keystroke="control D" />
   </action>
