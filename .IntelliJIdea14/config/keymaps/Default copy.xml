@@ -10,4 +10,9 @@
     <keyboard-shortcut first-keystroke="shift control O" />
   </action>
   <action id="SendEOF" />
+  <action id="SwitchApply" />
+  <action id="SwitchDown" />
+  <action id="SwitchLeft" />
+  <action id="SwitchRight" />
+  <action id="SwitchUp" />
 </keymap>
