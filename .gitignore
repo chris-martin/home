@@ -5,6 +5,7 @@
 !/.emacs.d/
 !/.gitignore/
 !/.IntelliJIdea14/
+!/.kde/
 !/.latexmkrc
 !/lib/
 !/.local/
