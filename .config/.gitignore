@@ -1,5 +1,6 @@
 /*
 !/.gitignore
+!/autostart/
 !/fish/
 /fish/*
 !/fish/config.fish
