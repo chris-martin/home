@@ -3,6 +3,7 @@
 /config/options/dimensions.xml
 /config/options/feature.usage.statistics.xml
 /config/options/find.recents.xml
+/config/options/ignore.xml
 /config/options/options.xml
 /config/options/recentProjects.xml
 /config/options/statistics.application.usages.xml
