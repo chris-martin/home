@@ -1,0 +1,13 @@
+<keymap version="1" name="Default copy" parent="$default">
+  <action id="Compare.SameVersion">
+    <keyboard-shortcut first-keystroke="control D" />
+  </action>
+  <action id="CompareTwoFiles" />
+  <action id="Diff.ShowDiff" />
+  <action id="EditorDuplicate" />
+  <action id="FileChooser.GotoDesktop" />
+  <action id="OpenFile">
+    <keyboard-shortcut first-keystroke="shift control O" />
+  </action>
+  <action id="SendEOF" />
+</keymap>
