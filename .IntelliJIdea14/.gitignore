@@ -1,9 +1,11 @@
 /config/idea14.key
+/config/options/applicationLibraries.xml
 /config/options/baseRefactoring.xml
 /config/options/dimensions.xml
 /config/options/feature.usage.statistics.xml
 /config/options/find.recents.xml
 /config/options/ignore.xml
+/config/options/jdk.table.xml
 /config/options/options.xml
 /config/options/project.default.xml
 /config/options/recentProjects.xml
