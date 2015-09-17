@@ -3,7 +3,7 @@
     <ignoreFiles list="*.hprof;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.bundle;.git;.hg;.svn;.tox;CVS;RCS;SCCS;__pycache__;_svn;rcs;vssver.scc;vssver2.scc;" />
     <extensionMap>
       <mapping pattern="fab" type="Bash" />
-      <removed_mapping ext="conf" type="HOCON" />
+      <removed_mapping ext="conf" approved="true" type="HOCON" />
       <mapping pattern="minion" type="PLAIN_TEXT" />
       <mapping ext="conf" type="PLAIN_TEXT" />
       <mapping ext="sls" type="YAML" />
