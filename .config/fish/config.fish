@@ -1,6 +1,6 @@
 set --erase fish_greeting
 
-set PATH $HOME/bin $HOME/.cabal/bin $PATH
+set PATH $HOME/bin $HOME/.local/bin $HOME/.cabal/bin $PATH
 
 set -x ANDROID_HOME $HOME/lib/android
 
