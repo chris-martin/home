@@ -1,8 +1,9 @@
 <keymap version="1" name="Chris Martin" parent="$default">
-  <action id="CloseActiveTab">
+  <action id="CloseActiveTab" />
+  <action id="CloseContent" />
+  <action id="CloseEditor">
     <keyboard-shortcut first-keystroke="control F4" />
   </action>
-  <action id="CloseContent" />
   <action id="Compare.SameVersion">
     <keyboard-shortcut first-keystroke="control D" />
   </action>
