@@ -2,6 +2,12 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
+        <option value="bash.vardef" />
+        <option value="bash.includers" />
+        <option value="bash.included" />
+        <option value="bash.script.fullname" />
+        <option value="bash.script.name" />
+        <option value="bash.function.name" />
         <option value="JRuby.import.shortName" />
         <option value="Ruby.require.load.shortName" />
         <option value="Ruby.inheritance.shortName" />
