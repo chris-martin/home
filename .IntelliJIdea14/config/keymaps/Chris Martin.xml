@@ -1,4 +1,8 @@
 <keymap version="1" name="Chris Martin" parent="$default">
+  <action id="CloseActiveTab">
+    <keyboard-shortcut first-keystroke="control F4" />
+  </action>
+  <action id="CloseContent" />
   <action id="Compare.SameVersion">
     <keyboard-shortcut first-keystroke="control D" />
   </action>
@@ -6,6 +10,7 @@
   <action id="Diff.ShowDiff" />
   <action id="EditorDuplicate" />
   <action id="FileChooser.GotoDesktop" />
+  <action id="Images.Thumbnails.Hide" />
   <action id="OpenFile">
     <keyboard-shortcut first-keystroke="shift control O" />
   </action>
