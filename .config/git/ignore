@@ -1,4 +1,12 @@
+# IntelliJ
 *.ipr
 *.swp
 .idea
 *.iml
+
+# Vagrant
+.vagrant
+
+# Python
+*.pyc
+*.egg
