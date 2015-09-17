@@ -4,6 +4,7 @@
     <extensionMap>
       <removed_mapping ext="conf" type="HOCON" />
       <mapping pattern="minion" type="PLAIN_TEXT" />
+      <mapping ext="conf" type="PLAIN_TEXT" />
       <mapping ext="sls" type="YAML" />
     </extensionMap>
   </component>
