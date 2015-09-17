@@ -8,9 +8,13 @@
     <keyboard-shortcut first-keystroke="control D" />
   </action>
   <action id="CompareTwoFiles" />
+  <action id="CopyPaths" />
   <action id="Diff.ShowDiff" />
   <action id="EditorDuplicate" />
   <action id="FileChooser.GotoDesktop" />
+  <action id="Git.ResolveConflicts">
+    <keyboard-shortcut first-keystroke="shift control C" />
+  </action>
   <action id="Images.Thumbnails.Hide" />
   <action id="OpenFile">
     <keyboard-shortcut first-keystroke="shift control O" />
