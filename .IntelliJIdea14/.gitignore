@@ -3,6 +3,7 @@
 /config/options/baseRefactoring.xml
 /config/options/dimensions.xml
 /config/options/feature.usage.statistics.xml
+/config/options/fileEditorProviderManager.xml
 /config/options/find.recents.xml
 /config/options/ignore.xml
 /config/options/jdk.table.xml
