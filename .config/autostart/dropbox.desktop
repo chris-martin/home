@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=dropbox
+Icon=
+Comment=Online directories
+Terminal=false
+Name=Dropbox
+GenericName=Online storage
+MimeType=
+Categories=Application;Internet;
