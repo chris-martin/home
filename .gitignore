@@ -4,6 +4,7 @@
 !/.emacs
 !/.emacs.d/
 !/.gitignore/
+!/.gradle/
 !/.IntelliJIdea14/
 !/.kde/
 !/.latexmkrc
