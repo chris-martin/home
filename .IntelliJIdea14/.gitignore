@@ -8,6 +8,7 @@
 /config/options/ignore.xml
 /config/options/jdk.table.xml
 /config/options/options.xml
+/config/options/packages.xml
 /config/options/project.default.xml
 /config/options/recentProjects.xml
 /config/options/statistics.application.usages.xml
