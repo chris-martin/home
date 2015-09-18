@@ -5,4 +5,5 @@
 /fish/*
 !/fish/config.fish
 !/git/
+/git/gitk
 !/user-dirs.dirs
