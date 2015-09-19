@@ -1,5 +1,8 @@
 <keymap version="1" name="Chris Martin" parent="$default">
   <action id="CloseActiveTab" />
+  <action id="CloseAllEditorsButActive">
+    <keyboard-shortcut first-keystroke="control F5" />
+  </action>
   <action id="CloseContent" />
   <action id="CloseEditor">
     <keyboard-shortcut first-keystroke="control F4" />
@@ -19,6 +22,8 @@
   <action id="OpenFile">
     <keyboard-shortcut first-keystroke="shift control O" />
   </action>
+  <action id="Refresh" />
+  <action id="Rerun" />
   <action id="SendEOF" />
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt ENTER" />
@@ -35,5 +40,6 @@
   <action id="SwitchUp">
     <keyboard-shortcut first-keystroke="shift alt UP" />
   </action>
+  <action id="UsageView.Rerun" />
   <action id="Vcs.UpdateProject" />
 </keymap>
