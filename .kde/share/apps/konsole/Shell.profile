@@ -13,5 +13,5 @@ Parent=FALLBACK/
 UnderlineLinksEnabled=false
 
 [Scrolling]
-HistoryMode=1
+HistoryMode=0
 ScrollBarPosition=2
