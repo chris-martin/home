@@ -15,9 +15,13 @@
   <action id="Diff.ShowDiff" />
   <action id="EditorDuplicate" />
   <action id="FileChooser.GotoDesktop" />
+  <action id="FindUsages">
+    <keyboard-shortcut first-keystroke="control U" />
+  </action>
   <action id="Git.ResolveConflicts">
     <keyboard-shortcut first-keystroke="shift control C" />
   </action>
+  <action id="GotoSuperMethod" />
   <action id="Images.Thumbnails.Hide" />
   <action id="OpenFile">
     <keyboard-shortcut first-keystroke="shift control O" />
