@@ -2,4 +2,7 @@
   <component name="CodeFoldingSettings">
     <option name="COLLAPSE_IMPORTS" value="false" />
   </component>
+  <component name="CodeInsightSettings">
+    <option name="AUTO_POPUP_COMPLETION_LOOKUP" value="false" />
+  </component>
 </application>
