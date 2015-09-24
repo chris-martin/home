@@ -2,6 +2,11 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
+        <option value="clj.script.fqn" />
+        <option value="clj.class" />
+        <option value="clj.keywords" />
+        <option value="clj.ns.name" />
+        <option value="clj.def.name" />
         <option value="bash.vardef" />
         <option value="bash.includers" />
         <option value="bash.included" />
