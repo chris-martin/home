@@ -2,6 +2,7 @@
 /config/options/applicationLibraries.xml
 /config/options/baseRefactoring.xml
 /config/options/dimensions.xml
+/config/options/dslActivation.xml
 /config/options/feature.usage.statistics.xml
 /config/options/fileEditorProviderManager.xml
 /config/options/find.xml
