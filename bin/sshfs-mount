@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Parameters as environvment variables:
+#   USER       username to connect as
+#   PASSWORD   password of user
+#   HOST       host to connect to
+#   MOUNT      filesystem mount point
+
+# todo - add command arg parsing instead of env vars
+
+# todo - add errors/warnings if parameters are missing
+
+echo "If this hangs indefinitely, you may need to SSH to the"
+echo "host to accept the server's public key."
+echo ""
+echo "Mounting..."
+
+echo "$PASSWORD" | \
+  sshfs "$USER"@"$HOST": "$MOUNT" \
+  -o ServerAliveInterval=30,password_stdin,allow_other
+
+echo "Done."
+echo ""
+echo "To unmount: fusermount -u $MOUNT"
