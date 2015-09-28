@@ -9,5 +9,6 @@
 !/.kde/
 !/.latexmkrc
 !/.local/
+!/oseary
 !/.tmux.conf
 !/.vimrc
