@@ -19,4 +19,4 @@ echo ""
 echo "nixpkgs branch: $BRANCH"
 echo ""
 
-nixos-rebuild -I nixpkgs="$DIR" switch
+nixos-rebuild -I nixpkgs="$DIR" "$@"
