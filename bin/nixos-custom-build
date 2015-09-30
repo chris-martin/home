@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Fail fast if not sudoing
+if [[ -z "$SUDO_USER" ]]; then
+  echo "This script must be called with sudo."
+  exit
+fi
+
+# Get the home directory of the user who called this script with sudo
+HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
+
+# Assume the nixpkgs repo is in ~/get/nixpkgs
+DIR="$HOME/git/nixpkgs"
+
+# Print the name of the current branch
+cd "$DIR"
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+echo ""
+echo "nixpkgs branch: $BRANCH"
+echo ""
+
+nixos-rebuild -I nixpkgs="$DIR" switch
