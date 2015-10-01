@@ -2,6 +2,7 @@
   <component name="GeneralSettings">
     <option name="confirmExit" value="false" />
     <option name="reopenLastProject" value="false" />
+    <option name="searchInBackground" value="true" />
     <option name="showTipsOnStartup" value="false" />
     <option name="useDefaultBrowser" value="false" />
   </component>
