@@ -46,6 +46,15 @@
         <option value="sc.not.visible.in.java.class.shortName" />
         <option value="sc.class.shortName" />
         <option value="sc.all.class.names" />
+        <option value="Django.foreignKey" />
+        <option value="Py.class.attributes" />
+        <option value="Python.Decorator" />
+        <option value="Py.instanceAttribute.name" />
+        <option value="Py.variable.shortName" />
+        <option value="Py.class.super" />
+        <option value="Py.function.shortName" />
+        <option value="Py.class.shortNameInsensitive" />
+        <option value="Py.class.shortName" />
         <option value="java.class.fqn" />
         <option value="java.class.shortname" />
         <option value="java.anonymous.baseref" />
