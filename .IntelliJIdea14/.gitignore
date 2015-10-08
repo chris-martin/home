@@ -15,6 +15,7 @@
 /config/options/packages.xml
 /config/options/project.default.xml
 /config/options/recentProjects.xml
+/config/options/runner.layout.xml
 /config/options/statistics.application.usages.xml
 /config/options/updates.xml
 /config/options/usageView.xml
