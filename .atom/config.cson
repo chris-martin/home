@@ -4,6 +4,7 @@
   core:
     disabledPackages: [
       "exception-reporting"
+      "spell-check"
     ]
   editor:
     invisibles: {}
