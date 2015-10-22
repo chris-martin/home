@@ -16,3 +16,5 @@
     invisibles: {}
     backUpBeforeSaving: true
     scrollPastEnd: true
+  autosave:
+    enabled: true
