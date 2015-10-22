@@ -11,6 +11,7 @@
       "one-light-syntax"
     ]
     audioBeep: false
+    projectHome: "/home/chris/git"
   editor:
     invisibles: {}
     backUpBeforeSaving: true
