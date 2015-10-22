@@ -1,0 +1,9 @@
+"*":
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "exception-reporting"
+    ]
+  editor:
+    invisibles: {}
