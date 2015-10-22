@@ -13,3 +13,4 @@
     audioBeep: false
   editor:
     invisibles: {}
+    backUpBeforeSaving: true
