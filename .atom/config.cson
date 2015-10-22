@@ -14,3 +14,4 @@
   editor:
     invisibles: {}
     backUpBeforeSaving: true
+    scrollPastEnd: true
