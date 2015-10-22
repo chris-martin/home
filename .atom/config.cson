@@ -6,5 +6,9 @@
       "exception-reporting"
       "spell-check"
     ]
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
   editor:
     invisibles: {}
