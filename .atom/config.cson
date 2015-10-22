@@ -10,5 +10,6 @@
       "one-light-ui"
       "one-light-syntax"
     ]
+    audioBeep: false
   editor:
     invisibles: {}
