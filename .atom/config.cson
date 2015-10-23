@@ -5,6 +5,7 @@
     disabledPackages: [
       "exception-reporting"
       "spell-check"
+      "welcome"
     ]
     themes: [
       "one-light-ui"
