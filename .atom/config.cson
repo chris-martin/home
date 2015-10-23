@@ -22,6 +22,8 @@
     backUpBeforeSaving: true
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
+    fontFamily: "\"DejaVu Sans Mono\""
+    fontSize: 12
   autosave:
     enabled: true
   "local-history": {}
