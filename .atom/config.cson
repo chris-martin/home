@@ -13,6 +13,10 @@
     ]
     audioBeep: false
     projectHome: "/home/chris/git"
+    ignoredNames: [
+      ".git"
+      ".idea"
+    ]
   editor:
     invisibles: {}
     backUpBeforeSaving: true
