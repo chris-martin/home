@@ -20,3 +20,5 @@
   autosave:
     enabled: true
   "local-history": {}
+  tabs:
+    enableVcsColoring: true
