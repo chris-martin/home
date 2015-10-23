@@ -27,3 +27,5 @@
   "local-history": {}
   tabs:
     enableVcsColoring: true
+  "tree-view":
+    hideIgnoredNames: true
