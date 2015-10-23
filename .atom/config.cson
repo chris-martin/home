@@ -18,3 +18,4 @@
     scrollPastEnd: true
   autosave:
     enabled: true
+  "local-history": {}
