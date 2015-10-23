@@ -1,0 +1,14 @@
+/* Hide the file-modified indicator, because with autosave
+ * enabled it's a rather pointless distraction. */
+.tab-bar .tab.modified {
+
+  &, &:hover {
+    .close-icon {
+      color: #282929;
+    }
+  }
+
+  &:not(:hover) .close-icon {
+    display: none;
+  }
+}
