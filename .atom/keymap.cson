@@ -2,3 +2,8 @@
   'ctrl-backspace': 'editor:delete-to-beginning-of-subword'
   'ctrl-left': 'editor:move-to-previous-subword-boundary'
   'ctrl-right': 'editor:move-to-next-subword-boundary'
+  'alt-right': 'pane:show-next-item'
+  'alt-left': 'pane:show-previous-item'
+'body':
+  'alt-right': 'pane:show-next-item'
+  'alt-left': 'pane:show-previous-item'
