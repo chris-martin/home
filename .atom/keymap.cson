@@ -8,3 +8,4 @@
 'body':
   'alt-right': 'pane:show-next-item'
   'alt-left': 'pane:show-previous-item'
+  'ctrl-f4': 'core:close'
