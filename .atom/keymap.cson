@@ -4,6 +4,7 @@
   'ctrl-right': 'editor:move-to-next-subword-boundary'
   'alt-right': 'pane:show-next-item'
   'alt-left': 'pane:show-previous-item'
+  'ctrl-y': 'editor:delete-line'
 'body':
   'alt-right': 'pane:show-next-item'
   'alt-left': 'pane:show-previous-item'
