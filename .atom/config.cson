@@ -16,6 +16,7 @@
     invisibles: {}
     backUpBeforeSaving: true
     scrollPastEnd: true
+    zoomFontWhenCtrlScrolling: false
   autosave:
     enabled: true
   "local-history": {}
