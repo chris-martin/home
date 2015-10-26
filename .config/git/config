@@ -4,6 +4,9 @@
 [core]
   excludesfile = ~/.config/git/ignore
   editor = emacs -nw
+[diff]
+  tool = vimdiff
+  guitool = meld
 [color]
   diff = auto
   status = auto
