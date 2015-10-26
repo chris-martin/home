@@ -5,7 +5,13 @@
   'alt-right': 'pane:show-next-item'
   'alt-left': 'pane:show-previous-item'
   'ctrl-y': 'editor:delete-line'
+  'ctrl-alt-d': 'unset!'
+  'ctrl-shift-d': 'unset!'
+'atom-workspace':
+  'ctrl-d': 'git-difftool:diff-file'
 'body':
   'alt-right': 'pane:show-next-item'
   'alt-left': 'pane:show-previous-item'
   'ctrl-f4': 'core:close'
+'.platform-linux atom-text-editor':
+  'ctrl-d': 'unset!'
