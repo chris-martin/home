@@ -11,5 +11,6 @@
 !/.latexmkrc
 !/.local/
 !/oseary
+!/.sbt/
 !/.tmux.conf
 !/.vimrc
