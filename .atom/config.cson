@@ -31,3 +31,6 @@
     enableVcsColoring: true
   "tree-view":
     hideIgnoredNames: true
+  "autocomplete-plus":
+    enableAutoActivation: false
+    enableAutoConfirmSingleSuggestion: false
