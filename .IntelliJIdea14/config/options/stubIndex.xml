@@ -2,6 +2,8 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
+        <option value="elixir.all.name" />
+        <option value="haskell.all.name" />
         <option value="clj.script.fqn" />
         <option value="clj.class" />
         <option value="clj.keywords" />
