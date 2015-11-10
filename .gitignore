@@ -2,6 +2,7 @@
 !/bin/
 !/.atom/
 !/.config/
+!/dropbox
 !/.emacs
 !/.emacs.d/
 !/.gitignore/
