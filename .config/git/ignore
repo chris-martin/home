@@ -10,3 +10,6 @@
 # Python
 *.pyc
 *.egg
+
+# Haskell
+.stack-work
