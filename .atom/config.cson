@@ -6,6 +6,7 @@
       "exception-reporting"
       "spell-check"
       "welcome"
+      "tree-view"
     ]
     themes: [
       "one-light-ui"
