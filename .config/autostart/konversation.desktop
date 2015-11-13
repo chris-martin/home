@@ -4,6 +4,7 @@ Comment=
 Exec=konversation
 GenericName[en_US]=
 GenericName=
+Hidden=true
 Icon=system-run
 MimeType=
 Name[en_US]=
