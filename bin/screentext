@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+IMG=$(mktemp /tmp/screentext.XXXX.png)
+OUT_BASE=$(mktemp /tmp/screentext.XXXX)
+OUT="$OUT_BASE.txt"
+
+gnome-screenshot -a -f $IMG &> /dev/null
+
+# scaling should increase detection rate
+mogrify -modulate 100,0 -resize 400% $IMG
+
+tesseract $IMG $OUT_BASE &> /dev/null
+
+cat $OUT | xclip -selection clipboard
+cat $OUT
+
+rm $IMG
+rm $OUT
