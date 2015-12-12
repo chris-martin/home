@@ -2,6 +2,15 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinSuperClassIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFunctionShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinPropertyShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFullClassNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyByPackageIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelFunctionByPackageIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelClassByPackageIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex" />
         <option value="sc.implicit.function.name" />
         <option value="sc.self.type.class.name.key" />
         <option value="sc.super.class.name" />
@@ -82,11 +91,6 @@
         <option value="js.element.qualifiedName" />
         <option value="js.members.shortName" />
         <option value="js.qualified.shortName" />
-        <option value="clj.script.fqn" />
-        <option value="clj.class" />
-        <option value="clj.keywords" />
-        <option value="clj.ns.name" />
-        <option value="clj.def.name" />
         <option value="elixir.all.name" />
         <option value="properties.index" />
         <option value="cfml.interface.shortName" />
@@ -106,6 +110,18 @@
         <option value="bash.function.name" />
         <option value="dom.elementClass" />
         <option value="dom.namespaceKey" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinScriptFqnIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinMultifileClassPartIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeClassByPackageIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFilePartClassIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeFqNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinProbablyNothingPropertyShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinProbablyNothingFunctionShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelExtensionsByReceiverTypeIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyFqnNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelFunctionFqnNameIndex" />
       </list>
     </option>
   </component>

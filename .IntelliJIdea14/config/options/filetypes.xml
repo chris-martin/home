@@ -10,6 +10,7 @@
       <mapping pattern=".keep" type="PLAIN_TEXT" />
       <mapping pattern="minion" type="PLAIN_TEXT" />
       <mapping ext="nix" type="PLAIN_TEXT" />
+      <mapping ext="eex" type="PLAIN_TEXT" />
       <mapping ext="sls" type="YAML" />
     </extensionMap>
   </component>
