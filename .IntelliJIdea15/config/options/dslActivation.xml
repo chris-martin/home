@@ -1,0 +1,16 @@
+<application>
+  <component name="DslActivationStatus">
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/bindableTransform.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/newifyTransform.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/indexedProperty.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/singletonTransform.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/closuresInMethod.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/categoryTransform.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/vetoableTransform.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/defaultMethods.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/gantScript.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/extensions.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/listenerList.gdsl" />
+    <file url="file://$APPLICATION_HOME_DIR$/plugins/Groovy/lib/standardDsls/metaDsl.gdsl" />
+  </component>
+</application>
