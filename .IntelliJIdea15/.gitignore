@@ -6,6 +6,7 @@
 /config/options/ClojureUsageStatisticsSettings.xml
 /config/options/dimensions.xml
 /config/options/feature.usage.statistics.xml
+/config/options/filetypes.xml
 /config/options/find.recents.xml
 /config/options/find.xml
 /config/options/images.support.xml
