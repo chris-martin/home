@@ -14,7 +14,7 @@
   ui = auto
   interactive = auto
 [alias]
-  st = "!bash -c 'if [[ $(which gitst) ]]; then gitst; else git status; fi'"
+  st = "!bash -c 'if [[ $(which st) ]]; then st; else git status; fi'"
   co = checkout
   ci = commit
   llog = log --date=local
