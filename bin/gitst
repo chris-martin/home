@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 git status
 IFS=$(echo -en "\n\b")
 todo=$(git diff HEAD --name-only -Gtodo)
