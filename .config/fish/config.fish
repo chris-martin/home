@@ -13,6 +13,21 @@ alias such git
 alias very git
 alias wow 'git status'
 
+alias add    'git add'
+alias amend  'git commit --amend'
+alias staged 'git diff --cached'
+alias ci     'git commit'
+alias clone  'git clone'
+alias gdiff  'git diff'
+alias fetch  'git fetch'
+alias log    'git log'
+alias merge  'git merge'
+alias pull   'git pull'
+alias push   'git push'
+alias rebase 'git rebase'
+alias show   'git show'
+alias stash  'git stash'
+
 # https://github.com/fish-shell/fish-shell/issues/838
 function readSilent # prompt targetVar
     echo -n $argv[1]
