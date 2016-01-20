@@ -4,6 +4,7 @@
 /config/options/applicationLibraries.xml
 /config/options/ClojureUsageStatistics.xml
 /config/options/ClojureUsageStatisticsSettings.xml
+/config/options/CursiveLicence.xml
 /config/options/dimensions.xml
 /config/options/feature.usage.statistics.xml
 /config/options/filetypes.xml

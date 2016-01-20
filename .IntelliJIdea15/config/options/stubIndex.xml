@@ -4,6 +4,7 @@
       <list>
         <option value="Py.function.shortName" />
         <option value="sc.package.object.fqn" />
+        <option value="haskell.all.name" />
         <option value="Py.class.super" />
         <option value="sc.annotatde.member.name" />
         <option value="Py.class.shortNameInsensitive" />
