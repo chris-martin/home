@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 git for-each-ref \
   --sort=committerdate refs/heads/ \
   --format='%(committerdate:short)%09%(authorname)%09%(refname:short)' \
