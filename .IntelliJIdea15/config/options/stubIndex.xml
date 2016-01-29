@@ -2,9 +2,13 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
+        <option value="Scss.mixin" />
+        <option value="Stylus.mixins" />
+        <option value="angularjs.filter.index" />
         <option value="Py.function.shortName" />
         <option value="sc.package.object.fqn" />
         <option value="haskell.all.name" />
+        <option value="Py.class.shortName" />
         <option value="Py.class.super" />
         <option value="sc.annotatde.member.name" />
         <option value="Py.class.shortNameInsensitive" />
@@ -26,9 +30,9 @@
         <option value="java.field.name" />
         <option value="java.class.extlist" />
         <option value="java.annotations" />
-        <option value="Stylus.mixins" />
-        <option value="Stylus.variables" />
-        <option value="Scss.mixin" />
+        <option value="angularjs.directives.doc.index" />
+        <option value="angularjs.delimiter.index" />
+        <option value="angularjs.symbol.index" />
         <option value="Scss.function" />
         <option value="Scss.placeholder.selector" />
         <option value="Scss.variable" />
@@ -87,6 +91,9 @@
         <option value="Css.class" />
         <option value="dom.elementClass" />
         <option value="dom.namespaceKey" />
+        <option value="angularjs.module.index" />
+        <option value="angularjs.controller.index" />
+        <option value="angularjs.directives.index" />
         <option value="Django.manager" />
         <option value="sc.value.name" />
         <option value="sc.self.type.class.name.key" />
@@ -101,7 +108,7 @@
         <option value="sc.variable.name" />
         <option value="sc.method.name" />
         <option value="sc.class.parameter.name" />
-        <option value="Py.class.shortName" />
+        <option value="Stylus.variables" />
         <option value="sc.java.class.name.in.package" />
         <option value="sc.type.alias.name" />
       </list>
