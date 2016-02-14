@@ -89,7 +89,7 @@
         vlc
 
         # Web browsers
-        chromium # firefox
+        chromium
 
         idea."idea-ultimate"
         kde5.karchive
