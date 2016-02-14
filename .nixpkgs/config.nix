@@ -41,7 +41,7 @@
         steam minecraft
 
         # Haskell
-        haskellPackages.cabal2nix
+        haskellPackages.stack
 
         # Image editing
         gimp
