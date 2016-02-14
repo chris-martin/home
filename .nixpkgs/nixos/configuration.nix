@@ -1,5 +1,4 @@
-# This configuration is for my NixOS fork based on nixos-15.09.
-# https://github.com/chris-martin/nixpkgs
+# My NixOS fork: https://github.com/chris-martin/nixpkgs
 
 { config, pkgs, ... }:
 
@@ -11,6 +10,8 @@
     # Anything else not version-controlled
     ./secret.nix
   ];
+
+  system.stateVersion = "unstable";
 
   hardware = {
 
@@ -194,9 +195,6 @@
   services.udev.extraRules = ''
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0402|0403|0406|0407|0410", TAG+="uaccess"
   '';
-
-  # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "15.09";
 
   # https://stackoverflow.com/questions/33180784
   nix.extraOptions = ''
