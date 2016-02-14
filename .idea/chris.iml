@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea15/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.android" />
+      <excludeFolder url="file://$MODULE_DIR$/.atom" />
+      <excludeFolder url="file://$MODULE_DIR$/.bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/.cabal/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/chromium" />
+      <excludeFolder url="file://$MODULE_DIR$/.dropbox" />
+      <excludeFolder url="file://$MODULE_DIR$/.dropbox-dist" />
+      <excludeFolder url="file://$MODULE_DIR$/.gimp-2.8" />
+      <excludeFolder url="file://$MODULE_DIR$/.gnome" />
+      <excludeFolder url="file://$MODULE_DIR$/.googleearth" />
+      <excludeFolder url="file://$MODULE_DIR$/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/.gstreamer-0.10" />
+      <excludeFolder url="file://$MODULE_DIR$/.hex" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea-build" />
+      <excludeFolder url="file://$MODULE_DIR$/.ivy2" />
+      <excludeFolder url="file://$MODULE_DIR$/.java" />
+      <excludeFolder url="file://$MODULE_DIR$/.lein" />
+      <excludeFolder url="file://$MODULE_DIR$/.leksah-0.15" />
+      <excludeFolder url="file://$MODULE_DIR$/.m2" />
+      <excludeFolder url="file://$MODULE_DIR$/.mozilla" />
+      <excludeFolder url="file://$MODULE_DIR$/.nix-defexpr" />
+      <excludeFolder url="file://$MODULE_DIR$/.nix-profile" />
+      <excludeFolder url="file://$MODULE_DIR$/.node-gyp" />
+      <excludeFolder url="file://$MODULE_DIR$/.npm" />
+      <excludeFolder url="file://$MODULE_DIR$/.otto.d" />
+      <excludeFolder url="file://$MODULE_DIR$/.packer.d" />
+      <excludeFolder url="file://$MODULE_DIR$/.parse" />
+      <excludeFolder url="file://$MODULE_DIR$/.pencil" />
+      <excludeFolder url="file://$MODULE_DIR$/.pex" />
+      <excludeFolder url="file://$MODULE_DIR$/.rabbitmq" />
+      <excludeFolder url="file://$MODULE_DIR$/.sbt/boot" />
+      <excludeFolder url="file://$MODULE_DIR$/.stack" />
+      <excludeFolder url="file://$MODULE_DIR$/.steam" />
+      <excludeFolder url="file://$MODULE_DIR$/.thumbnails" />
+      <excludeFolder url="file://$MODULE_DIR$/.vagrant.d" />
+      <excludeFolder url="file://$MODULE_DIR$/.weechat" />
+      <excludeFolder url="file://$MODULE_DIR$/.wine-pipelight" />
+      <excludeFolder url="file://$MODULE_DIR$/.xchat2" />
+      <excludeFolder url="file://$MODULE_DIR$/.yEd" />
+      <excludeFolder url="file://$MODULE_DIR$/git" />
+      <excludeFolder url="file://$MODULE_DIR$/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/luongo" />
+      <excludeFolder url="file://$MODULE_DIR$/python" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
