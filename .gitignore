@@ -13,8 +13,8 @@
 !/.idea/
 !/.latexmkrc
 !/.local/
-!/oseary
 !/.nixpkgs/
+!/oseary
 !/.sbt/
 !/.tmux.conf
 !/.vimrc
