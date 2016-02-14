@@ -19,4 +19,6 @@ echo ""
 echo "nixpkgs branch: $BRANCH"
 echo ""
 
+export NIXOS_CONFIG=/home/chris/git/nixos-config/configuration.nix
+
 nixos-rebuild -I nixpkgs="$DIR" "$@"
