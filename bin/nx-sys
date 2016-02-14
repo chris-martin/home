@@ -10,5 +10,5 @@ echo "nixpkgs branch: $BRANCH"
 echo ""
 
 sudo \
-  env NIXOS_CONFIG=/home/chris/git/.nixpkgs/os/configuration.nix \
+  env NIXOS_CONFIG=/home/chris/git/.nixpkgs/nixos/configuration.nix \
   nixos-rebuild -I nixpkgs="$NIX_PKGS" switch
