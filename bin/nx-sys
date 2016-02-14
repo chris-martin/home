@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+NIX_PKGS="$HOME/git/nixpkgs"
+
+# Print the name of the current branch
+cd "$NIX_PKGS"
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+echo ""
+echo "nixpkgs branch: $BRANCH"
+echo ""
+
+sudo \
+  env NIXOS_CONFIG=/home/chris/git/.nixpkgs/os/configuration.nix \
+  nixos-rebuild -I nixpkgs="$NIX_PKGS" switch
