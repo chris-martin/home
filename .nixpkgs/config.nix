@@ -38,7 +38,8 @@
         rebar
 
         # Gaming
-        steam minecraft
+        steam
+        minecraft
 
         # Haskell
         haskellPackages.stack
@@ -47,7 +48,6 @@
         gimp
         imagemagick
         inkscape
-        #kde5.kcolorchooser
 
         # JS
         nodejs
@@ -55,7 +55,13 @@
         nodePackages.grunt-cli
 
         # JVM
-        openjdk8 scala sbt gradle ant leiningen maven
+        ant
+        gradle
+        leiningen
+        openjdk8
+        sbt
+        scala
+        maven
 
         # Networking
         kde5.networkmanager-qt
