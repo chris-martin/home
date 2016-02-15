@@ -27,9 +27,6 @@
     (and mark-active (filter-buffer-substring (region-beginning) (region-end) t))
     (insert (shell-command-to-string "xclip -o -selection clipboard")))
 
-; Disable the menu bar
-(menu-bar-mode -1)
-
 ; Show line numbers
 (global-linum-mode 1)
 
