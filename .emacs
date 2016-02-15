@@ -1,6 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'tmux-xterm-keys)
 
+(global-set-key [f8] 'neotree-toggle)
+
 ; git modes
 ; https://github.com/magit/git-modes/
 (add-to-list 'load-path "~/.emacs.d/lisp/git-modes/")
