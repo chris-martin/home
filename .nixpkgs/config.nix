@@ -33,6 +33,16 @@
         # Document/image viewers
         evince gnome3.eog
 
+        # Editors
+        (emacsWithPackages (epkgs: [
+          epkgs.flycheck
+          epkgs.flycheck-haskell
+          epkgs.neotree
+        ]))
+        idea."idea-ultimate"
+        sublime3
+        vim
+
         # Elixir
         elixir
         rebar
@@ -96,7 +106,6 @@
         # Web browsers
         chromium
 
-        idea."idea-ultimate"
         kde4.ark
         kde4.konversation
         meld
