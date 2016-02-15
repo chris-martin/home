@@ -122,3 +122,5 @@
         (delete-file filename)
         (set-visited-file-name newname)
         (set-buffer-modified-p nil)      t))))
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
