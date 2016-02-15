@@ -9,6 +9,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.bundle" />
       <excludeFolder url="file://$MODULE_DIR$/.cabal/packages" />
       <excludeFolder url="file://$MODULE_DIR$/.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/Atom/Cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/Atom/GPUCache" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/Atom/Local Storage" />
       <excludeFolder url="file://$MODULE_DIR$/.config/chromium" />
       <excludeFolder url="file://$MODULE_DIR$/.dropbox" />
       <excludeFolder url="file://$MODULE_DIR$/.dropbox-dist" />
