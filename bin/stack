@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+export NIX_PATH=nixpkgs=$HOME/git/nixpkgs:nixos-config=$HOME/.nixpkgs/nixos/configuration.nix
+$HOME/.nix-profile/bin/stack --nix "$@"
