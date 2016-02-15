@@ -64,7 +64,6 @@
         maven
 
         # Networking
-        kde5.networkmanager-qt
         nmap
 
         # OCR
@@ -90,16 +89,16 @@
         # Video/audio
         ffmpeg
         gnome3.totem
-        kde5.kmediaplayer
-        kde5.plasma-pa
+        kde4.dragon
+        kde4.kmix
         vlc
 
         # Web browsers
         chromium
 
         idea."idea-ultimate"
-        kde5.karchive
-        kde5.konversation
+        kde4.ark
+        kde4.konversation
         meld
         skype
         sshfsFuse
