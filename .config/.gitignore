@@ -9,4 +9,5 @@
 !/fish/config.fish
 !/git/
 /git/gitk
+!/user-dirs.conf
 !/user-dirs.dirs
