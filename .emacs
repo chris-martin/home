@@ -128,4 +128,4 @@
 
 (defun kill-emacs-and-restart ()
   (interactive)
-    (kill-emacs 123))
+  (kill-emacs 123))
