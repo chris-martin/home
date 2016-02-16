@@ -10,9 +10,7 @@ set PATH              \
 
 set -x ANDROID_HOME $HOME/lib/android
 
-set EDITOR vim
-
-alias emacs '/usr/bin/env emacs -nw'
+set EDITOR emacs
 
 # https://twitter.com/chris__martin/status/420992421673988096
 alias such git

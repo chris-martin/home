@@ -124,3 +124,8 @@
         (set-buffer-modified-p nil)      t))))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook #'projectile-global-mode)
+
+(defun kill-emacs-and-restart ()
+  (interactive)
+    (kill-emacs 123))

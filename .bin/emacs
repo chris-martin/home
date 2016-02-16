@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# https://emacs.stackexchange.com/questions/5428/restart-emacs-from-within-emacs
+#
+# Run emacs in a loop that relaunches it any time it exits with code 123, which
+# we return from emacs when we want to restart it.
+
+EMACS=$HOME/.nix-profile/bin/emacs
+
+while $EMACS "$@"; [ $? = 123 ]; do :; done
+
