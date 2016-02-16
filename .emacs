@@ -9,6 +9,8 @@
 (setenv "PATH" (concat "/home/chris/.bin:" (getenv "PATH")))
 (setq exec-path (append '("/home/chris/.bin") exec-path))
 
+(tool-bar-mode -1)
+
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (global-set-key [f8] 'neotree-toggle)
