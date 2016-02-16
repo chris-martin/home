@@ -3,7 +3,7 @@
 !/autostart/
 !/dconf/
 /dconf/*
-!/dconf/user.dump
+!/dconf/setup.sh
 !/fish/
 /fish/*
 !/fish/config.fish
