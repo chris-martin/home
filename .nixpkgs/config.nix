@@ -99,15 +99,13 @@
         # Video/audio
         ffmpeg
         gnome3.totem
-        kde4.dragon
-        kde4.kmix
         vlc
 
         # Web browsers
         chromium
 
-        kde4.ark
-        kde4.konversation
+        gnome3.file-roller
+        gnome3.polari
         meld
         skype
         sshfsFuse

@@ -75,7 +75,6 @@
     gptfdisk
     htop
     jq
-    kde4.plasma-nm
     lsof
     man_db
     nix-repl
@@ -107,8 +106,9 @@
       enable = true;
       layout = "us";
 
-      # KDE Desktop Environment.
-      desktopManager.kde4.enable = true;
+      desktopManager.gnome3.enable = true;
+      desktopManager.default = "gnome3";
+      displayManager.gdm.enable = true;
 
       # Touchpad
       synaptics = {
