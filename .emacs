@@ -6,6 +6,9 @@
 
 (eval-when-compile (require 'cl))
 
+(setenv "PATH" (concat "/home/chris/.bin:" (getenv "PATH")))
+(setq exec-path (append '("/home/chris/.bin") exec-path))
+
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (global-set-key [f8] 'neotree-toggle)
