@@ -1,25 +1,14 @@
+;;; .emacs --- emacs config
+
+;;; Commentary:
+
+;;; Code:
+
+(eval-when-compile (require 'cl))
+
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(require 'tmux-xterm-keys)
 
 (global-set-key [f8] 'neotree-toggle)
-
-; git modes
-; https://github.com/magit/git-modes/
-(add-to-list 'load-path "~/.emacs.d/lisp/git-modes/")
-(require 'gitattributes-mode)
-(require 'git-commit-mode)
-(require 'gitconfig-mode)
-(require 'gitignore-mode)
-(require 'git-rebase-mode)
-
-; disable spell checking in git commit mode
-; https://github.com/magit/git-modes/issues/106
-(eval-after-load "git-commit-mode"
-  '(cond
-    ((boundp 'git-commit-mode-hook) ; old
-     (remove-hook 'git-commit-mode-hook 'flyspell-mode))
-    ((boundp 'git-commit-setup-hook) ; new
-     (remove-hook 'git-commit-setup-hook 'git-commit-turn-on-flyspell))))
 
 ; http://www.emacswiki.org/emacs-en/CopyAndPaste
 ; http://www.emacswiki.org/emacs-en/xclip.el
@@ -32,13 +21,6 @@
 ; Show line numbers
 (global-linum-mode 1)
 
-; Format line numbers right-aligned with padding
-(setq linum-format (lambda (line)
-  (propertize (format
-    (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-      (concat "%" (number-to-string w) "d ")) line) 'face 'linum)))
-
-
 ; Make backup files even in version-controlled directories
 (setq vc-make-backup-files t)
 
@@ -48,7 +30,7 @@
 (make-directory backup-dir t)
 (setq backup-directory-alist `(("" . ,backup-dir)))
 
-; https://stackoverflow.com/questions/2020941/how-can-i-hide-the-backup-files-that-emacs-creates
+; https://stackoverflow.com/questions/2020941
 ; Set directory for autosave files
 (defvar autosave-dir (expand-file-name "~/.emacs.d/autosave/"))
 (make-directory autosave-dir t)
@@ -56,14 +38,20 @@
 (setq auto-save-file-name-transforms `((".*" ,autosave-dir t)))
 
 ; Follow symlinks without prompting
-; https://stackoverflow.com/questions/15390178/emacs-and-symbolic-links
+; https://stackoverflow.com/questions/15390178
 (setq vc-follow-symlinks 1)
 
-; Remove trailing whitespace from saved files
-; https://github.com/lewang/ws-butler
-(require 'ws-butler)
-(add-hook 'text-mode-hook 'ws-butler-mode)
-(add-hook 'prog-mode-hook 'ws-butler-mode)
+; Ws-butler removes trailing whitespace from saved files.
+; Ws-butler causes Emacs --daemon to hang, so in daemon mode we set it
+; up only when creating frames, so it won't happen on daemon startup.
+; https://github.com/lewang/ws-butler/issues/4
+(defun ws-butler-add-hooks ()
+  "Add ws-butler hooks."
+  (add-hook 'text-mode-hook 'ws-butler-mode)
+  (add-hook 'prog-mode-hook 'ws-butler-mode))
+(if (daemonp)
+  (add-hook 'before-make-frame-hook 'ws-butler-add-hooks)
+  (ws-butler-add-hooks))
 
 ; Enable mouse integration
 ; https://bitheap.org/mouseterm/
@@ -75,12 +63,6 @@
   (global-set-key [mouse-5] '(lambda ()
                                (interactive)
                                (scroll-up 1))))
-
-; Fix shift+up
-; https://groups.google.com/forum/?fromgroups=#!topic/gnu.emacs.help/rR478H4BDU8
-(define-key input-decode-map "\e[1;2A" [S-up])
-(if (equal "xterm" (tty-type))
-  (define-key input-decode-map "\e[1;2A" [S-up]))
 
 ; Markdown
 ; http://jblevins.org/projects/markdown-mode/
@@ -108,24 +90,35 @@
 
 ; https://sites.google.com/site/steveyegge2/my-dot-emacs-file
 (defun move-buffer-file (dir)
- "Moves both current buffer and file it's visiting to DIR."
- (interactive "DNew directory: ")
- (let* ((name (buffer-name))
-   (filename (buffer-file-name))
-   (dir
-   (if (string-match dir "\\(?:/\\|\\\\)$")
-   (substring dir 0 -1) dir))
-   (newname (concat dir "/" name)))
- (if (not filename)
-  (message "Buffer '%s' is not visiting a file!" name)
- (progn (copy-file filename newname 1)
-        (delete-file filename)
-        (set-visited-file-name newname)
-        (set-buffer-modified-p nil)      t))))
+  "Move both current buffer and file it's visiting to DIR."
+  (interactive "DNew directory: ")
+  (let* ((name (buffer-name))
+    (filename (buffer-file-name))
+    (dir
+    (if (string-match dir "\\(?:/\\|\\\\)$")
+    (substring dir 0 -1) dir))
+    (newname (concat dir "/" name)))
+  (if (not filename)
+    (message "Buffer '%s' is not visiting a file!" name)
+  (progn (copy-file filename newname 1)
+         (delete-file filename)
+         (set-visited-file-name newname)
+         (set-buffer-modified-p nil)      t))))
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'after-init-hook #'projectile-global-mode)
+(add-hook 'after-init-hook 'global-flycheck-mode)
+(add-hook 'after-init-hook 'projectile-global-mode)
 
-(defun kill-emacs-and-restart ()
+(defun delete-file-and-buffer ()
+  "Kill the current buffer and deletes the file it is visiting."
   (interactive)
-  (kill-emacs 123))
+  (let ((filename (buffer-file-name)))
+    (when filename
+      (if (vc-backend filename)
+          (vc-delete-file filename)
+        (progn
+          (delete-file filename)
+          (message "Deleted file %s" filename)
+          (kill-buffer))))))
+
+(provide '.emacs)
+;;; .emacs ends here

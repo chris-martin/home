@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+emacsclient --eval '(kill-emacs)'

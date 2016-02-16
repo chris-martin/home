@@ -37,7 +37,16 @@
         (emacsWithPackages (epkgs: [
           epkgs.flycheck
           epkgs.flycheck-haskell
+          epkgs.git-commit
+          epkgs.git-rebase
+          epkgs.gitattributes-mode
+          epkgs.gitconfig-mode
+          epkgs.gitignore-mode
           epkgs.neotree
+          epkgs.projectile
+          epkgs.tabbar
+          epkgs.ws-butler
+          epkgs.markdown-mode
         ]))
         idea."idea-ultimate"
         sublime3

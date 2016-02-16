@@ -10,7 +10,9 @@ set PATH              \
 
 set -x ANDROID_HOME $HOME/lib/android
 
-set EDITOR emacs
+set EDITOR emacsclient
+set ALTERNATE_EDITOR emacs-nw
+export ALTERNATE_EDITOR
 
 # https://twitter.com/chris__martin/status/420992421673988096
 alias such git

@@ -3,7 +3,7 @@
   name = Chris Martin
 [core]
   excludesfile = ~/.config/git/ignore
-  editor = emacs -nw
+  editor = emacsclient
 [diff]
   tool = vimdiff
   guitool = meld
