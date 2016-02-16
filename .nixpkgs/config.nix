@@ -69,6 +69,10 @@
         imagemagick
         inkscape
 
+        # IRC
+        gnome3.polari
+        kde4.konversation
+
         # JS
         nodejs
         nodePackages.bower
@@ -115,7 +119,6 @@
         chromium
 
         gnome3.file-roller
-        gnome3.polari
         meld
         skype
         sshfsFuse
