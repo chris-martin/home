@@ -153,8 +153,9 @@
       ASPELL_CONF = "dict-dir /run/current-system/sw/lib/aspell";
     };
     serviceConfig = {
-      Type = "simple";
+      Type = "forking";
       ExecStart = "${pkgs.bash}/bin/bash -c 'source ${config.system.build.setEnvironment}; emacs --daemon'";
+      ExecStop = "emacsclient --eval '(kill-emacs)'";
       Restart = "always";
     };
     wantedBy = [ "default.target" ];
