@@ -11,6 +11,8 @@
 
 (tool-bar-mode -1)
 
+(savehist-mode 1)
+
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (global-set-key [f8] 'neotree-toggle)
