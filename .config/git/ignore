@@ -13,3 +13,6 @@
 
 # Haskell
 .stack-work
+
+# Emacs
+.projectile
