@@ -3,10 +3,7 @@ set --erase fish_greeting
 set NIX_PATH nixpkgs=$HOME/git/nixpkgs:nixos-config=$HOME/.nixpkgs/nixos/configuration.nix
 
 set PATH              \
-  $HOME/bin           \
-  $HOME/bin/git       \
-  $HOME/bin/haskell   \
-  $HOME/bin/systemctl \
+  $HOME/.bin          \
   $HOME/.local/bin    \
   $HOME/.cabal/bin    \
   $PATH

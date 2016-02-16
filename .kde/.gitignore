@@ -1,3 +1,5 @@
 *
 !/.gitignore
+!/env/
+!/env/*
 !/share/
