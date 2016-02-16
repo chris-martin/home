@@ -1,6 +1,8 @@
 /*
 !/.gitignore
 !/autostart/
+!/dconf/
+/dconf/*
 !/dconf/user.dump
 !/fish/
 /fish/*
