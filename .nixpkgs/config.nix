@@ -37,11 +37,12 @@
         (emacsWithPackages (epkgs: [
           epkgs.flycheck
           epkgs.flycheck-haskell
-          epkgs.git-commit
-          epkgs.git-rebase
-          epkgs.gitattributes-mode
-          epkgs.gitconfig-mode
-          epkgs.gitignore-mode
+          #epkgs.git-commit
+          #epkgs.git-rebase
+          #epkgs.gitattributes-mode
+          #epkgs.gitconfig-mode
+          #epkgs.gitignore-mode
+	  epkgs.magit
           epkgs.neotree
           epkgs.projectile
           epkgs.tabbar
