@@ -3,8 +3,8 @@ use-custom-command=true
 custom-command='tmux'
 
 [org/gnome/desktop/peripherals/keyboard]
-repeat-interval=uint32 21
-delay=uint32 261
+repeat-interval=uint32 20
+delay=uint32 300
 
 [org/gnome/desktop/wm/preferences]
 mouse-button-modifier='<Alt>'
