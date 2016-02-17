@@ -17,9 +17,10 @@
 (savehist-mode 1)
 
 ;; Set the default font
-(let ((f "Monospace 11"))
-  (add-to-list 'default-frame-alist `(font . ,f))
-  (set-face-attribute 'default t :font f))
+(if (not (daemonp))
+  (let ((f "Monospace 11"))
+    (add-to-list 'default-frame-alist `(font . ,f))
+    (set-face-attribute 'default t :font f)))
 
 ;; Set cursor to a thin vertical bar
 (setq-default cursor-type 'bar)
@@ -45,7 +46,8 @@
 
 (global-set-key [f8] 'neotree-toggle)
 
-(cua-mode t)            ; ctrl+x,c,v bindings for cut,copy,paste
+;; cua provides ctrl+x,c,v bindings for cut,copy,paste.
+(if (not (daemonp)) (cua-mode t))
 
 (global-linum-mode 1)   ; Show line numbers
 
