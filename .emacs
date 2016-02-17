@@ -16,6 +16,11 @@
 ;; Save Emacs command history so it persists across sessions
 (savehist-mode 1)
 
+;; Set the default font
+(let ((f "Monospace 11"))
+  (add-to-list 'default-frame-alist `(font . ,f))
+  (set-face-attribute 'default t :font f))
+
 ;; Set cursor to a thin vertical bar
 (setq-default cursor-type 'bar)
 
