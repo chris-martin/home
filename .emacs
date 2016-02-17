@@ -31,7 +31,10 @@
 (global-set-key [end]  'mwim-end-of-code-or-line)
 
 (add-hook 'after-init-hook 'global-flycheck-mode)
+
+;; Projectile - projects - http://batsov.com/projectile/
 (add-hook 'after-init-hook 'projectile-global-mode)
+(setq projectile-switch-project-action 'projectile-dired)
 
 ;; Git commit mode - https://emacs.stackexchange.com/questions/17689
 (package-initialize)                     ; otherwise Emacs doesn't know were to find it
