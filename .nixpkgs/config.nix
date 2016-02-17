@@ -37,12 +37,13 @@
         (emacsWithPackages (epkgs: [
           epkgs.flycheck
           epkgs.flycheck-haskell
+          epkgs.markdown-mode
           epkgs.magit
           epkgs.neotree
           epkgs.projectile
           epkgs.tabbar
           epkgs.ws-butler
-          epkgs.markdown-mode
+          epkgs.yaml-mode
         ]))
         idea."idea-ultimate"
         sublime3
