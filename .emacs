@@ -38,7 +38,7 @@
 (setq projectile-switch-project-action 'projectile-dired)
 
 ;; Git commit mode - https://emacs.stackexchange.com/questions/17689
-(package-initialize)                     ; otherwise Emacs doesn't know were to find it
+(package-initialize) ; otherwise Emacs doesn't know were to find it
 (setq package-initialize-at-startup nil) ; don't do it again
 (global-git-commit-mode)
 
@@ -49,7 +49,7 @@
 ;; cua provides ctrl+x,c,v bindings for cut,copy,paste.
 (if (not (daemonp)) (cua-mode t))
 
-(global-linum-mode 1)   ; Show line numbers
+(global-linum-mode 1) ; Show line numbers
 
 ;; Format t line numbers right-aligned with padding
 (setq
