@@ -37,6 +37,7 @@
         (emacsWithPackages (epkgs: [
           epkgs.flycheck
           epkgs.flycheck-haskell
+          epkgs.ido-ubiquitous
           epkgs.markdown-mode
           epkgs.magit
           epkgs.mwim
