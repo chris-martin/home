@@ -1,6 +1,7 @@
 /autosave/
 /backup/
 /elpa/
+/.emacs.desktop
 /history
 /projectile-bookmarks.eld
 /projectile.cache
