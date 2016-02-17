@@ -16,3 +16,4 @@ dconf write /org/gnome/desktop/interface/font-name          "'Cantarell 11'"
 dconf write /org/gnome/desktop/interface/document-font-name "'Lato Medium 11'"
 dconf write /org/gnome/desktop/interface/clock-format       "'12h'"
 dconf write /org/gnome/desktop/interface/clock-show-seconds false
+dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Lato Bold 11'"
