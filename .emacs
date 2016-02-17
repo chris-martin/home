@@ -16,12 +16,10 @@
 ;; Save Emacs command history so it persists across sessions
 (savehist-mode 1)
 
-;; Fuck tabs
-(setq-default indent-tabs-mode nil)
-;(add-hook 'emacs-lisp-mode-hook
-;          (lambda () (setq indent-tabs-mode nil)))
-;(add-hook 'text-mode-hook
-;          (lambda () (setq indent-tabs-mode nil)))
+;; Set cursor to a thin vertical bar
+(setq-default cursor-type 'bar)
+
+(setq-default indent-tabs-mode nil)      ; Fuck tabs
 
 (add-hook 'after-init-hook 'global-flycheck-mode)
 (add-hook 'after-init-hook 'projectile-global-mode)
