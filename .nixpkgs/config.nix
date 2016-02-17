@@ -37,7 +37,7 @@
         (emacsWithPackages (epkgs: [
           epkgs.flycheck
           epkgs.flycheck-haskell
-	  epkgs.magit
+          epkgs.magit
           epkgs.neotree
           epkgs.projectile
           epkgs.tabbar
