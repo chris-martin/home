@@ -2,6 +2,7 @@
 /backup/
 /elpa/
 /.emacs.desktop
+/.emacs.desktop.lock
 /history
 /projectile-bookmarks.eld
 /projectile.cache
