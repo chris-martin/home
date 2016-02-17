@@ -1,18 +1,22 @@
 set --erase fish_greeting
 
-set NIX_PATH nixpkgs=$HOME/git/nixpkgs:nixos-config=$HOME/.nixpkgs/nixos/configuration.nix
+set -x NIXOS_CONFIG   $HOME/.nix/sys.nix
+set -x NIXPKGS_CONFIG $HOME/.nix/user.nix
+set -x NIXPKGS_ALL    $HOME/git/nixpkgs
 
-set PATH              \
-  $HOME/.bin          \
-  $HOME/.local/bin    \
-  $HOME/.cabal/bin    \
+set -x NIX_PATH nixpkgs=$NIXPKGS_ALL:nixos-config=$NIXOS_CONFIG
+
+set PATH                 \
+  $HOME/.bin             \
+  $HOME/.local/bin       \
+  $HOME/.cabal/bin       \
+  $HOME/.nix-profile/bin \
   $PATH
 
 set -x ANDROID_HOME $HOME/lib/android
 
-set EDITOR emacsclient
-set ALTERNATE_EDITOR emacs-nw
-export ALTERNATE_EDITOR
+set    EDITOR           emacsclient
+set -x ALTERNATE_EDITOR emacs-nw
 
 alias e emacsclient
 

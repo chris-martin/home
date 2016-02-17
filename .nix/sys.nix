@@ -1,15 +1,8 @@
-# My NixOS fork: https://github.com/chris-martin/nixpkgs
-
 { config, pkgs, ... }:
 
 {
-  imports = [
-    # The results of the hardware scan
-    ./hardware-configuration.nix
-
-    # Anything else not version-controlled
-    ./secret.nix
-  ];
+  imports = [ ./hardware.nix
+              ./secret.nix   ];
 
   system.stateVersion = "unstable";
 

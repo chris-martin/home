@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
-NIX_PKGS="$HOME/git/nixpkgs"
-
 # Print the name of the current branch
-cd "$NIX_PKGS"
+cd "$NIXPKGS_ALL"
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 echo ""
 echo "nixpkgs branch: $BRANCH"
 echo ""
 
 sudo \
-  env NIXOS_CONFIG=/home/chris/.nixpkgs/nixos/configuration.nix \
-  nixos-rebuild -I nixpkgs="$NIX_PKGS" switch
+  env NIXOS_CONFIG=$NIXOS_CONFIG \
+  nixos-rebuild -I nixpkgs="$NIXPKGS_ALL" switch

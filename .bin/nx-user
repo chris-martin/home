@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-NIX_PKGS="$HOME/git/nixpkgs"
-
 # Print the name of the current branch
-cd "$NIX_PKGS"
+cd "$NIXPKGS_ALL"
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 echo ""
 echo "nixpkgs branch: $BRANCH"
 echo ""
 
-nix-env -i all -f "$NIX_PKGS"
+export NIXPKGS_CONFIG
+
+nix-env -i all -f "$NIXPKGS_ALL"
