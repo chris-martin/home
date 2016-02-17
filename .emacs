@@ -65,6 +65,15 @@
      (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
        (concat "%" (number-to-string w) "d ")) line) 'face 'linum)))
 
+;; Scrolling
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ; one line at a time
+(setq mouse-wheel-progressive-speed nil) ; no acceleration
+(setq scroll-step 1) ; keyboard scroll one line at a time
+
+;; Automatically save the desktop (open tabs, etc)
+(setq desktop-save t)
+(desktop-save-mode 1)
+
 ;; Make backup files even in version-controlled directories
 (setq vc-make-backup-files t)
 
