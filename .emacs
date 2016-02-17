@@ -33,15 +33,9 @@
 
 (global-set-key [f8] 'neotree-toggle)
 
-;; http://www.emacswiki.org/emacs-en/CopyAndPaste
-;; http://www.emacswiki.org/emacs-en/xclip.el
-(defun paste ()
-  "Yank from the X clipboard using xclip."
-  (interactive)
-  (and mark-active (filter-buffer-substring (region-beginning) (region-end) t))
-  (insert (shell-command-to-string "xclip -o -selection clipboard")))
+(cua-mode t)            ; ctrl+x,c,v bindings for cut,copy,paste
 
-(global-linum-mode 1)        ; Show line numbers
+(global-linum-mode 1)   ; Show line numbers
 
 ;; Format t line numbers right-aligned with padding
 (setq
