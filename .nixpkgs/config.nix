@@ -39,6 +39,7 @@
           epkgs.flycheck-haskell
           epkgs.markdown-mode
           epkgs.magit
+          epkgs.mwim
           epkgs.neotree
           epkgs.projectile
           epkgs.tabbar

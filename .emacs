@@ -26,6 +26,10 @@
 
 (setq-default indent-tabs-mode nil)      ; Fuck tabs
 
+;; Map <home> and <end> keys to mwim
+(global-set-key [home] 'mwim-beginning-of-code-or-line)
+(global-set-key [end]  'mwim-end-of-code-or-line)
+
 (add-hook 'after-init-hook 'global-flycheck-mode)
 (add-hook 'after-init-hook 'projectile-global-mode)
 
