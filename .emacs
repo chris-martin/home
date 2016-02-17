@@ -23,7 +23,7 @@
 
 ;; Set the default font
 (if (not (daemonp))
-  (let ((f "Monospace 11"))
+  (let ((f "DejaVu Sans Mono Book 10"))
     (add-to-list 'default-frame-alist `(font . ,f))
     (set-face-attribute 'default t :font f)))
 
