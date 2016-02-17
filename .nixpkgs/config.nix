@@ -41,6 +41,7 @@
           epkgs.magit
           epkgs.mwim
           epkgs.neotree
+          epkgs.nix-mode
           epkgs.projectile
           epkgs.tabbar
           epkgs.ws-butler
