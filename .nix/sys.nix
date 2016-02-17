@@ -147,7 +147,7 @@
     };
     serviceConfig = {
       Type = "forking";
-      ExecStart = "${pkgs.bash}/bin/bash -c 'source ${config.system.build.setEnvironment}; emacs --daemon'";
+      ExecStart = "${pkgs.bash}/bin/bash -c 'source ${config.system.build.setEnvironment}; emacs --daemon --no-desktop'";
       ExecStop = "${pkgs.emacs}/bin/emacsclient --eval '(kill-emacs)'";
       Restart = "always";
     };
