@@ -1,11 +1,1 @@
-#!/usr/bin/env bash
-
-env NIXPKGS_CONFIG=$HOME/.nix/user-stable.nix \
-    nix-env \
-    -i all-stable \
-    -f $STABLE $HOME/.nix-defexpr/channels/nixos-15.09
-
-env NIXPKGS_CONFIG=$HOME/.nix/user-unstable.nix \
-    nix-env \
-    -i all-unstable \
-    -f $HOME/.nix-defexpr/channels/nixos-unstable
+../.nix/nx-user
