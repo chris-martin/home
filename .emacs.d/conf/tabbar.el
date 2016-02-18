@@ -12,10 +12,13 @@
 (defun find-tabbar-group-dir (dir)
   "Search up the directory tree looking for a tabbar group root."
   (cond
-   ((not dir) "process")
-   ((string= dir "/") "no-group")
-   ((file-exists-p (concat dir "/.git")) (directory-file-name dir))
-   ((file-exists-p (concat dir "/.projectile")) (directory-file-name dir))
+   ((not dir)                                          "emacs")
+   ((string-equal "*" (substring (buffer-name) 0 1))   "emacs")
+   ((string= dir "/")                                  "no-group")
+
+   ((file-exists-p (concat dir "/.git"))            (directory-file-name dir))
+   ((file-exists-p (concat dir "/.projectile"))     (directory-file-name dir))
+
    (t (find-tabbar-group-dir (directory-file-name (file-name-directory dir))))))
 
 (setq
