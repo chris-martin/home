@@ -87,5 +87,8 @@
 
 (global-set-key (kbd "C-/") 'comment-dwim)
 
+(helm-mode 1)
+(helm-projectile-on)
+
 (provide '.emacs)
 ;;; all.el ends here

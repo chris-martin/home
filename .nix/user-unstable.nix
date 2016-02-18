@@ -20,8 +20,8 @@
         (emacsWithPackages (epkgs: [
           epkgs.flycheck
           epkgs.flycheck-haskell
-          epkgs.helm
-          epkgs.helm-projectile
+          epkgs.melpaPackages.helm
+          epkgs.melpaPackages.helm-projectile
           epkgs.ido-ubiquitous
           epkgs.markdown-mode
           epkgs.magit
