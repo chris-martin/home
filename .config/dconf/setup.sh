@@ -18,3 +18,4 @@ dconf write /org/gnome/desktop/interface/clock-format       "'12h'"
 dconf write /org/gnome/desktop/interface/clock-show-seconds false
 dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Lato Bold 11'"
 dconf write /org/gnome/desktop/wm/preferences/resize-with-right-button true
+dconf write /org/gnome/desktop/wm/preferences/focus-mode    "'sloppy'"
