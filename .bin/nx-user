@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-# Print the name of the current branch
-cd "$NIXPKGS_ALL"
-BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-echo ""
-echo "nixpkgs branch: $BRANCH"
-echo ""
-
 env NIXPKGS_CONFIG=$HOME/.nix/user-stable.nix \
     nix-env \
     -i all-stable \
