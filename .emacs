@@ -6,6 +6,8 @@
 
 (eval-when-compile (require 'cl))
 
+(load-file "~/.emacs.d/tabbar.el")
+
 ;; Append ~/.bin to the executable path.
 (setenv "PATH" (concat "/home/chris/.bin:" (getenv "PATH")))
 (setq exec-path (append '("/home/chris/.bin") exec-path))
@@ -15,11 +17,6 @@
 
 ;; Save Emacs command history so it persists across sessions
 (savehist-mode 1)
-
-(add-hook 'after-init-hook 'tabbar-mode)
-
-(global-set-key [M-left] 'tabbar-backward-tab)
-(global-set-key [M-right] 'tabbar-forward-tab)
 
 ;; Set the default font
 (if (not (daemonp))
