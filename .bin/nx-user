@@ -7,6 +7,12 @@ echo ""
 echo "nixpkgs branch: $BRANCH"
 echo ""
 
-export NIXPKGS_CONFIG
+env NIXPKGS_CONFIG=$HOME/.nix/user-stable.nix \
+    nix-env \
+    -i all-stable \
+    -f $STABLE $HOME/.nix-defexpr/channels/nixos-15.09
 
-nix-env -i all -f "$NIXPKGS_ALL"
+env NIXPKGS_CONFIG=$HOME/.nix/user-unstable.nix \
+    nix-env \
+    -i all-unstable \
+    -f $HOME/.nix-defexpr/channels/nixos-unstable

@@ -62,26 +62,16 @@
     curl
     docker
     emacs
-    fish
-    gitAndTools.gitFull
     gparted
     gptfdisk
     htop
-    jq
     lsof
     man_db
-    nix-repl
     openssl
-    psmisc
-    tmux
     tree
-    unzip
     vim
     wget
     which
-    xclip
-    xorg.xkill
-    zip
   ];
 
   services = {
