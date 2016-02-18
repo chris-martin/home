@@ -13,16 +13,16 @@
   "Search up the directory tree looking for a tabbar group root."
   (cond
    ((not dir) "process")
-   ((string= dir "/") "no-git")
-   ((file-exists-p (concat dir "/.git")) dir)
-   ((file-exists-p (concat dir "/.projectile")) dir)
+   ((string= dir "/") "no-group")
+   ((file-exists-p (concat dir "/.git")) (directory-file-name dir))
+   ((file-exists-p (concat dir "/.projectile")) (directory-file-name dir))
    (t (find-tabbar-group-dir (directory-file-name (file-name-directory dir))))))
 
 (setq
  tabbar-buffer-groups-function
  (lambda ()
    (list
-    (find-tabbar-group-dir (buffer-file-name (current-buffer))))))
+     (find-tabbar-group-dir (expand-file-name default-directory)))))
 
 (provide 'tabbar)
 ;;; tabbar.el ends here
