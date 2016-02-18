@@ -9,6 +9,7 @@
 (load-file "/home/chris/.emacs.d/conf/cursor.el")
 (load-file "/home/chris/.emacs.d/conf/file.el")
 (load-file "/home/chris/.emacs.d/conf/tabbar.el")
+(load-file "/home/chris/.emacs.d/conf/markdown.el")
 (load-file "/home/chris/.emacs.d/conf/whitespace.el")
 
 ;; Append ~/.bin to the executable path.
@@ -83,12 +84,6 @@
   (xterm-mouse-mode 1)
   (global-set-key [mouse-4] '(lambda () (interactive) (scroll-down 1)))
   (global-set-key [mouse-5] '(lambda () (interactive) (scroll-up 1))))
-
-;; Markdown - http://jblevins.org/projects/markdown-mode/
-(autoload 'markdown-mode "markdown-mode"
-  "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (provide '.emacs)
 ;;; all.el ends here
