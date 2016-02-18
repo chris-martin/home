@@ -18,6 +18,8 @@
 ;; Save Emacs command history so it persists across sessions
 (savehist-mode 1)
 
+(add-hook 'after-init-hook 'subword-mode)
+
 ;; Set the default font
 (if (not (daemonp))
   (let ((f "DejaVu Sans Mono Book 10"))
