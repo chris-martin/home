@@ -7,10 +7,19 @@
       paths = [
 
         # Android
-        #jmtpfs
+        jmtpfs
+
+        # Archives
+        zip
+        unzip
+        gnome3.file-roller
 
         # AWS
         awscli packer
+
+        # Crypto
+        keepassx2
+        truecrypt
 
         # Disk usage analysis
         baobab
@@ -19,31 +28,27 @@
         # Document/image viewers
         evince gnome3.eog
 
-        # Editors
-        sublime3
-        vim
-
         # Elixir
         # elixir
         # rebar
 
         # Gaming
-        # steam
-        # minecraft
+        steam
+        minecraft
 
         # Image editing
-        # gimp
-        # imagemagick
-        # inkscape
+        gimp
+        imagemagick
+        inkscape
 
         # IRC
         gnome3.polari
         kde4.konversation
 
         # JS
-        # nodejs
-        # nodePackages.bower
-        # nodePackages.grunt-cli
+        nodejs
+        nodePackages.bower
+        nodePackages.grunt-cli
 
         # JVM
         # ant
@@ -58,14 +63,12 @@
         nmap
 
         # OCR
-        #tesseract
-
-        # Password management
-        keepassx2
+        tesseract
 
         # Python
-        #python34Packages.ipython
-        #pypyPackages.virtualenv
+        python3
+        python34Packages.ipython
+        pypyPackages.virtualenv
 
         # Ruby
         ruby
@@ -75,27 +78,23 @@
         scrot
         gnome3.gnome-screenshot
 
-        # Video/audio
-        #ffmpeg
-        #gnome3.totem
-        #vlc
+        # Torrent
+        transmission_gtk
 
-        # Zip
-        zip
-        unzip
+        # Video/audio
+        ffmpeg
+        gnome3.totem
+        vlc
 
         fish
         gitAndTools.gitFull
-        #gnome3.file-roller
         jq
-        #meld
+        meld
         nix-repl
         psmisc
-        #skype
+        skype
         sshfsFuse
         tmux
-        #transmission_gtk
-        #truecrypt
         xclip
         xorg.xkill
       ];
