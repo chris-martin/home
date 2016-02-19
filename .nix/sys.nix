@@ -1,8 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, ... }: {
 
-{
-  imports = [ ./hardware.nix
-              ./secret.nix   ];
+  imports = [ ./hardware.nix ./secret.nix ];
 
   system.stateVersion = "unstable";
 
@@ -45,73 +43,34 @@
     defaultLocale = "en_US.UTF-8";
   };
 
-  # Set your time zone.
   time.timeZone = "America/Los_Angeles";
   #time.timeZone = "America/New_York";
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.etc."fuse.conf".text = ''
-    user_allow_other
-  '';
+  environment.etc."fuse.conf".text = "user_allow_other";
 
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    android-udev-rules
-    curl
-    docker
-    emacs
-    gparted
-    gptfdisk
-    htop
-    lsof
-    man_db
-    openssl
-    tree
-    vim
-    wget
-    which
+    android-udev-rules curl docker emacs
+    gparted gptfdisk htop lsof man_db
+    openssl tree vim wget which
   ];
 
   services = {
 
     nixosManual.showManual = true;
 
-    # Printing
     printing = {
       enable = true;
       drivers = [ pkgs.gutenprint pkgs.hplipWithPlugin ];
     };
 
-    # The X11 windowing system.
     xserver = {
       enable = true;
       layout = "us";
-
       desktopManager.gnome3.enable = true;
-      #desktopManager.default = "gnome3";
-      displayManager.gdm.enable = true;
-
-      # Touchpad
-      synaptics = {
-        enable = true;
-        tapButtons = false;
-        twoFingerScroll = true;
-        minSpeed = "0.75";
-        maxSpeed = "5.5";
-        accelFactor = "0.015";
-        palmDetect = true;
-        palmMinWidth = 3;
-        scrollDelta = 65;
-
-        # Left edge is adjusted because palm detection isn't good
-        # enough on the edges. This touchpad is off-center and my
-        # left palm tends to graze it.
-        additionalOptions = ''
-          Option "AreaLeftEdge" "450"
-        '';
-      };
+      displayManager.gdm.enable    = true;
+      synaptics = import ./synaptics.nix;
     };
 
     redshift = {
@@ -125,69 +84,48 @@
     unclutter.enable = true;
   };
 
-  systemd.user.services.emacs = {
-    description = "Emacs Daemon";
-    environment = {
-      GTK_DATA_PREFIX = config.system.path;
-      SSH_AUTH_SOCK = "%t/ssh-agent";
-      GTK_PATH = "${config.system.path}/lib/gtk-3.0:${config.system.path}/lib/gtk-2.0";
-      NIX_PROFILES = "${pkgs.lib.concatStringsSep " " config.environment.profiles}";
-      TERMINFO_DIRS = "/run/current-system/sw/share/terminfo";
-      ASPELL_CONF = "dict-dir /run/current-system/sw/lib/aspell";
-    };
-    serviceConfig = {
-      Type = "forking";
-      ExecStart = "${pkgs.bash}/bin/bash -c 'source ${config.system.build.setEnvironment}; emacs --daemon --no-desktop'";
-      ExecStop = "${pkgs.emacs}/bin/emacsclient --eval '(kill-emacs)'";
-      Restart = "always";
-    };
-    wantedBy = [ "default.target" ];
+  systemd.user.services.emacs = import ./emacs-daemon.nix {
+    config = config;
+    pkgs   = pkgs;
   };
 
   systemd.services.emacs.enable = true;
 
   virtualisation = {
 
-    # VirtualBox
     virtualbox.host = {
-      enable = true;
-      enableHardening = false;
+      enable              = true;
+      enableHardening     = false;
       addNetworkInterface = true;
     };
 
-    # Docker
     docker = {
-      enable = true;
-      storageDriver = "devicemapper";
+      enable           = true;
+      storageDriver    = "devicemapper";
       socketActivation = false;
     };
   };
 
-  # Fonts
   fonts = {
-    enableFontDir = true;
+    enableFontDir          = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
-      corefonts
-      inconsolata
-      symbola
-      ubuntu_font_family
-      unifont
-      vistafonts
+      corefonts inconsolata symbola ubuntu_font_family
+      unifont vistafonts
     ];
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.chris = {
-    name = "chris";
+    name  = "chris";
     group = "users";
     extraGroups = [
       "audio" "disk" "docker" "networkmanager" "plugdev"
       "systemd-journal" "wheel" "vboxusers" "video"
     ];
     createHome = true;
-    uid = 1000;
-    home = "/home/chris";
+    uid   = 1000;
+    home  = "/home/chris";
     shell = "/run/current-system/sw/bin/bash";
   };
 
@@ -202,8 +140,6 @@
   '';
 
   # https://stackoverflow.com/questions/33180784
-  nix.extraOptions = ''
-    binary-caches-parallel-connections = 25
-  '';
+  nix.extraOptions = "binary-caches-parallel-connections = 25";
 
 }
