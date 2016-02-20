@@ -66,6 +66,7 @@
         tesseract
 
         # Python
+        python27Full
         python3
         python34Packages.ipython
         pypyPackages.virtualenv
