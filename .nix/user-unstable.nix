@@ -17,22 +17,22 @@
         python27Packages.docker_compose
 
         # Editors
-        (emacsWithPackages (epkgs: [
-          epkgs.diff-hl
-          epkgs.flycheck
-          epkgs.flycheck-haskell
-          epkgs.melpaPackages.helm
-          epkgs.melpaPackages.helm-projectile
-          epkgs.ido-ubiquitous
-          epkgs.markdown-mode
-          epkgs.magit
-          epkgs.mwim
-          epkgs.neotree
-          epkgs.nix-mode
-          epkgs.projectile
-          epkgs.tabbar
-          epkgs.ws-butler
-          epkgs.yaml-mode
+        (emacsWithPackages (emacs-pkgs_: with emacs-pkgs_; [
+          diff-hl
+          flycheck
+          flycheck-haskell
+          melpaPackages.helm
+          melpaPackages.helm-projectile
+          ido-ubiquitous
+          markdown-mode
+          magit
+          mwim
+          neotree
+          nix-mode
+          projectile
+          tabbar
+          ws-butler
+          yaml-mode
         ]))
         idea."idea-ultimate"
 
