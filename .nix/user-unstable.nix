@@ -18,6 +18,7 @@
 
         # Editors
         (emacsWithPackages (epkgs: [
+          epkgs.diff-hl
           epkgs.flycheck
           epkgs.flycheck-haskell
           epkgs.melpaPackages.helm
