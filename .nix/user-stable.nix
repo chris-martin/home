@@ -29,8 +29,8 @@
         evince gnome3.eog
 
         # Elixir
-        # elixir
-        # rebar
+        elixir
+        rebar
 
         # Gaming
         steam
@@ -51,13 +51,13 @@
         nodePackages.grunt-cli
 
         # JVM
-        # ant
-        # gradle
-        # leiningen
-        # openjdk8
-        # sbt
-        # scala
-        # maven
+        ant
+        gradle
+        leiningen
+        openjdk8
+        sbt
+        scala
+        maven
 
         # Networking
         nmap
