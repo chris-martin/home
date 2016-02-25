@@ -9,10 +9,13 @@
       <excludeFolder url="file://$MODULE_DIR$/.bundle" />
       <excludeFolder url="file://$MODULE_DIR$/.cabal/packages" />
       <excludeFolder url="file://$MODULE_DIR$/.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.compose-cache" />
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/Cache" />
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/GPUCache" />
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/Local Storage" />
       <excludeFolder url="file://$MODULE_DIR$/.config/chromium" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/ibus" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/pulse" />
       <excludeFolder url="file://$MODULE_DIR$/.dropbox" />
       <excludeFolder url="file://$MODULE_DIR$/.dropbox-dist" />
       <excludeFolder url="file://$MODULE_DIR$/.emacs.d/autosave" />
@@ -68,7 +71,9 @@
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/luongo" />
       <excludeFolder url="file://$MODULE_DIR$/mnt" />
+      <excludeFolder url="file://$MODULE_DIR$/oseary" />
       <excludeFolder url="file://$MODULE_DIR$/python" />
+      <excludeFolder url="file://$MODULE_DIR$/secrets" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

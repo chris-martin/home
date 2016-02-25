@@ -12,9 +12,6 @@
     </value>
   </option>
   <option name="RIGHT_MARGIN" value="80" />
-  <ClojureCodeStyleSettings>{
-  :cursive.formatting/align-binding-forms true
-}</ClojureCodeStyleSettings>
   <XML>
     <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
   </XML>
