@@ -62,7 +62,7 @@
 
     printing = {
       enable = true;
-      drivers = [ pkgs.gutenprint pkgs.hplipWithPlugin ];
+      drivers = with pkgs; [ gutenprint hplipWithPlugin ];
     };
 
     xserver = {
