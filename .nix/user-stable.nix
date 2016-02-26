@@ -33,7 +33,6 @@
         rebar
 
         # Gaming
-        steam
         minecraft
 
         # Image editing
