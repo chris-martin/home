@@ -20,6 +20,7 @@
 /config/options/project.default.xml
 /config/options/recentProjects.xml
 /config/options/statistics.application.usages.xml
+/config/options/ui.lnf.xml
 /config/options/updates.xml
 /config/options/window.manager.xml
 /config/options/window.state.xml
