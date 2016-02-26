@@ -1,2 +1,5 @@
 /hardware.nix
 /secret.nix
+
+# sys.nix should be a symlink to the respective machine's config
+/sys.nix

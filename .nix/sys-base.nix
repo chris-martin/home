@@ -13,23 +13,7 @@
     pulseaudio.support32Bit = true;
   };
 
-  boot = {
-    initrd.luks.devices = [
-      {
-        name = "root";
-        device = "/dev/sda3";
-        preLVM = true;
-      }
-    ];
-    loader = {
-      grub.device = "/dev/sda";
-      gummiboot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-  };
-
   networking = {
-    hostName = "annemarie";
     networkmanager.enable = true;
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
     firewall.allowPing = true;
@@ -48,7 +32,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.etc."fuse.conf".text = "user_allow_other";
+  environment.etc."fuse.conf".text = ''
+    user_allow_other
+  '';
 
   environment.systemPackages = with pkgs; [
     android-udev-rules curl docker emacs
@@ -70,14 +56,13 @@
       layout = "us";
       desktopManager.gnome3.enable = true;
       displayManager.gdm.enable    = true;
-      synaptics = import ./synaptics.nix;
     };
 
     redshift = {
       enable = true;
 
       # San Mateo
-      latitude = "37.56";
+      latitude  = "37.56";
       longitude = "-122.33";
     };
 
