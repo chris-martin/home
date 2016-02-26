@@ -1,6 +1,8 @@
-<scheme name="Chris Martin" version="142" parent_scheme="Default">
+<scheme name="renzo" version="142" parent_scheme="Default">
   <option name="LINE_SPACING" value="1.0" />
-  <option name="EDITOR_FONT_SIZE" value="12" />
+  <option name="EDITOR_FONT_SIZE" value="16" />
+  <option name="CONSOLE_FONT_NAME" value="DejaVu Sans Mono" />
+  <option name="CONSOLE_FONT_SIZE" value="12" />
   <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
   <colors>
     <option name="MODIFIED_LINES_COLOR" value="b51ce8" />
