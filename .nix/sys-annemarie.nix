@@ -1,3 +1,7 @@
+#
+# Annemarie is a Samsung NP900X4C, circa late 20013.
+#
+
 { config, pkgs, ... }: {
 
   imports = [ ./sys-base.nix ];

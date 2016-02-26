@@ -1,3 +1,7 @@
+#
+# Renzo is a Dell XPS 13 non-touch, circa early 2016.
+#
+
 { config, pkgs, ... }: {
 
   imports = [ ./sys-base.nix ];
