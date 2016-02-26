@@ -1,5 +1,6 @@
 /config/idea14.key
 /config/idea15.key
+/config/eval/
 /config/fileTemplates/
 /config/options/applicationLibraries.xml
 /config/options/ClojureUsageStatistics.xml
