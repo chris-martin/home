@@ -82,8 +82,10 @@
         transmission_gtk
 
         # Video/audio
+        alsamixer
         ffmpeg
         gnome3.totem
+        gstreamer
         vlc
 
         fish
@@ -91,10 +93,14 @@
         jq
         meld
         nix-repl
+        pciutils
         psmisc
         skype
         sshfsFuse
+        texLiveFull
         tmux
+        which
+        vim
         xclip
         xorg.xkill
       ];
