@@ -20,11 +20,14 @@
     };
     kernelPackages = pkgs.linuxPackages_4_4;
     kernelModules  = ["snd-hda-intel"];
+    extraKernelParams = ["pci=nocrs"];
   };
 
   services.xserver.synaptics = {
     enable      = true;
-    accelFactor = "0.04";
+    minSpeed    = "0.8";
+    maxSpeed    = "1.4";
+    accelFactor = "0.05";
   };
 
   environment.etc."modprobe.d/alsa-base.conf".text = ''
