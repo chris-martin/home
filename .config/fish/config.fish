@@ -7,8 +7,6 @@ set PATH                 \
   $HOME/.nix-profile/bin \
   $PATH
 
-set -x ANDROID_HOME $HOME/lib/android
-
 set    EDITOR           emacsclient
 set -x ALTERNATE_EDITOR emacs-nw
 
