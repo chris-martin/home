@@ -1,10 +1,5 @@
 set --erase fish_greeting
 
-set -x NIXOS_CONFIG   $HOME/.nix/sys.nix
-set -x NIXPKGS_ALL    $HOME/git/nixpkgs
-
-set -x NIX_PATH nixpkgs=$NIXPKGS_ALL:nixos-config=$NIXOS_CONFIG
-
 set PATH                 \
   $HOME/.bin             \
   $HOME/.local/bin       \
