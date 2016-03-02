@@ -24,7 +24,8 @@
 
 ;; Set the default font
 (if (not (daemonp))
-  (let ((f "DejaVu Sans Mono Book 10"))
+    (let* ((font-size (if (string= system-name "renzo") "14" "10"))
+           (f (concat "DejaVu Sans Mono Book " font-size)))
     (add-to-list 'default-frame-alist `(font . ,f))
     (set-face-attribute 'default t :font f)))
 
