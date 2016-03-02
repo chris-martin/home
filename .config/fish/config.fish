@@ -9,10 +9,22 @@ set PATH                 \
   $HOME/.nix-profile/bin \
   $PATH
 
-set    EDITOR           emacsclient
-set -x ALTERNATE_EDITOR emacs-nw
+function use_emacs
+  set EDITOR emacsclient
+  set -x ALTERNATE_EDITOR emacs-nw
+end
 
-alias e emacsclient
+function use_vim
+  set EDITOR vim
+end
+
+switch (echo $HOSTNAME)
+  case annemarie ; use_emacs
+  case renzo     ; use_emacs
+  case mandeeza  ; use_vim
+end
+
+alias e $EDITOR
 
 # https://twitter.com/chris__martin/status/420992421673988096
 alias such git
