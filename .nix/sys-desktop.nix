@@ -67,7 +67,7 @@
     unclutter.enable = true;
   };
 
-  config.systemd.user.services.emacs = {
+  nixpkgs.config.systemd.user.services.emacs = {
 
     description = "Emacs Daemon";
 
@@ -90,7 +90,7 @@
     wantedBy = [ "default.target" ];
   };
 
-  config.systemd.services.emacs.enable = true;
+  nixpkgs.config.systemd.services.emacs.enable = true;
 
   virtualisation = {
 

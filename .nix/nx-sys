@@ -1,4 +1,17 @@
 #!/usr/bin/env bash
 
-sudo env NIXOS_CONFIG=$HOME/.nix/sys.nix \
-  nixos-rebuild -I $HOME/.nix/sys-pkgs switch "$@"
+PKGS_FORK=$HOME/git/nixpkgs
+PKGS_STABLE=$HOME/.nix-defexpr/channels/nixos-15.09
+
+case "$HOSTNAME" in
+  annemarie ) PKGS=$PKGS_FORK   ;;
+  renzo     ) PKGS=$PKGS_FORK   ;;
+  mandeeza  ) PKGS=$PKGS_STABLE ;;
+esac
+
+echo "Package directory: " $PKGS
+echo
+
+sudo env NIXOS_CONFIG=$HOME/.nix/sys-renzo.nix \
+         HOSTNAME=$HOSTNAME \
+  nixos-rebuild -I $PKGS switch "$@"
