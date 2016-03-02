@@ -23,7 +23,7 @@ with rec {
 
   all = with nixos-stable; buildEnv {
     name = "all";
-    paths = [ stable unstable ];
+    paths = [ stable ];
   };
 
   stable = with nixos-stable; buildEnv {
