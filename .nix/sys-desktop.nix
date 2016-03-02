@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }: {
 
-  imports = [ ./hardware.nix ./secret.nix ];
+  imports = [ ./sys-base.nix ];
 
   system.stateVersion = "unstable";
 
@@ -24,17 +24,11 @@
     #firewall.allowedTCPPorts = [ 8080 ];
   };
 
-  # Select internationalisation properties.
-  i18n = {
-    consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "us";
-    defaultLocale = "en_US.UTF-8";
-  };
+  i18n.consoleFont = "Lat2-Terminus16";
+  i18n.consoleKeyMap = "us";
 
   time.timeZone = "America/Los_Angeles";
   #time.timeZone = "America/New_York";
-
-  nixpkgs.config.allowUnfree = true;
 
   environment.etc."fuse.conf".text = ''
     user_allow_other
@@ -122,7 +116,6 @@
     ];
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.chris = {
     isNormalUser = true;
     description = "Chris Martin";
@@ -132,8 +125,6 @@
     ];
     uid = 1000;
   };
-
-  users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
   system.activationScripts.dockerGc = ''
     echo ".*-data(_[0-9]+)?" > /etc/docker-gc-exclude-containers
