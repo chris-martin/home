@@ -1,7 +1,8 @@
 /hardware.nix
 /secret.nix
 
-# sys.nix should be a symlink to the respective machine's config
+# These should be symlinks to the appropriate configs
 /sys.nix
+/user.nix
 
 /.idea
