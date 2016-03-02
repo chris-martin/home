@@ -2,7 +2,6 @@ with rec {
   pkgs = nixos-stable // {
     all      = all;
     stable   = stable;
-    unstable = unstable;
   };
 
   channelPath = name:
