@@ -102,17 +102,16 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.chris = {
-    name  = "chris";
-    group = "users";
+    isNormalUser = true;
+    description = "Chris Martin";
     extraGroups = [
       "audio" "disk" "docker" "networkmanager" "plugdev"
       "systemd-journal" "wheel" "vboxusers" "video"
     ];
-    createHome = true;
-    uid   = 1000;
-    home  = "/home/chris";
-    shell = "/run/current-system/sw/bin/bash";
+    uid = 1000;
   };
+
+  users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
   system.activationScripts.dockerGc = ''
     echo ".*-data(_[0-9]+)?" > /etc/docker-gc-exclude-containers
