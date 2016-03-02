@@ -47,6 +47,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.mozilla" />
       <excludeFolder url="file://$MODULE_DIR$/.nix-defexpr" />
       <excludeFolder url="file://$MODULE_DIR$/.nix-profile" />
+      <excludeFolder url="file://$MODULE_DIR$/.nix/sys-pkgs" />
       <excludeFolder url="file://$MODULE_DIR$/.node-gyp" />
       <excludeFolder url="file://$MODULE_DIR$/.npm" />
       <excludeFolder url="file://$MODULE_DIR$/.otto.d" />
