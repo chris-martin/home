@@ -59,21 +59,9 @@ with rec {
     paths = [
 
       (emacsWithPackages (x: with x; [   # Emacs
-        diff-hl
-        flycheck
-        flycheck-haskell
-        melpaPackages.helm
-        melpaPackages.helm-projectile
-        ido-ubiquitous
-        markdown-mode
         magit
         mwim
-        neotree
-        nix-mode
-        projectile
-        tabbar
         ws-butler
-        yaml-mode
       ]))
 
     ];
