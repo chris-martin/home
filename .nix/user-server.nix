@@ -54,17 +54,4 @@ with rec {
     ];
   };
 
-  unstable = with nixos-unstable; buildEnv {
-    name = "unstable";
-    paths = [
-
-      (emacsWithPackages (x: with x; [   # Emacs
-        magit
-        mwim
-        ws-butler
-      ]))
-
-    ];
-  };
-
 }; pkgs
