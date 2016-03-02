@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }: {
 
-  imports = [ ./sys-base.nix ];
+  imports = [ ./sys-desktop.nix ];
 
   networking.hostName = "renzo";
 

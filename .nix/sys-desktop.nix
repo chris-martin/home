@@ -1,3 +1,7 @@
+#
+# The base config for desktops machines, with GUI stuff.
+#
+
 { config, pkgs, ... }: {
 
   imports = [ ./hardware.nix ./secret.nix ];
