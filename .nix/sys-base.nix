@@ -37,7 +37,7 @@
   '';
 
   environment.systemPackages = with pkgs; [
-    android-udev-rules curl docker emacs
+    android-udev-rules curl docker
     gparted gptfdisk htop lsof man_db
     openssl tree vim wget which
   ];
@@ -68,13 +68,6 @@
 
     unclutter.enable = true;
   };
-
-  systemd.user.services.emacs = import ./emacs-daemon.nix {
-    config = config;
-    pkgs   = pkgs;
-  };
-
-  systemd.services.emacs.enable = true;
 
   virtualisation = {
 
