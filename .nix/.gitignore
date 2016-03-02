@@ -1,8 +1,11 @@
-/hardware.nix
-/secret.nix
-
-# These should be symlinks to the appropriate configs
+# symlinks to the appropriate configs
 /sys.nix
 /user.nix
+
+# symlink to the nixpkgs dir that sys.nix is built from
+/sys-pkgs
+
+/hardware.nix
+/secret.nix
 
 /.idea
