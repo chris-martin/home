@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 
-  imports = [ ./sys-base.nix ];
+  imports = [ ./sys-server.nix ];
 
   networking.hostName = "mandeeza";
 
