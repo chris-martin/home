@@ -58,7 +58,6 @@ with rec {
     name = "unstable";
     paths = [
 
-      # Editors
       (emacsWithPackages (x: with x; [   # Emacs
         diff-hl
         flycheck

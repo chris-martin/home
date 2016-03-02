@@ -115,7 +115,6 @@ with rec {
       bridge-utils                       # Docker
       python27Packages.docker_compose
 
-      # Editors
       (emacsWithPackages (x: with x; [   # Emacs
         diff-hl
         flycheck
