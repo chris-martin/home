@@ -12,6 +12,6 @@ esac
 echo "Package directory: " $PKGS
 echo
 
-sudo env NIXOS_CONFIG=$HOME/.nix/sys-renzo.nix \
+sudo env NIXOS_CONFIG=$HOME/.nix/sys.nix \
          HOSTNAME=$HOSTNAME \
   nixos-rebuild -I $PKGS switch "$@"
