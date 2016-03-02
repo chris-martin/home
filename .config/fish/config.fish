@@ -1,5 +1,7 @@
 set --erase fish_greeting
 
+set HOSTNAME (hostname)
+
 set PATH                 \
   $HOME/.bin             \
   $HOME/.local/bin       \
