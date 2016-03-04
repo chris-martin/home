@@ -10,12 +10,12 @@ set PATH                 \
   $PATH
 
 function use_emacs
-  set EDITOR emacsclient
-  set -x ALTERNATE_EDITOR emacs-nw
+  set -g EDITOR emacsclient
+  set -g -x ALTERNATE_EDITOR emacs-nw
 end
 
 function use_vim
-  set EDITOR vim
+  set -g EDITOR vim
 end
 
 switch (echo $HOSTNAME)
