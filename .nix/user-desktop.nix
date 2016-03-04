@@ -35,8 +35,6 @@ with rec {
 
       zip unzip gnome3.file-roller       # Archives
 
-      awscli packer                      # AWS
-
       keepassx2 truecrypt                # Crypto
 
       sassc                              # CSS
@@ -60,14 +58,7 @@ with rec {
       gnome3.polari                      # IRC
       kde4.konversation
 
-      nodejs                             # JS
-      nodePackages.bower
-      nodePackages.grunt-cli
-
       jq                                 # JSON
-
-      ant gradle leiningen               # JVM
-      openjdk8 sbt scala maven
 
       texLiveFull                        # LaTeX
 
@@ -78,13 +69,6 @@ with rec {
       tesseract                          # OCR
 
       gparted gptfdisk                   # Partitioning
-
-      python27Full                       # Python
-      python3
-      python34Packages.ipython
-      pythonPackages.virtualenv
-
-      ruby bundler                       # Ruby
 
       scrot gnome3.gnome-screenshot      # Screenshots
 
@@ -113,7 +97,6 @@ with rec {
       chromium                           # Chromium
 
       bridge-utils                       # Docker
-      python27Packages.docker_compose
 
       (emacsWithPackages (x: with x; [   # Emacs
         diff-hl
