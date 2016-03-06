@@ -26,8 +26,8 @@
 (if (not (daemonp))
     (let* ((font-size (if (string= system-name "renzo") "14" "10"))
            (f (concat "DejaVu Sans Mono Book " font-size)))
-    (add-to-list 'default-frame-alist `(font . ,f))
-    (set-face-attribute 'default t :font f)))
+      (add-to-list 'default-frame-alist `(font . ,f))
+      (set-face-attribute 'default t :font f)))
 
 (add-hook 'after-init-hook 'global-flycheck-mode)
 
@@ -57,8 +57,10 @@
        (concat "%" (number-to-string w) "d ")) line) 'face 'linum)))
 
 ;; Automatically save the desktop (open tabs, etc)
-(setq desktop-save t)
-(desktop-save-mode 1)
+(if (not (daemonp))
+  (progn
+    (setq desktop-save t)
+    (desktop-save-mode 1)))
 
 ;; Make backup files even in version-controlled directories
 (setq vc-make-backup-files t)

@@ -35,7 +35,7 @@
   '';
 
   environment.systemPackages = with pkgs; [
-    android-udev-rules curl docker
+    android-udev-rules curl docker emacs
     gparted gptfdisk htop lsof man_db
     openssl tree vim wget which
   ];
@@ -67,7 +67,7 @@
     unclutter.enable = true;
   };
 
-  nixpkgs.config.systemd.user.services.emacs = {
+  systemd.user.services.emacs = {
 
     description = "Emacs Daemon";
 
@@ -82,7 +82,7 @@
 
     serviceConfig = {
       Type      = "forking";
-      ExecStart = "${pkgs.bash}/bin/bash -c 'source ${config.system.build.setEnvironment} emacs --daemon --no-desktop'";
+      ExecStart = "${pkgs.bash}/bin/bash -c 'source ${config.system.build.setEnvironment}; emacs --daemon --no-desktop'";
       ExecStop  = "${pkgs.emacs}/bin/emacsclient --eval '(kill-emacs)'";
       Restart   = "always";
     };
@@ -90,7 +90,7 @@
     wantedBy = [ "default.target" ];
   };
 
-  nixpkgs.config.systemd.services.emacs.enable = true;
+  systemd.services.emacs.enable = true;
 
   virtualisation = {
 
