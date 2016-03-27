@@ -4,14 +4,13 @@ with rec {
     stable   = stable;
   };
 
-  channelPath = name:
-    (builtins.getEnv "HOME") + "/.nix-defexpr/channels/"
-    + name + "/pkgs/top-level/all-packages.nix";
+  channelPath = name: file:
+    "${builtins.getEnv "HOME"}/.nix-defexpr/channels/${name}/pkgs/top-level/${file}";
 
-  channel = name: import (channelPath name) { config = config; };
+  channel = name: file: import (channelPath name file) { config = config; };
 
-  nixos-stable   = channel "nixos-15.09";
-  nixos-unstable = channel "nixos-unstable";
+  nixos-stable   = channel "nixos-15.09" "all-packages.nix";
+  nixos-unstable = channel "nixos-unstable" "default.nix";
 
   config.allowUnfree = true;
 
