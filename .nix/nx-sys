@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 PKGS_FORK=$HOME/git/nixpkgs
+PKGS_UNSTABLE=$HOME/.nix-defexpr/channels/nixos-unstable
 PKGS_STABLE=$HOME/.nix-defexpr/channels/nixos-15.09
 
 case "$HOSTNAME" in
-  annemarie ) PKGS=$PKGS_FORK   ;;
-  renzo     ) PKGS=$PKGS_FORK   ;;
-  mandeeza  ) PKGS=$PKGS_STABLE ;;
+  annemarie ) PKGS=$PKGS_UNSTABLE ;;
+  renzo     ) PKGS=$PKGS_UNSTABLE ;;
+  mandeeza  ) PKGS=$PKGS_STABLE   ;;
 esac
 
 echo "Package directory: " $PKGS
