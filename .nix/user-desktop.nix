@@ -50,6 +50,7 @@ with rec {
       steam minecraft                    # Gaming
 
       gitAndTools.gitFull                # Git
+      gitAndTools.hub
 
       curl wget                          # HTTP
 
