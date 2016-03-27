@@ -63,6 +63,8 @@ with rec {
 
       texLiveFull                        # LaTeX
 
+      moc pithos                         # Music
+
       nmap                               # Networking
 
       nix-repl                           # Nix
