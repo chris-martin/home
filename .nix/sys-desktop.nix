@@ -37,7 +37,7 @@
   environment.systemPackages = with pkgs; [
     android-udev-rules curl docker emacs
     gparted gptfdisk htop lsof man_db
-    openssl tree vim wget which
+    openssl tree vim wget which nodePackages.peerflix
   ];
 
   services = {
