@@ -48,9 +48,6 @@ with rec {
 
       steam minecraft                    # Gaming
 
-      gitAndTools.gitFull                # Git
-      gitAndTools.hub
-
       curl wget                          # HTTP
 
       gimp imagemagick inkscape          # Image editing
@@ -117,6 +114,9 @@ with rec {
         ws-butler
         yaml-mode
       ]))
+
+      gitAndTools.gitFull                # Git
+      gitAndTools.hub
 
       haskellPackages.cabal-install      # Haskell
       haskellPackages.stack
