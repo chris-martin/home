@@ -31,6 +31,8 @@
 
 (add-hook 'after-init-hook 'global-flycheck-mode)
 
+(setq haskell-stylish-on-save t)
+
 ;; Projectile - projects - http://batsov.com/projectile/
 (add-hook 'after-init-hook 'projectile-global-mode)
 (setq projectile-switch-project-action 'projectile-dired)
