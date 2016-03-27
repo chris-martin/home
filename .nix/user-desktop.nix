@@ -119,7 +119,9 @@ with rec {
         yaml-mode
       ]))
 
-      haskellPackages.stack              # Haskell
+      haskellPackages.cabal-install      # Haskell
+      haskellPackages.stack
+      haskellPackages.stylish-haskell
 
       idea."idea-ultimate"               # IntelliJ
     ];
