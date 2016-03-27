@@ -40,6 +40,7 @@ alias merge  'git merge'
 alias pull   'git pull'
 alias push   'git push'
 alias rebase 'git rebase'
+alias revert 'git revert'
 alias show   'git show'
 alias stash  'git stash'
 
