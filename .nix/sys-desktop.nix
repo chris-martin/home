@@ -40,32 +40,31 @@
     openssl tree vim wget which nodePackages.peerflix
   ];
 
-  services = {
+  services.nixosManual.showManual = true;
 
-    nixosManual.showManual = true;
-
-    printing = {
-      enable = true;
-      drivers = with pkgs; [ gutenprint hplipWithPlugin ];
-    };
-
-    xserver = {
-      enable = true;
-      layout = "us";
-      desktopManager.gnome3.enable = true;
-      displayManager.gdm.enable    = true;
-    };
-
-    redshift = {
-      enable = true;
-
-      # San Mateo
-      latitude  = "37.56";
-      longitude = "-122.33";
-    };
-
-    unclutter.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [ gutenprint hplipWithPlugin ];
   };
+
+  services.xserver = {
+    enable = true;
+    layout = "us";
+    desktopManager.gnome3.enable = true;
+    displayManager.gdm.enable    = true;
+  };
+
+  services.redshift = {
+    enable = true;
+
+    # San Mateo
+    latitude  = "37.56";
+    longitude = "-122.33";
+  };
+
+  services.unclutter.enable = true;
+
+  services.peerflix.enable = true;
 
   systemd.user.services.emacs = {
 
@@ -92,19 +91,16 @@
 
   systemd.services.emacs.enable = true;
 
-  virtualisation = {
+  virtualisation.virtualbox.host = {
+    enable              = true;
+    enableHardening     = false;
+    addNetworkInterface = true;
+  };
 
-    virtualbox.host = {
-      enable              = true;
-      enableHardening     = false;
-      addNetworkInterface = true;
-    };
-
-    docker = {
-      enable           = true;
-      storageDriver    = "devicemapper";
-      socketActivation = false;
-    };
+  virtualisation.docker = {
+    enable           = true;
+    storageDriver    = "devicemapper";
+    socketActivation = false;
   };
 
   fonts = {
