@@ -120,9 +120,9 @@ with rec {
       haskellPackages.stack
       haskellPackages.stylish-haskell
 
-      idea."idea-ultimate"               # IntelliJ
-
       pithos                             # Music
+
+      ((callPackage ./idea/default.nix { }).idea15-ultimate)
     ];
   };
 
