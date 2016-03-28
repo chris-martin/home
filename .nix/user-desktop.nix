@@ -57,8 +57,6 @@ with rec {
 
       jq                                 # JSON
 
-      texLiveFull                        # LaTeX
-
       moc pithos                         # Music
 
       nmap                               # Networking
