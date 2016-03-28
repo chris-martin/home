@@ -57,7 +57,7 @@ with rec {
 
       jq                                 # JSON
 
-      moc pithos                         # Music
+      moc                                # Music
 
       nmap                               # Networking
 
@@ -121,6 +121,8 @@ with rec {
       haskellPackages.stylish-haskell
 
       idea."idea-ultimate"               # IntelliJ
+
+      pithos                             # Music
     ];
   };
 
