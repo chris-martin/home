@@ -29,6 +29,10 @@
       (add-to-list 'default-frame-alist `(font . ,f))
       (set-face-attribute 'default t :font f)))
 
+;; Disable elisp flycheck - don't know why, but it always generates errors.
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(emacs-lisp emacs-lisp-checkdoc)))
+
 (add-hook 'after-init-hook 'global-flycheck-mode)
 
 (setq haskell-stylish-on-save t)
