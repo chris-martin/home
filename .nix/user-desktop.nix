@@ -96,6 +96,7 @@ with rec {
       bridge-utils                       # Docker
 
       (emacsWithPackages (x: with x.melpaPackages; [   # Emacs
+        back-button
         diff-hl
         elixir-mode
         flycheck
