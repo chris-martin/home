@@ -8,14 +8,15 @@
 
   system.stateVersion = "unstable";
 
-  hardware = {
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+    support32Bit = true; # needed for Steam
+  }
 
-    pulseaudio.enable = true;
+  hardware.bluetooth.enable = true;
 
-    # Needed for Steam
-    opengl.driSupport32Bit = true;
-    pulseaudio.support32Bit = true;
-  };
+  hardware.opengl.driSupport32Bit = true; # needed for Steam
 
   networking = {
     networkmanager.enable = true;
