@@ -126,6 +126,7 @@ with rec {
       haskellPackages.cabal-install      # Haskell
       haskellPackages.stack
       haskellPackages.stylish-haskell
+      haskellPackages.cabal2nix
 
       pithos                             # Music
 
