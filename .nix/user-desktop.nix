@@ -95,19 +95,26 @@ with rec {
 
       bridge-utils                       # Docker
 
-      (emacsWithPackages (x: with x; [   # Emacs
+      (emacsWithPackages (x: with x.melpaPackages; [   # Emacs
         diff-hl
+        elixir-mode
         flycheck
         flycheck-haskell
-        melpaPackages.helm
-        melpaPackages.helm-projectile
+        ghc
+        haskell-mode
+        helm
+        helm-projectile
         ido-ubiquitous
+        js2-mode
+        json-mode
         markdown-mode
         magit
         mwim
         neotree
+        nix-sandbox
         nix-mode
         projectile
+        python-mode
         tabbar
         ws-butler
         yaml-mode
