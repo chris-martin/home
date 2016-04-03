@@ -3,9 +3,11 @@
 (load-file "/home/chris/.emacs.d/conf/cursor.el")
 (load-file "/home/chris/.emacs.d/conf/file.el")
 (load-file "/home/chris/.emacs.d/conf/font.el")
-(load-file "/home/chris/.emacs.d/conf/tabbar.el")
 (load-file "/home/chris/.emacs.d/conf/markdown.el")
 (load-file "/home/chris/.emacs.d/conf/whitespace.el")
+
+(if (not (daemonp))
+    (load-file "/home/chris/.emacs.d/conf/tabbar.el"))
 
 ;; Append ~/.bin to the executable path.
 (setenv "PATH" (concat "/home/chris/.bin:" (getenv "PATH")))
