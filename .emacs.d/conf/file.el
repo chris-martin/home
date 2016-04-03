@@ -1,9 +1,3 @@
-;;; package --- summary
-
-;;; Commentary:
-
-;;; Code:
-
 ;; https://stackoverflow.com/questions/384284/how-do-i-rename-an-open-file-in-emacs
 ;; http://steve.yegge.googlepages.com/my-dot-emacs-file
 (defun rename-file-and-buffer (new-name)
@@ -49,5 +43,3 @@
           (delete-file filename)
           (message "Deleted file %s" filename)
           (kill-buffer))))))
-
-;;; file.el ends here

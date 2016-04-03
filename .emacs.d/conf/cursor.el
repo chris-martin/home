@@ -1,9 +1,3 @@
-;;; package --- summary
-
-;;; Commentary:
-
-;;; Code:
-
 ;; Set cursor to a thin vertical bar
 (setq-default cursor-type 'bar)
 
@@ -18,5 +12,3 @@
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)) ; one line at a time
       mouse-wheel-progressive-speed nil ; no acceleration
       scroll-step 1) ; keyboard scroll one line at a time
-
-;;; cursor.el ends here

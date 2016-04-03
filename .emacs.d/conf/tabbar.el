@@ -1,9 +1,3 @@
-;;; package --- summary
-
-;;; Commentary:
-
-;;; Code:
-
 (add-hook 'after-init-hook 'tabbar-mode)
 
 (global-set-key [M-left] 'tabbar-backward-tab)
@@ -26,6 +20,3 @@
  (lambda ()
    (list
      (find-tabbar-group-dir (expand-file-name default-directory)))))
-
-(provide 'tabbar)
-;;; tabbar.el ends here

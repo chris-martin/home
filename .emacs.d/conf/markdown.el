@@ -1,10 +1,4 @@
-;;; package --- summary
-
 ;; Markdown - http://jblevins.org/projects/markdown-mode/
-
-;;; Commentary:
-
-;;; Code:
 
 (eval-when-compile (require 'cl))
 
@@ -18,5 +12,3 @@
   (lambda ()
     (define-key markdown-mode-map (kbd "M-<left>" ) nil)
     (define-key markdown-mode-map (kbd "M-<right>") nil)))
-
-;;; markdown.el ends here

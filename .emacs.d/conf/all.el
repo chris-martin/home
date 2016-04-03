@@ -1,9 +1,3 @@
-;;; all.el --- emacs config
-
-;;; Commentary:
-
-;;; Code:
-
 (eval-when-compile (require 'cl))
 
 (load-file "/home/chris/.emacs.d/conf/cursor.el")
@@ -109,6 +103,3 @@
       (centered-window-mode)))
 
 (if (not (daemonp)) (global-hl-line-mode))
-
-(provide '.emacs)
-;;; all.el ends here

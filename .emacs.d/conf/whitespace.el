@@ -1,9 +1,3 @@
-;;; package --- summary
-
-;;; Commentary:
-
-;;; Code:
-
 ;; Prefer spaces to tabs
 (setq-default indent-tabs-mode nil)
 
@@ -18,5 +12,3 @@
 (if (daemonp)
     (add-hook 'before-make-frame-hook 'ws-butler-add-hooks)
   (ws-butler-add-hooks))
-
-;;; whitespace.el ends here
