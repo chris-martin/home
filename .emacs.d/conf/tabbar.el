@@ -30,13 +30,14 @@
   (set-face-attribute face nil
                       :background bg
                       :foreground fg
+                      :underline nil
                       :box `(:line-width 4 :color ,bg :style nil)))
 
 (set-tabbar-face 'tabbar-default    "gray10" "#ddd")
 (set-tabbar-face 'tabbar-unselected "gray10" "#ddd")
 (set-tabbar-face 'tabbar-selected   "black"  "gray65")
 (set-tabbar-face 'tabbar-modified   "blue"   "#ddd")
-(set-tabbar-face 'tabbar-highlight  "black"  "#gray75")
+(set-tabbar-face 'tabbar-highlight  "black"  "gray75")
 (set-tabbar-face 'tabbar-button     "gray10" "#ddd")
 (set-tabbar-face 'tabbar-separator  "black"  "#ddd")
 
