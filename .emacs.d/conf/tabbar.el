@@ -29,7 +29,7 @@
 ;; number of buffers. We could probably do this more intelligently by periodically
 ;; checking the complete list of buffers and cleanng up ones that no longer exist,
 ;; or just by periodically flushing the whole cache.
-(defconst group-table (make-hash-table))
+(defconst group-table (make-hash-table :test #'equal))
 
 ;; Return (f &args) and store the result in the table, or use an existing value
 ;; from the table if it's there.
