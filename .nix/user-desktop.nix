@@ -51,6 +51,7 @@ with rec {
       curl wget                          # HTTP
 
       gimp imagemagick inkscape          # Image editing
+      kde4.kcolorchooser
 
       gnome3.polari                      # IRC
       kde4.konversation
