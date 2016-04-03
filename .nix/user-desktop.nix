@@ -101,6 +101,7 @@ with rec {
         centered-window-mode
         diff-hl
         elixir-mode
+        fill-column-indicator
         flycheck
         flycheck-haskell
         ghc

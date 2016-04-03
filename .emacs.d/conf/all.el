@@ -35,6 +35,8 @@
 
 (setq haskell-stylish-on-save t)
 
+(add-hook 'python-mode-hook 'fci-mode)
+
 ;; Projectile - projects - http://batsov.com/projectile/
 (add-hook 'after-init-hook 'projectile-global-mode)
 (setq projectile-switch-project-action 'projectile-dired)
