@@ -9,5 +9,6 @@
 !/fish/config.fish
 !/git/
 /git/gitk
+!/sublime-text-2/
 !/user-dirs.conf
 !/user-dirs.dirs
