@@ -109,5 +109,12 @@
 (helm-mode 1)
 (helm-projectile-on)
 
+(if (not (daemonp))
+    (progn
+      (require 'centered-window-mode)
+      (centered-window-mode)))
+
+(if (not (daemonp)) (global-hl-line-mode))
+
 (provide '.emacs)
 ;;; all.el ends here

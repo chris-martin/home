@@ -97,6 +97,7 @@ with rec {
 
       (emacsWithPackages (x: with x.melpaPackages; [   # Emacs
         back-button
+        centered-window-mode
         diff-hl
         elixir-mode
         flycheck
