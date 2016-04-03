@@ -118,6 +118,7 @@ with rec {
         nix-mode
         projectile
         python-mode
+        scss-mode
         tabbar
         ws-butler
         yaml-mode
