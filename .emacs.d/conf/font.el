@@ -2,7 +2,7 @@
 (defvar font-face-sans "Lato")
 
 (defvar font-size-low-dpi    10)
-(defvar font-size-medium-dpi 14)
+(defvar font-size-medium-dpi 13)
 
 (defvar font-size
   (if (string= system-name "renzo")
