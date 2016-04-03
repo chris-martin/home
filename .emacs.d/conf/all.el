@@ -8,6 +8,7 @@
 
 (load-file "/home/chris/.emacs.d/conf/cursor.el")
 (load-file "/home/chris/.emacs.d/conf/file.el")
+(load-file "/home/chris/.emacs.d/conf/font.el")
 (load-file "/home/chris/.emacs.d/conf/tabbar.el")
 (load-file "/home/chris/.emacs.d/conf/markdown.el")
 (load-file "/home/chris/.emacs.d/conf/whitespace.el")
@@ -21,13 +22,6 @@
 
 ;; Save Emacs command history so it persists across sessions
 (savehist-mode 1)
-
-;; Set the default font
-(if (not (daemonp))
-    (let* ((font-size (if (string= system-name "renzo") "14" "10"))
-           (f (concat "DejaVu Sans Mono Book " font-size)))
-      (add-to-list 'default-frame-alist `(font . ,f))
-      (set-face-attribute 'default t :font f)))
 
 ;; Disable elisp flycheck - don't know why, but it always generates errors.
 (with-eval-after-load 'flycheck
