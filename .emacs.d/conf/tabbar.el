@@ -5,18 +5,24 @@
 (global-set-key [M-left] 'tabbar-backward-tab)
 (global-set-key [M-right] 'tabbar-forward-tab)
 
-(defun find-tabbar-group-dir (dir)
-  "Search up the directory tree looking for a tabbar group root."
-  (let* ((dir (expand-file-name dir)))
+(defun find-tabbar-group-dir (dir buffer-name)
+  "Search up the directory tree looking for a tabbar group root.
+   Returns a list of tab groups."
+  (let ((dir (expand-file-name dir)))
     (cond
-     ((not dir)                                          "emacs")
-     ((string-equal "*" (substring (buffer-name) 0 1))   "emacs")
-     ((string= dir "/")                                  "no-group")
+     ((not dir)                                       nil)
+     ((string-equal "*" (substring buffer-name 0 1))  nil)
+     ((string= dir "/")                               nil)
 
-     ((file-exists-p (concat dir "/.git"))            (directory-file-name dir))
-     ((file-exists-p (concat dir "/.projectile"))     (directory-file-name dir))
+     ((is-project-root dir) (list (directory-file-name dir)))
 
-     (t (find-tabbar-group-dir (directory-file-name (file-name-directory dir)))))))
+     (t (find-tabbar-group-dir
+         (directory-file-name (file-name-directory dir))
+         buffer-name)))))
+
+(defun is-project-root (dir)
+  (or (file-exists-p (concat dir "/.git"))
+      (file-exists-p (concat dir "/.projectile"))))
 
 ;; Cached data for the tab group function. This never gets cleaned up, so it
 ;; does leak memory, but hopefully not significant unless we open an absurd
@@ -25,20 +31,29 @@
 ;; or just by periodically flushing the whole cache.
 (defconst group-table (make-hash-table))
 
-;; Return (f x) and store the result in the table, or use an existing value
-;; from the table if it's there. We're not using the skeeto's memoize.el for
-;; this, because it isn't fast enough.
-(defun cache (f x table)
-  (or (gethash x table)
-      (let ((y (funcall f x)))
-        (progn (puthash x y table) y))))
+;; Return (f &args) and store the result in the table, or use an existing value
+;; from the table if it's there.
+;;
+;; Values are stored in the table as the second item in a list, to work around
+;; the issue that elisp hash tables don't distinguish a nil mapping from a
+;; missing mapping.
+;;
+;; We're not using the skeeto's memoize.el for this, because it isn't fast enough.
+(defun cache (table f &rest args)
+  (let ((y-wrapper (gethash args table)))
+    (if y-wrapper
+        (car (cdr y-wrapper))
+      (let ((y (apply f args)))
+        (progn
+          (puthash args (list t y) table)
+          y)))))
 
 ;; We memoize this function because it's called often and requires disk access,
 ;; which is noticeably slow if some files are under network mount.
 (setq
  tabbar-buffer-groups-function
  (lambda ()
-   (list (cache 'find-tabbar-group-dir default-directory group-table))))
+   (cache group-table 'find-tabbar-group-dir default-directory (buffer-name))))
 
 (setq tabbar-use-images nil)
 
