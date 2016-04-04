@@ -3,6 +3,7 @@
 (load-file "/home/chris/.emacs.d/conf/cursor.el")
 (load-file "/home/chris/.emacs.d/conf/file.el")
 (load-file "/home/chris/.emacs.d/conf/font.el")
+(load-file "/home/chris/.emacs.d/conf/haskell.el")
 (load-file "/home/chris/.emacs.d/conf/markdown.el")
 (load-file "/home/chris/.emacs.d/conf/whitespace.el")
 (load-file "/home/chris/.emacs.d/conf/window.el")
@@ -30,11 +31,6 @@
         (lambda (command) (apply 'nix-shell-command (nix-current-sandbox) command))
       flycheck-executable-find
         (lambda (cmd) (nix-executable-find (nix-current-sandbox) cmd)))
-
-(setq haskell-process-wrapper-function
-  (lambda (args) (apply 'nix-shell-command (nix-current-sandbox) args)))
-
-(setq haskell-stylish-on-save t)
 
 (add-hook 'python-mode-hook 'fci-mode)
 
