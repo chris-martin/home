@@ -121,3 +121,11 @@
          (w2b (window-buffer w2)))
     (set-window-buffer w1 w2b)
     (set-window-buffer w2 w1b)))
+
+(setq-default
+ fill-column 80
+ underline-minimum-offset 4
+ )
+
+;; Don't show a warning when using erase-buffer
+(put 'erase-buffer 'disabled nil)
