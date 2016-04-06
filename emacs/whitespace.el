@@ -1,5 +1,7 @@
-;; Prefer spaces to tabs
-(setq-default indent-tabs-mode nil)
+(setq-default
+ indent-tabs-mode nil   ; Prefer spaces to tabs
+ tab-width 4            ; Width of displayed tab characters
+ )
 
 ;; Ws-butler removes trailing whitespace from saved files.
 ;; Ws-butler causes Emacs --daemon to hang, so in daemon mode we set it

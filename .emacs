@@ -10,5 +10,6 @@
  )
 
 (custom-set-variables
+ '(tab-stop-list (number-sequence 4 200 4))
  '(warning-suppress-types (quote ((undo discard-info))))
  )
