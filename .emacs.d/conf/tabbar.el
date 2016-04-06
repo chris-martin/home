@@ -10,15 +10,21 @@
    Returns a list of tab groups."
   (let ((dir (expand-file-name dir)))
     (cond
-     ((not dir)                                       nil)
-     ((string-equal "*" (substring buffer-name 0 1))  nil)
-     ((string= dir "/")                               nil)
+     ((not dir)                               (list (concat dir buffer-name)))
+     ((is-ungrouped-buffer-name buffer-name)  (list buffer-name))
+     ((string= dir "/")                       (list (concat dir buffer-name)))
 
      ((is-project-root dir) (list (directory-file-name dir)))
 
      (t (find-tabbar-group-dir
          (directory-file-name (file-name-directory dir))
          buffer-name)))))
+
+(defun is-ungrouped-buffer-name (buffer-name)
+  (and
+    (string= "*" (substring buffer-name 0 1))
+    (not (string-equal buffer-name "*shell*"))
+))
 
 (defun is-project-root (dir)
   (or (file-exists-p (concat dir "/.git"))
