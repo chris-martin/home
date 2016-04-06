@@ -41,6 +41,13 @@
     openssl tree vim wget which nodePackages.peerflix
   ];
 
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    publish.enable = true;
+    publish.addresses = true;
+  };
+
   services.nixosManual.showManual = true;
 
   services.printing = {
