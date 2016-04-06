@@ -121,6 +121,7 @@ with rec {
         python-mode
         scss-mode
         tabbar
+        transpose-frame
         ws-butler
         yaml-mode
       ]))
