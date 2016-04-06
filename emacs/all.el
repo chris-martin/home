@@ -1,15 +1,11 @@
 (eval-when-compile (require 'cl))
 
-(load-file "/home/chris/.emacs.d/conf/cursor.el")
-(load-file "/home/chris/.emacs.d/conf/file.el")
-(load-file "/home/chris/.emacs.d/conf/font.el")
-(load-file "/home/chris/.emacs.d/conf/haskell.el")
-(load-file "/home/chris/.emacs.d/conf/markdown.el")
-(load-file "/home/chris/.emacs.d/conf/whitespace.el")
-(load-file "/home/chris/.emacs.d/conf/window.el")
-
-(if (not (daemonp))
-    (load-file "/home/chris/.emacs.d/conf/tabbar.el"))
+(dolist (name (append '("cursor" "file" "font" "haskell" "markdown"
+                        "whitespace" "window")
+                      (if (daemonp) nil '("tabbar"))))
+  (load-file
+   (expand-file-name (concat name ".el")
+                     (file-name-directory load-file-name))))
 
 ;; Append ~/.bin to the executable path.
 (setenv "PATH" (concat "/home/chris/.bin:" (getenv "PATH")))

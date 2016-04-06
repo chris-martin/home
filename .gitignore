@@ -5,7 +5,7 @@
 !/.config/
 !/dropbox
 !/.emacs
-!/.emacs.d/
+!/emacs/
 !/.gitignore/
 !/.gradle/
 !/.IntelliJIdea14/
