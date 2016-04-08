@@ -4,7 +4,7 @@
       (expand-file-name "custom.el"
                         (file-name-directory load-file-name)))
 
-(dolist (name (append '("autosave" "backup" "cursor" "file" "flycheck" "font" "haskell"
+(dolist (name (append '("autosave" "backup" "cursor" "file" "flycheck" "font" "git" "haskell"
                         "markdown" "mouse" "whitespace" "window")
                       (if (daemonp) nil '("tabbar"))))
   (load-file
@@ -26,11 +26,6 @@
 ;; Projectile - projects - http://batsov.com/projectile/
 (add-hook 'after-init-hook 'projectile-global-mode)
 (setq projectile-switch-project-action 'projectile-dired)
-
-;; Git commit mode - https://emacs.stackexchange.com/questions/17689
-(package-initialize) ; otherwise Emacs doesn't know were to find it
-(setq package-initialize-at-startup nil) ; don't do it again
-(global-git-commit-mode)
 
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key [mouse-8] 'previous-buffer)
