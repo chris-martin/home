@@ -4,16 +4,13 @@
       (expand-file-name "custom.el"
                         (file-name-directory load-file-name)))
 
-(dolist (name (append '("autosave" "backup" "cursor" "file" "flycheck" "font" "git" "haskell"
+(dolist (name (append '("autosave" "backup" "cursor" "exec-path"
+                        "file" "flycheck" "font" "git" "haskell"
                         "markdown" "mouse" "whitespace" "window")
                       (if (daemonp) nil '("tabbar"))))
   (load-file
    (expand-file-name (concat name ".el")
                      (file-name-directory load-file-name))))
-
-;; Append ~/.bin to the executable path.
-(setenv "PATH" (concat "/home/chris/.bin:" (getenv "PATH")))
-(setq exec-path (append '("/home/chris/.bin") exec-path))
 
 ;; Hide the icon toolbar
 (tool-bar-mode -1)
