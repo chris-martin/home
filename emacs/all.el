@@ -5,7 +5,7 @@
                         (file-name-directory load-file-name)))
 
 (dolist (name (append '("cursor" "file" "flycheck" "font" "haskell"
-                        "markdown" "whitespace" "window")
+                        "markdown" "mouse" "whitespace" "window")
                       (if (daemonp) nil '("tabbar"))))
   (load-file
    (expand-file-name (concat name ".el")
@@ -75,12 +75,6 @@
 ;; Follow symlinks without prompting
 ;; https://stackoverflow.com/questions/15390178
 (setq vc-follow-symlinks 1)
-
-;; Enable mouse integration - https://bitheap.org/mouseterm/
-(unless window-system
-  (xterm-mouse-mode 1)
-  (global-set-key [mouse-4] '(lambda () (interactive) (scroll-down 1)))
-  (global-set-key [mouse-5] '(lambda () (interactive) (scroll-up 1))))
 
 (global-set-key (kbd "C-/") 'comment-dwim)
 
