@@ -94,10 +94,7 @@
 
 (if (not (daemonp)) (global-hl-line-mode))
 
-(setq-default
- fill-column 80
- underline-minimum-offset 4
- )
+(setq-default fill-column 80)
 
 ;; Don't show a warning when using erase-buffer
 (put 'erase-buffer 'disabled nil)

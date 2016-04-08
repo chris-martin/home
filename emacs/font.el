@@ -20,6 +20,8 @@
     (set-face-attribute 'default t :font font-mono)
 ))
 
+(setq-default underline-minimum-offset 4)
+
 (defun font-neo-setup (window)
   (progn
     (set-face-attribute 'neo-banner-face      nil :font font-sans)
