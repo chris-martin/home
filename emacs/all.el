@@ -4,7 +4,7 @@
       (expand-file-name "custom.el"
                         (file-name-directory load-file-name)))
 
-(dolist (name (append '("cursor" "file" "flycheck" "font" "haskell"
+(dolist (name (append '("backup" "cursor" "file" "flycheck" "font" "haskell"
                         "markdown" "mouse" "whitespace" "window")
                       (if (daemonp) nil '("tabbar"))))
   (load-file
@@ -55,15 +55,6 @@
   (progn
     (setq desktop-save t)
     (desktop-save-mode 1)))
-
-;; Make backup files even in version-controlled directories
-(setq vc-make-backup-files t)
-
-;; Set directory for backup files
-;; http://ergoemacs.org/emacs/emacs_set_backup_into_a_directory.html
-(defvar backup-dir (expand-file-name "~/.emacs.d/backup/"))
-(make-directory backup-dir t)
-(setq backup-directory-alist `(("" . ,backup-dir)))
 
 ;; https://stackoverflow.com/questions/2020941
 ;; Set directory for autosave files
