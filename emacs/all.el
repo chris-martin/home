@@ -25,8 +25,6 @@
 (setq projectile-switch-project-action 'projectile-dired)
 
 (global-set-key [f8] 'neotree-toggle)
-(global-set-key [mouse-8] 'previous-buffer)
-(global-set-key [mouse-9] 'next-buffer)
 
 ;; cua provides ctrl+x,c,v bindings for cut,copy,paste.
 (if (not (daemonp)) (cua-mode t))
