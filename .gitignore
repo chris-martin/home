@@ -15,7 +15,7 @@
 !/.idea/
 !/.latexmkrc
 !/.local/
-!/.nix/
+!/nix/
 !/oseary
 !/.sbt/
 !/.tmux.conf
