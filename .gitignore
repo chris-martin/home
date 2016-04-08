@@ -7,6 +7,7 @@
 !/dropbox
 !/.emacs
 !/emacs/
+!/.emacs.d/
 !/.gitignore/
 !/.gradle/
 !/.IntelliJIdea14/

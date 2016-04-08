@@ -1,5 +1,9 @@
 (eval-when-compile (require 'cl))
 
+(setq custom-file
+      (expand-file-name "custom.el"
+                        (file-name-directory load-file-name)))
+
 (dolist (name (append '("cursor" "file" "font" "haskell" "markdown"
                         "whitespace" "window")
                       (if (daemonp) nil '("tabbar"))))
@@ -108,3 +112,5 @@
 
 ;; Don't show a warning when using erase-buffer
 (put 'erase-buffer 'disabled nil)
+
+(load custom-file)
