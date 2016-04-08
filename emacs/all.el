@@ -4,8 +4,8 @@
       (expand-file-name "custom.el"
                         (file-name-directory load-file-name)))
 
-(dolist (name (append '("cursor" "file" "font" "haskell" "markdown"
-                        "whitespace" "window")
+(dolist (name (append '("cursor" "file" "flycheck" "font" "haskell"
+                        "markdown" "whitespace" "window")
                       (if (daemonp) nil '("tabbar"))))
   (load-file
    (expand-file-name (concat name ".el")
@@ -20,17 +20,6 @@
 
 ;; Save Emacs command history so it persists across sessions
 (savehist-mode 1)
-
-;; Disable elisp flycheck - don't know why, but it always generates errors.
-(with-eval-after-load 'flycheck
-  (setq-default flycheck-disabled-checkers '(emacs-lisp emacs-lisp-checkdoc)))
-
-(add-hook 'after-init-hook 'global-flycheck-mode)
-
-(setq flycheck-command-wrapper-function
-        (lambda (command) (apply 'nix-shell-command (nix-current-sandbox) command))
-      flycheck-executable-find
-        (lambda (cmd) (nix-executable-find (nix-current-sandbox) cmd)))
 
 (add-hook 'python-mode-hook 'fci-mode)
 
