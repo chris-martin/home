@@ -5,8 +5,10 @@ with rec {
     unstable = unstable;
   };
 
+  home = builtins.getEnv "HOME";
+
   channelPath = name: file:
-    "${builtins.getEnv "HOME"}/.nix-defexpr/channels/${name}/pkgs/top-level/${file}";
+    "${home}/.nix-defexpr/channels/${name}/pkgs/top-level/${file}";
 
   channel = name: file: import (channelPath name file) { config = config; };
 
@@ -26,7 +28,7 @@ with rec {
     paths = [ stable unstable ];
   };
 
-  stable = with nixos-stable; buildEnv {
+  stable = let pkgs = nixos-stable; in with pkgs; buildEnv {
     name = "stable";
     paths = [
 
@@ -88,7 +90,7 @@ with rec {
     ];
   };
 
-  unstable = with nixos-unstable; buildEnv {
+  unstable = let pkgs = nixos-unstable; in with pkgs; buildEnv {
     name = "unstable";
     paths = [
 
@@ -96,35 +98,7 @@ with rec {
 
       bridge-utils                       # Docker
 
-      (emacsWithPackages (x: with x.melpaPackages; [   # Emacs
-        back-button
-        centered-window-mode
-        diff-hl
-        elixir-mode
-        fill-column-indicator
-        flycheck
-        flycheck-haskell
-        ghc
-        haskell-mode
-        helm
-        helm-projectile
-        ido-ubiquitous
-        js2-mode
-        json-mode
-        markdown-mode
-        magit
-        mwim
-        neotree
-        nix-sandbox
-        nix-mode
-        projectile
-        python-mode
-        scss-mode
-        tabbar
-        transpose-frame
-        ws-butler
-        yaml-mode
-      ]))
+      ((import "${home}/emacs/emacs.nix") pkgs) # Emacs
 
       gitAndTools.gitFull                # Git
       gitAndTools.hub
