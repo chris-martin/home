@@ -5,7 +5,7 @@
                         (file-name-directory load-file-name)))
 
 (dolist (name (append '("autosave" "backup" "cursor" "exec-path"
-                        "file" "flycheck" "font" "git" "haskell"
+                        "file" "flycheck" "font" "git" "haskell" "line-numbers"
                         "markdown" "mouse" "whitespace" "window")
                       (if (daemonp) nil '("tabbar"))))
   (load-file
@@ -30,17 +30,6 @@
 
 ;; cua provides ctrl+x,c,v bindings for cut,copy,paste.
 (if (not (daemonp)) (cua-mode t))
-
-(global-linum-mode 1) ; Show line numbers
-
-;; Format t line numbers right-aligned with padding
-(setq
- linum-format
- (lambda (line)
-   (propertize
-    (format
-     (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-       (concat "%" (number-to-string w) "d ")) line) 'face 'linum)))
 
 ;; Automatically save the desktop (open tabs, etc)
 (if (not (daemonp))
