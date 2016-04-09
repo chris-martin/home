@@ -1,5 +1,8 @@
 { emacsWithPackages, ... }:
-(emacsWithPackages (emacsPkgs: with emacsPkgs.melpaPackages; [
+(emacsWithPackages (emacsPackages: with {
+  elpa = emacsPackages.elpaPackages;
+  melpa = emacsPackages.melpaPackages;
+}; with melpa; [
   back-button
   centered-window-mode
   diff-hl
@@ -20,6 +23,7 @@
   neotree
   nix-sandbox
   nix-mode
+  elpa.org
   projectile
   python-mode
   scss-mode
