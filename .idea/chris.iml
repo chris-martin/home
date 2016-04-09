@@ -3,7 +3,10 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.IdeaIC2016.1/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea14/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea15/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea2016.1/system" />
       <excludeFolder url="file://$MODULE_DIR$/.android" />
       <excludeFolder url="file://$MODULE_DIR$/.atom" />
       <excludeFolder url="file://$MODULE_DIR$/.bundle" />
@@ -16,6 +19,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.config/chromium" />
       <excludeFolder url="file://$MODULE_DIR$/.config/ibus" />
       <excludeFolder url="file://$MODULE_DIR$/.config/pulse" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/sublime-text-2/Installed Packages" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/sublime-text-2/Packages" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/sublime-text-2/Pristine Packages" />
       <excludeFolder url="file://$MODULE_DIR$/.dropbox" />
       <excludeFolder url="file://$MODULE_DIR$/.dropbox-dist" />
       <excludeFolder url="file://$MODULE_DIR$/.emacs.d/autosave" />
@@ -47,7 +53,6 @@
       <excludeFolder url="file://$MODULE_DIR$/.mozilla" />
       <excludeFolder url="file://$MODULE_DIR$/.nix-defexpr" />
       <excludeFolder url="file://$MODULE_DIR$/.nix-profile" />
-      <excludeFolder url="file://$MODULE_DIR$/.nix/sys-pkgs" />
       <excludeFolder url="file://$MODULE_DIR$/.node-gyp" />
       <excludeFolder url="file://$MODULE_DIR$/.npm" />
       <excludeFolder url="file://$MODULE_DIR$/.otto.d" />
@@ -72,6 +77,7 @@
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/luongo" />
       <excludeFolder url="file://$MODULE_DIR$/mnt" />
+      <excludeFolder url="file://$MODULE_DIR$/nix/sys-pkgs" />
       <excludeFolder url="file://$MODULE_DIR$/oseary" />
       <excludeFolder url="file://$MODULE_DIR$/python" />
       <excludeFolder url="file://$MODULE_DIR$/secrets" />
