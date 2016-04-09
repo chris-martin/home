@@ -2,4 +2,4 @@
   (setenv "PATH" (concat s ":" (getenv "PATH")))
   (setq exec-path (cons s exec-path)))
 
-(add-to-exec-path (expand-file-name "~/.bin"))
+(add-to-exec-path (expand-file-name "~/bin"))

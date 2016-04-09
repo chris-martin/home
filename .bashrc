@@ -1,5 +1,5 @@
 paths=(
-  "$HOME/.bin"
+  "$HOME/bin"
   "$HOME/.local/bin"
   "$HOME/.cabal/bin"
   "$HOME/.nix-profile/bin"
