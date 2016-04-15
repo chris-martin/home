@@ -26,6 +26,7 @@
   elpa.org
   projectile
   python-mode
+  scala-mode2
   scss-mode
   tabbar
   transpose-frame
