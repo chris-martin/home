@@ -1,5 +1,5 @@
 ;; Show line numbers
-(global-linum-mode 1)
+;(global-linum-mode 1)
 
 ;; Format t line numbers right-aligned with padding
 (setq
