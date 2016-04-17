@@ -15,7 +15,6 @@ set HOSTNAME (hostname)
 set fish_user_paths      \
   $HOME/bin              \
   $HOME/.local/bin       \
-  $HOME/.cabal/bin       \
   $HOME/.nix-profile/bin
 
 set -x EDITOR e
