@@ -64,7 +64,7 @@ with rec {
 
       nmap                               # Networking
 
-      nix-repl                           # Nix
+      nix-repl nix-prefetch-scripts      # Nix
 
       tesseract                          # OCR
 
