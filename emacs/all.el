@@ -12,6 +12,9 @@
    (expand-file-name (concat name ".el")
                      (file-name-directory load-file-name))))
 
+;; Don't show the startup buffer
+(setq inhibit-startup-message t)
+
 ;; Hide the icon toolbar
 (tool-bar-mode -1)
 
@@ -28,12 +31,6 @@
 
 ;; cua provides ctrl+x,c,v bindings for cut,copy,paste.
 (if (not (daemonp)) (cua-mode t))
-
-;; Automatically save the desktop (open tabs, etc)
-(if (not (daemonp))
-  (progn
-    (setq desktop-save t)
-    (desktop-save-mode 1)))
 
 ;; Follow symlinks without prompting
 ;; https://stackoverflow.com/questions/15390178
@@ -55,5 +52,11 @@
 
 ;; Don't show a warning when using erase-buffer
 (put 'erase-buffer 'disabled nil)
+
+;; Automatically save the desktop (open tabs, etc)
+(require 'workgroups2)
+(setq wg-session-file "~/.emacs.d/.emacs_workgroups")
+(if (not (daemonp))
+  (workgroups-mode 1))
 
 (load custom-file)

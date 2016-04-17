@@ -30,6 +30,7 @@
   scss-mode
   tabbar
   transpose-frame
+  workgroups2
   ws-butler
   yaml-mode
 ]))
