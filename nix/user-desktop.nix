@@ -64,8 +64,6 @@ with rec {
 
       nmap                               # Networking
 
-      nix-repl nix-prefetch-scripts      # Nix
-
       tesseract                          # OCR
 
       gparted gptfdisk                   # Partitioning
@@ -109,6 +107,8 @@ with rec {
       haskellPackages.cabal2nix
 
       pithos                             # Music
+
+      nix-repl nix-prefetch-scripts      # Nix
 
       ((callPackage ./idea/default.nix { }).idea15-ultimate)
     ];
