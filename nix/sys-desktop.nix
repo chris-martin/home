@@ -28,8 +28,8 @@
   i18n.consoleFont = "Lat2-Terminus16";
   i18n.consoleKeyMap = "us";
 
-  time.timeZone = "America/Los_Angeles";
-  #time.timeZone = "America/New_York";
+  #time.timeZone = "America/Los_Angeles";
+  time.timeZone = "America/New_York";
 
   environment.etc."fuse.conf".text = ''
     user_allow_other
