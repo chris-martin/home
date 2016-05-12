@@ -12,7 +12,7 @@ with rec {
 
   channel = name: file: import (channelPath name file) { config = config; };
 
-  nixos-stable   = channel "nixos-15.09" "all-packages.nix";
+  nixos-stable   = channel "nixos-16.03" "all-packages.nix";
   nixos-unstable = channel "nixos-unstable" "default.nix";
 
   config.allowUnfree = true;

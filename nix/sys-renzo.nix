@@ -25,8 +25,8 @@
 
   nixpkgs.config.virtualbox.enableExtensionPack =
     let _ = pkgs.fetchurl {
-      url = "http://download.virtualbox.org/virtualbox/5.0.14/Oracle_VM_VirtualBox_Extension_Pack-5.0.14-105127.vbox-extpack";
-      sha256 = "0rb806yp8wpvaxxq7ijd1bxv54r24risn5730whrblyz146lnh2a";
+      url = "http://download.virtualbox.org/virtualbox/5.0.12/Oracle_VM_VirtualBox_Extension_Pack-5.0.12-104815.vbox-extpack";
+      sha256 = "0v933g6sk1akfm48xwdd0z61164by7llj8974lriipvz5d2wh6xc";
     }; in true;
 
   services.xserver.synaptics = {
