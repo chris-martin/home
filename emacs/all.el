@@ -23,6 +23,13 @@
 
 (add-hook 'python-mode-hook 'fci-mode)
 
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq
+ web-mode-markup-indent-offset 2
+ web-mode-code-indent-offset 2
+ web-mode-css-indent-offset 2)
+
 ;; Projectile - projects - http://batsov.com/projectile/
 (add-hook 'after-init-hook 'projectile-global-mode)
 (setq projectile-switch-project-action 'projectile-dired)

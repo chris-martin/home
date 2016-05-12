@@ -31,6 +31,7 @@
   tabbar
   transpose-frame
   workgroups2
+  web-mode
   ws-butler
   yaml-mode
 ]))
