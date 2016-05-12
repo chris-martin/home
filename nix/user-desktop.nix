@@ -32,6 +32,8 @@ with rec {
     name = "stable";
     paths = [
 
+      ack
+
       jmtpfs                             # Android
 
       zip unzip gnome3.file-roller       # Archives
@@ -58,6 +60,8 @@ with rec {
       gnome3.polari                      # IRC
       kde4.konversation
 
+      openjdk8                           # JVM
+
       jq                                 # JSON
 
       moc                                # Music
@@ -81,6 +85,8 @@ with rec {
 
       transmission_gtk                   # Torrent
 
+      usbutils
+
       alsamixer ffmpeg mpv vlc           # Video/audio
       gnome3.totem gstreamer
 
@@ -95,6 +101,7 @@ with rec {
       chromium                           # Chromium
 
       bridge-utils                       # Docker
+      pythonPackages.docker_compose
 
       ((import "${home}/emacs/emacs.nix") pkgs) # Emacs
 
