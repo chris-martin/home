@@ -60,10 +60,6 @@
 ;; Don't show a warning when using erase-buffer
 (put 'erase-buffer 'disabled nil)
 
-;; Automatically save the desktop (open tabs, etc)
-(require 'workgroups2)
-(setq wg-session-file "~/.emacs.d/.emacs_workgroups")
-(if (not (daemonp))
-  (workgroups-mode 1))
+(desktop-save-mode 1)
 
 (load custom-file)
