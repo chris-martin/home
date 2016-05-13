@@ -38,6 +38,8 @@ with rec {
 
       zip unzip gnome3.file-roller       # Archives
 
+      chromium                           # Chromium
+
       keepassx2 truecrypt                # Crypto
 
       sassc                              # CSS
@@ -46,11 +48,24 @@ with rec {
 
       evince gnome3.eog                  # Doc/image viewers
 
-      vim                                # Editors
+      bridge-utils                       # Docker
+      pythonPackages.docker_compose
+
+      vim idea.idea15-ultimate           # Editors
 
       elixir rebar                       # Elixir
 
+      ((import "${home}/emacs/emacs.nix") pkgs) # Emacs
+
       steam minecraft                    # Gaming
+
+      gitAndTools.gitFull                # Git
+      gitAndTools.hub
+
+      haskellPackages.cabal-install      # Haskell
+      haskellPackages.stack
+      haskellPackages.stylish-haskell
+      haskellPackages.cabal2nix
 
       curl wget                          # HTTP
 
@@ -64,9 +79,10 @@ with rec {
 
       jq                                 # JSON
 
-      moc                                # Music
+      moc pithos                         # Music
 
       nmap                               # Networking
+      nix-repl nix-prefetch-scripts      # Nix
 
       tesseract                          # OCR
 
@@ -98,26 +114,11 @@ with rec {
     name = "unstable";
     paths = [
 
-      chromium                           # Chromium
 
-      bridge-utils                       # Docker
-      pythonPackages.docker_compose
 
-      ((import "${home}/emacs/emacs.nix") pkgs) # Emacs
 
-      gitAndTools.gitFull                # Git
-      gitAndTools.hub
 
-      haskellPackages.cabal-install      # Haskell
-      haskellPackages.stack
-      haskellPackages.stylish-haskell
-      haskellPackages.cabal2nix
-
-      pithos                             # Music
-
-      nix-repl nix-prefetch-scripts      # Nix
-
-      ((callPackage ./idea/default.nix { }).idea15-ultimate)
+      #((callPackage ./idea/default.nix { }).idea15-ultimate)
     ];
   };
 
