@@ -6,6 +6,7 @@
 
 (dolist (name (append '("autosave" "backup" "cursor" "exec-path"
                         "file" "flycheck" "font" "git" "haskell" "line-numbers"
+                        "line-wrapping"
                         "markdown" "mouse" "org" "whitespace" "window")
                       (if (daemonp) nil '("tabbar"))))
   (load-file

@@ -1,6 +1,7 @@
 (setq-default
  indent-tabs-mode nil   ; Prefer spaces to tabs
  tab-width 4            ; Width of displayed tab characters
+ sentence-end-double-space nil
  )
 
 ;; Ws-butler removes trailing whitespace from saved files.
