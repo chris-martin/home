@@ -22,7 +22,9 @@
     networkmanager.enable = true;
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
     firewall.allowPing = true;
-    #firewall.allowedTCPPorts = [ 8080 ];
+    firewall.allowedTCPPorts = [
+      51413 # bittorrent
+    ];
   };
 
   i18n.consoleFont = "Lat2-Terminus16";
