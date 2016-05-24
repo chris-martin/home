@@ -4,9 +4,7 @@
 
 { config, pkgs, ... }: {
 
-  imports = [ ./sys-desktop.nix ];
-
-  networking.hostName = "annemarie";
+  imports = [ ../boxTypes/desktop.nix ];
 
   boot = {
     initrd.luks.devices = [{

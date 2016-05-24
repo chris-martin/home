@@ -1,10 +1,8 @@
 #
-# The base config for desktops machines, with GUI stuff.
+# NixOS config for desktops machines, with GUI stuff.
 #
 
 { config, pkgs, ... }: {
-
-  imports = [ ./sys-base.nix ];
 
   system.stateVersion = "unstable";
 
@@ -106,7 +104,7 @@
   systemd.services.emacs.enable = true;
 
   virtualisation.virtualbox.host = {
-    enable              = true;
+    enable              = false;
     enableHardening     = false;
     addNetworkInterface = true;
   };

@@ -1,0 +1,23 @@
+Source the script appropriate for your shell from the shell directory
+to set up environment variables for Nix stuff.
+
+The channel list should look like this:
+
+    > nix-channel --list
+    nixos https://nixos.org/channels/nixos-16.03
+    nixos-15.09 http://nixos.org/channels/nixos-15.09
+    nixos-unstable https://nixos.org/channels/nixos-unstable
+    nixos-16.03 http://nixos.org/channels/nixos-16.03
+
+The root channel list can be empty.
+
+    > sudo nix-channel --list
+    [no output]
+
+To install packages for a desktop environment:
+
+    nix-env -f '<nixpkgs>' -i desktopEnv
+
+To rebuild the OS:
+
+    sudo env NIX_PATH=$NIX_PATH nixos-rebuild switch

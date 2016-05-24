@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-env HOSTNAME=$HOSTNAME \
-  nix-env -i all -f ~/nix/user.nix

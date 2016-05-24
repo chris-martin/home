@@ -1,8 +1,10 @@
+#
+# Mandeeza is a Digital Ocean droplet.
+#
+
 { config, pkgs, ... }: {
 
-  imports = [ ./sys-server.nix ];
-
-  networking.hostName = "mandeeza";
+  imports = [ ../boxTypes/server.nix ];
 
   ## Everything below is generated from nixos-in-place
   ## -------------------------------------------------

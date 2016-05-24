@@ -1,10 +1,8 @@
 #
-# The base for servers.
+# NixOS config for servers.
 #
 
 { config, pkgs, ... }: {
-
-  imports = [ ./sys-base.nix ];
 
   system.stateVersion = "15.09";
 

@@ -10,7 +10,7 @@ function fish_prompt
   end
 end
 
-set HOSTNAME (hostname)
+set -x HOSTNAME (hostname)
 
 set fish_user_paths      \
   $HOME/bin              \
@@ -18,6 +18,8 @@ set fish_user_paths      \
   $HOME/.nix-profile/bin
 
 set -x EDITOR e
+
+. $HOME/nix/shell/nix.fish
 
 # https://twitter.com/chris__martin/status/420992421673988096
 alias such git

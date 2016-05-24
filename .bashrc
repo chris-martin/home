@@ -9,6 +9,8 @@ export PATH="$(printf '%s:' "${paths[@]%/}")$PATH"
 
 export EDITOR=e
 
+. $HOME/nix/shell/nix.bash
+
 # https://twitter.com/chris__martin/status/420992421673988096
 alias such=git
 alias very=git
