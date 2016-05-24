@@ -46,6 +46,8 @@ buildEnv {
 
     openjdk8                           # JVM
 
+    npm npm2nix                        # Javascript
+
     jq                                 # JSON
 
     moc pandora                        # Music

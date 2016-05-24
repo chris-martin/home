@@ -37,6 +37,9 @@ config = rec {
       gore = unstable.goPackages.gore;
       geth = unstable.goPackages.ethereum;
 
+      # npm2nix is broken everywhere, but slightly better in unstable
+      npm2nix = unstable.nodePackages.npm2nix;
+
     };
   in overrides;
 
