@@ -46,7 +46,7 @@ buildEnv {
 
     openjdk8                           # JVM
 
-    npm npm2nix                        # Javascript
+    nodejs npm2nix                     # Javascript
 
     jq                                 # JSON
 
