@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }: {
 
-  system.stateVersion = "unstable";
+  system.stateVersion = "16.03";
 
   hardware.pulseaudio = {
     enable = true;

@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }: {
 
-  system.stateVersion = "15.09";
+  system.stateVersion = "16.03";
 
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
