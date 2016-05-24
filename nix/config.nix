@@ -20,7 +20,7 @@ let config = rec {
       desktopEnv = callEnv ./envs/desktop.nix;
       serverEnv = callEnv ./envs/server.nix;
 
-      pandora = pkgs.callPackage ./pkgs/pandora {};
+      pandora = callPackage ./pkgs/pandora {};
 
       # Convenience aliases
       bower = nodePackages.bower;
