@@ -1,4 +1,6 @@
-let config = rec {
+let
+
+config = rec {
   home = builtins.getEnv "HOME";
   hostName = builtins.getEnv "HOSTNAME";
 
@@ -32,7 +34,8 @@ let config = rec {
       polari = gnome3.polari;
 
       # Packages that aren't in stable release yet
-      gore = (import <nixpkgs-unstable> {}).goPackages.gore;
+      gore = unstable.goPackages.gore;
+      geth = unstable.goPackages.ethereum;
 
     };
   in overrides;
@@ -43,4 +46,7 @@ let config = rec {
     atlanta = { latitude = "33.784190"; longitude = "-84.374263"; };
   };
 };
+
+unstable = (import <nixpkgs-unstable> {});
+
 in config
