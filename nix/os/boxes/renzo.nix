@@ -27,6 +27,9 @@
       sha256 = "0v933g6sk1akfm48xwdd0z61164by7llj8974lriipvz5d2wh6xc";
     }; in true;
 
+  services.redshift = { enable = true; } //
+    config.nixpkgs.config.locations.atlanta;
+
   services.xserver.synaptics = {
     enable      = true;
     minSpeed    = "0.8";

@@ -62,18 +62,6 @@
     displayManager.gdm.enable    = true;
   };
 
-  services.redshift = {
-    enable = true;
-
-    # Lexington
-    latitude  = "38.062373";
-    longitude = "-84.50178";
-
-    # San Mateo
-    #latitude  = "37.56";
-    #longitude = "-122.33";
-  };
-
   services.unclutter.enable = true;
 
   services.peerflix.enable = true;

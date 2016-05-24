@@ -36,5 +36,11 @@ let config = rec {
 
     };
   in overrides;
+
+  locations = {
+    lexington = { latitude = "38.062373"; longitude = "-84.50178"; };
+    sanMateo = { latitude = "37.56"; longitude = "-122.33"; };
+    atlanta = { latitude = "33.784190"; longitude = "-84.374263"; };
+  };
 };
 in config
