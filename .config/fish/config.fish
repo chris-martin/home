@@ -44,8 +44,6 @@ alias revert 'git revert'
 alias show   'git show'
 alias stash  'git stash'
 
-alias pandora pithos
-
 # https://github.com/fish-shell/fish-shell/issues/838
 function readSilent # prompt targetVar
     echo -n $argv[1]
