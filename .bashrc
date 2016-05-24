@@ -3,6 +3,7 @@ paths=(
   "$HOME/.local/bin"
   "$HOME/.cabal/bin"
   "$HOME/.nix-profile/bin"
+  "$HOME/node_modules/.bin"
 )
 
 export PATH="$(printf '%s:' "${paths[@]%/}")$PATH"
