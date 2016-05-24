@@ -25,8 +25,6 @@ buildEnv {
 
     vim idea.idea15-ultimate           # Editors
 
-    elixir rebar                       # Elixir
-
     ((import "${config.home}/emacs/emacs.nix") pkgs) # Emacs
 
     steam minecraft                    # Gaming
@@ -42,16 +40,15 @@ buildEnv {
     curl wget                          # HTTP
 
     gimp imagemagick inkscape          # Image editing
-    kde4.kcolorchooser
+    kcolorchooser
 
-    gnome3.polari                      # IRC
-    kde4.konversation
+    polari konversation                # IRC
 
     openjdk8                           # JVM
 
     jq                                 # JSON
 
-    moc pithos                         # Music
+    moc pandora                        # Music
 
     nmap                               # Networking
     nix-repl nix-prefetch-scripts      # Nix
