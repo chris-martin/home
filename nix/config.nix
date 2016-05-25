@@ -25,6 +25,9 @@ config = rec {
       # Packages that aren't and probably won't ever be in nixpkgs
       pandora = callPackage ./pkgs/pandora {};
 
+      # https://github.com/NixOS/nixpkgs/pull/15710
+      sublime = unstable.callPackage ./pkgs/sublime {};
+
       # Convenience aliases
       bower = nodePackages.bower;
       cabal = haskellPackages.cabal-install;

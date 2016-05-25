@@ -22,7 +22,7 @@ buildEnv {
 
     bridge-utils docker-compose        # Docker
 
-    vim idea.idea15-ultimate           # Editors
+    vim idea.idea15-ultimate sublime   # Editors
 
     ((import "${config.home}/emacs/emacs.nix") pkgs) # Emacs
 
