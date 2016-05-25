@@ -22,6 +22,7 @@ config = rec {
       desktopEnv = callEnv ./envs/desktop.nix;
       serverEnv = callEnv ./envs/server.nix;
 
+      # Packages that aren't and probably won't ever be in nixpkgs
       pandora = callPackage ./pkgs/pandora {};
 
       # Convenience aliases
