@@ -27,6 +27,8 @@ buildEnv {
 
     ((import "${config.home}/emacs/emacs.nix") pkgs) # Emacs
 
+    geth                               # Ethereum
+
     steam minecraft                    # Gaming
 
     gitAndTools.gitFull                # Git
