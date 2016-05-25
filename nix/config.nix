@@ -26,12 +26,21 @@ config = rec {
 
       # Convenience aliases
       bower = nodePackages.bower;
+      cabal = haskellPackages.cabal-install;
+      cabal2nix = haskellPackages.cabal2nix;
+      docker-compose = pythonPackages.docker_compose;
+      eog = gnome3.eog;
+      file-roller = gnome3.file-roller;
+      gnome-screenshot = gnome3.gnome-screenshot;
       grunt = nodePackages.bower;
       ipython = pythonPackages.ipython;
       kcolorchooser = kde4.kcolorchooser;
       konversation = kde4.konversation;
       npm = nodePackages.npm;
       polari = gnome3.polari;
+      stack = haskellPackages.stack;
+      stylish-haskell = haskellPackages.stylish-haskell;
+      xkill = xorg.xkill;
 
       # Packages that aren't in stable release yet
       gore = unstable.goPackages.gore;

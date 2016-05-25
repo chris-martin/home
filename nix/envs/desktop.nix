@@ -8,7 +8,7 @@ buildEnv {
 
     jmtpfs                             # Android
 
-    zip unzip gnome3.file-roller       # Archives
+    zip unzip file-roller              # Archives
 
     chromium                           # Chromium
 
@@ -18,10 +18,9 @@ buildEnv {
 
     meld                               # Diff tools
 
-    evince gnome3.eog                  # Doc/image viewers
+    evince eog                         # Doc/image viewers
 
-    bridge-utils                       # Docker
-    pythonPackages.docker_compose
+    bridge-utils docker-compose        # Docker
 
     vim idea.idea15-ultimate           # Editors
 
@@ -34,10 +33,8 @@ buildEnv {
     gitAndTools.gitFull                # Git
     gitAndTools.hub
 
-    haskellPackages.cabal-install      # Haskell
-    haskellPackages.stack
-    haskellPackages.stylish-haskell
-    haskellPackages.cabal2nix
+    cabal stack stylish-haskell        # Haskell
+    cabal2nix
 
     curl wget                          # HTTP
 
@@ -55,13 +52,14 @@ buildEnv {
     moc pandora                        # Music
 
     nmap                               # Networking
+
     nix-repl nix-prefetch-scripts      # Nix
 
     tesseract                          # OCR
 
     gparted gptfdisk                   # Partitioning
 
-    scrot gnome3.gnome-screenshot      # Screenshots
+    scrot gnome-screenshot             # Screenshots
 
     fish tmux man tree which           # Shell
 
@@ -76,9 +74,8 @@ buildEnv {
 
     usbutils
 
-    alsamixer ffmpeg mpv vlc           # Video/audio
-    gnome3.totem gstreamer
+    alsamixer ffmpeg mpv               # Video/audio
 
-    xclip xorg.xkill                   # X utils
+    xclip xkill                        # X utils
   ];
 }
