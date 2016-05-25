@@ -52,6 +52,6 @@ config = rec {
   };
 };
 
-unstable = (import <nixpkgs-unstable> {});
+unstable = (import <nixpkgs-unstable> { config = { allowUnfree = true; }; });
 
 in config
