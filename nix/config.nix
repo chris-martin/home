@@ -35,9 +35,11 @@ config = rec {
 
       # Packages that aren't in stable release yet
       gore = unstable.goPackages.gore;
-      geth = unstable.goPackages.ethereum;
 
-      # npm2nix is broken everywhere, but slightly better in unstable
+      # https://github.com/NixOS/nixpkgs/pull/15702
+      geth = unstable.goPackages.ethereum.bin // { outputs = [ "bin" ]; };
+
+      # npm2nix is broken everywhere, but seems slightly better in unstable
       npm2nix = unstable.nodePackages.npm2nix;
 
     };
