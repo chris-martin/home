@@ -22,43 +22,55 @@ config = rec {
       desktopEnv = callEnv ./envs/desktop.nix;
       serverEnv = callEnv ./envs/server.nix;
 
-      # Packages that aren't and probably won't ever be in nixpkgs
+      # Pandora probably won't ever be packaged like this in nixpkgs
       pandora = callPackage ./pkgs/pandora {};
 
-      # https://github.com/NixOS/nixpkgs/pull/15710
+      # Sublime with desktop entry: https://github.com/NixOS/nixpkgs/pull/15710
       sublime = unstable.callPackage ./pkgs/sublime {};
 
-      # https://github.com/NixOS/nixpkgs/pull/14237
+      # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
       google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
 
-      # Convenience aliases
-      bower = nodePackages.bower;
-      cabal = haskellPackages.cabal-install;
-      cabal2nix = haskellPackages.cabal2nix;
-      docker-compose = pythonPackages.docker_compose;
-      eog = gnome3.eog;
-      file-roller = gnome3.file-roller;
-      gnome-screenshot = gnome3.gnome-screenshot;
-      grunt = nodePackages.bower;
-      ipython = pythonPackages.ipython;
-      kcolorchooser = kde4.kcolorchooser;
-      konversation = kde4.konversation;
-      npm = nodePackages.npm;
-      polari = gnome3.polari;
-      stack = haskellPackages.stack;
-      stylish-haskell = haskellPackages.stylish-haskell;
-      xkill = xorg.xkill;
-
-      # Packages that aren't in stable release yet
+      # Gore isn't backported to 16.03
       gore = unstable.goPackages.gore;
 
-      # https://github.com/NixOS/nixpkgs/pull/15702
+      # geth alias will be in unstable after https://github.com/NixOS/nixpkgs/pull/15702
       geth = unstable.goPackages.ethereum.bin // { outputs = [ "bin" ]; };
 
       # npm2nix is broken everywhere, but seems slightly better in unstable
       npm2nix = unstable.nodePackages.npm2nix;
 
-    };
+    } //
+
+    # Convenience aliases
+
+    (with xorg; {
+      inherit xkill;
+    }) //
+
+    (with pythonPackages; {
+      inherit ipython;
+      docker-compose = docker_compose;
+    }) //
+
+    (with kde4; {
+      inherit kcolorchooser konversation;
+    }) //
+
+    (with nodePackages; {
+      inherit bower npm;
+      grunt = grunt-cli;
+    }) //
+
+    (with gnome3; {
+      inherit eog file-roller gnome-screenshot polari;
+    }) //
+
+    (with haskellPackages; {
+      inherit cabal2nix stack stylish-haskell;
+      cabal = cabal-install;
+    });
+
   in overrides;
 
   locations = {
