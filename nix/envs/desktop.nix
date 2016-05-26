@@ -6,6 +6,8 @@ buildEnv {
 
     ack
 
+    gnumake
+
     jmtpfs                             # Android
 
     zip unzip file-roller              # Archives
