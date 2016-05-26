@@ -28,6 +28,9 @@ config = rec {
       # https://github.com/NixOS/nixpkgs/pull/15710
       sublime = unstable.callPackage ./pkgs/sublime {};
 
+      # https://github.com/NixOS/nixpkgs/pull/14237
+      google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
+
       # Convenience aliases
       bower = nodePackages.bower;
       cabal = haskellPackages.cabal-install;
