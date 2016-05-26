@@ -16,3 +16,6 @@
 
 # Emacs
 .projectile
+
+# Sublime
+*.sublime-workspace
