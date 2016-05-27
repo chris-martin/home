@@ -1,0 +1,5 @@
+[Unit]
+Description=Ethereum client for testing and development
+
+[Service]
+ExecStart=/run/current-system/sw/bin/bash -c ". ~/.bashrc; testrpc | systemd-cat -t testrpc"

@@ -10,5 +10,6 @@
 !/git/
 /git/gitk
 !/sublime-text-2/
+!/systemd/
 !/user-dirs.conf
 !/user-dirs.dirs
