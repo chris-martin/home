@@ -72,6 +72,25 @@ config = rec {
     (with pkgs.haskellPackages; {
       inherit cabal2nix stack stylish-haskell;
       cabal = cabal-install;
+    }) //
+
+    # Ethereum work-in-progress
+    #
+    # I think we just need unstable here to get gcc49; we may be
+    # able to do with with an explicit dependency instead by passing
+    # an { stdenv = overrideCC stdenv gcc49; } override on 16.03
+    (with unstable; rec {
+      ethereum = callPackage ./pkgs/ethereum {
+        jsoncpp = jsoncpp-1-7;
+        libjson_rpc_cpp = libjson_rpc_cpp-0-6;
+        llvm = llvm_38;
+      };
+      argtable-2 = callPackage ./pkgs/argtable-2 { };
+      jsoncpp-1-7 = callPackage ./pkgs/jsoncpp-1.7 { };
+      libjson_rpc_cpp-0-6 = callPackage ./pkgs/libjson-rpc-cpp-0.6 {
+        argtable = argtable-2;
+        jsoncpp = jsoncpp-1-7;
+      };
     });
 
   in overrides;
