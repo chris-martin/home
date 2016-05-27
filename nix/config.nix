@@ -40,6 +40,9 @@ config = rec {
       # npm2nix is broken everywhere, but seems slightly better in unstable
       npm2nix = unstable.nodePackages.npm2nix;
 
+      # New things that probably deserve a PR
+      libscrypt = callPackage ./pkgs/libscrypt { };
+
     }) //
 
     # Convenience aliases
