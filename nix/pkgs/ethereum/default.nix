@@ -36,6 +36,6 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Ethereum C++ implementation";
     homepage = "http://www.ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/";
-    license = with stdenv.licenses; [ mit gpl3 ];
+    license = with stdenv.lib.licenses; [ mit gpl3 ];
   };
 }
