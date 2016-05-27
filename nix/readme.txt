@@ -21,3 +21,12 @@ To install packages for a desktop environment:
 To rebuild the OS:
 
     sudo env NIX_PATH=$NIX_PATH nixos-rebuild switch
+
+To go to the directory where some package is installed in the nix store:
+
+    cd (nix-store -r (nix-instantiate '<nixpkgs>' -A foo))
+
+To manually walk through the build process for some package:
+
+    cd (mktemp -d)
+    nix-shell '<nixpkgs>' -A foo --pure
