@@ -17,7 +17,7 @@ config = rec {
       inherit config;
       pkgs = (pkgs // overrides);
     };
-    overrides = with pkgs; {
+    overrides = (with pkgs; rec {
 
       desktopEnv = callEnv ./envs/desktop.nix;
       serverEnv = callEnv ./envs/server.nix;
@@ -40,33 +40,33 @@ config = rec {
       # npm2nix is broken everywhere, but seems slightly better in unstable
       npm2nix = unstable.nodePackages.npm2nix;
 
-    } //
+    }) //
 
     # Convenience aliases
 
-    (with xorg; {
+    (with pkgs.xorg; {
       inherit xkill;
     }) //
 
-    (with pythonPackages; {
+    (with pkgs.pythonPackages; {
       inherit ipython;
       docker-compose = docker_compose;
     }) //
 
-    (with kde4; {
+    (with pkgs.kde4; {
       inherit kcolorchooser konversation;
     }) //
 
-    (with nodePackages; {
+    (with pkgs.nodePackages; {
       inherit bower npm;
       grunt = grunt-cli;
     }) //
 
-    (with gnome3; {
+    (with pkgs.gnome3; {
       inherit eog file-roller gnome-screenshot polari;
     }) //
 
-    (with haskellPackages; {
+    (with pkgs.haskellPackages; {
       inherit cabal2nix stack stylish-haskell;
       cabal = cabal-install;
     });
