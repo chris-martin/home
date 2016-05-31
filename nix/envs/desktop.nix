@@ -63,6 +63,8 @@ buildEnv {
 
     gparted gptfdisk                   # Partitioning
 
+    python                             # Python
+
     scrot gnome-screenshot             # Screenshots
 
     fish tmux man tree which           # Shell
