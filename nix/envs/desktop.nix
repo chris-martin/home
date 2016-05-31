@@ -6,7 +6,9 @@ buildEnv {
 
     ack
 
-    gnumake
+    gcc gnumake
+
+    rlwrap
 
     jmtpfs                             # Android
 
