@@ -10,6 +10,8 @@ buildEnv {
 
     rlwrap
 
+    cheese
+
     jmtpfs                             # Android
 
     zip unzip file-roller              # Archives

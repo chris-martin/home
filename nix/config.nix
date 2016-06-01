@@ -77,7 +77,7 @@ config = rec {
     }) //
 
     (with pkgs.gnome3; {
-      inherit eog file-roller gnome-screenshot polari;
+      inherit cheese eog file-roller gnome-screenshot polari;
     }) //
 
     (with pkgs.haskellPackages; {
