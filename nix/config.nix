@@ -81,7 +81,7 @@ config = rec {
     }) //
 
     (with pkgs.haskellPackages; {
-      inherit cabal2nix stack stylish-haskell;
+      inherit cabal2nix purescript stack stylish-haskell;
       cabal = cabal-install;
     }) //
 
