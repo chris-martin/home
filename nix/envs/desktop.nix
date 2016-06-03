@@ -57,7 +57,7 @@ buildEnv {
 
     moc pandora                        # Music
 
-    nmap                               # Networking
+    iw nmap                            # Networking
 
     nix-repl nix-prefetch-scripts      # Nix
 
