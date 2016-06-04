@@ -52,6 +52,7 @@ config = rec {
 
       secp256k1 = callPackage pkgs/secp256k1 {};
 
+      # https://github.com/NixOS/nixpkgs/pull/15977
       serpent = callPackage pkgs/serpent {};
 
     }) //
