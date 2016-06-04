@@ -45,8 +45,6 @@ buildEnv {
     gimp imagemagick inkscape          # Image editing
     kcolorchooser
 
-    polari konversation                # IRC
-
     openjdk8                           # JVM
 
     nodejs npm2nix grunt bower         # Javascript
