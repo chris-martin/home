@@ -2,6 +2,7 @@
 /config/idea15.key
 /config/eval/
 /config/fileTemplates/
+/config/javascript/
 /config/options/applicationLibraries.xml
 /config/options/ClojureUsageStatistics.xml
 /config/options/ClojureUsageStatisticsSettings.xml
