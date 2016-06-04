@@ -6,15 +6,13 @@ buildEnv {
 
     ack
 
-    gcc gnumake
-
-    rlwrap
-
-    cheese
-
     jmtpfs                             # Android
 
     zip unzip file-roller              # Archives
+
+    gcc gnumake                        # Build
+
+    cheese                             # Camera
 
     chromium                           # Chromium
 
@@ -70,7 +68,7 @@ buildEnv {
 
     scrot gnome-screenshot             # Screenshots
 
-    fish tmux man tree which           # Shell
+    fish tmux man rlwrap tree which    # Shell
 
     sshfsFuse                          # SSH mount
 
@@ -81,7 +79,7 @@ buildEnv {
 
     transmission_gtk                   # Torrent
 
-    usbutils
+    usbutils                           # USB
 
     alsamixer ffmpeg mpv               # Video/audio
 
