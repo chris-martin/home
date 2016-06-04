@@ -25,6 +25,7 @@
   nix-mode
   elpa.org
   projectile
+  purescript-mode
   python-mode
   scala-mode2
   scss-mode
