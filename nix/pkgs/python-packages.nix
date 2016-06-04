@@ -184,6 +184,7 @@ rec {
     propagatedBuildInputs = [ pkgs.openssl ];
   };
 
+  # https://github.com/NixOS/nixpkgs/pull/15979
   secp256k1 = buildPythonPackage rec {
     name = "secp256k1";
 
@@ -209,6 +210,7 @@ rec {
     };
   };
 
+  # https://github.com/NixOS/nixpkgs/pull/15977
   serpent = buildPythonPackage rec {
     name = "serpent";
 

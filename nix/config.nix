@@ -50,6 +50,7 @@ config = rec {
       # New thing that probably deserves a PR
       libscrypt = callPackage pkgs/libscrypt { };
 
+      # https://github.com/NixOS/nixpkgs/pull/15979
       secp256k1 = callPackage pkgs/secp256k1 {};
 
       # https://github.com/NixOS/nixpkgs/pull/15977
