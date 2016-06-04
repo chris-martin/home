@@ -51,7 +51,8 @@ buildEnv {
 
     openjdk8                           # JVM
 
-    nodejs npm2nix                     # Javascript
+    nodejs npm2nix grunt bower         # Javascript
+    purescript
 
     jq                                 # JSON
 
