@@ -56,6 +56,8 @@ config = rec {
       # https://github.com/NixOS/nixpkgs/pull/15977
       serpent = callPackage pkgs/serpent {};
 
+      wordlist = callPackage pkgs/wordlist {};
+
     }) //
 
     # Convenience aliases

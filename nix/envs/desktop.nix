@@ -4,6 +4,8 @@ buildEnv {
   name = "desktopEnv";
   paths = [
 
+    wordlist
+
     ack
 
     jmtpfs                             # Android
