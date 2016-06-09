@@ -1,6 +1,7 @@
 /*
 !/.gitignore
 !/Preferences.sublime-settings
+!/hs.sublime-settings
 !/nix.sublime-settings
 !/purs.sublime-settings
 !/Markdown\ Extended.sublime-settings
