@@ -22,6 +22,7 @@
     firewall.allowPing = true;
     firewall.allowedTCPPorts = [
       51413 # bittorrent
+      30303 # ethereum
     ];
   };
 
