@@ -39,8 +39,8 @@ buildEnv {
     gitAndTools.gitFull                # Git
     gitAndTools.hub
 
-    cabal stack stylish-haskell        # Haskell
-    cabal2nix
+    cabal stylish-haskell hlint        # Haskell
+    cabal2nix stack
 
     curl wget                          # HTTP
 
