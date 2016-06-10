@@ -24,6 +24,7 @@ import           Options.Applicative.Extra   (execParser, helper)
 import           Options.Applicative.Types   (Parser)
 
 import           System.Environment          (getEnv)
+import           System.IO                   (hFlush, hPutStr, stderr, stdout)
 import           System.Random               (randomRIO)
 
 data Args = Args
@@ -82,4 +83,6 @@ main = do
   allText <- TextIO.readFile path
   let allWords = Seq.fromList $ Text.lines allText
   selectedWords <- replicateM (getN args) (randomFromSeq allWords)
-  TextIO.putStrLn $ Text.intercalate (getD args) selectedWords
+  TextIO.putStr $ Text.intercalate (getD args) selectedWords
+  hFlush stdout
+  hPutStr stderr "\n"
