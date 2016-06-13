@@ -13,9 +13,10 @@ config = rec {
   };
 
   packageOverrides = pkgs: let
+    pkgsWithOverrides = pkgs // overrides;
     callEnv = path: import path {
       inherit config;
-      pkgs = (pkgs // overrides);
+      pkgs = pkgsWithOverrides;
     };
     overrides = (with pkgs; rec {
 
@@ -23,7 +24,17 @@ config = rec {
       serverEnv = callEnv ./envs/server.nix;
 
       # Python packages is its own separate bucket of overrides
-      pythonPackages = pkgs.pythonPackages // (import pkgs/python-packages.nix pkgs);
+      python27Packages = pkgs.python27Packages //
+        (callPackage pkgs/python-packages.nix {
+          python = python27;
+          self = python27Packages;
+        });
+
+      python34Packages = pkgs.python34Packages //
+        (unstable.callPackage pkgs/python-packages.nix {
+          python = python34;
+          self = python34Packages;
+        });
 
       # Pandora probably won't ever be packaged like this in nixpkgs
       pandora = callPackage ./pkgs/pandora {};
@@ -58,6 +69,8 @@ config = rec {
 
       wordlist = callPackage pkgs/wordlist {};
 
+      rethinkdb = unstable.rethinkdb;
+
     }) //
 
     # Convenience aliases
@@ -66,8 +79,8 @@ config = rec {
       inherit xkill;
     }) //
 
-    (with pkgs.pythonPackages; {
-      inherit ipython;
+    (with pkgs.python34Packages; {
+      inherit bigchaindb ipython;
       docker-compose = docker_compose;
     }) //
 

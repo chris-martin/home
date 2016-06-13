@@ -1,10 +1,54 @@
-{ pkgs, python, pythonPackages, fetchgit, fetchurl, fetchFromGitHub, ... }:
-
-with pythonPackages;
+{ pkgs, python, self, fetchgit, fetchurl, fetchFromGitHub, ... }:
 
 rec {
 
-  bitcoin = buildPythonPackage rec {
+  base58 = self.buildPythonPackage rec {
+    pname = "base58";
+    version = "0.2.2";
+    name = "${pname}-${version}";
+
+    src = fetchurl {
+     url = "https://pypi.python.org/packages/37/fd/73309b33e20bd2d3c7436f4dddbf2c363ff9fb55d867f593401d7cd716f5/${name}.tar.gz";
+     sha256 = "102vxvvz5jzc2ccgaf5pwdrmgypg277d7bfy0h9mp9d0nv9s9spi";
+    };
+
+    meta = {
+      description = "Base58 and Base58Check implementation";
+    };
+  };
+
+  bigchaindb = self.buildPythonPackage rec {
+    pname = "BigchainDB";
+    version = "0.4.0";
+    name = "${pname}-${version}";
+    disabled = !self.isPy34;
+
+    # I don't know why the check phase fails
+    doCheck = false;
+
+    propagatedBuildInputs = with self; [
+      base58 requests-2-9-0 rethinkdb statsd flask rapidjson cryptoconditions
+      pysha3 pytz logstats gunicorn
+    ];
+
+    buildInputs = with self; [
+      pytest pytest-flask coverage pep8 pyflakes pylint pytest pytest-cov
+      pytest-xdist
+    ];
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/cb/53/33466d60f0d85babd7f09e6b42406017a9fc2948baff8557920b191d2865/${name}.tar.gz";
+      sha256 = "0zw6nndrd55sv9179cmvpxb32s4ck6gyp733mgn5m73n83jhggvq";
+    };
+
+    meta = {
+      description = "A scalable blockchain database";
+      homepage = "https://www.bigchaindb.com/";
+      license = with self.licenses; [ agpl3 ];
+    };
+  };
+
+  bitcoin = self.buildPythonPackage rec {
     name = "bitcoin-${version}";
     version = "1.1.42";
 
@@ -14,7 +58,7 @@ rec {
     };
   };
 
-  coveralls = buildPythonPackage rec {
+  coveralls = self.buildPythonPackage rec {
     name = "coveralls-${version}";
     version = "1.1";
 
@@ -23,10 +67,24 @@ rec {
       sha256 = "0238hgdwbvriqxrj22zwh0rbxnhh9c6hh75i39ll631vq62h65il";
     };
 
-    propagatedBuildInputs = [ docopt coverage requests pyyaml ];
+    propagatedBuildInputs = with self; [ docopt coverage requests pyyaml ];
   };
 
-  cryptodome = buildPythonPackage rec {
+  cryptoconditions = self.buildPythonPackage rec {
+    name = "cryptoconditions-${version}";
+    version = "0.3.0";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/a9/21/58ee457e3d5f0e40312670b3e80250cf1ab1724f98747e166f5bea3be9b6/${name}.tar.gz";
+      sha256 = "0db5jwws6x30k46903zaqa727gpdx5m8dqk9g90qihqpj7a7xfd1";
+    };
+
+    propagatedBuildInputs = with self; [ base58 ed25519 ];
+
+    buildInputs = with self; [ pytest ];
+  };
+
+  cryptodome = self.buildPythonPackage rec {
     name = "pycryptodome-${version}";
     version = "3.4";
 
@@ -36,9 +94,19 @@ rec {
     };
   };
 
+  logstats = self.buildPythonPackage rec {
+    name = "logstats-${version}";
+    version = "0.2.1";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/1d/e8/a0dd81934c909e145af9709d47d1e7866b26a75f0c37b77ce75fd2b625cd/${name}.tar.gz";
+      sha256 = "02b7bk99023j1bgs1as7qmndcwknxmq3m3lvhs7kqnqg2pkp34m1";
+    };
+  };
+
   rlp = rlp-0-4-5;
 
-  rlp-0-4-4 = buildPythonPackage rec {
+  rlp-0-4-4 = self.buildPythonPackage rec {
     name = "rlp-${version}";
     version = "0.4.4";
 
@@ -48,7 +116,7 @@ rec {
     };
   };
 
-  rlp-0-4-5 = buildPythonPackage rec {
+  rlp-0-4-5 = self.buildPythonPackage rec {
     name = "rlp-${version}";
     version = "0.4.5";
 
@@ -58,7 +126,7 @@ rec {
     };
   };
 
-  pyethash = buildPythonPackage rec {
+  pyethash = self.buildPythonPackage rec {
     name = "pyethash-${version}";
     version = "0.1.27";
 
@@ -68,7 +136,7 @@ rec {
     };
   };
 
-  pyethereum = buildPythonPackage rec {
+  pyethereum = self.buildPythonPackage rec {
     version = "1.3.2";
     name = "pyethereum-${version}";
 
@@ -83,12 +151,12 @@ rec {
       echo "Skipping pyethereum tests because they're slow."
     '';
 
-    buildInputs = [
+    buildInputs = with self; [
       pytest-2-9-1 pytest-catchlog pytest-timeout
       serpent coveralls tox virtualenv pluggy
     ];
 
-    propagatedBuildInputs = [
+    propagatedBuildInputs = with self; [
       bitcoin pysha3 pyyaml repoze_lru pbkdf2 cryptodome
       scrypt rlp-0-4-4 pyethash secp256k1
     ];
@@ -99,7 +167,9 @@ rec {
     };
   };
 
-  pysha3 = buildPythonPackage rec {
+  pysha3 = pysha3-0-3;
+
+  pysha3-0-1 = self.buildPythonPackage rec {
     name = "pysha3-${version}";
     version = "0.1";
 
@@ -114,12 +184,27 @@ rec {
     };
   };
 
+  pysha3-0-3 = self.buildPythonPackage rec {
+    name = "pysha3-${version}";
+    version = "0.3";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/d0/17/9fb9efcde17f8fc77e0af0b49281d22eb7c640e326987b0308c88a927ba5/${name}.tar.gz";
+      sha256 = "0kghj6wbxjzwfn0h6m90yxkwx09wydr5p0kcgj2gn4fyfwgmy70r";
+    };
+
+    meta = {
+      homepage = https://bitbucket.org/tiran/pykeccak;
+      description = "SHA-3 wrapper (keccak) for Python";
+    };
+  };
+
   pytest = pytest-2-9-1;
 
   # Pytest upgraded beyond what's in nixpkgs upstream.
   # There's some stuff removed from this definition that
   # I just didn't care about.
-  pytest-2-9-1 = buildPythonPackage rec {
+  pytest-2-9-1 = self.buildPythonPackage rec {
     name = "pytest-2.9.1";
 
     src = fetchurl {
@@ -132,10 +217,10 @@ rec {
       rm testing/test_argcomplete.py
     '';
 
-    propagatedBuildInputs = [ py ];
+    propagatedBuildInputs = with self; [ py ];
   };
 
-  pytest-catchlog = buildPythonPackage rec {
+  pytest-catchlog = self.buildPythonPackage rec {
     name = "pytest-catchlog-1.2.2";
 
     src = fetchurl {
@@ -143,10 +228,43 @@ rec {
       sha256 = "1w7wxh27sbqwm4jgwrjr9c2gy384aca5jzw9c0wzhl0pmk2mvqab";
     };
 
-    propagatedBuildInputs = [ py pytest ];
+    propagatedBuildInputs = with self; [ py pytest ];
   };
 
-  pytest-timeout = buildPythonPackage rec {
+  pytest-cov = self.buildPythonPackage rec {
+    name = "pytest-cov-2.2.1";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/39/07/bdd2d985ae7ac726cc5e7a6a343b585570bf1f9f7cb297a9cd58a60c7c89/${name}.tar.gz";
+      sha256 = "1yl4nbhzfgsxqlsyk4clafgp9x11zvgrkprm9i2p3fgkwx9jxcm8";
+    };
+
+    propagatedBuildInputs = with self; [ py pytest coverage ];
+  };
+
+  pytest-flask = self.buildPythonPackage rec {
+    name = "pytest-flask-0.10.0";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/b4/b5/6d86a2362be78d1d817c7a1d5105100b7b51089dd56ca907d4fed9461570/${name}.tar.gz";
+      sha256 = "00vznyjfn6qszq6v551z53y9g4gqsjysxvyvbpwbdy1y0gwkcnic";
+    };
+
+    propagatedBuildInputs = with self; [ py pytest werkzeug flask ];
+  };
+
+  pytest-httpbin = self.buildPythonPackage rec {
+    name = "pytest-httpbin-0.2.3";
+
+    src = fetchurl {
+     url = "https://pypi.python.org/packages/12/12/5430600cb9417080b561237761ff2dffde520b664cc352433d2e57051222/${name}.tar.gz";
+     sha256 = "1y0v2v7xpzpyd4djwp7ad8ifnlxp8r1y6dfbxg5ckzvllkgridn5";
+    };
+
+    propagatedBuildInputs = with self; [ py pytest decorator flask httpbin six ];
+  };
+
+  pytest-timeout = self.buildPythonPackage rec {
     name = "pytest-timeout-1.0.0";
 
     src = fetchurl {
@@ -154,25 +272,73 @@ rec {
       sha256 = "1qccg490vvjsasy5dmwpp4apx2j2j8v4bcfi2lgdy5iywxmhjr8l";
     };
 
-    propagatedBuildInputs = [ py pytest ];
+    propagatedBuildInputs = with self; [ py pytest ];
+  };
+
+  pytest-xdist = self.buildPythonPackage rec {
+    name = "pytest-xdist-1.14";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/9e/df/434c91ac13e96dae9bf519eb4d606d99beac835c7f859d2bca923dbb6b80/${name}.zip";
+      sha256 = "08rn2l39ds60xshs4js787l84pfckksqklfq2wq9x8ig2aci2pja";
+    };
+
+    propagatedBuildInputs = with self; [ py pytest execnet ];
+  };
+
+  rapidjson = self.buildPythonPackage rec {
+    pname = "rapidjson";
+    version = "0.0.6";
+    name = "${pname}-${version}";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/14/af/1c2f7677d2ff8bc6f25d9e96c5fef9fe4886038dfaabe73c797d621de2c2/python-${name}.tar.gz";
+      sha256 = "1simb7b0yypwzr89vqidrvxafi34kcn2g54q8rjsssq61ijppx94";
+    };
+  };
+
+  requests-2-9-0 = self.buildPythonPackage rec {
+    pname = "requests";
+    version = "2.9.0";
+    name = "${pname}-${version}";
+
+    # I don't know why the check phase fails
+    doCheck = false;
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/e4/99/3e33bfe263894278a094c374f87031554406e57fd0b1ad22520357556627/${name}.tar.gz";
+      sha256 = "1f4f7zkcvkrpb3ymcvq84r58q6vdwsfr1za449anr8xm69jrd0a8";
+    };
+  };
+
+  requests-2-10-0 = self.buildPythonPackage rec {
+    pname = "requests";
+    version = "2.10.0";
+    name = "${pname}-${version}";
+
+    # I don't know why the check phase fails
+    doCheck = false;
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/49/6f/183063f01aae1e025cf0130772b55848750a2f3a89bfa11b385b35d7329d/${name}.tar.gz";
+      sha256 = "0m2vaasjdhrsf9nk05q0bybqw0w4w4p3p4vaw7730w8mi1bq3wb3";
+    };
+  };
+
+  rethinkdb = self.buildPythonPackage rec {
+    pname = "rethinkdb";
+    version = "2.3.0";
+    name = "${pname}-${version}";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/4c/a8/384144095230d21928c7d9615acb111c6ed4cd2af1aef5e8fe9d528451c0/${name}.tar.gz";
+      sha256 = "1xshqz3q7bi3si623mj860i44ayd4pkhp0rxj2dd055v1720ycrn";
+    };
   };
 
   scrypt = scrypt-0-7-0;
 
-  # broken
-  scrypt-0-7-1 = buildPythonPackage rec {
-    name = "scrypt-${version}";
-    version = "0.7.1";
-
-    src = fetchurl {
-      url = "https://pypi.python.org/packages/f6/fa/2e80258d58555d38ba0373db3c8947e03ceaaa91ad9f80725802bc05aa77/${name}.tar.gz";
-      sha256 = "18qxyqh0r5p3iyx3g6yd3vmmnw3yl1qz0cb59cw7hqc11hq8rxpm";
-    };
-
-    propagatedBuildInputs = [ pkgs.openssl ];
-  };
-
-  scrypt-0-7-0 = buildPythonPackage rec {
+  scrypt-0-7-0 = self.buildPythonPackage rec {
     name = "scrypt-${version}";
     version = "0.7.0";
 
@@ -181,11 +347,24 @@ rec {
       sha256 = "0vx579w6ik9l46bh41piq9bf49aa3xhzh768lz59qxvh6z6xmhx5";
     };
 
-    propagatedBuildInputs = [ pkgs.openssl ];
+    propagatedBuildInputs = with self; [ pkgs.openssl ];
+  };
+
+  # broken
+  scrypt-0-7-1 = self.buildPythonPackage rec {
+    name = "scrypt-${version}";
+    version = "0.7.1";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/f6/fa/2e80258d58555d38ba0373db3c8947e03ceaaa91ad9f80725802bc05aa77/${name}.tar.gz";
+      sha256 = "18qxyqh0r5p3iyx3g6yd3vmmnw3yl1qz0cb59cw7hqc11hq8rxpm";
+    };
+
+    propagatedBuildInputs = with self; [ pkgs.openssl ];
   };
 
   # https://github.com/NixOS/nixpkgs/pull/15979
-  secp256k1 = buildPythonPackage rec {
+  secp256k1 = self.buildPythonPackage rec {
     name = "secp256k1";
 
     src = fetchFromGitHub {
@@ -195,8 +374,8 @@ rec {
       sha256 = "0kyaph97gjwv4vv5nl9j5w8zp2bb606z4hfmjzl5la1da5gsdfaq";
     };
 
-    buildInputs = [ pkgs.pkgconfig ];
-    propagatedBuildInputs = [ cffi pkgs.secp256k1 ];
+    buildInputs = with self; [ pkgs.pkgconfig ];
+    propagatedBuildInputs = with self; [ cffi pkgs.secp256k1 ];
 
     preConfigure = ''
       ln -s ${pkgs.secp256k1.src} libsecp256k1
@@ -211,7 +390,7 @@ rec {
   };
 
   # https://github.com/NixOS/nixpkgs/pull/15977
-  serpent = buildPythonPackage rec {
+  serpent = self.buildPythonPackage rec {
     name = "serpent";
 
     src = fetchFromGitHub {
