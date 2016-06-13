@@ -3,10 +3,16 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.CLion12/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.IdeaIC14/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IdeaIC2016.1/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea14/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea15/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea2016.1/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.PyCharm2016.1/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.RubyMine70/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.WebIde100/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.WebStorm10/system" />
       <excludeFolder url="file://$MODULE_DIR$/.android" />
       <excludeFolder url="file://$MODULE_DIR$/.atom" />
       <excludeFolder url="file://$MODULE_DIR$/.bundle" />
@@ -16,6 +22,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/Cache" />
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/GPUCache" />
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/Local Storage" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/cef_user_data" />
       <excludeFolder url="file://$MODULE_DIR$/.config/chromium" />
       <excludeFolder url="file://$MODULE_DIR$/.config/ibus" />
       <excludeFolder url="file://$MODULE_DIR$/.config/pulse" />
@@ -37,6 +44,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.ivy2" />
       <excludeFolder url="file://$MODULE_DIR$/.java" />
       <excludeFolder url="file://$MODULE_DIR$/.kde/share/icons" />
+      <excludeFolder url="file://$MODULE_DIR$/.kodi/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.lein" />
       <excludeFolder url="file://$MODULE_DIR$/.leksah-0.15" />
       <excludeFolder url="file://$MODULE_DIR$/.local/lib" />
@@ -78,9 +86,11 @@
       <excludeFolder url="file://$MODULE_DIR$/luongo" />
       <excludeFolder url="file://$MODULE_DIR$/mnt" />
       <excludeFolder url="file://$MODULE_DIR$/nix/sys-pkgs" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/oseary" />
       <excludeFolder url="file://$MODULE_DIR$/python" />
       <excludeFolder url="file://$MODULE_DIR$/secrets" />
+      <excludeFolder url="file://$MODULE_DIR$/virtualbox" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
