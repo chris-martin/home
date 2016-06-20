@@ -50,8 +50,8 @@ config = rec {
       # - https://github.com/NixOS/nixpkgs/commit/08575ee
       #gore = unstable.goPackages.gore;
 
-      # geth alias will be in unstable after https://github.com/NixOS/nixpkgs/pull/15702
-      geth = unstable.goPackages.ethereum.bin // { outputs = [ "bin" ]; };
+      # Get is also now gone due to https://github.com/NixOS/nixpkgs/commit/08575ee
+      #geth = unstable.goPackages.ethereum.bin // { outputs = [ "bin" ]; };
 
       # npm2nix is broken everywhere, but seems slightly better in unstable
       npm2nix = unstable.nodePackages.npm2nix;
