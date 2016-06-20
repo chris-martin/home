@@ -4,7 +4,7 @@ let
 
 # http://gnome-look.org/content/show.php?content=120117
 icon = fetchurl {
-  url = "http://gnome-look.org/CONTENT/content-files/120117-pandora.png";
+  url = "https://cn.pling.com/img/hive/content-pre1/120117-1.png";
   sha256 = "03qn91h96gyagj4xvi44484mdq0gmw7dr88fv52wfa3iphhy9lv1";
 };
 
