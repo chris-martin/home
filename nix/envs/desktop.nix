@@ -32,7 +32,7 @@ buildEnv {
 
     ((import "${config.home}/emacs/emacs.nix") pkgs) # Emacs
 
-    geth                               # Ethereum
+    #geth                              # Ethereum
 
     steam minecraft                    # Gaming
 
