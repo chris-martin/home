@@ -40,7 +40,7 @@
   environment.systemPackages = with pkgs; [
     android-udev-rules curl docker emacs
     gparted gptfdisk htop lsof man_db
-    openssl tree vim wget which nodePackages.peerflix
+    openssl tree vim wget which
   ];
 
   services.avahi = {
@@ -65,8 +65,6 @@
   };
 
   services.unclutter.enable = true;
-
-  services.peerflix.enable = true;
 
   systemd.user.services.emacs = {
 
