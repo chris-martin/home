@@ -45,8 +45,10 @@ config = rec {
       # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
       google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
 
-      # Gore isn't backported to 16.03
-      gore = unstable.goPackages.gore;
+      # Gore isn't backported to 16.03, and now it's gone from unstable.
+      # - https://github.com/NixOS/nixpkgs/pull/15440
+      # - https://github.com/NixOS/nixpkgs/commit/08575ee
+      #gore = unstable.goPackages.gore;
 
       # geth alias will be in unstable after https://github.com/NixOS/nixpkgs/pull/15702
       geth = unstable.goPackages.ethereum.bin // { outputs = [ "bin" ]; };
