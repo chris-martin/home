@@ -24,16 +24,16 @@ config = rec {
       serverEnv = callEnv ./envs/server.nix;
 
       # Python packages is its own separate bucket of overrides
-      python27Packages = pkgs.python27Packages //
+      myPython27Packages = pkgs.python27Packages //
         (callPackage pkgs/python-packages.nix {
           python = python27;
-          self = python27Packages;
+          self = myPython27Packages;
         });
 
-      python34Packages = pkgs.python34Packages //
+      myPython34Packages = pkgs.python34Packages //
         (unstable.callPackage pkgs/python-packages.nix {
           python = python34;
-          self = python34Packages;
+          self = myPython34Packages;
         });
 
       # Pandora probably won't ever be packaged like this in nixpkgs
@@ -75,29 +75,36 @@ config = rec {
 
     # Convenience aliases
 
-    (with pkgs.xorg; {
+    (with pkgsWithOverrides.xorg; {
       inherit xkill;
     }) //
 
-    (with pkgs.python34Packages; {
-      inherit bigchaindb ipython;
+    (with pkgsWithOverrides.python27Packages; {
       docker-compose = docker_compose;
     }) //
 
-    (with pkgs.kde4; {
+    (with pkgsWithOverrides.python34Packages; {
+      inherit ipython;
+    }) //
+
+    (with pkgsWithOverrides.myPython34Packages; {
+      inherit bigchaindb pyethereum;
+    }) //
+
+    (with pkgsWithOverrides.kde4; {
       inherit kcolorchooser konversation;
     }) //
 
-    (with pkgs.nodePackages; {
+    (with pkgsWithOverrides.nodePackages; {
       inherit bower npm;
       grunt = grunt-cli;
     }) //
 
-    (with pkgs.gnome3; {
+    (with pkgsWithOverrides.gnome3; {
       inherit cheese eog file-roller gnome-screenshot polari;
     }) //
 
-    (with pkgs.haskellPackages; {
+    (with pkgsWithOverrides.haskellPackages; {
       inherit cabal2nix hlint purescript stack stylish-haskell;
       cabal = cabal-install;
     }) //
