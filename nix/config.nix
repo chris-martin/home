@@ -73,6 +73,11 @@ config = rec {
 
       rethinkdb = unstable.rethinkdb;
 
+      # Fall back to unstable for Haskell LTS releases that aren't in stable
+      haskell = pkgs.haskell // {
+        packages = pkgs.haskell.packages // unstable.haskell.packages;
+      };
+
     }) //
 
     # Convenience aliases
