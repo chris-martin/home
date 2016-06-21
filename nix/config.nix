@@ -71,6 +71,7 @@ config = rec {
 
       wordlist = callPackage pkgs/wordlist {};
 
+      # BigchainDB requires rethinkdb version higher than what's in 16.03
       rethinkdb = unstable.rethinkdb;
 
       # Fall back to unstable for Haskell LTS releases that aren't in stable
