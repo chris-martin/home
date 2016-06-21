@@ -7,11 +7,88 @@
   'ctrl-y': 'editor:delete-line'
   'ctrl-alt-d': 'unset!'
   'ctrl-shift-d': 'unset!'
+
 'atom-workspace':
   'ctrl-d': 'git-difftool:diff-file'
+
 'body':
   'alt-right': 'pane:show-next-item'
   'alt-left': 'pane:show-previous-item'
   'ctrl-f4': 'core:close'
+
 '.platform-linux atom-text-editor':
   'ctrl-d': 'unset!'
+
+'atom-text-editor[data-grammar~="haskell"]':
+  'cmd-b':         'haskell-ghc-mod:go-to-declaration'
+  'ctrl-b':        'haskell-ghc-mod:go-to-declaration'
+  # 'ctrl-b':        'ide-haskell-hasktags:go-to-declaration'
+  # 'cmd-b':         'ide-haskell-hasktags:go-to-declaration'
+  'ctrl-alt-left': 'ide-haskell-hasktags:go-back'
+  'ctrl-n':        'ide-haskell-hasktags:show-tags'
+
+  'ctrl-alt-t':    'haskell-ghc-mod:show-type'
+  'ctrl-alt-T':    'haskell-ghc-mod:insert-type'
+
+  'ctrl-alt-l':    'ide-haskell:prettify-file'
+  'f3':            'ide-haskell:next-error'
+  'shift-f3':      'ide-haskell:prev-error'
+
+  'ctrl-q':        'haskell-ghc-mod:show-info-fallback-to-type'
+  'ctrl-alt-i':    'haskell-ghc-mod:insert-import'
+
+'atom-text-editor[data-grammar~="cabal"]':
+  'ctrl-alt-l':    'ide-haskell:prettify-file'
+
+'body':
+  'ctl-z':           'core:undo'
+  'ctl-shift-z':     'core:redo'
+
+  'ctrl-home':       'core:move-to-top'
+  'ctrl-end':        'core:move-to-bottom'
+
+'atom-workspace':
+  'ctrl-shift-f':    'project-find:show'
+  'ctrl-shift-r':    'project-find:show'
+
+  'ctrl-shift-n':    'fuzzy-finder:toggle-file-finder'
+
+  'ctrl-shift-a':    'command-palette:toggle'  # Find action
+  'ctrl-1':          'tree-view:toggle'        # Open corresponding tool window
+
+  'ctrl-2':          'ide-haskell:toggle-output'
+
+'atom-text-editor':
+  'ctrl-left':        'editor:move-to-beginning-of-word'
+  'ctrl-right':       'editor:move-to-end-of-word'
+
+  'ctrl-shift-left':  'editor:select-to-beginning-of-word'
+  'ctrl-shift-right': 'editor:select-to-end-of-word'
+
+  'ctrl-down':        'editor:scroll-down'
+  'ctrl-up':          'editor:scroll-up'
+
+'atom-workspace atom-text-editor:not([mini])':
+  # TODO move cursor down if one or no line was selected
+  'ctrl-/': 'editor:toggle-line-comments'
+  # 'cmd-/': 'editor:toggle-line-comments'
+
+  'ctrl-d':          'editor:duplicate-lines'
+  'cmd-d':           'editor:duplicate-lines'
+  'ctrl-w':          'editor:select-to-next-subword-boundary'
+  'ctrl-shift-w':    'editor:select-to-previous-subword-boundary'
+
+  'shift-delete':    'editor:delete-line'
+  'ctrl-y':          'editor:delete-line'
+
+  'ctrl-shift-up':   'editor:move-line-up'
+  'ctrl-shift-down': 'editor:move-line-down'
+
+  'ctrl-r':          'find-and-replace:show'
+
+  'alt-right':       'pane:show-next-item'
+  'alt-left':        'pane:show-previous-item'
+
+  'ctrl-l':          'go-to-line:toggle'
+  'ctrl-e':          'fuzzy-finder:toggle-buffer-finder'
+  'ctrl-j':          'snippets:available'

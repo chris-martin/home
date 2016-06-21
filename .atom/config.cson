@@ -1,37 +1,38 @@
 "*":
-  welcome:
-    showOnStartup: false
+  "autocomplete-plus":
+    enableAutoActivation: false
+    enableAutoConfirmSingleSuggestion: false
+  autosave:
+    enabled: true
   core:
+    audioBeep: false
     disabledPackages: [
       "exception-reporting"
       "spell-check"
       "welcome"
-      "tree-view"
     ]
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
-    ]
-    audioBeep: false
-    projectHome: "/home/chris/git"
     ignoredNames: [
       ".git"
       ".idea"
     ]
+    projectHome: "/home/chris/git"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
   editor:
-    invisibles: {}
     backUpBeforeSaving: true
+    fontFamily: "\"DejaVu Sans Mono\""
+    fontSize: 17
+    invisibles: {}
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
-    fontFamily: "\"DejaVu Sans Mono\""
-    fontSize: 12
-  autosave:
-    enabled: true
+  "haskell-ghc-mod":
+    ghcModPath: "ghc-mod-nix-shell"
   "local-history": {}
   tabs:
     enableVcsColoring: true
   "tree-view":
     hideIgnoredNames: true
-  "autocomplete-plus":
-    enableAutoActivation: false
-    enableAutoConfirmSingleSuggestion: false
+  welcome:
+    showOnStartup: false
