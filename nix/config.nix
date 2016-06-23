@@ -51,7 +51,9 @@ config = rec {
       #gore = unstable.goPackages.gore;
 
       # Get is also now gone due to https://github.com/NixOS/nixpkgs/commit/08575ee
-      #geth = unstable.goPackages.ethereum.bin // { outputs = [ "bin" ]; };
+      # New PR at https://github.com/NixOS/nixpkgs/pull/16353
+      # Using unstable because the new go infrastructure isn't in 16.03
+      go-ethereum = unstable.callPackage ./pkgs/go-ethereum {};
 
       # npm2nix is broken everywhere, but seems slightly better in unstable
       npm2nix = unstable.nodePackages.npm2nix;
