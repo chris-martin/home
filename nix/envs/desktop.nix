@@ -38,6 +38,7 @@ buildEnv {
 
     gitAndTools.gitFull                # Git
     gitAndTools.hub
+    gitAndTools.git-extras
 
     cabal stylish-haskell hlint        # Haskell
     cabal2nix stack
