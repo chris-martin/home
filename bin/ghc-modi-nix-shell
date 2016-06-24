@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Source .bashrc because this script is intended to be
+# used by editors, e.g. Atom which doesn't source .bashrc,
+# and we need NIX_PATH to be set correctly.
+source ~/.bashrc
+
+# Walk up the FS hierarchy until we find a shell.nix
+while [ "$PWD" != "/" ] && [ ! -f shell.nix ]; do
+    cd ..    echo "$PWD"
+done
+
+# If we didn't find a shell.nix, give up.
+if [ "$PWD" = "/" ]; then
+    (>&2 echo "No shell.nix found")
+    exit 1
+fi
+
+# Arg list trick:
+# https://stackoverflow.com/questions/3104209
+ARGS=$(printf "%q"" " "$@")
+
+# Run ghc-mod inside nix-shell
+nix-shell --run "ghc-modi $ARGS"
