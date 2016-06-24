@@ -13,11 +13,11 @@ let
 
   wordlist = stdenv.mkDerivation {
     name = "wordlist";
-    src = ./.;
+    src = builtins.filterSource (path: type: false) ./.;
     buildInputs = [ makeWrapper ];
     installPhase = ''
       mkdir -p $out/bin
-      ln -s ${exe}/bin/wordlist-exe $out/bin/wordlist
+      cp ${exe}/bin/wordlist-exe $out/bin/wordlist
       wrapProgram $out/bin/wordlist --set WORD_LIST_PATH ${data}
     '';
     passthru = {

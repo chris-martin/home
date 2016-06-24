@@ -71,6 +71,8 @@ config = rec {
       # https://github.com/NixOS/nixpkgs/pull/15977
       serpent = callPackage pkgs/serpent {};
 
+      # My software that lives in this repo
+      choose = callPackage pkgs/choose {};
       wordlist = callPackage pkgs/wordlist {};
 
       # BigchainDB requires rethinkdb version higher than what's in 16.03

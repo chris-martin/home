@@ -4,7 +4,7 @@ buildEnv {
   name = "desktopEnv";
   paths = [
 
-    wordlist
+    choose wordlist
 
     ack
 
