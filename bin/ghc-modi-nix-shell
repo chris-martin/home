@@ -5,20 +5,26 @@
 # and we need NIX_PATH to be set correctly.
 source ~/.bashrc
 
-# Walk up the FS hierarchy until we find a shell.nix
-while [ "$PWD" != "/" ] && [ ! -f shell.nix ]; do
-    cd ..    echo "$PWD"
+# Walk up the FS hierarchy until we find a shell.nix or stack.yaml
+while [ "$PWD" != "/" ] && [ ! -f shell.nix ] && [ ! -f stack.yaml ]; do
+    cd ..
 done
 
-# If we didn't find a shell.nix, give up.
-if [ "$PWD" = "/" ]; then
-    (>&2 echo "No shell.nix found")
-    exit 1
+# If we didn't find either, give up.
+if [ -f shell.nix ]; then
+
+  # Arg list trick:
+  # https://stackoverflow.com/questions/3104209
+  ARGS=$(printf "%q"" " "$@")
+
+  # Run ghc-mod inside nix-shell
+  nix-shell --run "ghc-modi $ARGS"
+
+elif [ -f stack.yaml ]; then
+
+  ghc-modi "$@"
+
+else
+  (>&2 echo "No shell.nix or stack.yaml found")
+  exit 1
 fi
-
-# Arg list trick:
-# https://stackoverflow.com/questions/3104209
-ARGS=$(printf "%q"" " "$@")
-
-# Run ghc-mod inside nix-shell
-nix-shell --run "ghc-modi $ARGS"
