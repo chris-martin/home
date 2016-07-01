@@ -32,13 +32,21 @@ haskellMain = main =<< getPath
         testStack = doesFileExist $ Path.toFilePath $ path </> $(mkRelFile "stack.yaml")
         useShell = do
             cmd <- getWrappedCommand
+            let interactive = cmd == "ghd-modi"
             args <- getArgs
-            let cp = (bashProc ["nix-shell", "--run", escapeMany (cmd:args)]) { cwd = Just (Path.toFilePath path) }
+            let cp = (bashProc [ "nix-shell"
+                               , if interactive then "--command" else "--run"
+                               , escapeMany (cmd:args)])
+                     { cwd = Just (Path.toFilePath path)
+                     , delegate_ctlc = interactive }
             execAndExit cp
         noWrap = do
             cmd <- getWrappedCommand
+            let interactive = cmd == "ghd-modi"
             args <- getArgs
-            let cp = (proc cmd args) { cwd = Just (Path.toFilePath path) }
+            let cp = (bashProc (cmd:args))
+                     { cwd = Just (Path.toFilePath path)
+                     , delegate_ctlc = interactive }
             execAndExit cp
         fail = do
             hPutStrLn stderr "Haskell project root not found."
