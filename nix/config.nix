@@ -80,6 +80,10 @@ config = rec {
 
       # Fall back to unstable for Haskell LTS releases that aren't in stable
       haskell = pkgs.haskell // {
+
+        # https://github.com/NixOS/nixpkgs/issues/16629
+        compiler = pkgs.haskell.compiler // { ghc801 = unstable.haskell.compiler.ghc801; };
+
         packages = unstable.haskell.packages // pkgs.haskell.packages;
       };
 
