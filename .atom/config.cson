@@ -28,8 +28,8 @@
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
   "haskell-ghc-mod":
-    ghcModPath: "ghc-mod-nix-shell"
-    ghcModiPath: "ghc-modi-nix-shell"
+    ghcModPath: "nix-shell.ghc-mod"
+    ghcModiPath: "nix-shell.ghc-modi"
   "local-history": {}
   tabs:
     enableVcsColoring: true

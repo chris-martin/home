@@ -74,6 +74,7 @@ config = rec {
       # My software that lives in this repo
       choose = callPackage pkgs/choose {};
       wordlist = callPackage pkgs/wordlist {};
+      nix-shell-wrapper = callPackage pkgs/nix-shell-wrapper {};
 
       # BigchainDB requires rethinkdb version higher than what's in 16.03
       rethinkdb = unstable.rethinkdb;
