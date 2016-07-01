@@ -23,6 +23,7 @@
   editor:
     backUpBeforeSaving: true
     fontFamily: "\"DejaVu Sans Mono\""
+    fontSize: 16
     invisibles: {}
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
