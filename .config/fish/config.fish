@@ -24,6 +24,8 @@ set -x EDITOR e
 
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
+alias idea idea-ultimate
+
 # https://twitter.com/chris__martin/status/420992421673988096
 alias such git
 alias very git
