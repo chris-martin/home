@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Wordlist (main) where
+module Main (main) where
 
 import           Prelude                     (IO, Int, Maybe, show, ($), (++),
                                               (-), (.), (<$>), (<*>))
@@ -27,10 +27,15 @@ import           System.Environment          (getEnv)
 import           System.IO                   (hFlush, hPutStr, stderr, stdout)
 import           System.Random               (randomRIO)
 
+
+-------------------------------------------------------------------------------
+--  Command-line args
+-------------------------------------------------------------------------------
+
 data Args = Args
-  { argN :: Maybe Int
-  , argD :: Maybe Text
-  }
+    { argN :: Maybe Int
+    , argD :: Maybe Text
+    }
 
 defaultN :: Int
 defaultN = 4
@@ -45,30 +50,23 @@ readInt :: Opt.ReadM Int
 readInt = Opt.auto
 
 parserN :: Parser (Maybe Int)
-parserN = optional $ Opt.option readInt
-   ( Opt.long "number"
-  <> Opt.short 'n'
-  <> Opt.help ("Number of words (default: " ++ show defaultN ++ ")")
-   )
+parserN = optional $ Opt.option readInt $
+    Opt.long "number" <> Opt.short 'n' <> Opt.help help
+    where
+    help = "Number of words (default: " ++ show defaultN ++ ")"
 
 parserD :: Parser (Maybe Text)
-parserD = optional $ Opt.option readText
-   ( Opt.long "delimiter"
-  <> Opt.short 'd'
-  <> Opt.help "Delimiter between words (default: space)"
-   )
+parserD = optional $ Opt.option readText $
+    Opt.long "delimiter" <> Opt.short 'd' <> Opt.help help
+    where
+    help = "Delimiter between words (default: space)"
 
 parser :: Parser Args
 parser = Args <$> parserN <*> parserD
 
 parserInfo :: Opt.InfoMod a
 parserInfo = Opt.header
-  "Generates random English words. Useful for password generation."
-
-randomFromSeq :: Seq a -> IO a
-randomFromSeq xs = do
-  i <- randomRIO (0, Seq.length xs - 1)
-  return $ Seq.index xs i
+    "Generates random English words. Useful for password generation."
 
 getN :: Args -> Int
 getN = fromMaybe defaultN . argN
@@ -76,13 +74,23 @@ getN = fromMaybe defaultN . argN
 getD :: Args -> Text
 getD = fromMaybe defaultD . argD
 
+
+-------------------------------------------------------------------------------
+--  Main
+-------------------------------------------------------------------------------
+
 main :: IO ()
 main = do
-  args <- execParser $ Opt.info (helper <*> parser) parserInfo
-  path <- getEnv "WORD_LIST_PATH"
-  allText <- TextIO.readFile path
-  let allWords = Seq.fromList $ Text.lines allText
-  selectedWords <- replicateM (getN args) (randomFromSeq allWords)
-  TextIO.putStr $ Text.intercalate (getD args) selectedWords
-  hFlush stdout
-  hPutStr stderr "\n"
+    args <- execParser $ Opt.info (helper <*> parser) parserInfo
+    path <- getEnv "WORD_LIST_PATH"
+    allText <- TextIO.readFile path
+    let allWords = Seq.fromList $ Text.lines allText
+    selectedWords <- replicateM (getN args) (randomFromSeq allWords)
+    TextIO.putStr $ Text.intercalate (getD args) selectedWords
+    hFlush stdout
+    hPutStr stderr "\n"
+
+randomFromSeq :: Seq a -> IO a
+randomFromSeq xs = do
+    i <- randomRIO (0, Seq.length xs - 1)
+    return $ Seq.index xs i

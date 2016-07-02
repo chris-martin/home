@@ -16,7 +16,7 @@
 -- The process of moving items futher down the tree is herein referred to as
 -- "disambiguation", because its purpose is to resolve ties in the score.
 
-module Choose (main) where
+module Main (main) where
 
 import Prelude (Bool (..), Either (..), Foldable (..), IO, Int, Maybe (..),
                 mapM_, not, pure, show, snd, ($), (+), (++), (-), (.), (<$>),

@@ -1,8 +1,6 @@
 {-# LANGUAGE TemplateHaskell #-}
 
-module NixShellWrapper
-    ( haskellMain
-    ) where
+module Main (main) where
 
 import           Path                (Abs, Dir, Path, mkRelFile, parent,
                                       parseAbsDir, (</>))
@@ -15,10 +13,10 @@ import           System.Posix.Escape (escapeMany)
 import           System.Process      (CreateProcess (..), createProcess, proc,
                                       waitForProcess)
 
-haskellMain :: IO ()
-haskellMain = main =<< getPath
+main :: IO ()
+main = main' =<< getPath
     where
-    main path = do
+    main' path = do
         shellNixExists <- testShell
         if shellNixExists
             then useShell
@@ -26,7 +24,7 @@ haskellMain = main =<< getPath
                 stackYamlExists <- testStack
                 if stackYamlExists
                     then noWrap
-                    else maybe fail main $ parentMaybe path
+                    else maybe fail main' $ parentMaybe path
         where
         testShell = doesFileExist $ Path.toFilePath $ path </> $(mkRelFile "shell.nix")
         testStack = doesFileExist $ Path.toFilePath $ path </> $(mkRelFile "stack.yaml")
