@@ -83,7 +83,9 @@
   <action id=":cursive.testing.actions/remove-test-markers">
     <keyboard-shortcut first-keystroke="shift ctrl back_space" />
   </action>
-  <action id="CloseActiveTab" />
+  <action id="CloseActiveTab">
+    <keyboard-shortcut first-keystroke="ctrl w" />
+  </action>
   <action id="CloseAllEditorsButActive">
     <keyboard-shortcut first-keystroke="ctrl f5" />
   </action>
@@ -98,6 +100,7 @@
   <action id="CopyPaths" />
   <action id="Diff.ShowDiff" />
   <action id="EditorDuplicate" />
+  <action id="EditorSelectWord" />
   <action id="FileChooser.GotoDesktop" />
   <action id="FindUsages">
     <keyboard-shortcut first-keystroke="ctrl u" />
