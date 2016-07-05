@@ -83,13 +83,10 @@
   <action id=":cursive.testing.actions/remove-test-markers">
     <keyboard-shortcut first-keystroke="shift ctrl back_space" />
   </action>
-  <action id="CloseActiveTab">
+  <action id="CloseActiveTab" />
+  <action id="CloseContent">
     <keyboard-shortcut first-keystroke="ctrl w" />
   </action>
-  <action id="CloseAllEditorsButActive">
-    <keyboard-shortcut first-keystroke="ctrl f5" />
-  </action>
-  <action id="CloseContent" />
   <action id="CloseEditor">
     <keyboard-shortcut first-keystroke="ctrl f4" />
   </action>
