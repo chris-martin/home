@@ -39,8 +39,7 @@ config = rec {
       # Pandora probably won't ever be packaged like this in nixpkgs
       pandora = callPackage ./pkgs/pandora {};
 
-      # Sublime with desktop entry: https://github.com/NixOS/nixpkgs/pull/15710
-      sublime = unstable.callPackage ./pkgs/sublime {};
+      sublime = unstable.sublime3;
 
       # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
       google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
