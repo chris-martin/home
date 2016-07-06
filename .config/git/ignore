@@ -19,3 +19,7 @@
 
 # Sublime
 *.sublime-workspace
+
+# Ensime (Sublime plugin for Scala)
+.ensime
+.ensime_cache
