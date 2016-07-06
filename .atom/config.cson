@@ -30,6 +30,9 @@
   "haskell-ghc-mod":
     ghcModPath: "nix-shell.ghc-mod"
     ghcModiPath: "nix-shell.ghc-modi"
+  "linter-scalac":
+    compileAllClassesOnLint: true
+    compileClassesToClasspath: true
   "local-history": {}
   tabs:
     enableVcsColoring: true
