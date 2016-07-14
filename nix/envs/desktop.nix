@@ -52,7 +52,7 @@ buildEnv {
     gimp imagemagick inkscape          # Image editing
     kcolorchooser
 
-    openjdk8                           # JVM
+    openjdk8 sbt scala                 # JVM
 
     nodejs npm2nix grunt bower         # Javascript
     purescript
