@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, autoconf, automake, libtool, ... }:
+{ stdenv, fetchFromGitHub, autoconf, automake, libtool, openjdk8, ... }:
 
 stdenv.mkDerivation rec {
   name = "secp256k1";
@@ -12,9 +12,15 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ autoconf automake libtool ];
 
-  configureFlags = [ "--enable-module-recovery" ];
+  configureFlags = [
+    "--enable-jni" "--enable-experimental" "--enable-module-schnorr"
+    "--enable-module-ecdh" "--enable-module-recovery"
+  ];
 
-  preConfigure = "./autogen.sh";
+  preConfigure = ''
+    export JAVA_HOME=${openjdk8}
+    ./autogen.sh
+  '';
 
   # The python wrapper requires autogen.sh to be there
   postInstall = "cp autogen.sh $out/lib";
