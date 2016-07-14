@@ -19,6 +19,7 @@
     kernelPackages = pkgs.linuxPackages_4_4;
     kernelModules  = ["snd-hda-intel"];
     extraKernelParams = ["pci=nocrs"];
+    cleanTmpDir = true;
   };
 
   nixpkgs.config.virtualbox.enableExtensionPack =
