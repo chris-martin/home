@@ -41,7 +41,8 @@ buildEnv {
     gitAndTools.git-extras
 
     cabal stylish-haskell hlint        # Haskell
-    cabal2nix stack
+    cabal2nix stack hasktags
+    pointfree pointful ghc ghc-mod
 
     curl wget                          # HTTP
 

@@ -121,7 +121,7 @@ config = rec {
     }) //
 
     (with pkgsWithOverrides.haskellPackages; {
-      inherit cabal2nix hlint purescript stack stylish-haskell;
+      inherit cabal2nix hlint purescript stack stylish-haskell hasktags pointfree pointful ghc-mod;
       cabal = cabal-install;
     }) //
 
