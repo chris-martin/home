@@ -8,6 +8,8 @@ buildEnv {
 
     ack
 
+    gnupg
+
     jmtpfs                             # Android
 
     zip unzip file-roller              # Archives
