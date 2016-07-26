@@ -34,7 +34,7 @@ stdenv.mkDerivation rec {
     chmod +x $out/bin/tla-toolbox
 
     wrapProgram $out/bin/tla-toolbox \
-      --prefix PATH : "${builtins.concatStringsSep ":" path}"
+      --prefix PATH : "${builtins.concatStringsSep ":" path}" \
       --prefix LD_LIBRARY_PATH : "${builtins.concatStringsSep ":" ld-library-path}"
   '';
 

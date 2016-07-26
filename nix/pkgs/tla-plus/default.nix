@@ -1,34 +1,31 @@
-{ fetchzip, makeWrapper, stdenv, jre, swt, bash, ... }:
+{ callPackage, buildEnv, ... }:
 
-# http://research.microsoft.com/en-us/um/people/lamport/tla/tools.html
-stdenv.mkDerivation rec {
-  name = "tla-plus";
+let
 
-  src = fetchzip {
-    url = "https://tla.msr-inria.inria.fr/tlatoolbox/dist/tla.zip";
-    sha256 = "1n4v2pnlbih8hgmchwb21wy9cwv59gb3jv0rj427jal3nyh2ay3b";
+  core = execName: javaMain: callPackage ./core.nix {
+    execName = execName;
+    javaMain = javaMain;
   };
 
-  buildInputs = [ makeWrapper ];
+in
 
-  phases = [ "installPhase" ];
+rec {
 
-  installPhase = ''
+  tlc = core "tlc" "tlc2.TLC";
 
-    mkdir -pv $out/bin
+  sany = core "sany" "tla2sany.SANY";
 
-    java=${jre}/bin/java
+  pluscal = core "pluscal" "pcal.trans";
 
-    mkbin () {
-      bin=$out/bin/$1
-      echo -e "$java $2 \"\$@\"" > $bin
-      chmod +x $bin
-      wrapProgram $bin --set CLASSPATH $src
-    }
+  tlatex = core "tlatex" "tla2tex.TLA";
 
-    mkbin tlc     tlc2.TLC
-    mkbin sany    tla2sany.SANY
-    mkbin pluscal pcal.trans
-    mkbin tlatex  tla2tex.TLA
-  '';
+  tlaps = callPackage ./tlaps.nix {};
+
+  toolbox = callPackage ./toolbox.nix {};
+
+  all = buildEnv {
+    name = "tlaplus";
+    paths = [ tlc sany pluscal tlatex tlaps toolbox ];
+  };
+
 }
