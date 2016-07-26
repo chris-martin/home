@@ -73,6 +73,7 @@ config = rec {
       # TLA+
       tla-plus = callPackage pkgs/tla-plus {};
       tla-toolbox = callPackage pkgs/tla-toolbox {};
+      tla-ps = callPackage pkgs/tla-ps {};
 
       # My software that lives in this repo
       choose = callPackage pkgs/choose {};
