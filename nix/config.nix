@@ -70,6 +70,10 @@ config = rec {
       # https://github.com/NixOS/nixpkgs/pull/15977
       serpent = callPackage pkgs/serpent {};
 
+      # TLA+
+      tla-plus = callPackage pkgs/tla-plus {};
+      tla-toolbox = callPackage pkgs/tla-toolbox {};
+
       # My software that lives in this repo
       choose = callPackage pkgs/choose {};
       wordlist = callPackage pkgs/wordlist {};
