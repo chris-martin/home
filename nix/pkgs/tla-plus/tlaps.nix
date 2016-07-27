@@ -46,6 +46,8 @@ let
         isabelle make
         popd
 
+        # Use a modified version of the command in the Makefile
+        # that avoids needing LaTeX dependencies
         isabelle usedir -b -i true Pure TLA+
 
         runHook postBuild
