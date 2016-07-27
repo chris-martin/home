@@ -1,55 +1,97 @@
-# The TLA+ Proof System (TLAPS) mechanically checks TLA+ proofs.
-
-{ fetchurl, makeWrapper, stdenv, ocaml, wget, gawk, ... }:
+{ lib, fetchurl, makeWrapper, stdenv, ocaml, wget, gawk, isabelle2011, perl, ... }:
 
 let
 
   version = "1.4.3";
 
   src = fetchurl {
-    url = "https://tla.msr-inria.inria.fr/tlaps/dist/current/tlaps-${version}.tar.gz";
+    url = "https://tla.msr-inria.inria.fr/tlaps/dist/${version}/tlaps-${version}.tar.gz";
     sha256 = "1w5z3ns5xxmhmp8r4x2kjmy3clqam935gmvx82imyxrr1bamx6gf";
   };
 
-  isabelle = stdenv.mkDerivation {
-    name = "tla-ps-${version}-isabelle";
-    src = src;
-    buildInputs = [ ocaml ];
-    configurePhase = ''
-      cd zenon
-      ./configure --prefix $out
-    '';
+  mkModule = { name, meta }: args:
+    stdenv.mkDerivation (args // {
+
+      name = "tlaps-${name}-${version}";
+
+      inherit src;
+
+      preConfigure = "cd ${name}";
+
+      meta = {
+        homepage = "http://tla.msr-inria.inria.fr/tlaps/content/Home.html";
+
+        # todo: The licenses look complicated.
+        # https://tla.msr-inria.inria.fr/tlaps/content/Download/License.html
+
+      } // meta;
+
+    });
+
+  modules = {
+
+    isabelle = mkModule {
+      name = "isabelle";
+      meta = {};
+    } {
+      buildInputs = [ ocaml isabelle2011 perl ];
+      buildPhase = "#";
+      installPhase = ''
+        runHook preBuild
+
+        mkdir -pv $out
+        export HOME=$out
+
+        pushd ${isabelle2011}/Isabelle2011-1/src/Pure
+        isabelle make
+        popd
+
+        isabelle usedir -b -i true Pure TLA+
+
+        runHook postBuild
+      '';
+    };
+
+    zenon = mkModule {
+      name = "zenon";
+      meta = {};
+    } {
+      buildInputs = [ ocaml ];
+      configurePhase = ''
+        runHook preConfigure
+        ./configure --prefix $out
+        runHook postConfigure
+      '';
+    };
+
+    tlapm = mkModule {
+      name = "tlapm";
+      meta = {
+        description = "The TLA+ Proof System (TLAPS)";
+        longDescription = ''
+          Mechanically checks TLA+ proofs. TLA+ is a general-purpose formal specification
+          language that is particularly useful for describing concurrent and distributed
+          systems. The TLA+ proof language is declarative, hierarchical, and scalable to
+          large system specifications. It provides a consistent abstraction over the
+          various "backend" verifiers. The current release of TLAPS does not perform
+          temporal reasoning, and it does not handle some features of TLA+.
+        '';
+      };
+    } {
+      buildInputs = [ makeWrapper wget ocaml gawk ];
+      configurePhase = ''
+        runHook preConfigure
+        ./configure --prefix $out
+        runHook postConfigure
+      '';
+      postInstall = with modules; ''
+        wrapProgram $out/bin/tlapm \
+          --prefix PATH : "${isabelle}/bin:${zenon}/bin"
+      '';
+    };
+
   };
 
-  zenon = stdenv.mkDerivation {
-    name = "tla-ps-${version}-zenon";
-    src = src;
-    buildInputs = [ ocaml ];
-    configurePhase = ''
-      cd zenon
-      ./configure --prefix $out
-    '';
-  };
+  all = with modules; [ tlapm isabelle zenon ];
 
-  path = [
-    "${isabelle}/bin"
-    "${zenon}/bin"
-  ];
-
-in
-
-stdenv.mkDerivation {
-  name = "tla-ps-${version}";
-  buildInputs = [ makeWrapper wget ocaml gawk ];
-  src = src;
-
-  configurePhase = ''
-    cd tlapm
-    ./configure --prefix $out
-  '';
-
-  postInstall = ''
-    wrapProgram $out/bin/tlapm \
-      --prefix PATH : "${builtins.concatStringsSep ":" path}"
-  '';
-}
+in modules // { inherit all; }

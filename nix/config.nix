@@ -81,6 +81,13 @@ config = rec {
       # BigchainDB requires rethinkdb version higher than what's in 16.03
       rethinkdb = unstable.rethinkdb;
 
+      isabelle2011 = callPackage pkgs/isabelle2011 {
+        inherit (pkgs) stdenv fetchurl nettools perl;
+        inherit (pkgs.emacs24Packages) proofgeneral;
+      };
+
+      polyml-5-4 = callPackage pkgs/polyml-5-4 {};
+
       # Fall back to unstable for Haskell LTS releases that aren't in stable
       haskell = pkgs.haskell // {
 

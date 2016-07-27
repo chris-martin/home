@@ -1,25 +1,99 @@
-{ fetchzip, makeWrapper, stdenv, jre,
-
-  # options
-  javaMain, execName, ... }:
-
 # http://research.microsoft.com/en-us/um/people/lamport/tla/tools.html
-stdenv.mkDerivation rec {
-  name = "tla-plus";
 
-  src = fetchzip {
-    url = "https://tla.msr-inria.inria.fr/tlatoolbox/dist/tla.zip";
-    sha256 = "1n4v2pnlbih8hgmchwb21wy9cwv59gb3jv0rj427jal3nyh2ay3b";
+{ lib, fetchzip, makeWrapper, stdenv, jre, ... }:
+
+let
+
+  mkModule = { name, version, java-main, meta }: stdenv.mkDerivation {
+
+    name = "tla-plus-${name}-${version}";
+
+    src = fetchzip {
+      url = "https://tla.msr-inria.inria.fr/tlatoolbox/dist/tla.zip";
+      sha256 = "1n4v2pnlbih8hgmchwb21wy9cwv59gb3jv0rj427jal3nyh2ay3b";
+    };
+
+    buildInputs = [ makeWrapper ];
+
+    phases = [ "installPhase" ];
+
+    installPhase = ''
+      mkdir -pv $out/bin
+      echo -e "${jre}/bin/java ${java-main} \"\$@\"" > $out/bin/${name}
+      chmod +x $out/bin/${name}
+      wrapProgram $out/bin/${name} --set CLASSPATH $src
+    '';
+
+    meta = {
+
+      # http://research.microsoft.com/en-us/um/people/lamport/tla/license.html
+      license = with lib.licenses; [ mit ];
+
+    } // meta;
+
   };
 
-  buildInputs = [ makeWrapper ];
+  modules = {
 
-  phases = [ "installPhase" ];
+    tlc = mkModule {
+      name = "tlc";
+      version = "2.08";
+      java-main = "tlc2.TLC";
+      meta = {
+        homepage = "http://research.microsoft.com/en-us/um/people/lamport/tla/tlc.html";
+        description = "The TLA+ Model Checker";
+        longDescription = ''
+          Model checker for specifications written in TLA+. TLA+ is a specification
+          language based on TLA, the Temporal Logic of Actions.
+        '';
+      };
+    };
 
-  installPhase = ''
-    mkdir -pv $out/bin
-    echo -e "${jre}/bin/java ${javaMain} \"\$@\"" > $out/bin/${execName}
-    chmod +x $out/bin/${execName}
-    wrapProgram $out/bin/${execName} --set CLASSPATH $src
-  '';
-}
+    sany = mkModule {
+      name = "sany";
+      version = "2.1";
+      java-main = "tla2sany.SANY";
+      meta = {
+        homepage = "http://research.microsoft.com/en-us/um/people/lamport/tla/sany.html";
+        description = "The TLA+ Syntactic Analyzer";
+        longDescription = ''
+          Parser and semantic analyzer for the TLA+ specification language.
+        '';
+      };
+    };
+
+    pluscal = mkModule {
+      name = "pluscal";
+      version = "1.8";
+      java-main = "pcal.trans";
+      meta = {
+        homepage = "http://research.microsoft.com/en-us/um/people/lamport/tla/pluscal.html";
+        description = "The PlusCal Algorithm Language";
+        longDescription = ''
+          Algorithm language based on TLA+. A PlusCal algorithm is translated to a TLA+
+          specification, which can be checked with the TLC model checker. An algorithm
+          language is for writing algorithms, just as a programming language is for writing
+          programs. Formerly called +CAL.
+        '';
+      };
+    };
+
+    tlatex = mkModule {
+      name = "tlatex";
+      version = "1.0";
+      java-main = "tla2tex.TLA";
+      meta = {
+        homepage = "http://research.microsoft.com/en-us/um/people/lamport/tla/tlatex.html";
+        description = "A Typesetter for TLA+ Specifications";
+        longDescription = ''
+          Uses the LaTeX document production system to typeset TLA+ specifications.
+          TLA+ is a specification language based on TLA, the Temporal Logic of Actions.
+        '';
+      };
+    };
+
+  };
+
+  all = with modules; [ tlc sany pluscal tlatex ];
+
+in modules // { inherit all; }

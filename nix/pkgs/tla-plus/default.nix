@@ -2,30 +2,15 @@
 
 let
 
-  core = execName: javaMain: callPackage ./core.nix {
-    execName = execName;
-    javaMain = javaMain;
-  };
-
-in
-
-rec {
-
-  tlc = core "tlc" "tlc2.TLC";
-
-  sany = core "sany" "tla2sany.SANY";
-
-  pluscal = core "pluscal" "pcal.trans";
-
-  tlatex = core "tlatex" "tla2tex.TLA";
+  core = callPackage ./core.nix {};
 
   tlaps = callPackage ./tlaps.nix {};
 
   toolbox = callPackage ./toolbox.nix {};
 
-  all = buildEnv {
-    name = "tlaplus";
-    paths = [ tlc sany pluscal tlatex tlaps toolbox ];
+  full = buildEnv {
+    name = "tla-plus-full";
+    paths = core.all ++ tlaps.all ++ [ toolbox ];
   };
 
-}
+in core // tlaps // { inherit toolbox full; }
