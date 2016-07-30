@@ -6,7 +6,10 @@ let
   version = "1.4.3";
 
   src = fetchurl {
-    url = "https://tla.msr-inria.inria.fr/tlaps/dist/${version}/tlaps-${version}.tar.gz";
+
+    # Originally from "https://tla.msr-inria.inria.fr/tlaps/dist/${version}/tlaps-${version}.tar.gz";
+    url = "https://github.com/chris-martin/tla-plus/raw/master/tlaps-${version}.tar.gz";
+
     sha256 = "1w5z3ns5xxmhmp8r4x2kjmy3clqam935gmvx82imyxrr1bamx6gf";
   };
 
