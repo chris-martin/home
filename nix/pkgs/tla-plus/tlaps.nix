@@ -1,4 +1,5 @@
-{ lib, fetchurl, makeWrapper, stdenv, ocaml, wget, gawk, isabelle2011, perl, ... }:
+{ lib, fetchurl, makeWrapper, stdenv, ocaml, gawk, isabelle2011, cvc3, perl
+, dummy-wget, ... }:
 
 let
 
@@ -21,8 +22,8 @@ let
       meta = {
         homepage = "http://tla.msr-inria.inria.fr/tlaps/content/Home.html";
 
-        # todo: The licenses look complicated.
         # https://tla.msr-inria.inria.fr/tlaps/content/Download/License.html
+        license = with lib.licenses; [ bsd2 ];
 
       } // meta;
 
@@ -34,7 +35,7 @@ let
       name = "isabelle";
       meta = {};
     } {
-      buildInputs = [ ocaml isabelle2011 perl ];
+      buildInputs = [ ocaml isabelle2011 cvc3 perl ];
       buildPhase = "#";
       installPhase = ''
         runHook preBuild
@@ -80,12 +81,15 @@ let
         '';
       };
     } {
-      buildInputs = [ makeWrapper wget ocaml gawk ];
+
+      buildInputs = [ makeWrapper ocaml gawk dummy-wget ];
+
       configurePhase = ''
         runHook preConfigure
         ./configure --prefix $out
         runHook postConfigure
       '';
+
       postInstall = with modules; ''
         wrapProgram $out/bin/tlapm \
           --prefix PATH : "${isabelle}/bin:${zenon}/bin"
