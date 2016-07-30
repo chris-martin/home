@@ -64,7 +64,7 @@
     displayManager.gdm.enable    = true;
   };
 
-  services.unclutter.enable = true;
+  services.unclutter.enable = false;
 
   systemd.user.services.emacs = {
 
