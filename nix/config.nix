@@ -36,6 +36,8 @@ config = rec {
           self = myPython34Packages;
         });
 
+      dummy-wget = callPackage pkgs/dummy-wget {};
+
       # Pandora probably won't ever be packaged like this in nixpkgs
       pandora = callPackage ./pkgs/pandora {};
 
