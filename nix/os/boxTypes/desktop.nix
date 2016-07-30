@@ -12,7 +12,7 @@
     support32Bit = true; # needed for Steam
   };
 
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = false;
 
   hardware.opengl.driSupport32Bit = true; # needed for Steam
 
