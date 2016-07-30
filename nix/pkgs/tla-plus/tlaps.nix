@@ -43,10 +43,10 @@ let
       installPhase = ''
         runHook preBuild
 
-        mkdir -pv $out
-        export HOME=$out
+        mkdir -pv "$out"
+        export HOME="$out"
 
-        pushd ${isabelle2011}/Isabelle2011-1/src/Pure
+        pushd "${isabelle2011}/Isabelle2011-1/src/Pure"
         isabelle make
         popd
 
@@ -65,7 +65,7 @@ let
       buildInputs = [ ocaml ];
       configurePhase = ''
         runHook preConfigure
-        ./configure --prefix $out
+        ./configure --prefix "$out"
         runHook postConfigure
       '';
     };
@@ -94,7 +94,7 @@ let
       '';
 
       postInstall = with modules; ''
-        wrapProgram $out/bin/tlapm \
+        wrapProgram "$out/bin/tlapm" \
           --prefix PATH : "${isabelle}/bin:${zenon}/bin"
       '';
     };

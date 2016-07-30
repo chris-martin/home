@@ -21,10 +21,10 @@ let
     phases = [ "installPhase" ];
 
     installPhase = ''
-      mkdir -pv $out/bin
-      echo -e "${jre}/bin/java ${java-main} \"\$@\"" > $out/bin/${name}
-      chmod +x $out/bin/${name}
-      wrapProgram $out/bin/${name} --set CLASSPATH $src
+      mkdir -pv "$out/bin"
+      echo -e "${jre}/bin/java ${java-main} \"\$@\"" > "$out/bin/${name}"
+      chmod +x "$out/bin/${name}"
+      wrapProgram "$out/bin/${name}" --set CLASSPATH "$src"
     '';
 
     meta = {
