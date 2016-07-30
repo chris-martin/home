@@ -38,7 +38,7 @@ in stdenv.mkDerivation {
 
   installPhase = ''
 
-    mkdir -pv $out/bin
+    mkdir -p $out/bin
     echo $out
 
     cp -rv $src $out/toolbox
@@ -57,6 +57,24 @@ in stdenv.mkDerivation {
     wrapProgram $out/bin/tla-toolbox \
       --prefix PATH : "${jre}/bin" \
       --prefix LD_LIBRARY_PATH : "${swt}/lib:${gtk}/lib:${libXtst}/lib:${glib}/lib"
+
+    echo -e "\nCreating TLA Toolbox icons..."
+    pushd $src
+    for icon_in in $(find . -path "./plugins/*/icons/full/etool16/tla_launch_check_wiz_*.png")
+    do
+      icon_size=$(echo $icon_in | grep -Po "wiz_\K[0-9]+")
+      icon_out="$out/share/icons/hicolor/$icon_size""x$icon_size/apps/tla-toolbox.png"
+      mkdir -p $(dirname $icon_out)
+      cp -v $icon_in $icon_out
+    done
+    popd
+
+    echo -e "\nCreating TLA Toolbox desktop entry..."
+    desktop_dir=$out/share/applications
+    mkdir -p $desktop_dir
+    cp -v ${./tla-toolbox.desktop} $desktop_dir
+
+    echo
   '';
 
 }
