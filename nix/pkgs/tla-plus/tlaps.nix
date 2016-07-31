@@ -1,4 +1,4 @@
-{ lib, fetchurl, makeWrapper, stdenv, ocaml, gawk, isabelle2011, cvc3, perl
+{ lib, fetchurl, makeWrapper, stdenv, ocaml, gawk, isabelle2011-1, cvc3, perl
 , dummy-wget, ... }:
 
 let
@@ -38,7 +38,7 @@ let
       name = "isabelle";
       meta = {};
     } {
-      buildInputs = [ ocaml isabelle2011 cvc3 perl ];
+      buildInputs = [ ocaml isabelle2011-1 cvc3 perl ];
       buildPhase = "#";
       installPhase = ''
         runHook preBuild
@@ -46,7 +46,7 @@ let
         mkdir -pv "$out"
         export HOME="$out"
 
-        pushd "${isabelle2011}/Isabelle2011-1/src/Pure"
+        pushd "${isabelle2011-1}/Isabelle2011-1/src/Pure"
         isabelle make
         popd
 

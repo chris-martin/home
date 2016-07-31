@@ -83,7 +83,7 @@ config = rec {
       # BigchainDB requires rethinkdb version higher than what's in 16.03
       rethinkdb = unstable.rethinkdb;
 
-      isabelle2011 = callPackage pkgs/isabelle2011 {
+      isabelle2011-1 = callPackage pkgs/isabelle2011-1 {
         inherit (pkgs) stdenv fetchurl nettools perl;
         inherit (pkgs.emacs24Packages) proofgeneral;
       };
