@@ -30,7 +30,7 @@ in stdenv.mkDerivation {
   src = fetchzip {
 
     # Originally from https://tla.msr-inria.inria.fr/tlatoolbox/products/TLAToolbox-${version}-linux.gtk.${arch}.zip
-    url = "https://github.com/chris-martin/tla-plus/raw/master/TLAToolbox-${version}-linux.gtk.${arch}.zip";
+    url = "https://github.com/chris-martin/tla-plus/raw/5c9786746f6a2ba74e031279eb858bd9a1c59613/TLAToolbox-${version}-linux.gtk.${arch}.zip";
 
     sha256 = "1k5bxn60qrqaxg1ihdqfyzgzgpan0n547574i31j45l5nxq8kf6n";
   };

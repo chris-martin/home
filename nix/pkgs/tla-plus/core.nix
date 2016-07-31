@@ -11,7 +11,7 @@ let
     src = fetchzip {
 
       # Originally from https://tla.msr-inria.inria.fr/tlatoolbox/dist/tla.zip
-      url = "https://github.com/chris-martin/tla-plus/raw/master/tla.zip";
+      url = "https://github.com/chris-martin/tla-plus/raw/5c9786746f6a2ba74e031279eb858bd9a1c59613/tla.zip";
 
       sha256 = "1n4v2pnlbih8hgmchwb21wy9cwv59gb3jv0rj427jal3nyh2ay3b";
     };

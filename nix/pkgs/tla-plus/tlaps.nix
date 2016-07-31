@@ -8,7 +8,7 @@ let
   src = fetchurl {
 
     # Originally from "https://tla.msr-inria.inria.fr/tlaps/dist/${version}/tlaps-${version}.tar.gz";
-    url = "https://github.com/chris-martin/tla-plus/raw/master/tlaps-${version}.tar.gz";
+    url = "https://github.com/chris-martin/tla-plus/raw/5c9786746f6a2ba74e031279eb858bd9a1c59613/tlaps-${version}.tar.gz";
 
     sha256 = "1w5z3ns5xxmhmp8r4x2kjmy3clqam935gmvx82imyxrr1bamx6gf";
   };
