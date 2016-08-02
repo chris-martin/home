@@ -29,9 +29,9 @@
   i18n.consoleFont = "Lat2-Terminus16";
   i18n.consoleKeyMap = "us";
 
-  time.timeZone = "America/Los_Angeles"; # Pacific
+  #time.timeZone = "America/Los_Angeles"; # Pacific
   #time.timeZone = "America/Chicago"; # Central
-  #time.timeZone = "America/New_York"; # Eastern
+  time.timeZone = "America/New_York"; # Eastern
 
   environment.etc."fuse.conf".text = ''
     user_allow_other
