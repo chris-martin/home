@@ -26,6 +26,11 @@ config = rec {
       desktopEnv = callEnv ./envs/desktop.nix;
       serverEnv = callEnv ./envs/server.nix;
 
+      # truecrypt refactor work-in-progress
+      #truecrypt = with unstable; callPackage pkgs/truecrypt {
+      #  stdenv = overrideInStdenv stdenv [ useOldCXXAbi ];
+      #};
+
       # Python packages is its own separate bucket of overrides
       myPython27Packages = pkgs.python27Packages //
         (callPackage pkgs/python-packages.nix {
