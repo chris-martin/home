@@ -13,7 +13,7 @@ config = rec {
   };
 
   # This doesn't work: https://github.com/NixOS/nixpkgs/issues/17457
-  truecrypt.wxGUI = false;
+  #truecrypt.wxGUI = false;
 
   packageOverrides = pkgs: let
     pkgsWithOverrides = pkgs // overrides;
