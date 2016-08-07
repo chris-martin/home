@@ -92,7 +92,7 @@
   systemd.services.emacs.enable = true;
 
   virtualisation.virtualbox.host = {
-    enable              = false;
+    enable              = true;
     enableHardening     = false;
     addNetworkInterface = true;
   };

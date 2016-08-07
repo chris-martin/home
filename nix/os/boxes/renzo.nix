@@ -24,8 +24,8 @@
 
   nixpkgs.config.virtualbox.enableExtensionPack =
     let _ = pkgs.fetchurl {
-      url = "http://download.virtualbox.org/virtualbox/5.0.12/Oracle_VM_VirtualBox_Extension_Pack-5.0.12-104815.vbox-extpack";
-      sha256 = "0v933g6sk1akfm48xwdd0z61164by7llj8974lriipvz5d2wh6xc";
+      url = "http://download.virtualbox.org/virtualbox/5.0.20/Oracle_VM_VirtualBox_Extension_Pack-5.0.20-106931.vbox-extpack";
+      sha256 = "06q7ma8ajf40svg59g8f6fjhhqg68cas50mw3gd1gfvflm10ix0i";
     }; in true;
 
   services.redshift = { enable = true; } //
