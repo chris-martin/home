@@ -107,6 +107,10 @@ config = rec {
         packages = unstable.haskell.packages // pkgs.haskell.packages;
       };
 
+      latex = texlive.combine {
+        inherit (texlive) scheme-medium mathabx-type1 latexmk;
+      };
+
     }) //
 
     # Convenience aliases
