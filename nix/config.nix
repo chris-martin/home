@@ -111,42 +111,35 @@ config = rec {
         inherit (texlive) scheme-medium mathabx-type1 latexmk;
       };
 
-    }) //
+      # Convenience aliases for nested packages
 
-    # Convenience aliases
+      inherit (pkgsWithOverrides.xorg) xkill;
 
-    (with pkgsWithOverrides.xorg; {
-      inherit xkill;
-    }) //
+      inherit (pkgsWithOverrides.python27Packages) docker_compose;
 
-    (with pkgsWithOverrides.python27Packages; {
-      docker-compose = docker_compose;
-    }) //
+      inherit (pkgsWithOverrides.python34Packages) ipython;
 
-    (with pkgsWithOverrides.python34Packages; {
-      inherit ipython;
-    }) //
+      inherit (pkgsWithOverrides.myPython34Packages) bigchaindb pyethereum;
 
-    (with pkgsWithOverrides.myPython34Packages; {
-      inherit bigchaindb pyethereum;
-    }) //
+      inherit (pkgsWithOverrides.kde4) kcolorchooser konversation;
 
-    (with pkgsWithOverrides.kde4; {
-      inherit kcolorchooser konversation;
-    }) //
+      inherit (pkgsWithOverrides.nodePackages) bower npm grunt-cli;
 
-    (with pkgsWithOverrides.nodePackages; {
-      inherit bower npm;
+      inherit (pkgsWithOverrides.gnome3)
+        cheese eog file-roller gnome-screenshot polari;
+
+      inherit (pkgsWithOverrides.haskellPackages)
+        cabal-install cabal2nix hlint purescript stack stylish-haskell
+        hasktags pointfree pointful ghc-mod;
+
+      # Renaming things with dumb names
+
       grunt = grunt-cli;
-    }) //
 
-    (with pkgsWithOverrides.gnome3; {
-      inherit cheese eog file-roller gnome-screenshot polari;
-    }) //
+      docker-compose = docker_compose;
 
-    (with pkgsWithOverrides.haskellPackages; {
-      inherit cabal2nix hlint purescript stack stylish-haskell hasktags pointfree pointful ghc-mod;
       cabal = cabal-install;
+
     }) //
 
     # Ethereum work-in-progress
