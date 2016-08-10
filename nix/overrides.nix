@@ -36,7 +36,8 @@ overrides = (with pkgs; rec {
   # Pandora probably won't ever be packaged like this in nixpkgs
   pandora = callPackage ./pkgs/pandora {};
 
-  sublime = unstable.sublime3;
+  inherit (unstable) sublime3;
+  sublime = sublime3;
 
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
   google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
@@ -56,7 +57,7 @@ overrides = (with pkgs; rec {
 
   # StartupWMClass fix not backported to 16.03
   # https://github.com/NixOS/nixpkgs/pull/15685
-  idea = unstable.idea;
+  inherit (unstable) idea;
 
   # New thing that probably deserves a PR
   libscrypt = callPackage pkgs/libscrypt { };
@@ -76,7 +77,7 @@ overrides = (with pkgs; rec {
   nix-shell-wrapper = callPackage pkgs/nix-shell-wrapper {};
 
   # BigchainDB requires rethinkdb version higher than what's in 16.03
-  rethinkdb = unstable.rethinkdb;
+  inherit (unstable) rethinkdb;
 
   isabelle2011-1 = callPackage pkgs/isabelle2011-1 {
     inherit (pkgs) stdenv fetchurl nettools perl;
