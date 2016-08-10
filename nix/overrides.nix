@@ -31,6 +31,10 @@ overrides = (with pkgs; rec {
       self = myPython34Packages;
     });
 
+  inherit (unstable) glide;
+
+  go = go_1_6;
+
   dummy-wget = callPackage pkgs/dummy-wget {};
 
   # Pandora probably won't ever be packaged like this in nixpkgs
