@@ -4,6 +4,9 @@
     enableAutoConfirmSingleSuggestion: false
   autosave:
     enabled: true
+  "bracket-matcher":
+    autocompleteBrackets: false
+    autocompleteSmartQuotes: false
   core:
     audioBeep: false
     disabledPackages: [
