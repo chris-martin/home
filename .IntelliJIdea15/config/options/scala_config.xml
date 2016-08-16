@@ -1,4 +1,8 @@
 <application>
+  <component name="ScalaApplicationSettings">
+    <option name="INSERT_MULTILINE_QUOTES" value="false" />
+    <option name="UPGRADE_TO_INTERPOLATED" value="false" />
+  </component>
   <component name="TypeAwareHighlightingApplicationState">
     <option name="SUGGEST_TYPE_AWARE_HIGHLIGHTING_ENABLED" value="true" />
   </component>
