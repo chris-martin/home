@@ -16,7 +16,7 @@ set fish_user_paths       \
   $HOME/bin               \
   $HOME/.local/bin        \
   $HOME/.nix-profile/bin  \
-  $HOME/node_modules/.bin
+  $HOME/.local/share/npm/node_modules/.bin
 
 set -x EDITOR e
 
