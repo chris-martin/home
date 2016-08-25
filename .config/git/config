@@ -17,7 +17,7 @@
   co = checkout
   ci = commit
   llog = log --date=local
-  br = "!bash -c 'gitbr'"
+  br = "!bash -c br"
 [log]
   date = local
 [format]
