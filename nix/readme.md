@@ -4,10 +4,9 @@ to set up environment variables for Nix stuff.
 The channel list should look like this:
 
     > nix-channel --list
-    nixos https://nixos.org/channels/nixos-16.03
-    nixos-15.09 http://nixos.org/channels/nixos-15.09
     nixos-unstable https://nixos.org/channels/nixos-unstable
     nixos-16.03 http://nixos.org/channels/nixos-16.03
+    nixos-15.09 http://nixos.org/channels/nixos-15.09
 
 The root channel list can be empty.
 
@@ -20,7 +19,7 @@ To install packages for a desktop environment:
 
 To rebuild the OS:
 
-    sudo env NIX_PATH=$NIX_PATH nixos-rebuild switch
+    sudo env NIX_PATH=$NIXOS_PATH nixos-rebuild switch
 
 To go to the directory where some package is installed in the nix store:
 
