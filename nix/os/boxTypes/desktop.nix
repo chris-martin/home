@@ -52,7 +52,7 @@
   services.nixosManual.showManual = true;
 
   services.printing = {
-    enable = true;
+    enable = false;
     drivers = with pkgs; [ gutenprint hplipWithPlugin ];
   };
 
