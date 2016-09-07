@@ -122,7 +122,12 @@ overrides = (with pkgs; rec {
 
   inherit (pkgsWithOverrides.haskellPackages)
     cabal-install cabal2nix hlint purescript stack stylish-haskell
-    hasktags pointfree pointful ghc-mod;
+    pointfree pointful ghc-mod;
+
+  # https://github.com/NixOS/nixpkgs/pull/18403
+  hasktags = haskell.lib.overrideCabal haskellPackages.hasktags (drv: {
+    postFixup = "rm -rf $out/bin/test $out/nix-support $out/share";
+  });
 
   # Renaming things with dumb names
 
