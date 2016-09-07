@@ -27,7 +27,7 @@
   projectile
   purescript-mode
   python-mode
-  scala-mode2
+  scala-mode
   scss-mode
   tabbar
   transpose-frame

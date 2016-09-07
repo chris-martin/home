@@ -14,11 +14,11 @@
     }];
     loader = {
       grub.device = "/dev/nvme0n1";
-      gummiboot.enable = false;
+      systemd-boot.enable = false;
     };
     kernelPackages = pkgs.linuxPackages_4_4;
     kernelModules  = ["snd-hda-intel"];
-    extraKernelParams = ["pci=nocrs"];
+    kernelParams = ["pci=nocrs"];
     cleanTmpDir = true;
   };
 
@@ -31,11 +31,15 @@
   services.redshift = { enable = true; } //
     config.nixpkgs.config.locations.atlanta;
 
+  services.xserver.libinput.enable = false;
+
   services.xserver.synaptics = {
     enable      = true;
     minSpeed    = "0.8";
     maxSpeed    = "1.4";
     accelFactor = "0.05";
+    tapButtons  = false;
+    twoFingerScroll = true;
   };
 
   #services.xserver.videoDrivers = [ "displaylink" "modesetting" ];

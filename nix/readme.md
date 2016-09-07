@@ -5,6 +5,7 @@ The channel list should look like this:
 
     > nix-channel --list
     nixos-unstable https://nixos.org/channels/nixos-unstable
+    nixos-16.09 http://nixos.org/channels/nixos-16.09
     nixos-16.03 http://nixos.org/channels/nixos-16.03
     nixos-15.09 http://nixos.org/channels/nixos-15.09
 

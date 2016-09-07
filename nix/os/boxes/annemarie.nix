@@ -14,10 +14,12 @@
     }];
     loader = {
       grub.device = "/dev/sda";
-      gummiboot.enable = true;
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
   };
+
+  services.xserver.libinput.enable = false;
 
   services.xserver.synaptics = {
     enable          = true;
