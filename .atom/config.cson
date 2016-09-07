@@ -13,6 +13,8 @@
       "exception-reporting"
       "spell-check"
       "welcome"
+      "autocomplete-elixir"
+      "language-elixir"
     ]
     ignoredNames: [
       ".git"
