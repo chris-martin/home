@@ -24,6 +24,14 @@ set -x EDITOR e
 
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
+function oseary-mount
+  env USER=chris PASSWORD=(cat ~/secrets/oseary) HOST=192.168.0.100 MOUNT=$HOME/mnt/oseary sshfs-mount
+end
+
+function oseary-umount
+  fusermount -u $HOME/mnt/oseary
+end
+
 # https://twitter.com/chris__martin/status/420992421673988096
 alias such git
 alias very git
