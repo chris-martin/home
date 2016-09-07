@@ -103,6 +103,17 @@ overrides = (with pkgs; rec {
     inherit (texlive) scheme-medium mathabx-type1 latexmk;
   };
 
+  # Workaround for Atom not working in 16.09
+  # https://github.com/NixOS/nixpkgs/issues/16888#issuecomment-232351368
+  atom = ( lib.overrideDerivation pkgs.atom (attrs: {
+    name = "atom-1.6.2";
+    src = fetchurl {
+      url = "https://github.com/atom/atom/releases/download/v1.6.2/atom-amd64.deb";
+      sha256 = "1kl2pc0smacn4lgk5wwlaiw03rm8b0763vaisgp843p35zzsbc9n";
+      name = "atom-1.6.2.deb";
+    };
+  }));
+
   # Convenience aliases for nested packages
 
   inherit (pkgsWithOverrides.xorg) xkill;
