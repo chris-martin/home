@@ -1,4 +1,4 @@
-{ pkgs, config, unstable }:
+{ pkgs, config, unstable, nixos_16_03 }:
 let
 
 pkgsWithOverrides = pkgs // overrides;

@@ -25,10 +25,12 @@ simple-config = {
 
 config = simple-config // {
   packageOverrides = pkgs: import ./overrides.nix {
-    inherit pkgs config unstable;
+    inherit pkgs config unstable nixos_16_03;
   };
 };
 
 unstable = (import <nixpkgs-unstable> { config = simple-config; });
+
+nixos_16_03 = (import <nixpkgs-16.03> { config = simple-config; });
 
 in config
