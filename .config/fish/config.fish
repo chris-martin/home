@@ -20,17 +20,7 @@ set fish_user_paths       \
 
 set -x EDITOR e
 
-. $HOME/nix/shell/nix.fish
-
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
-
-function oseary-mount
-  env USER=chris PASSWORD=(cat ~/secrets/oseary) HOST=192.168.0.100 MOUNT=$HOME/mnt/oseary sshfs-mount
-end
-
-function oseary-umount
-  fusermount -u $HOME/mnt/oseary
-end
 
 function alias2 --argument alias command
   alias "$alias" "$command"
@@ -44,29 +34,6 @@ function alias2 --argument alias command
   )"
 end
 
-# https://twitter.com/chris__martin/status/420992421673988096
-alias2 such git
-alias2 very git
-alias2 wow st
-
-alias2 add    'git add'
-alias2 amend  'git commit --amend'
-alias2 staged 'git diff --cached'
-alias2 cherry 'git cherry-pick'
-alias2 ci     'git commit'
-alias2 clone  'git clone'
-alias2 co     'git checkout'
-alias2 gdiff  'git diff'
-alias2 fetch  'git fetch'
-alias2 log    'git log'
-alias2 merge  'git merge'
-alias2 pull   'git pull'
-alias2 push   'git push'
-alias2 rebase 'git rebase'
-alias2 revert 'git revert'
-alias2 show   'git show'
-alias2 stash  'git stash'
-
 # https://github.com/fish-shell/fish-shell/issues/838
 function readSilent # prompt targetVar
     echo -n $argv[1]
@@ -75,3 +42,8 @@ function readSilent # prompt targetVar
     stty echo
     echo
 end
+
+
+source ~/nix/shell/nix.fish
+source ~/.config/fish/git.fish
+source ~/.config/fish/oseary.fish

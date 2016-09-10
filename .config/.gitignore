@@ -6,7 +6,7 @@
 !/dconf/setup-*.sh
 !/fish/
 /fish/*
-!/fish/config.fish
+!/fish/*
 !/git/
 /git/gitk
 !/sublime-text-2/
