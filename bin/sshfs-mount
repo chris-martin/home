@@ -10,15 +10,8 @@
 
 # todo - add errors/warnings if parameters are missing
 
-echo "If this hangs indefinitely, you may need to SSH to the"
-echo "host to accept the server's public key."
-echo ""
+echo "If this hangs indefinitely, you may need to SSH to the host to accept the server's public key."
 echo "Mounting..."
-
 echo "$PASSWORD" | \
   sshfs "$USER"@"$HOST": "$MOUNT" \
-  -o ServerAliveInterval=30,password_stdin,allow_other
-
-echo "Done."
-echo ""
-echo "To unmount: fusermount -u $MOUNT"
+  -o ServerAliveInterval=30,password_stdin,allow_other && echo -e 'Done.'
