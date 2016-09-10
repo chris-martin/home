@@ -1,15 +1,5 @@
 set --erase fish_greeting
 
-functions --copy fish_prompt default_fish_prompt
-
-function fish_prompt
-  if [ $FISH_PROMPT ]
-    echo "$FISH_PROMPT"
-  else
-    default_fish_prompt
-  end
-end
-
 set -x HOSTNAME (hostname)
 
 set fish_user_paths       \
@@ -43,7 +33,7 @@ function readSilent # prompt targetVar
     echo
 end
 
-
 source ~/nix/shell/nix.fish
 source ~/.config/fish/git.fish
 source ~/.config/fish/oseary.fish
+source ~/.config/fish/prompt.fish
