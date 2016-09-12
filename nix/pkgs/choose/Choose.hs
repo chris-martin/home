@@ -20,14 +20,16 @@
 
 module Main (main) where
 
-import Prelude (Bool (..), Either (..), Foldable (..), IO, Int, Maybe (..), Ord,
-                mapM_, not, pure, show, snd, ($), (+), (++), (-), (.), (<$>),
-                (<*>), (<=), (=<<), (==), (>))
+import           Choose.Tree (Tree)
+import qualified Choose.Tree as Tree
+
+import Prelude (Either (..), IO, Int, Maybe (..), Ord, mapM_, show, snd, ($),
+                (+), (++), (.), (<$>), (<*>), (>))
 
 import Control.Applicative    (optional)
 import Control.Exception.Base (try)
 import Control.Monad          (return, when)
-import Control.Monad.Random   (evalRandIO, getRandom, Rand, RandomGen)
+import Control.Monad.Random   (evalRandIO)
 
 import qualified Data.Foldable as Foldable
 import           Data.List     (sort)
@@ -89,7 +91,7 @@ getSelectionsIO :: forall a. (Ord a) =>
                -- (produce Nothing when there are no more items)
   -> Int       -- ^ Number of items to choose
   -> IO [a]
-getSelectionsIO getItem limit = f 0 Nil
+getSelectionsIO getItem limit = f 0 Tree.Nil
     where
     -- We store each line of text along with its index (i) so that when we're
     -- done, we can sort by the index, thus outputting the selected items in
@@ -100,7 +102,7 @@ getSelectionsIO getItem limit = f 0 Nil
         case lineMaybe of
             -- We read a line; insert it into the tree and recurse.
             Just line -> do
-                tree' <- evalRandIO $ applyLimit limit . insert (i, line) $ tree
+                tree' <- evalRandIO $ Tree.applyLimit limit . Tree.insert (i, line) $ tree
                 f (i + 1) tree'
             -- We've reached the end of the input. Convert the tree to a list,
             -- sort it, and strip out the indices to return just the text.
@@ -113,78 +115,3 @@ readLine = do
     case lineEither of
         Left e -> if isEOFError e then return Nothing else ioError e
         Right line -> return $ Just line
-
-
--------------------------------------------------------------------------------
---  Core algorithm
--------------------------------------------------------------------------------
-
-data Tree a = Nil | Tree
-    { treeSize   :: Int    -- ^ Total number of items at this node and below
-    , treeValues :: [a]    -- ^ Items at this node
-    , treeLeft   :: Tree a -- ^ Left subtree (less likely for inclusion)
-    , treeRight  :: Tree a -- ^ Right subtree (more likely for inclusion)
-    }
-
-instance Foldable Tree where
-
-    foldr _ z Nil = z
-    foldr f z (Tree size (x:xs) left right) =
-        foldr f (f x z) (Tree (size - 1) xs left right)
-    foldr f z (Tree size [] left right) =
-        (\z -> foldr f z left) . (\z -> foldr f z right) $ z
-
-    length Nil = 0
-    length t@Tree{} = treeSize t
-
-    null Nil = True
-    null t@Tree{} = treeSize t == 0
-
--- | Trivial insertion into the root of a tree, increasing its size by 1
--- and leaving its children unmodified.
-insert :: a -> Tree a -> Tree a
-insert x Nil = Tree 1 [x] Nil Nil
-insert x (Tree size xs left right) = Tree (size + 1) (x:xs) left right
-
--- | Remove items from the tree until its size is at most @limit@.
--- This may involve disambiguation if eviction takes place.
-applyLimit :: (RandomGen g) =>
-  Int -- ^ @limit@
-  -> Tree a
-  -> Rand g (Tree a)
-applyLimit limit _ | limit <= 0 = pure Nil
-applyLimit limit tree =
-    -- If the tree is small enough: We don't need to do anything.
-    if length tree <= limit then pure tree
-    -- If the tree is oversized: Remove an item from it, and recurse.
-    else applyLimit limit =<< evict tree
-
--- | Remove one item from the tree (or leave the tree unmodified if it is
--- already empty). This may involve disambiguation if there is not already
--- a clear leftmost item.
-evict :: (RandomGen g) => Tree a -> Rand g (Tree a)
-evict tree | length tree <= 1 = pure Nil
-evict tree = do
-    (Tree _ _ left right) <- disambiguate tree
-    -- Evict from one of the subtrees, preferring to evict from the left.
-    (left', right') <- if not . null $ left
-                       then (\x -> (x, right)) <$> evict left
-                       else (\x -> (left, x)) <$> evict right
-    return $ Tree (length left' + length right') [] left' right'
-
--- | Perform disambiguation at the root level only, pushing items from
--- the root down into subtrees as necessary.
-disambiguate :: (RandomGen g) => Tree a -> Rand g (Tree a)
--- No items at the root: No disambiguation is possible at the root level.
-disambiguate tree@(Tree _ [] _ _) = pure tree
--- A single item with no children: No disambiguation is required on this tree.
-disambiguate tree@(Tree _ [_] Nil Nil) = pure tree
--- There is at least one item at the root that needs to be pushed down, to
--- disambiguate it (either from items in subtrees, or from other items at
--- the root).
-disambiguate (Tree size (x:xs) left right) = do
-    b <- getRandom
-    let (left', right') = if b
-                          then (insert x left, right)
-                          else (left, insert x right)
-    disambiguate $ Tree size xs left' right'
