@@ -105,12 +105,12 @@ overrides = (with pkgs; rec {
 
   # Workaround for Atom not working in 16.09
   # https://github.com/NixOS/nixpkgs/issues/16888#issuecomment-232351368
-  atom = ( lib.overrideDerivation pkgs.atom (attrs: {
-    name = "atom-1.6.2";
+  atom = let v = "1.10.2"; in ( lib.overrideDerivation pkgs.atom (attrs: {
+    name = "atom-${v}";
     src = fetchurl {
-      url = "https://github.com/atom/atom/releases/download/v1.6.2/atom-amd64.deb";
-      sha256 = "1kl2pc0smacn4lgk5wwlaiw03rm8b0763vaisgp843p35zzsbc9n";
-      name = "atom-1.6.2.deb";
+      url = "https://github.com/atom/atom/releases/download/v${v}/atom-amd64.deb";
+      sha256 = "1pizmr5i4fnbxykrrqk7g837fj0plazgxrbgyqb9bns5nvwcrk6p";
+      name = "atom-${v}.deb";
     };
   }));
 
