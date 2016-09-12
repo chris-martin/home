@@ -1,3 +1,5 @@
+{-# LANGUAGE ScopedTypeVariables #-}
+
 -- | Reads lines from stdin and outputs N of them, selected uniformly at
 -- random.
 --
@@ -18,7 +20,7 @@
 
 module Main (main) where
 
-import Prelude (Bool (..), Either (..), Foldable (..), IO, Int, Maybe (..),
+import Prelude (Bool (..), Either (..), Foldable (..), IO, Int, Maybe (..), Ord,
                 mapM_, not, pure, show, snd, ($), (+), (++), (-), (.), (<$>),
                 (<*>), (<=), (=<<), (==), (>))
 
@@ -79,18 +81,22 @@ main = do
     args <- execParser $ Opt.info (helper <*> parser) parserInfo
     let n = getN args
     when (n > 0) $ do
-        selections <- getSelections n
+        selections <- getSelectionsIO readLine n
         mapM_ TextIO.putStrLn selections
 
-getSelections :: Int -> IO [Text]
-getSelections limit = f 0 Nil
+getSelectionsIO :: forall a. (Ord a) =>
+  IO (Maybe a) -- ^ Producer of items to choose from
+               -- (produce Nothing when there are no more items)
+  -> Int       -- ^ Number of items to choose
+  -> IO [a]
+getSelectionsIO getItem limit = f 0 Nil
     where
     -- We store each line of text along with its index (i) so that when we're
     -- done, we can sort by the index, thus outputting the selected items in
     -- the same order in which they were read.
-    f :: Int -> Tree (Int, Text) -> IO [Text]
+    f :: Int -> Tree (Int, a) -> IO [a]
     f i tree = do
-        lineMaybe <- readLine
+        lineMaybe <- getItem
         case lineMaybe of
             -- We read a line; insert it into the tree and recurse.
             Just line -> do
