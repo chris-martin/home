@@ -20,68 +20,30 @@
 
 module Main (main) where
 
+import qualified Choose.Args as Args
 import           Choose.Tree (Tree)
 import qualified Choose.Tree as Tree
 
-import Prelude (Either (..), IO, Int, Maybe (..), Ord, mapM_, show, snd, ($),
-                (+), (++), (.), (<$>), (<*>), (>))
+import Prelude (Either (..), IO, Int, Maybe (..), Ord, mapM_, snd, ($), (+),
+                (.), (<$>), (>))
 
-import Control.Applicative    (optional)
 import Control.Exception.Base (try)
 import Control.Monad          (return, when)
 import Control.Monad.Random   (evalRandIO)
 
 import qualified Data.Foldable as Foldable
 import           Data.List     (sort)
-import           Data.Maybe    (fromMaybe)
-import           Data.Monoid   ((<>))
 import           Data.Text     (Text)
 import qualified Data.Text.IO  as TextIO
-
-import qualified Options.Applicative.Builder as Opt
-import           Options.Applicative.Extra   (execParser, helper)
-import           Options.Applicative.Types   (Parser)
 
 import System.IO       (stdin)
 import System.IO.Error (ioError, isEOFError)
 
 
--------------------------------------------------------------------------------
---  Command-line args
--------------------------------------------------------------------------------
-
-data Args = Args
-    { argN :: Maybe Int
-    }
-
-defaultN :: Int
-defaultN = 1
-
-readInt :: Opt.ReadM Int
-readInt = Opt.auto
-
-parserN :: Parser (Maybe Int)
-parserN = optional $ Opt.argument readInt $ Opt.metavar "N" <> Opt.help help
-    where help = "Number of items to choose (default: " ++ show defaultN ++ ")"
-
-getN :: Args -> Int
-getN = fromMaybe defaultN . argN
-
-parser :: Parser Args
-parser = Args <$> parserN
-
-parserInfo :: Opt.InfoMod a
-parserInfo = Opt.header "Selects lines from stdin uniformly at random."
-
-
--------------------------------------------------------------------------------
---  Main
--------------------------------------------------------------------------------
-
 main :: IO ()
 main = do
-    args <- execParser $ Opt.info (helper <*> parser) parserInfo
-    let n = getN args
+    args <- Args.getArgs
+    let n = Args.getN args
     when (n > 0) $ do
         selections <- getSelectionsIO readLine n
         mapM_ TextIO.putStrLn selections

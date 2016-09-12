@@ -6,17 +6,12 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Choose.Tree
-  build-depends:       base >= 4.7 && < 5
-                     , MonadRandom
+  exposed-modules:     Choose.Args, Choose.Tree
+  build-depends:       base >= 4.7 && < 5, MonadRandom, optparse-applicative
 
 executable choose
   hs-source-dirs:      .
   main-is:             Choose.hs
   ghc-options:         -fwarn-unused-imports
-  build-depends:       base >= 4.7 && < 5
-                     , choose
-                     , MonadRandom
-                     , optparse-applicative
-                     , text
+  build-depends:       base >= 4.7 && < 5, choose, MonadRandom, text
   default-language:    Haskell2010
