@@ -9,7 +9,7 @@ executable choose
   main-is:             Choose.hs
   ghc-options:         -fwarn-unused-imports
   build-depends:       base >= 4.7 && < 5
+                     , MonadRandom
                      , optparse-applicative
-                     , random
                      , text
   default-language:    Haskell2010
