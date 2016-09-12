@@ -42,7 +42,7 @@
     twoFingerScroll = true;
   };
 
-  #services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
+  #services.xserver.videoDrivers = [ "displaylink" ];
 
   environment.etc."modprobe.d/alsa-base.conf".text = ''
     options snd-hda-intel index=1 model=dell-headset-multi
