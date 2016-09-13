@@ -10,6 +10,8 @@ set fish_user_paths       \
 
 set -x EDITOR e
 
+alias trash gvfs-trash
+
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
 function alias2 --argument alias command
