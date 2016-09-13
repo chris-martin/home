@@ -34,5 +34,3 @@ alias rebase='git rebase'
 alias revert='git revert'
 alias   show='git show'
 alias  stash='git stash'
-
-alias pandora=pithos
