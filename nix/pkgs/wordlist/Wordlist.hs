@@ -2,9 +2,9 @@ module Main (main) where
 
 import qualified Wordlist.Args as Args
 
-import Prelude (IO, ($), (-), (<$>), (>>), take)
+import Prelude (IO, take, ($), (-), (<$>), (>>))
 
-import Control.Monad (return)
+import Control.Monad        (return)
 import Control.Monad.Random (Rand, RandomGen, evalRandIO, getRandomRs)
 
 import           Data.Sequence (Seq)
@@ -34,7 +34,7 @@ main = do
 
     -- Concatenate the words
     let result = Text.intercalate d selectedWords
-    
+
     -- Print the result
     TextIO.putStr result >> hFlush stdout >> hPutStr stderr "\n"
 
