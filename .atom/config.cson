@@ -15,6 +15,13 @@
       "welcome"
       "autocomplete-elixir"
       "language-elixir"
+      "gofmt"
+      "godoc"
+      "go-get"
+      "go-debug"
+      "go-config"
+      "builder-go"
+      "autocomplete-go"
     ]
     ignoredNames: [
       ".git"
