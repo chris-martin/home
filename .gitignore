@@ -19,5 +19,6 @@
 !/nix/
 !/oseary
 !/.sbt/
+!/.stack/
 !/.tmux.conf
 !/.vimrc
