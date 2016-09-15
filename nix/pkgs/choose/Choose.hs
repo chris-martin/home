@@ -40,7 +40,7 @@ getSelectionsIO :: forall a. (Ord a) =>
                -- (produce Nothing when there are no more items)
   -> Int       -- ^ Number of items to choose
   -> IO [a]
-getSelectionsIO getItem limit = f 0 Tree.Nil
+getSelectionsIO getItem limit = f 0 Tree.empty
     where
     -- We store each line of text along with its index (i) so that when we're
     -- done, we can sort by the index, thus outputting the selected items in

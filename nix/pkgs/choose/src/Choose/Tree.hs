@@ -11,7 +11,7 @@
 -- The process of moving items futher down the tree is herein referred to as
 -- "disambiguation", because its purpose is to resolve ties in the score.
 
-module Choose.Tree (Tree(..), insert, applyLimit, evict, disambiguate) where
+module Choose.Tree (Tree, empty, insert, applyLimit, evict, disambiguate) where
 
 import Prelude (Bool (..), Foldable (..), Int,
                 not, pure, ($), (+), (-), (.), (<$>),
@@ -41,6 +41,9 @@ instance Foldable Tree where
 
     null Nil      = True
     null t@Tree{} = treeSize t == 0
+
+empty :: Tree a
+empty = Nil
 
 -- | Trivial insertion into the root of a tree, increasing its size by 1
 -- and leaving its children unmodified.
