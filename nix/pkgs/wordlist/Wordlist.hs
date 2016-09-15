@@ -2,30 +2,29 @@
 
 module Main (main) where
 
-import           Prelude                     (IO, Int, Maybe, show, ($), (++),
-                                              (-), (.), (<$>), (<*>))
+import Prelude (IO, Int, Maybe, show, ($), (++), (-), (.), (<$>), (<*>))
 
-import           Control.Applicative         (optional)
-import           Control.Monad               (replicateM, return)
+import Control.Applicative (optional)
+import Control.Monad       (replicateM, return)
 
-import           Data.Maybe                  (fromMaybe)
-import           Data.Monoid                 ((<>))
-import           Data.String                 (fromString)
+import Data.Maybe  (fromMaybe)
+import Data.Monoid ((<>))
+import Data.String (fromString)
 
-import           Data.Sequence               (Seq)
-import qualified Data.Sequence               as Seq
+import           Data.Sequence (Seq)
+import qualified Data.Sequence as Seq
 
-import           Data.Text                   (Text)
-import qualified Data.Text                   as Text
-import qualified Data.Text.IO                as TextIO
+import           Data.Text    (Text)
+import qualified Data.Text    as Text
+import qualified Data.Text.IO as TextIO
 
 import qualified Options.Applicative.Builder as Opt
 import           Options.Applicative.Extra   (execParser, helper)
 import           Options.Applicative.Types   (Parser)
 
-import           System.Environment          (getEnv)
-import           System.IO                   (hFlush, hPutStr, stderr, stdout)
-import           System.Random               (randomRIO)
+import System.Environment (getEnv)
+import System.IO          (hFlush, hPutStr, stderr, stdout)
+import System.Random      (randomRIO)
 
 
 -------------------------------------------------------------------------------
