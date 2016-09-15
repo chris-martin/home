@@ -21,7 +21,7 @@ mkDerivation {
   license = stdenv.lib.licenses.asl20;
 };
 
-hask = haskell.packages.lts-5_2.callPackage haskFn { };
+hask = haskell.packages.lts-5_9.callPackage haskFn { };
 
 wordlist = stdenv.mkDerivation {
   name = "wordlist";

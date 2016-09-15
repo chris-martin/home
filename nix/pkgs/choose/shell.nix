@@ -1,6 +1,6 @@
-{ nixpkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {} }:
 
-with import <nixpkgs> { };
+with pkgs;
 
 haskell.lib.buildStackProject {
   name = "choose";
