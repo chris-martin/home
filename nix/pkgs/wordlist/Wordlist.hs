@@ -2,7 +2,7 @@ module Main (main) where
 
 import qualified Wordlist.Args as Args
 
-import Prelude (IO, ($), (-), (<$>), take)
+import Prelude (IO, ($), (-), (<$>), (>>), take)
 
 import Control.Monad (return)
 import Control.Monad.Random (Rand, RandomGen, evalRandIO, getRandomRs)
@@ -10,6 +10,7 @@ import Control.Monad.Random (Rand, RandomGen, evalRandIO, getRandomRs)
 import           Data.Sequence (Seq)
 import qualified Data.Sequence as Seq
 
+import           Data.Text    (Text)
 import qualified Data.Text    as Text
 import qualified Data.Text.IO as TextIO
 
@@ -23,9 +24,10 @@ main = do
     allText <- TextIO.readFile path
     let allWords = Seq.fromList $ Text.lines allText
     selectedWords <- evalRandIO $ take (Args.getN args) <$> randomRsSeq allWords
-    TextIO.putStr $ Text.intercalate (Args.getD args) selectedWords
-    hFlush stdout
-    hPutStr stderr "\n"
+    printResult $ Text.intercalate (Args.getD args) selectedWords
+
+printResult :: Text -> IO ()
+printResult x = TextIO.putStr x >> hFlush stdout >> hPutStr stderr "\n"
 
 randomRsSeq :: (RandomGen g) => Seq a -> Rand g [a]
 randomRsSeq xs = do
