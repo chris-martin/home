@@ -13,14 +13,12 @@
 
 module Choose.Tree (Tree(..), insert, applyLimit, evict, disambiguate) where
 
-import Prelude (Bool (..), Either (..), Foldable (..), Int, Maybe (..), Ord,
-                not, pure, show, snd, ($), (+), (++), (-), (.), (<$>), (<*>),
-                (<=), (=<<), (==), (>))
+import Prelude (Bool (..), Foldable (..), Int,
+                not, pure, ($), (+), (-), (.), (<$>),
+                (<=), (=<<), (==))
 
 import Control.Monad        (return)
 import Control.Monad.Random (Rand, RandomGen, getRandom)
-
-import qualified Data.Foldable as Foldable
 
 
 data Tree a = Nil | Tree
