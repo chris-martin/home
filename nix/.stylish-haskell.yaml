@@ -12,8 +12,6 @@ steps:
       align: true
       remove_redundant: true
 
-  - records: {}
-
   - trailing_whitespace: {}
 
 columns: 80
