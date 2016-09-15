@@ -1,7 +1,6 @@
 module Choose.Args (Args(..), getArgs, getN) where
 
-import Prelude (IO, Int, Maybe (..), Ord, show, ($), (+), (++), (.), (<$>),
-                (<*>))
+import Prelude (IO, Int, Maybe (..), show, ($), (++), (.), (<$>), (<*>))
 
 import Control.Applicative (optional)
 
