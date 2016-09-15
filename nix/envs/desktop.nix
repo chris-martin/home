@@ -66,7 +66,6 @@ buildEnv {
     iw nmap                            # Networking
 
     nix-repl nix-prefetch-scripts      # Nix
-    nix-shell-wrapper
 
     tesseract                          # OCR
 
