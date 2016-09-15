@@ -12,7 +12,7 @@ mkDerivation {
   license = stdenv.lib.licenses.asl20;
 };
 
-hask = haskell.packages.lts-5_9.callPackage haskFn { };
+hask = haskell.packages.lts-6_7.callPackage haskFn { };
 
 choose = stdenv.mkDerivation {
   name = "choose";
