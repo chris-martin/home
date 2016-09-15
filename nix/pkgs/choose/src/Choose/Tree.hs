@@ -13,9 +13,8 @@
 
 module Choose.Tree (Tree, empty, insert, applyLimit, evict, disambiguate) where
 
-import Prelude (Bool (..), Foldable (..), Int,
-                not, pure, ($), (+), (-), (.), (<$>),
-                (<=), (=<<), (==))
+import Prelude (Bool (..), Foldable (..), Int, not, pure, ($), (+), (-), (.),
+                (<$>), (<=), (=<<), (==))
 
 import Control.Monad        (return)
 import Control.Monad.Random (Rand, RandomGen, getRandom)
