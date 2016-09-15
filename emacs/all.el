@@ -4,7 +4,7 @@
       (expand-file-name "custom.el"
                         (file-name-directory load-file-name)))
 
-(dolist (name (append '("autosave" "backup" "cursor" "exec-path"
+(dolist (name (append '("autosave" "backup" "cursor" "exec-path" "nix-path"
                         "file" "flycheck" "font" "git" "haskell" "line-numbers"
                         "line-wrapping"
                         "markdown" "mouse" "org" "whitespace" "window")
