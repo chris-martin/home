@@ -56,7 +56,7 @@ function nix
   case gc
     nix-collect-garbage --delete-older-than $argv[2]
 
-  case optimize
+  case optimise optimize
     nix-store --optimise
 
   case '*'
