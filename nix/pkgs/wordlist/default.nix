@@ -10,14 +10,14 @@ data = fetchurl {
   sha256 = "1nnv4hxyv8pkxzw9yvb40f2yb47wkqckz3qdi3w4nyvjli9yspig";
 };
 
-haskFn = { mkDerivation, base, containers, optparse-applicative,
-           random, stdenv, text }:
+haskFn = { mkDerivation, base, containers, MonadRandom, optparse-applicative,
+           stdenv, text }:
 mkDerivation {
   pname = "wordlist";
   version = "0.1.0.0";
   src = builtins.filterSource (path: type: baseNameOf path != "dist") ./.;
   isExecutable = true;
-  executableHaskellDepends = [ containers optparse-applicative random text ];
+  executableHaskellDepends = [ containers MonadRandom optparse-applicative text ];
   license = stdenv.lib.licenses.asl20;
 };
 

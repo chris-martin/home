@@ -14,5 +14,5 @@ executable wordlist
   main-is:             Wordlist.hs
   ghc-options:         -fwarn-unused-imports
   build-depends:       base >= 4.7 && < 5, wordlist,
-                       containers, random, text
+                       containers, MonadRandom, text
   default-language:    Haskell2010
