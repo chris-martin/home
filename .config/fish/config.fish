@@ -14,6 +14,11 @@ alias trash gvfs-trash
 
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
+function stylish-haskell --argument dir
+  cd "$dir"
+  and find . -name "*.hs" -not -path '*/\.*' -exec stylish-haskell -i "{}" \;
+end
+
 function alias2 --argument alias command
   alias "$alias" "$command"
 
