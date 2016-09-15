@@ -10,7 +10,6 @@ import Control.Monad.Random (Rand, RandomGen, evalRandIO, getRandomRs)
 import           Data.Sequence (Seq)
 import qualified Data.Sequence as Seq
 
-import           Data.Text    (Text)
 import qualified Data.Text    as Text
 import qualified Data.Text.IO as TextIO
 
@@ -19,15 +18,25 @@ import System.IO          (hFlush, hPutStr, stderr, stdout)
 
 main :: IO ()
 main = do
+
+    -- Read the command-line args
     args <- Args.getArgs
+    let n = Args.getN args
+    let d = Args.getD args
+
+    -- Read the word data
     path <- getEnv "WORD_LIST_PATH"
     allText <- TextIO.readFile path
     let allWords = Seq.fromList $ Text.lines allText
-    selectedWords <- evalRandIO $ take (Args.getN args) <$> randomRsSeq allWords
-    printResult $ Text.intercalate (Args.getD args) selectedWords
 
-printResult :: Text -> IO ()
-printResult x = TextIO.putStr x >> hFlush stdout >> hPutStr stderr "\n"
+    -- Choose n of the words
+    selectedWords <- evalRandIO $ take n <$> randomRsSeq allWords
+
+    -- Concatenate the words
+    let result = Text.intercalate d selectedWords
+    
+    -- Print the result
+    TextIO.putStr result >> hFlush stdout >> hPutStr stderr "\n"
 
 randomRsSeq :: (RandomGen g) => Seq a -> Rand g [a]
 randomRsSeq xs = do
