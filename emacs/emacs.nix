@@ -9,12 +9,11 @@
   elixir-mode
   fill-column-indicator
   flycheck
-  flycheck-haskell
   ghc
-  haskell-mode
   helm
   helm-projectile
   ido-ubiquitous
+  intero
   js2-mode
   json-mode
   markdown-mode
