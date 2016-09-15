@@ -14,11 +14,11 @@
 module Choose.Tree (Tree(..), insert, applyLimit, evict, disambiguate) where
 
 import Prelude (Bool (..), Either (..), Foldable (..), Int, Maybe (..), Ord,
-                not, pure, show, snd, ($), (+), (++), (-), (.), (<$>),
-                (<*>), (<=), (=<<), (==), (>))
+                not, pure, show, snd, ($), (+), (++), (-), (.), (<$>), (<*>),
+                (<=), (=<<), (==), (>))
 
-import Control.Monad          (return)
-import Control.Monad.Random   (getRandom, Rand, RandomGen)
+import Control.Monad        (return)
+import Control.Monad.Random (Rand, RandomGen, getRandom)
 
 import qualified Data.Foldable as Foldable
 
@@ -38,16 +38,16 @@ instance Foldable Tree where
     foldr f z (Tree size [] left right) =
         (\z -> foldr f z left) . (\z -> foldr f z right) $ z
 
-    length Nil = 0
+    length Nil      = 0
     length t@Tree{} = treeSize t
 
-    null Nil = True
+    null Nil      = True
     null t@Tree{} = treeSize t == 0
 
 -- | Trivial insertion into the root of a tree, increasing its size by 1
 -- and leaving its children unmodified.
 insert :: a -> Tree a -> Tree a
-insert x Nil = Tree 1 [x] Nil Nil
+insert x Nil                       = Tree 1 [x] Nil Nil
 insert x (Tree size xs left right) = Tree (size + 1) (x:xs) left right
 
 -- | Remove items from the tree until its size is at most @limit@.

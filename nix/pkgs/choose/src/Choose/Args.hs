@@ -5,8 +5,8 @@ import Prelude (IO, Int, Maybe (..), Ord, show, ($), (+), (++), (.), (<$>),
 
 import Control.Applicative (optional)
 
-import Data.Maybe    (fromMaybe)
-import Data.Monoid   ((<>))
+import Data.Maybe  (fromMaybe)
+import Data.Monoid ((<>))
 
 import qualified Options.Applicative.Builder as Opt
 import           Options.Applicative.Extra   (execParser, helper)
