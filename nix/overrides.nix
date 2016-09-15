@@ -89,6 +89,12 @@ overrides = (with pkgs; rec {
 
   polyml-5-4 = callPackage pkgs/polyml-5-4 {};
 
+  czmqpp = callPackage pkgs/czmqpp {};
+
+  libbitcoin = callPackage pkgs/libbitcoin/libbitcoin {};
+  libbitcoin-client = callPackage pkgs/libbitcoin/client {};
+  libbitcoin-explorer = callPackage pkgs/libbitcoin/explorer {};
+
   # Fall back to unstable for Haskell LTS releases that aren't in stable
   haskell = pkgs.haskell // {
 
