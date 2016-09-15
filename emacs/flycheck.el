@@ -1,6 +1,3 @@
-;; Use flycheck everywhere
-(add-hook 'after-init-hook 'global-flycheck-mode)
-
 ;; Disable elisp flycheck - don't know why, but it always generates errors.
 (with-eval-after-load 'flycheck
   (setq-default flycheck-disabled-checkers '(emacs-lisp emacs-lisp-checkdoc)))
