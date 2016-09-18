@@ -98,6 +98,8 @@ overrides = (with pkgs; rec {
   libbitcoin-client = callPackage pkgs/libbitcoin/client {};
   libbitcoin-explorer = callPackage pkgs/libbitcoin/explorer {};
 
+  tulip-lang = callPackage pkgs/tulip-lang {};
+
   # Fall back to unstable for Haskell LTS releases that aren't in stable
   haskell = pkgs.haskell // {
 
