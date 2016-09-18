@@ -23,7 +23,7 @@ set -x NIXOS_PATH "nixpkgs=$STABLE:nixos-config=$NIXOS_CONFIG:$NIX_PATH_BASE"
 function nix
   switch $argv[1]
 
-  case rebuild
+  case rebuild-os
     sudo env NIX_PATH=$NIXOS_PATH nixos-rebuild switch
 
   case packages
@@ -91,7 +91,7 @@ function __fish_nix_needs_command
   end
 end
 
-complete -f -c nix -a rebuild \
+complete -f -c nix -a rebuild-os \
   -n __fish_nix_needs_command \
   -d "Rebuild NixOS"
 
