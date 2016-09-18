@@ -66,13 +66,14 @@ overrides = (with pkgs; rec {
   # New thing that probably deserves a PR
   libscrypt = callPackage pkgs/libscrypt { };
 
-  # https://github.com/NixOS/nixpkgs/pull/15979
+  # https://github.com/NixOS/nixpkgs/issues/18637
+  # https://github.com/NixOS/nixpkgs/issues/18638
   secp256k1 = callPackage pkgs/secp256k1 {};
 
   # https://github.com/NixOS/nixpkgs/pull/15977
   serpent = callPackage pkgs/serpent {};
 
-  # TLA+
+  # https://github.com/NixOS/nixpkgs/issues/18640
   tla-plus = callPackage pkgs/tla-plus {};
 
   # My software that lives in this repo
@@ -82,6 +83,7 @@ overrides = (with pkgs; rec {
   # BigchainDB requires rethinkdb version higher than what's in 16.03
   inherit (unstable) rethinkdb;
 
+  # https://github.com/NixOS/nixpkgs/issues/18640
   isabelle2011-1 = callPackage pkgs/isabelle2011-1 {
     inherit (pkgs) stdenv fetchurl nettools perl;
     inherit (pkgs.emacs24Packages) proofgeneral;
