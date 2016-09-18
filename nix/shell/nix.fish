@@ -42,6 +42,9 @@ function nix
   case shell
     nix-shell $argv[2..-1]
 
+  case build
+    nix-build $argv[2..-1]
+
   case path
     nix-store -r (nix drv $argv[2])
 
@@ -114,6 +117,10 @@ complete -f -c nix -a update \
 complete -f -c nix -a shell \
   -n __fish_nix_needs_command \
   -d "Run nix-shell"
+
+complete -f -c nix -a build \
+  -n __fish_nix_needs_command \
+  -d "Run nix-build"
 
 complete -f -c nix -a path \
   -n __fish_nix_needs_command \
