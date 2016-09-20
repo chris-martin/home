@@ -8,6 +8,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Wordlist.Args
   build-depends:       base >= 4.7 && < 5, optparse-applicative, text
+  ghc-options:         -fwarn-unused-imports
 
 executable wordlist
   hs-source-dirs:      .

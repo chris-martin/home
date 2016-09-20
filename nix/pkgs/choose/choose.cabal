@@ -8,7 +8,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Choose.Args, Choose.Tree
   build-depends:       base >= 4.7 && < 5, MonadRandom, optparse-applicative
-  ghc-options:         -XUnicodeSyntax
+  ghc-options:         -XUnicodeSyntax -fwarn-unused-imports
 
 executable choose
   hs-source-dirs:      .
