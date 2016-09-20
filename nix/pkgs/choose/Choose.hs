@@ -27,40 +27,40 @@ import System.IO       (stdin)
 import System.IO.Error (ioError, isEOFError)
 
 
-main :: IO ()
+main ∷ IO ()
 main = do
-    args <- Args.getArgs
+    args ← Args.getArgs
     let n = Args.getN args
     when (n > 0) $ do
-        selections <- getSelectionsIO readLine n
+        selections ← getSelectionsIO readLine n
         mapM_ TextIO.putStrLn selections
 
-getSelectionsIO :: forall a. (Ord a) =>
+getSelectionsIO ∷ ∀ a. (Ord a) ⇒
   IO (Maybe a) -- ^ Producer of items to choose from
                -- (produce Nothing when there are no more items)
-  -> Int       -- ^ Number of items to choose
-  -> IO [a]
+  → Int       -- ^ Number of items to choose
+  → IO [a]
 getSelectionsIO getItem limit = f 0 Tree.empty
     where
     -- We store each line of text along with its index (i) so that when we're
     -- done, we can sort by the index, thus outputting the selected items in
     -- the same order in which they were read.
-    f :: Int -> Tree (Int, a) -> IO [a]
+    f ∷ Int → Tree (Int, a) → IO [a]
     f i tree = do
-        lineMaybe <- getItem
+        lineMaybe ← getItem
         case lineMaybe of
             -- We read a line; insert it into the tree and recurse.
-            Just line -> do
-                tree' <- evalRandIO $ Tree.applyLimit limit . Tree.insert (i, line) $ tree
+            Just line → do
+                tree' ← evalRandIO $ Tree.applyLimit limit . Tree.insert (i, line) $ tree
                 f (i + 1) tree'
             -- We've reached the end of the input. Convert the tree to a list,
             -- sort it, and strip out the indices to return just the text.
-            Nothing -> return $ snd <$> sort (Foldable.toList tree)
+            Nothing → return $ snd <$> sort (Foldable.toList tree)
 
 -- | Produces @Just@ a line of text, or @Nothing@ if the stream has ended.
-readLine :: IO (Maybe Text)
+readLine ∷ IO (Maybe Text)
 readLine = do
-    lineEither <- try $ TextIO.hGetLine stdin
+    lineEither ← try $ TextIO.hGetLine stdin
     case lineEither of
-        Left e     -> if isEOFError e then return Nothing else ioError e
-        Right line -> return $ Just line
+        Left e     → if isEOFError e then return Nothing else ioError e
+        Right line → return $ Just line
