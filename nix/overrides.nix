@@ -124,6 +124,8 @@ overrides = (with pkgs; rec {
     };
   }));
 
+  lato = callPackage ./pkgs/fonts/lato {};
+
   # Convenience aliases for nested packages
 
   inherit (pkgsWithOverrides.xorg) xkill;
