@@ -11,7 +11,7 @@ library
   ghc-options:         -fwarn-unused-imports
 
 executable choose
-  hs-source-dirs:      .
+  hs-source-dirs:      main
   main-is:             Choose.hs
   ghc-options:         -fwarn-unused-imports
   build-depends:       base >= 4.7 && < 5, choose, MonadRandom, text
