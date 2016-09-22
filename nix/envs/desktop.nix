@@ -8,8 +8,6 @@ buildEnv {
 
     ack
 
-    gnupg
-
     rsync
 
     jmtpfs                             # Android
