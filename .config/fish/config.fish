@@ -41,6 +41,7 @@ function readSilent # prompt targetVar
 end
 
 source ~/nix/shell/nix.fish
+source ~/.config/fish/bitcoin.fish
 source ~/.config/fish/git.fish
 source ~/.config/fish/oseary.fish
 source ~/.config/fish/prompt.fish
