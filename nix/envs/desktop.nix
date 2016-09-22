@@ -22,7 +22,7 @@ buildEnv {
 
     chromium                           # Chromium
 
-    keepassx2 truecrypt                # Crypto
+    gnupg1compat keepassx2 truecrypt   # Crypto
 
     sassc                              # CSS
 
