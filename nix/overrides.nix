@@ -132,7 +132,7 @@ overrides = (with pkgs; rec {
 
   inherit (pkgsWithOverrides.python27Packages) docker_compose;
 
-  inherit (pkgsWithOverrides.python34Packages) ipython;
+  inherit (pkgsWithOverrides.python35Packages) ipython;
 
   inherit (pkgsWithOverrides.myPython34Packages) bigchaindb pyethereum;
 
