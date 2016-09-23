@@ -9,6 +9,7 @@
 !/fish/*
 !/git/
 /git/gitk
+!/LightTable/
 !/sublime-text-2/
 /sublime-text-2/*
 !/sublime-text-3/
