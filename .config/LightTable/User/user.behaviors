@@ -43,7 +43,7 @@
  ;; Show line numbers
  ;; [:editor :lt.objs.editor/line-numbers]
  ;; Customize font
- ;; [:app :lt.objs.style/font-settings "Courier New" "11"]
+ [:app :lt.objs.style/font-settings "DejaVu Sans Mono" "13"]
  ;; Auto-close characters e.g. '{[("'
  ;; [:editor :lt.objs.editor/autoclose-brackets]
  ;; Tab settings: Use real tabs, tab size in spaces, spaces per indent
