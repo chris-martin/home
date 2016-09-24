@@ -39,9 +39,7 @@
     invisibles: {}
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
-  "haskell-ghc-mod":
-    ghcModPath: "nix-shell.ghc-mod"
-    ghcModiPath: "nix-shell.ghc-modi"
+  "haskell-ghc-mod": {}
   latex: {}
   "linter-scalac":
     compileAllClassesOnLint: true
