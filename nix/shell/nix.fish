@@ -2,14 +2,15 @@ set -x NIXPKGS_CONFIG "$HOME/nix/config.nix"
 
 set NIXOS_CONFIG "$HOME/nix/os/config.nix"
 
-set CHANNELS "$HOME/.nix-defexpr/channels"
+set CHANNELS "$HOME/nix/channels"
 
-set STABLE "$CHANNELS/nixos-16.09"
+set STABLE "$CHANNELS/16.09"
 
 set NIX_PATH_BASE "\
-nixpkgs-unstable=$CHANNELS/nixos-unstable:\
-nixpkgs-16.09=$CHANNELS/nixos-16.09:\
-nixpkgs-16.03=$CHANNELS/nixos-16.03:\
+nixpkgs-master=$CHANNELS/master:\
+nixpkgs-unstable=$CHANNELS/unstable:\
+nixpkgs-16.09=$CHANNELS/16.09:\
+nixpkgs-16.03=$CHANNELS/16.03:\
 nixos-config=$NIXOS_CONFIG"
 
 set -x NIX_PATH "nixpkgs=$STABLE:$NIX_PATH_BASE"
@@ -35,10 +36,6 @@ function nix
 
   case uninstall remove
     nix-env -f '<nixpkgs>' -e $argv[2]
-
-  case update
-    __fish_nix_set_channels
-    nix-channel --update
 
   case shell
     nix-shell $argv[2..-1]
@@ -110,10 +107,6 @@ complete -f -c nix -a install \
 complete -f -c nix -a uninstall \
   -n __fish_nix_needs_command \
   -d "Uninstall a package"
-
-complete -f -c nix -a update \
-  -n __fish_nix_needs_command \
-  -d "Download from channels"
 
 complete -f -c nix -a shell \
   -n __fish_nix_needs_command \
