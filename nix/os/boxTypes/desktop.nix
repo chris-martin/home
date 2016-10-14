@@ -97,7 +97,7 @@
   };
 
   virtualisation.docker = {
-    enable           = false;
+    enable           = true;
     storageDriver    = "devicemapper";
     socketActivation = false;
   };
