@@ -144,8 +144,10 @@ overrides = (with pkgs; rec {
     cheese eog file-roller gnome-screenshot polari;
 
   inherit (pkgsWithOverrides.haskellPackages)
-    cabal-install cabal2nix hlint purescript stack stylish-haskell
-    pointfree pointful ghc-mod;
+    cabal-install cabal2nix hlint purescript stylish-haskell
+    pointfree pointful ghc-mod hsdev hdevtools;
+
+  inherit (unstable) stack;
 
   # https://github.com/NixOS/nixpkgs/pull/18403
   hasktags = haskell.lib.overrideCabal haskellPackages.hasktags (drv: {
