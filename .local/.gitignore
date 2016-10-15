@@ -1,5 +1,8 @@
 /*
 !/.gitignore
+!/bin/
+/bin/*
+!/bin/.keep
 !/share/
 /share/*
 !/share/backgrounds/
