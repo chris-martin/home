@@ -2,6 +2,35 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
+        <option value="sc.package.fqn" />
+        <option value="go.method" />
+        <option value="go.packages" />
+        <option value="sc.package.object.short" />
+        <option value="sc.implicit.function.name" />
+        <option value="sc.class.shortName" />
+        <option value="go.all.private.name" />
+        <option value="sc.class.fqn" />
+        <option value="sc.variable.name" />
+        <option value="sc.method.name" />
+        <option value="sc.class.parameter.name" />
+        <option value="sc.java.class.name.in.package" />
+        <option value="sc.type.alias.name" />
+        <option value="sc.package.object.fqn" />
+        <option value="go.function" />
+        <option value="sc.annotatde.member.name" />
+        <option value="go.all.name" />
+        <option value="sc.not.visible.in.java.class.shortName" />
+        <option value="sc.super.class.name" />
+        <option value="sc.class.name.in.package" />
+        <option value="go.type.name" />
+        <option value="sc.stable.alias.name" />
+        <option value="sc.implcit.object" />
+        <option value="sc.all.class.names" />
+        <option value="java.unit.tree" />
+        <option value="java.class.fqn" />
+        <option value="java.class.shortname" />
+        <option value="java.method.parameter.types" />
+        <option value="java.anonymous.baseref" />
         <option value="jvm.static.member.type" />
         <option value="jvm.static.member.name" />
         <option value="java.method.name" />
@@ -43,11 +72,9 @@
         <option value="haskell.all.name" />
         <option value="dom.elementClass" />
         <option value="dom.namespaceKey" />
-        <option value="java.unit.tree" />
-        <option value="java.class.fqn" />
-        <option value="java.class.shortname" />
-        <option value="java.method.parameter.types" />
-        <option value="java.anonymous.baseref" />
+        <option value="sc.value.name" />
+        <option value="sc.self.type.class.name.key" />
+        <option value="go.method.fingerprint" />
       </list>
     </option>
   </component>
