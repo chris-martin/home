@@ -33,7 +33,7 @@ overrides = (with pkgs; rec {
 
   inherit (unstable) glide;
 
-  go = go_1_6;
+  go = go_1_7;
 
   dummy-wget = callPackage pkgs/dummy-wget {};
 
