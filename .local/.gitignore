@@ -9,3 +9,10 @@
 !/share/backgrounds/*
 !/share/fonts/
 !/share/fonts/*
+!/share/npm/
+/share/npm/*
+!/share/npm/node_modules/
+/share/npm/node_modules/*
+!/share/npm/node_modules/.bin/
+/share/npm/node_modules/.bin/*
+!/share/npm/node_modules/.bin/.keep
