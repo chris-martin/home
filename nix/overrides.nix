@@ -126,6 +126,8 @@ overrides = (with pkgs; rec {
 
   lato = callPackage ./pkgs/fonts/lato {};
 
+  kbtin = callPackage ./pkgs/kbtin {};
+
   # Convenience aliases for nested packages
 
   inherit (pkgsWithOverrides.xorg) xkill;
