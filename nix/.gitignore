@@ -1,5 +1,5 @@
 !/*
-/hardware.nix
-/secret.nix
+/os/hardware.nix
+/os/secret.nix
 
 /.idea
