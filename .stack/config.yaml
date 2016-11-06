@@ -4,4 +4,5 @@
 #
 nix:
   enable: true
+  pure: false
   shell-file: /home/chris/.stack/shell.nix
