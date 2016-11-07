@@ -3,6 +3,8 @@
   name = Chris Martin
 [core]
   excludesfile = ~/.config/git/ignore
+[pager]
+  log = less -c -+F
 [diff]
   tool = vimdiff
   guitool = meld
