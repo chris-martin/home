@@ -12,6 +12,7 @@
 *.egg
 
 # Haskell
+.cabal-sandbox
 .stack-work
 
 # Emacs
