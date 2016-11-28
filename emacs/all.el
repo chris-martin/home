@@ -61,6 +61,4 @@
 ;; Don't show a warning when using erase-buffer
 (put 'erase-buffer 'disabled nil)
 
-(desktop-save-mode 1)
-
 (load custom-file)
