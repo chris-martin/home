@@ -104,6 +104,18 @@ rec {
     };
   };
 
+  riemann-client = self.buildPythonPackage rec {
+    name = "riemann-client-${version}";
+    version = "6.3.0";
+
+    src = fetchurl {
+      url = "https://pypi.python.org/packages/17/64/1f49990762adf2742bf7e8587e83bdd0c9faaea181e3df75fdee1cb715aa/riemann-client-6.3.0.tar.gz";
+      sha256 = "1mh09m1xbr9f6w34085w8mp9hr3xgq7dfi132qydpm1f4gbj32hs";
+    };
+
+    propagatedBuildInputs = with self; [ click protobuf ];
+  };
+
   rlp = rlp-0-4-5;
 
   rlp-0-4-4 = self.buildPythonPackage rec {
