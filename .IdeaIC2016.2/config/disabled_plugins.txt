@@ -5,6 +5,7 @@ Subversion
 TestNG-J
 cc.cflags.nixitch
 com.cursiveclojure.cursive
+com.haskforce
 hg4idea
 mobi.hsz.idea.gitignore
 org.intellij.plugins.markdown
