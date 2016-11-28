@@ -22,11 +22,11 @@
     cleanTmpDir = true;
   };
 
-  nixpkgs.config.virtualbox.enableExtensionPack =
-    let _ = pkgs.fetchurl {
-      url = "http://download.virtualbox.org/virtualbox/5.0.26/Oracle_VM_VirtualBox_Extension_Pack-5.0.26-108824.vbox-extpack";
-      sha256 = "015id31c4qs0nzpf7xii7kfcr3dhdrx7drz8iwjs201xpb3h48rg";
-    }; in true;
+  #nixpkgs.config.virtualbox.enableExtensionPack =
+  #  let _ = pkgs.fetchurl {
+  #    url = "http://download.virtualbox.org/virtualbox/5.0.26/Oracle_VM_VirtualBox_Extension_Pack-5.0.26-108824.vbox-extpack";
+  #    sha256 = "015id31c4qs0nzpf7xii7kfcr3dhdrx7drz8iwjs201xpb3h48rg";
+  #  }; in true;
 
   services.redshift = { enable = true; } //
     config.nixpkgs.config.locations.atlanta;
