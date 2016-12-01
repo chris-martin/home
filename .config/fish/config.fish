@@ -10,6 +10,8 @@ set fish_user_paths       \
 
 set -x EDITOR e
 
+set -x GOPATH ~/go
+
 alias trash gvfs-trash
 
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
