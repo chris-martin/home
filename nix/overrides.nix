@@ -43,6 +43,8 @@ overrides = (with pkgs; rec {
   inherit (unstable) sublime3;
   sublime = sublime3;
 
+  riemannq = callPackage ./pkgs/riemannq {};
+
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
   google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
 
