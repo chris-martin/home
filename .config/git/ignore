@@ -3,6 +3,7 @@
 *.swp
 .idea
 *.iml
+ideaHaskellLib
 
 # Vagrant
 .vagrant
