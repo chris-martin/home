@@ -45,6 +45,8 @@ overrides = (with pkgs; rec {
 
   riemannq = callPackage ./pkgs/riemannq {};
 
+  clusterssh = callPackage ./pkgs/clusterssh {};
+
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
   google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
 
