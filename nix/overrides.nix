@@ -47,6 +47,8 @@ overrides = (with pkgs; rec {
 
   clusterssh = callPackage ./pkgs/clusterssh {};
 
+  pssh = callPackage ./pkgs/pssh {};
+
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
   google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
 
