@@ -18,7 +18,6 @@
   st = "!bash -c 'if [[ $(which st) ]]; then st; else git status; fi'"
   co = checkout
   ci = commit
-  llog = log --date=local
   br = "!bash -c br"
   top = !git log --format=format:%an | sort | uniq -c | sort -rg | head -n 20
   graph = "!f() { git log --oneline --abbrev-commit --graph --decorate; }; f"
