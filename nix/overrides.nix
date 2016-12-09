@@ -155,6 +155,8 @@ overrides = (with pkgs; rec {
     cabal-install cabal2nix hlint purescript stylish-haskell
     pointfree pointful ghc-mod hsdev hdevtools;
 
+  inherit (pkgsWithOverrides.gitAndTools) git-bz;
+
   inherit (unstable) stack;
 
   # https://github.com/NixOS/nixpkgs/pull/18403
