@@ -17,6 +17,7 @@
 !/.kde/
 !/.idea/
 !/.latexmkrc
+!/.lein/
 !/.local/
 !/nix/
 !/oseary
