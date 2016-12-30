@@ -51,6 +51,9 @@ overrides = (with pkgs; rec {
 
   pssh = callPackage ./pkgs/pssh {};
 
+  # Fix for https://github.com/NixOS/nixpkgs/issues/21013
+  git-bz = callPackage ./pkgs/git-bz {};
+
   ppl-address-book = callPackage ./pkgs/ppl-address-book {};
 
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
@@ -158,8 +161,6 @@ overrides = (with pkgs; rec {
   inherit (pkgsWithOverrides.haskellPackages)
     cabal-install cabal2nix hlint purescript stylish-haskell
     pointfree pointful ghc-mod hsdev hdevtools;
-
-  inherit (pkgsWithOverrides.gitAndTools) git-bz;
 
   inherit (unstable) stack;
 
