@@ -61,6 +61,7 @@
     enable = true;
     layout = "us";
     desktopManager.gnome3.enable = true;
+    windowManager.xmonad.enable  = false;
     displayManager.gdm.enable    = true;
   };
 
