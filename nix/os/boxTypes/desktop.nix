@@ -93,13 +93,13 @@
   systemd.services.emacs.enable = true;
 
   virtualisation.virtualbox.host = {
-    enable              = false;
+    enable              = true;
     enableHardening     = false;
     addNetworkInterface = true;
   };
 
   virtualisation.docker = {
-    enable           = true;
+    enable           = false;
     storageDriver    = "devicemapper";
     socketActivation = false;
   };
