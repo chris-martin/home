@@ -51,6 +51,8 @@ overrides = (with pkgs; rec {
 
   pssh = callPackage ./pkgs/pssh {};
 
+  ppl-address-book = callPackage ./pkgs/ppl-address-book {};
+
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
   google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
 
