@@ -29,3 +29,5 @@
   tool = vimdiff
 [push]
   default = tracking
+[bz]
+  browser = chromium
