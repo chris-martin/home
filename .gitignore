@@ -5,7 +5,6 @@
 !/bin/
 !/dropbox
 !/.emacs
-!/.ghc/
 !/.gitignore
 !/.gradle/
 !/.kde/
@@ -85,6 +84,10 @@
 !/.emacs.d/
 /.emacs.d/*
 !/.emacs.d/init.el
+
+!/.ghc/
+/.ghc/*
+!/.ghc/ghci.conf
 
 !/.IdeaIC2016.2/
 /.IdeaIC2016.2/config/idea14.key
