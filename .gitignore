@@ -9,7 +9,6 @@
 !/.latexmkrc
 !/nix/
 !/oseary
-!/.stack/
 !/.tmux.conf
 !/.vimrc
 !/.xmonad/
@@ -129,6 +128,11 @@
 /.sbt/0.13/plugins/target/
 /.sbt/0.13/plugins/project/target/
 /.sbt/launchers
+
+!/.stack/
+/.stack/*
+!/.stack/config.yaml
+!/.stack/shell.nix
 
 !/.idea/
 /.idea/*
