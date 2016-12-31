@@ -9,7 +9,6 @@
 !/.latexmkrc
 !/nix/
 !/oseary
-!/.sbt/
 !/.stack/
 !/.tmux.conf
 !/.vimrc
@@ -121,6 +120,15 @@
 !/.local/share/npm/node_modules/.bin/
 /.local/share/npm/node_modules/.bin/*
 !/.local/share/npm/node_modules/.bin/.keep
+
+!/.sbt/
+/.sbt/boot/
+/.sbt/0.13/dependency/
+/.sbt/0.13/staging/
+/.sbt/0.13/target/
+/.sbt/0.13/plugins/target/
+/.sbt/0.13/plugins/project/target/
+/.sbt/launchers
 
 !/.idea/
 /.idea/*
