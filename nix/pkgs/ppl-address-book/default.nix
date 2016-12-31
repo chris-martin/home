@@ -6,7 +6,7 @@ let
   version = (import ./gemset.nix).ppl.version;
 
   env = bundlerEnv rec {
-    name = "${pname}-${version}";
+    name = "${pname}-env-${version}";
     inherit ruby;
     gemfile = ./Gemfile;
     lockfile = ./Gemfile.lock;
