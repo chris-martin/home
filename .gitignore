@@ -7,7 +7,6 @@
 !/.emacs
 !/.gitignore
 !/.kde/
-!/.idea/
 !/.latexmkrc
 !/.lein/
 !/.local/
@@ -91,6 +90,10 @@
 !/.gradle/
 /.gradle/*
 !/.gradle/gradle.properties
+
+!/.idea/
+/.idea/*
+!/.idea/chris.iml
 
 !/.IdeaIC2016.2/
 /.IdeaIC2016.2/config/idea14.key
