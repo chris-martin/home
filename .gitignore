@@ -6,7 +6,7 @@
 !/dropbox
 !/.emacs
 !/.ghc/
-!/.gitignore/
+!/.gitignore
 !/.gradle/
 !/.kde/
 !/.idea/
@@ -23,7 +23,6 @@
 
 !/.config/
 /.config/*
-!/.config/.gitignore
 !/.config/autostart/
 !/.config/dconf/
 /.config/dconf/*
@@ -43,7 +42,6 @@
 
 !/.config/LightTable/
 /.config/LightTable/*
-!/.config/LightTable/.gitignore
 !/.config/LightTable/User
 /.config/LightTable/User/*
 !/.config/LightTable/User/user.behaviors
@@ -51,13 +49,10 @@
 
 !/.config/sublime-text-2/
 /.config/sublime-text-2/*
-!/.config/sublime-text-2/.gitignore
 !/.config/sublime-text-2/Packages/
 /.config/sublime-text-2/Packages/*
-!/.config/sublime-text-2/Packages/.gitignore
 !/.config/sublime-text-2/Packages/User/
 /.config/sublime-text-2/Packages/User/*
-!/.config/sublime-text-2/Packages/User/.gitignore
 !/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap
 !/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
 !/.config/sublime-text-2/Packages/User/Haskell.sublime-settings
@@ -67,13 +62,10 @@
 
 !/.config/sublime-text-3/
 /.config/sublime-text-3/*
-!/.config/sublime-text-3/.gitignore
 !/.config/sublime-text-3/Packages/
 /.config/sublime-text-3/Packages/*
-!/.config/sublime-text-3/Packages/.gitignore
 !/.config/sublime-text-3/Packages/User/
 /.config/sublime-text-3/Packages/User/*
-!/.config/sublime-text-3/Packages/User/.gitignore
 !/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap
 !/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 !/.config/sublime-text-3/Packages/User/Haskell.sublime-settings
@@ -83,7 +75,6 @@
 
 !/.atom/
 /.atom/*
-!/.atom/.gitignore
 !/.atom/config.cson
 !/.atom/keymap.cson
 !/.atom/styles.less
@@ -93,7 +84,6 @@
 !/emacs/
 !/.emacs.d/
 /.emacs.d/*
-!/.emacs.d/.gitignore
 !/.emacs.d/init.el
 
 !/.IdeaIC2016.2/
