@@ -7,7 +7,6 @@
 !/.emacs
 !/.gitignore
 !/.latexmkrc
-!/.lein/
 !/.local/
 !/nix/
 !/oseary
@@ -92,16 +91,18 @@
 
 !/.kde/
 /.kde/*
-!/.kde/.gitignore
 !/.kde/env/
 !/.kde/env/*
 !/.kde/share/
 /.kde/share/*
-!/.kde/share/.gitignore
 !/.kde/share/apps
 /.kde/share/apps/*
 !/.kde/share/apps/konsole/
 !/.kde/share/apps/konsole/**
+
+!/.lein/
+/.lein/*
+!/.lein/profiles.clj
 
 !/.idea/
 /.idea/*
