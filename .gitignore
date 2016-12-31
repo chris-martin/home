@@ -11,7 +11,6 @@
 !/oseary
 !/.tmux.conf
 !/.vimrc
-!/.xmonad/
 
 !/.config/
 /.config/*
@@ -133,6 +132,10 @@
 /.stack/*
 !/.stack/config.yaml
 !/.stack/shell.nix
+
+!/.xmonad/
+/.xmonad/*
+!/.xmonad/xmonad.hs
 
 !/.idea/
 /.idea/*
