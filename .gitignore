@@ -7,7 +7,6 @@
 !/.emacs
 !/.gitignore
 !/.latexmkrc
-!/nix/
 !/oseary
 !/.tmux.conf
 !/.vimrc
@@ -136,6 +135,14 @@
 !/.xmonad/
 /.xmonad/*
 !/.xmonad/xmonad.hs
+
+!/nix/
+!/nix/*
+/nix/os/hardware.nix
+/nix/os/secret.nix
+/nix/.idea
+/nix/pkgs/choose/dist/
+/nix/pkgs/wordlist/dist/
 
 !/.idea/
 /.idea/*
