@@ -30,8 +30,6 @@
 !/.config/dconf/
 /.config/dconf/*
 !/.config/dconf/setup-*.sh
-!/.config/fish/
-/.config/fish/*
 !/.config/fish/*
 !/.config/git/
 /.config/git/gitk
@@ -43,6 +41,11 @@
 !/.config/systemd/
 !/.config/user-dirs.conf
 !/.config/user-dirs.dirs
+
+!/.config/fish/
+/.config/fish/*
+/.config/fish/fishd.*
+/.config/fish/fish_history
 
 !/.config/LightTable/
 /.config/LightTable/*
