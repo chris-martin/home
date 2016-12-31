@@ -6,7 +6,6 @@
 !/dropbox
 !/.emacs
 !/.gitignore
-!/.gradle/
 !/.kde/
 !/.idea/
 !/.latexmkrc
@@ -88,6 +87,10 @@
 !/.ghc/
 /.ghc/*
 !/.ghc/ghci.conf
+
+!/.gradle/
+/.gradle/*
+!/.gradle/gradle.properties
 
 !/.IdeaIC2016.2/
 /.IdeaIC2016.2/config/idea14.key
