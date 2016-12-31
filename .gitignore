@@ -5,8 +5,6 @@
 !/bin/
 !/dropbox
 !/.emacs
-!/emacs/
-!/.emacs.d/
 !/.ghc/
 !/.gitignore/
 !/.gradle/
@@ -91,6 +89,12 @@
 !/.atom/styles.less
 !/.atom/grammar-config
 !/.atom/grammar-config/*
+
+!/emacs/
+!/.emacs.d/
+/.emacs.d/*
+!/.emacs.d/.gitignore
+!/.emacs.d/init.el
 
 !/.IdeaIC2016.2/
 /.IdeaIC2016.2/config/idea14.key
