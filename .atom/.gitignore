@@ -1,7 +1,0 @@
-*
-!/.gitignore
-!/config.cson
-!/keymap.cson
-!/styles.less
-!/grammar-config
-!/grammar-config/*
