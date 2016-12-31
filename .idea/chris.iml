@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.CLion12/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IdeaIC14/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IdeaIC2016.1/system" />
+      <excludeFolder url="file://$MODULE_DIR$/.IdeaIC2016.2/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea14/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea15/system" />
       <excludeFolder url="file://$MODULE_DIR$/.IntelliJIdea2016.1/system" />
@@ -29,6 +30,10 @@
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/Cache" />
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/GPUCache" />
       <excludeFolder url="file://$MODULE_DIR$/.config/Atom/Local Storage" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/LightTable" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/TulipSoftware" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/UNDERTALE_linux_steamver" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/VirtualBox" />
       <excludeFolder url="file://$MODULE_DIR$/.config/cef_user_data" />
       <excludeFolder url="file://$MODULE_DIR$/.config/chromium" />
       <excludeFolder url="file://$MODULE_DIR$/.config/ibus" />
@@ -36,6 +41,8 @@
       <excludeFolder url="file://$MODULE_DIR$/.config/sublime-text-2/Installed Packages" />
       <excludeFolder url="file://$MODULE_DIR$/.config/sublime-text-2/Packages" />
       <excludeFolder url="file://$MODULE_DIR$/.config/sublime-text-2/Pristine Packages" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/transmission" />
+      <excludeFolder url="file://$MODULE_DIR$/.config/unity3d" />
       <excludeFolder url="file://$MODULE_DIR$/.dropbox" />
       <excludeFolder url="file://$MODULE_DIR$/.dropbox-dist" />
       <excludeFolder url="file://$MODULE_DIR$/.eclipse" />
@@ -45,17 +52,21 @@
       <excludeFolder url="file://$MODULE_DIR$/.gem" />
       <excludeFolder url="file://$MODULE_DIR$/.ghc-mod" />
       <excludeFolder url="file://$MODULE_DIR$/.gimp-2.8" />
+      <excludeFolder url="file://$MODULE_DIR$/.glide" />
       <excludeFolder url="file://$MODULE_DIR$/.gnome" />
+      <excludeFolder url="file://$MODULE_DIR$/.gnucash" />
       <excludeFolder url="file://$MODULE_DIR$/.gnupg" />
       <excludeFolder url="file://$MODULE_DIR$/.googleearth" />
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/.gstreamer-0.10" />
       <excludeFolder url="file://$MODULE_DIR$/.hex" />
+      <excludeFolder url="file://$MODULE_DIR$/.hoogle" />
       <excludeFolder url="file://$MODULE_DIR$/.icons" />
       <excludeFolder url="file://$MODULE_DIR$/.idea-build" />
       <excludeFolder url="file://$MODULE_DIR$/.ideaLibSources" />
       <excludeFolder url="file://$MODULE_DIR$/.ipfs/blocks" />
       <excludeFolder url="file://$MODULE_DIR$/.ipfs/datastore" />
+      <excludeFolder url="file://$MODULE_DIR$/.isabelle" />
       <excludeFolder url="file://$MODULE_DIR$/.ivy2" />
       <excludeFolder url="file://$MODULE_DIR$/.java" />
       <excludeFolder url="file://$MODULE_DIR$/.kde/share/icons" />
@@ -108,7 +119,12 @@
       <excludeFolder url="file://$MODULE_DIR$/bin/google_appengine" />
       <excludeFolder url="file://$MODULE_DIR$/bin/google_closure" />
       <excludeFolder url="file://$MODULE_DIR$/bin/google_closure_templates" />
+      <excludeFolder url="file://$MODULE_DIR$/code" />
+      <excludeFolder url="file://$MODULE_DIR$/enchiridion" />
       <excludeFolder url="file://$MODULE_DIR$/git" />
+      <excludeFolder url="file://$MODULE_DIR$/go" />
+      <excludeFolder url="file://$MODULE_DIR$/haskell" />
+      <excludeFolder url="file://$MODULE_DIR$/hijro" />
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/luongo" />
       <excludeFolder url="file://$MODULE_DIR$/mnt" />
@@ -116,7 +132,9 @@
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/oseary" />
       <excludeFolder url="file://$MODULE_DIR$/python" />
+      <excludeFolder url="file://$MODULE_DIR$/scala" />
       <excludeFolder url="file://$MODULE_DIR$/secrets" />
+      <excludeFolder url="file://$MODULE_DIR$/torrent" />
       <excludeFolder url="file://$MODULE_DIR$/virtualbox" />
     </content>
     <orderEntry type="inheritedJdk" />
