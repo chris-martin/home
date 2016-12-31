@@ -7,7 +7,6 @@
 !/.emacs
 !/.gitignore
 !/.latexmkrc
-!/.local/
 !/nix/
 !/oseary
 !/.sbt/
@@ -103,6 +102,25 @@
 !/.lein/
 /.lein/*
 !/.lein/profiles.clj
+
+!/.local/
+/.local/*
+!/.local/bin/
+/.local/bin/*
+!/.local/bin/.keep
+!/.local/share/
+/.local/share/*
+!/.local/share/backgrounds/
+!/.local/share/backgrounds/*
+!/.local/share/fonts/
+!/.local/share/fonts/*
+!/.local/share/npm/
+/.local/share/npm/*
+!/.local/share/npm/node_modules/
+/.local/share/npm/node_modules/*
+!/.local/share/npm/node_modules/.bin/
+/.local/share/npm/node_modules/.bin/*
+!/.local/share/npm/node_modules/.bin/.keep
 
 !/.idea/
 /.idea/*
