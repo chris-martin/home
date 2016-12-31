@@ -35,7 +35,6 @@
 !/.config/fish/*
 !/.config/git/
 /.config/git/gitk
-!/.config/LightTable/
 !/.config/sublime/
 !/.config/sublime-text-2/
 /.config/sublime-text-2/*
@@ -44,6 +43,14 @@
 !/.config/systemd/
 !/.config/user-dirs.conf
 !/.config/user-dirs.dirs
+
+!/.config/LightTable/
+/.config/LightTable/*
+!/.config/LightTable/.gitignore
+!/.config/LightTable/User
+/.config/LightTable/User/*
+!/.config/LightTable/User/user.behaviors
+!/.config/LightTable/User/user.keymap
 
 !/.atom/
 /.atom/*
