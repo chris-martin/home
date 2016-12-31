@@ -6,7 +6,6 @@
 !/dropbox
 !/.emacs
 !/.gitignore
-!/.kde/
 !/.latexmkrc
 !/.lein/
 !/.local/
@@ -90,6 +89,19 @@
 !/.gradle/
 /.gradle/*
 !/.gradle/gradle.properties
+
+!/.kde/
+/.kde/*
+!/.kde/.gitignore
+!/.kde/env/
+!/.kde/env/*
+!/.kde/share/
+/.kde/share/*
+!/.kde/share/.gitignore
+!/.kde/share/apps
+/.kde/share/apps/*
+!/.kde/share/apps/konsole/
+!/.kde/share/apps/konsole/**
 
 !/.idea/
 /.idea/*
