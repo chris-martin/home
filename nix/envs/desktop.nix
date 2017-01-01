@@ -10,6 +10,8 @@ buildEnv {
 
     rsync
 
+    gksu
+
     jmtpfs                             # Android
 
     zip unzip file-roller              # Archives
