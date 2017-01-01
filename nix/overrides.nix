@@ -148,7 +148,7 @@ overrides = (with pkgs; rec {
 
   inherit (pkgsWithOverrides.xorg) xkill;
 
-  inherit (pkgsWithOverrides.python27Packages) docker_compose;
+  inherit (pkgsWithOverrides.python27Packages) docker_compose glances;
 
   inherit (pkgsWithOverrides.python35Packages) ipython;
 
