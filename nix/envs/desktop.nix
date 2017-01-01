@@ -6,11 +6,7 @@ buildEnv {
 
     choose wordlist
 
-    ack
-
-    rsync
-
-    gksu
+    ack ansifilter arcanist astyle awscli gksu rsync unetbootin solaar
 
     jmtpfs                             # Android
 
@@ -23,6 +19,7 @@ buildEnv {
     chromium                           # Chromium
 
     gnupg1compat keepassx2 truecrypt   # Crypto
+    easyrsa libbitcoin-explorer
 
     sassc                              # CSS
 
@@ -45,11 +42,14 @@ buildEnv {
     gitAndTools.gitFull                # Git
     gitAndTools.hub
     gitAndTools.git-extras
+    gitAndTools.git-bz
+
+    go go2nix                          # Go
 
     cabal stylish-haskell hlint        # Haskell
-    cabal2nix hasktags #hsdev
+    cabal2nix hasktags
     pointfree pointful ghc ghc-mod
-    hdevtools
+    hdevtools hoogle intero
 
     curl wget                          # HTTP
 
@@ -73,16 +73,18 @@ buildEnv {
 
     gparted gptfdisk                   # Partitioning
 
-    python                             # Python
+    python python35Packages.ipython    # Python
 
     scrot gnome-screenshot             # Screenshots
 
     fish tmux man rlwrap tree which    # Shell
+    moreutils mtools silver-searcher
+    pssh
 
     sshfsFuse                          # SSH mount
 
     htop lsof psmisc pciutils          # System inspection
-    baobab ncdu
+    baobab ncdu glances
 
     skype                              # Telephony
 

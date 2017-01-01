@@ -163,7 +163,7 @@ overrides = (with pkgs; rec {
 
   inherit (pkgsWithOverrides.haskellPackages)
     cabal-install cabal2nix hlint purescript stylish-haskell
-    pointfree pointful ghc-mod hsdev hdevtools;
+    pointfree pointful ghc-mod hsdev hdevtools hoogle intero;
 
   inherit (unstable) stack;
 
