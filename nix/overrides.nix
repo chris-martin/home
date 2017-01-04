@@ -115,6 +115,7 @@ overrides = (with pkgs; rec {
   libbitcoin-explorer = callPackage pkgs/libbitcoin/explorer {};
 
   stellar-core = callPackage pkgs/stellar-core {};
+  stellar-horizon = callPackage pkgs/stellar-horizon {};
 
   tulip-lang = callPackage pkgs/tulip-lang {};
 

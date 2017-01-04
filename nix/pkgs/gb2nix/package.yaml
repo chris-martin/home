@@ -1,0 +1,32 @@
+name:     gb2nix
+version:  1.0.0.0
+category: Application
+
+synopsis: >
+  Converts a manifest file from the "gb" Go package manager to a Nix file.
+
+author:     Chris Martin <ch.martin@gmail.com>
+maintainer: Chris Martin <ch.martin@gmail.com>
+
+ghc-options: -Wall
+default-extensions:
+  - DeriveGeneric
+  - NoImplicitPrelude
+  - OverloadedStrings
+
+dependencies:
+  - aeson
+  - ansi-wl-pprint
+  - base
+  - bytestring
+  - data-fix
+  - hnix
+  - process-extras
+  - protolude
+  - text
+  - unordered-containers
+
+executables:
+  gb2nix:
+    source-dirs: src
+    main: Gb2Nix.hs

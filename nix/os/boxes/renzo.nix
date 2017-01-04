@@ -42,6 +42,10 @@
     twoFingerScroll = true;
   };
 
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql94;
+  services.postgresql.authentication = "local all all ident";
+
   #services.xserver.videoDrivers = [ "displaylink" ];
 
   environment.etc."modprobe.d/alsa-base.conf".text = ''

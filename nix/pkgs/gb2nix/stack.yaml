@@ -1,0 +1,8 @@
+resolver: lts-7.14
+
+packages:
+  - '.'
+
+extra-deps:
+  - data-fix-0.0.3
+  - hnix-0.3.4
