@@ -20,6 +20,7 @@
 !/.config/fish/*
 !/.config/git/
 /.config/git/gitk
+!/.config/python/
 !/.config/sublime/
 !/.config/systemd/
 !/.config/user-dirs.conf

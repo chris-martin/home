@@ -12,6 +12,8 @@ set -x EDITOR e
 
 set -x GOPATH ~/go
 
+set -x PYTHONSTARTUP $HOME/.config/python
+
 alias trash gvfs-trash
 
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
