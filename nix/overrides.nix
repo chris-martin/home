@@ -35,9 +35,6 @@ overrides = (with pkgs; rec {
   inherit (unstable) sublime3;
   sublime = sublime3;
 
-  # Workaround for https://github.com/NixOS/nixpkgs/issues/20821
-  riemann = callPackage ./pkgs/riemann {};
-
   riemannq = callPackage ./pkgs/riemannq {};
 
   riemann-cli = callPackage ./pkgs/riemann-cli {};
