@@ -124,11 +124,6 @@
     uid = 1000;
   };
 
-  system.activationScripts.dockerGc = ''
-    echo ".*-data(_[0-9]+)?" > /etc/docker-gc-exclude-containers
-    echo -e "alpine:.*\ncardforcoin/bitgo-express:.*\nclojure:.*\nmemcached:.*\nnginx:.*\npostgres:.*\npython:.*\nredis:.*\nspotify/docker-gc:.*\ntianon/true\nubuntu:.*" > /etc/docker-gc-exclude
-  '';
-
   # Yubikey
   services.udev.extraRules = ''
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0402|0403|0406|0407|0410", TAG+="uaccess"
