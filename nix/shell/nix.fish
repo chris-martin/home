@@ -2,20 +2,9 @@ set -x NIXPKGS_CONFIG "$HOME/nix/config.nix"
 
 set NIXOS_CONFIG "$HOME/nix/os/config.nix"
 
-set CHANNELS "$HOME/nix/channels"
+set -x NIX_PATH $HOME/nix/path
 
-set STABLE "$CHANNELS/16.09"
-
-set NIX_PATH_BASE "\
-nixpkgs-master=$CHANNELS/master:\
-nixpkgs-unstable=$CHANNELS/unstable:\
-nixpkgs-16.09=$CHANNELS/16.09:\
-nixpkgs-16.03=$CHANNELS/16.03:\
-nixos-config=$NIXOS_CONFIG"
-
-set -x NIX_PATH "nixpkgs=$STABLE:$NIX_PATH_BASE"
-
-set -x NIXOS_PATH "nixpkgs=$STABLE:$NIX_PATH_BASE"
+set -x NIXOS_PATH $HOME/nix/path:nixos-config=$NIXOS_CONFIG
 
 
 #-------------------------------------------------------------------
