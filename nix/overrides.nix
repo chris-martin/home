@@ -35,8 +35,6 @@ overrides = (with pkgs; rec {
   inherit (unstable) sublime3;
   sublime = sublime3;
 
-  riemannq = callPackage ./pkgs/riemannq {};
-
   riemann-cli = callPackage ./pkgs/riemann-cli {};
 
   clusterssh = callPackage ./pkgs/clusterssh {};
