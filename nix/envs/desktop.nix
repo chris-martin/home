@@ -19,7 +19,7 @@ buildEnv {
     chromium                           # Chromium
 
     gnupg1compat keepassx2 truecrypt   # Crypto
-    easyrsa libbitcoin-explorer
+    easyrsa #libbitcoin-explorer
 
     sassc                              # CSS
 
