@@ -88,7 +88,6 @@ overrides = (with pkgs; rec {
   tla-plus = callPackage pkgs/tla-plus {};
 
   # My software that lives in this repo
-  choose = callPackage pkgs/choose {};
   wordlist = callPackage pkgs/wordlist {};
 
   # BigchainDB requires rethinkdb version higher than what's in 16.03
@@ -163,7 +162,7 @@ overrides = (with pkgs; rec {
 
   inherit (pkgsWithOverrides.haskellPackages)
     cabal-install cabal2nix hlint purescript stylish-haskell
-    pointfree pointful ghc-mod hsdev hdevtools hoogle intero;
+    pointfree pointful ghc-mod hsdev hdevtools hoogle intero choose;
 
   inherit (unstable) stack;
 
