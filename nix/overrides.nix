@@ -37,8 +37,6 @@ overrides = (with pkgs; rec {
 
   riemann-cli = callPackage ./pkgs/riemann-cli {};
 
-  clusterssh = callPackage ./pkgs/clusterssh {};
-
   pssh = callPackage ./pkgs/pssh {};
 
   ppl-address-book = callPackage ./pkgs/ppl-address-book {};
