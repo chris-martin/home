@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=pandora
-Icon=pandora
-Comment=Radio on the internet
-Terminal=false
-Name=Pandora
-Categories=Audio;AudioVideo;
-StartupWMClass=.pithos-wrapped

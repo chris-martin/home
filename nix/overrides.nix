@@ -32,9 +32,6 @@ overrides = (with pkgs; rec {
 
   dummy-wget = callPackage pkgs/dummy-wget {};
 
-  # Pandora probably won't ever be packaged like this in nixpkgs
-  pandora = callPackage ./pkgs/pandora {};
-
   inherit (unstable) sublime3;
   sublime = sublime3;
 
@@ -86,9 +83,6 @@ overrides = (with pkgs; rec {
 
   # https://github.com/NixOS/nixpkgs/issues/18640
   tla-plus = callPackage pkgs/tla-plus {};
-
-  # My software that lives in this repo
-  wordlist = callPackage pkgs/wordlist {};
 
   # BigchainDB requires rethinkdb version higher than what's in 16.03
   inherit (unstable) rethinkdb;
