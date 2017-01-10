@@ -1,15 +1,12 @@
-[submodule "nix/channels/unstable"]
-	path = nix/channels/unstable
-	url = https://github.com/NixOS/nixpkgs-channels.git
-  branch = nixos-unstable
-[submodule "nix/channels/16.09"]
-	path = nix/channels/16.09
-	url = https://github.com/NixOS/nixpkgs-channels.git
-	branch = nixos/16.09
-[submodule "nix/channels/16.03"]
-	path = nix/channels/16.03
-	url = https://github.com/NixOS/nixpkgs-channels.git
-	branch = nixos/16.03
-[submodule "nix/channels/master"]
-	path = nix/channels/master
-	url = https://github.com/NixOS/nixpkgs.git
+[submodule "nix-master"]
+	path = nix/path/master
+	url = /home/chris/nixpkgs
+	branch = master
+[submodule "nix-16.09"]
+	path = nix/path/release-16.09
+	url = /home/chris/nixpkgs
+	branch = release/16.09
+[submodule "nix-unstable"]
+	path = nix/path/unstable
+	url = /home/chris/nixpkgs
+	branch = unstable
