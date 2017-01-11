@@ -35,8 +35,6 @@ overrides = (with pkgs; rec {
   inherit (unstable) sublime3;
   sublime = sublime3;
 
-  riemann-cli = callPackage ./pkgs/riemann-cli {};
-
   pssh = callPackage ./pkgs/pssh {};
 
   ppl-address-book = callPackage ./pkgs/ppl-address-book {};
