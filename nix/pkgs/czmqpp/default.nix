@@ -7,7 +7,7 @@ version = "1.2.0";
 in
 
 stdenv.mkDerivation {
-  name = "cppzmq-${version}";
+  name = "czmqpp-${version}";
 
   src = fetchurl {
     url = "https://github.com/zeromq/czmqpp/archive/v${version}.tar.gz";
