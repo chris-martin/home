@@ -93,8 +93,6 @@ overrides = (with pkgs; rec {
 
   chain-core = callPackage pkgs/chain-core {};
 
-  tulip-lang = callPackage pkgs/tulip-lang {};
-
   # Fall back to unstable for Haskell LTS releases that aren't in stable
   haskell = pkgs.haskell // {
 
