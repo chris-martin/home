@@ -30,8 +30,6 @@ overrides = (with pkgs; rec {
 
   go = go_1_7;
 
-  dummy-wget = callPackage pkgs/dummy-wget {};
-
   inherit (unstable) sublime3;
   sublime = sublime3;
 
