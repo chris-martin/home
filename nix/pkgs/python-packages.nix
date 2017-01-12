@@ -140,7 +140,7 @@ rec {
     src = fetchgit {
       url = "https://github.com/ethereum/pyethereum.git";
       rev = "refs/tags/v${version}";
-      sha256 = "0bzqppjyy6ppgcbql416vyy1ylgq9ic1lpsa5004995hn539jf8q";
+      sha256 = "1qcfx0fwz6n6nzjpapvb9rbp5263b991yyz5l3zzhwl7vkwjms9p";
       fetchSubmodules = true;
     };
 
@@ -150,7 +150,7 @@ rec {
 
     buildInputs = with self; [
       pytest-2-9-1 pytest-catchlog pytest-timeout
-      serpent coveralls tox virtualenv pluggy
+      pkgs.serpent coveralls tox virtualenv pluggy
     ];
 
     propagatedBuildInputs = with self; [
@@ -326,18 +326,6 @@ rec {
     };
 
     propagatedBuildInputs = with self; [ pkgs.openssl ];
-  };
-
-  # https://github.com/NixOS/nixpkgs/pull/15977
-  serpent = self.buildPythonPackage rec {
-    name = "serpent";
-
-    src = fetchFromGitHub {
-      owner = "ethereum";
-      repo = "serpent";
-      rev = "51ee60857fe53c871fa916ef66fc1b4255bb9433";
-      sha256 = "1bns9wgn5i1ahj19qx7v1wwdy8ca3q3pigxwznm5nywsw7s7lqxs";
-    };
   };
 
 }
