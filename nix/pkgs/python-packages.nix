@@ -164,38 +164,6 @@ rec {
     };
   };
 
-  pysha3 = pysha3-0-3;
-
-  pysha3-0-1 = self.buildPythonPackage rec {
-    name = "pysha3-${version}";
-    version = "0.1";
-
-    src = fetchurl {
-      url = "https://pypi.python.org/packages/89/6a/fe37f6f74acee78c20cfa9206a39e09503514aa70ceb67b6fd0af4327089/${name}.tar.gz";
-      sha256 = "1zhkj2wp019amvq9hqwcsmdj4lxgzhdab78ydchag4k3d8vhkq9n";
-    };
-
-    meta = {
-      homepage = https://bitbucket.org/tiran/pykeccak;
-      description = "SHA-3 wrapper (keccak) for Python";
-    };
-  };
-
-  pysha3-0-3 = self.buildPythonPackage rec {
-    name = "pysha3-${version}";
-    version = "0.3";
-
-    src = fetchurl {
-      url = "https://pypi.python.org/packages/d0/17/9fb9efcde17f8fc77e0af0b49281d22eb7c640e326987b0308c88a927ba5/${name}.tar.gz";
-      sha256 = "0kghj6wbxjzwfn0h6m90yxkwx09wydr5p0kcgj2gn4fyfwgmy70r";
-    };
-
-    meta = {
-      homepage = https://bitbucket.org/tiran/pykeccak;
-      description = "SHA-3 wrapper (keccak) for Python";
-    };
-  };
-
   pytest = pytest-2-9-1;
 
   # Pytest upgraded beyond what's in nixpkgs upstream.
