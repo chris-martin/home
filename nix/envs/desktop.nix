@@ -16,7 +16,7 @@ buildEnv {
 
     cheese                             # Camera
 
-    chromium                           # Chromium
+    #chromium                           # Chromium
 
     gnupg1compat keepassx2 truecrypt   # Crypto
     easyrsa #libbitcoin-explorer
