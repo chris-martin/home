@@ -54,9 +54,6 @@ overrides = (with pkgs; rec {
   # https://github.com/NixOS/nixpkgs/pull/15685
   inherit (unstable) idea;
 
-  # New thing that probably deserves a PR
-  libscrypt = callPackage pkgs/libscrypt { };
-
   # https://github.com/NixOS/nixpkgs/issues/18637
   # https://github.com/NixOS/nixpkgs/issues/18638
   secp256k1 = callPackage pkgs/secp256k1 {};
