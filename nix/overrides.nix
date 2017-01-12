@@ -45,10 +45,6 @@ overrides = (with pkgs; rec {
   # - https://github.com/NixOS/nixpkgs/commit/08575ee
   #gore = unstable.goPackages.gore;
 
-  # StartupWMClass fix not backported to 16.03
-  # https://github.com/NixOS/nixpkgs/pull/15685
-  inherit (unstable) idea;
-
   # https://github.com/NixOS/nixpkgs/issues/18637
   # https://github.com/NixOS/nixpkgs/issues/18638
   secp256k1 = callPackage pkgs/secp256k1 {};
