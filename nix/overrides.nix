@@ -58,9 +58,6 @@ overrides = (with pkgs; rec {
   # https://github.com/NixOS/nixpkgs/issues/18638
   secp256k1 = callPackage pkgs/secp256k1 {};
 
-  # https://github.com/NixOS/nixpkgs/pull/15977
-  serpent = callPackage pkgs/serpent {};
-
   # https://github.com/NixOS/nixpkgs/issues/18640
   tla-plus = callPackage pkgs/tla-plus {};
 
@@ -73,10 +70,6 @@ overrides = (with pkgs; rec {
     inherit (pkgs.emacs24Packages) proofgeneral;
     polyml = pkgs.polyml_5_4;
   };
-
-  libbitcoin = callPackage pkgs/libbitcoin/libbitcoin {};
-  libbitcoin-client = callPackage pkgs/libbitcoin/client {};
-  libbitcoin-explorer = callPackage pkgs/libbitcoin/explorer {};
 
   stellar-core = callPackage pkgs/stellar-core {};
   stellar-horizon = callPackage pkgs/stellar-horizon {};
