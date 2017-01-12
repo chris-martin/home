@@ -78,9 +78,6 @@ overrides = (with pkgs; rec {
 
   polyml-5-4 = callPackage pkgs/polyml-5-4 {};
 
-  # https://github.com/NixOS/nixpkgs/pull/18643
-  czmqpp = callPackage pkgs/czmqpp {};
-
   libbitcoin = callPackage pkgs/libbitcoin/libbitcoin {};
   libbitcoin-client = callPackage pkgs/libbitcoin/client {};
   libbitcoin-explorer = callPackage pkgs/libbitcoin/explorer {};
