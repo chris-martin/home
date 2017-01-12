@@ -45,11 +45,6 @@ overrides = (with pkgs; rec {
   # - https://github.com/NixOS/nixpkgs/commit/08575ee
   #gore = unstable.goPackages.gore;
 
-  # Get is also now gone due to https://github.com/NixOS/nixpkgs/commit/08575ee
-  # New PR at https://github.com/NixOS/nixpkgs/pull/16353
-  # Using unstable because the new go infrastructure isn't in 16.03
-  go-ethereum = unstable.callPackage ./pkgs/go-ethereum {};
-
   # StartupWMClass fix not backported to 16.03
   # https://github.com/NixOS/nixpkgs/pull/15685
   inherit (unstable) idea;
