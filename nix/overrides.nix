@@ -33,8 +33,6 @@ overrides = (with pkgs; rec {
   inherit (unstable) sublime3;
   sublime = sublime3;
 
-  pssh = callPackage ./pkgs/pssh {};
-
   ppl-address-book = callPackage ./pkgs/ppl-address-book {};
 
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
