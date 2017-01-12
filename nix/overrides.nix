@@ -50,9 +50,6 @@ overrides = (with pkgs; rec {
   # Using unstable because the new go infrastructure isn't in 16.03
   go-ethereum = unstable.callPackage ./pkgs/go-ethereum {};
 
-  # npm2nix is broken everywhere, but seems slightly better in unstable
-  npm2nix = unstable.nodePackages.npm2nix;
-
   # StartupWMClass fix not backported to 16.03
   # https://github.com/NixOS/nixpkgs/pull/15685
   inherit (unstable) idea;
@@ -119,39 +116,7 @@ overrides = (with pkgs; rec {
 
   # Convenience aliases for nested packages
 
-  inherit (pkgsWithOverrides.xorg) xkill;
-
-  inherit (pkgsWithOverrides.python27Packages) docker_compose glances;
-
-  inherit (pkgsWithOverrides.python35Packages) ipython;
-
   inherit (pkgsWithOverrides.myPython34Packages) bigchaindb pyethereum;
-
-  inherit (pkgsWithOverrides.kde4) kcolorchooser konversation;
-
-  inherit (pkgsWithOverrides.nodePackages) bower npm grunt-cli;
-
-  inherit (pkgsWithOverrides.gnome3)
-    cheese eog file-roller gnome-screenshot polari;
-
-  inherit (pkgsWithOverrides.haskellPackages)
-    cabal-install cabal2nix hlint purescript stylish-haskell
-    pointfree pointful ghc-mod hsdev hdevtools hoogle intero choose;
-
-  inherit (unstable) stack;
-
-  # https://github.com/NixOS/nixpkgs/pull/18403
-  hasktags = haskell.lib.overrideCabal haskellPackages.hasktags (drv: {
-    postFixup = "rm -rf $out/bin/test $out/nix-support $out/share";
-  });
-
-  # Renaming things with dumb names
-
-  grunt = grunt-cli;
-
-  docker-compose = docker_compose;
-
-  cabal = cabal-install;
 
 });
 
@@ -162,14 +127,11 @@ overrides = (with pkgs; rec {
 # an { stdenv = overrideCC stdenv gcc49; } override on 16.03
 #(with unstable; rec {
 #  ethereum = callPackage ./pkgs/ethereum {
-#    jsoncpp = jsoncpp-1-7;
 #    libjson_rpc_cpp = libjson_rpc_cpp-0-6;
 #    llvm = llvm_38;
 #  };
-#  jsoncpp-1-7 = callPackage ./pkgs/jsoncpp-1.7 { };
 #  libjson_rpc_cpp-0-6 = callPackage ./pkgs/libjson-rpc-cpp-0.6 {
 #    argtable = argtable-2;
-#    jsoncpp = jsoncpp-1-7;
 #  };
 #});
 
