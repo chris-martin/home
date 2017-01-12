@@ -71,9 +71,8 @@ overrides = (with pkgs; rec {
   isabelle2011-1 = callPackage pkgs/isabelle2011-1 {
     inherit (pkgs) stdenv fetchurl nettools perl;
     inherit (pkgs.emacs24Packages) proofgeneral;
+    polyml = pkgs.polyml_5_4;
   };
-
-  polyml-5-4 = callPackage pkgs/polyml-5-4 {};
 
   libbitcoin = callPackage pkgs/libbitcoin/libbitcoin {};
   libbitcoin-client = callPackage pkgs/libbitcoin/client {};

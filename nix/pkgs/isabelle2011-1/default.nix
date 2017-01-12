@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, perl, nettools, polyml-5-4, proofgeneral }:
+{ stdenv, fetchurl, perl, nettools, polyml, proofgeneral }:
 # nettools needed for hostname
 
 let
@@ -16,7 +16,7 @@ stdenv.mkDerivation {
     sha256 = "027wxm9w163vvhq7d130kvngrn6s1fk56yda2mh4zd0n3bipzms8";
   };
 
-  buildInputs = [ perl polyml-5-4 nettools ];
+  buildInputs = [ perl polyml nettools ];
 
   sourceRoot = name;
 
