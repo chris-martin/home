@@ -2,21 +2,6 @@
 
 rec {
 
-  base58 = self.buildPythonPackage rec {
-    pname = "base58";
-    version = "0.2.2";
-    name = "${pname}-${version}";
-
-    src = fetchurl {
-     url = "https://pypi.python.org/packages/37/fd/73309b33e20bd2d3c7436f4dddbf2c363ff9fb55d867f593401d7cd716f5/${name}.tar.gz";
-     sha256 = "102vxvvz5jzc2ccgaf5pwdrmgypg277d7bfy0h9mp9d0nv9s9spi";
-    };
-
-    meta = {
-      description = "Base58 and Base58Check implementation";
-    };
-  };
-
   bigchaindb = self.buildPythonPackage rec {
     pname = "BigchainDB";
     version = "0.4.0";
@@ -79,7 +64,7 @@ rec {
       sha256 = "0db5jwws6x30k46903zaqa727gpdx5m8dqk9g90qihqpj7a7xfd1";
     };
 
-    propagatedBuildInputs = with self; [ base58 ed25519 ];
+    propagatedBuildInputs = with self; [ base58_0_2_2 ed25519 ];
 
     buildInputs = with self; [ pytest ];
   };
