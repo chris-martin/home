@@ -120,11 +120,7 @@ overrides = (with pkgs; rec {
 # an { stdenv = overrideCC stdenv gcc49; } override on 16.03
 #(with unstable; rec {
 #  ethereum = callPackage ./pkgs/ethereum {
-#    libjson_rpc_cpp = libjson_rpc_cpp-0-6;
 #    llvm = llvm_38;
-#  };
-#  libjson_rpc_cpp-0-6 = callPackage ./pkgs/libjson-rpc-cpp-0.6 {
-#    argtable = argtable-2;
 #  };
 #});
 
