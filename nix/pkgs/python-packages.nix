@@ -328,32 +328,6 @@ rec {
     propagatedBuildInputs = with self; [ pkgs.openssl ];
   };
 
-  # https://github.com/NixOS/nixpkgs/pull/15979
-  secp256k1 = self.buildPythonPackage rec {
-    name = "secp256k1";
-
-    src = fetchFromGitHub {
-      owner = "ulope";
-      repo = "secp256k1-py";
-      rev = "cb3078d4800ac0bdc64f4242462cb3c186329378";
-      sha256 = "0kyaph97gjwv4vv5nl9j5w8zp2bb606z4hfmjzl5la1da5gsdfaq";
-    };
-
-    buildInputs = with self; [ pkgs.pkgconfig ];
-    propagatedBuildInputs = with self; [ cffi pkgs.secp256k1 ];
-
-    preConfigure = ''
-      ln -s ${pkgs.secp256k1.src} libsecp256k1
-      export INCLUDE_DIR=${pkgs.secp256k1}/include
-      export LIB_DIR=${pkgs.secp256k1}/lib
-    '';
-
-    meta = {
-      homepage = https://github.com/ulope/secp256k1-py;
-      description = "Python FFI bindings for secp256k1";
-    };
-  };
-
   # https://github.com/NixOS/nixpkgs/pull/15977
   serpent = self.buildPythonPackage rec {
     name = "serpent";
