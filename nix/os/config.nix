@@ -6,13 +6,11 @@ pkgsConfig = import ../config.nix;
 
 box = builtins.getAttr pkgsConfig.hostName {
   annemarie = boxes/annemarie.nix;
-  mandeeza  = boxes/mandeeza.nix;
   renzo     = boxes/renzo.nix;
 };
 
 boxType = builtins.getAttr pkgsConfig.hostName {
   annemarie = boxTypes/desktop.nix;
-  mandeeza  = boxTypes/server.nix;
   renzo     = boxTypes/desktop.nix;
 };
 
