@@ -21,6 +21,7 @@
 !/.config/git/
 /.config/git/gitk
 !/.config/python/
+!/.config/stylebot.json
 !/.config/sublime/
 !/.config/systemd/
 !/.config/user-dirs.conf

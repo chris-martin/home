@@ -1,0 +1,52 @@
+{
+  "coq.inria.fr": {
+    "_enabled": true,
+    "_rules": {
+      "div.doc": {
+        "background-color": "#f0fbff"
+      }
+    }
+  },
+  "hackage.haskell.org": {
+    "_enabled": true,
+    "_rules": {
+      "#table-of-contents li": {
+        "line-height": "1.15em",
+        "margin-bottom": "0.25em",
+        "margin-top": "0.25em"
+      },
+      "#table-of-contents ul": {
+        "margin-bottom": "0.5em",
+        "margin-top": "0.5em"
+      }
+    }
+  },
+  "orgmode.org": {
+    "_enabled": true,
+    "_rules": {
+      "body": {
+        "max-width": "700px"
+      }
+    }
+  },
+  "twitter.com": {
+    "_enabled": true,
+    "_rules": {
+      "*[data-nav=\"moments\"]": {
+        "display": "none"
+      },
+      ".promoted-trend, .promoted-account, .promoted-tweet": {
+        "display": "none "
+      },
+      "at5": {
+        "at": true,
+        "expanded_text": "",
+        "text": "@media  (max-width: 950px) {\n  .dashboard-left {    \n    display: none;\n  }\n  .content-main {    \n    float: none;\n  }\n}",
+        "type": "@media"
+      },
+      "comment0": {
+        "comment": "/*\n.dashboard {\n    display: none;\n}\n\n.content-main {\n    float: none;\n    width: auto;\n}\n\n.js-adaptive-photo {\n    height: 80px;\n}\n\n.u-hiddenVisually, .time, .stream-item-footer, .avatar, .stream-item-header .fullname {\n    display: none;\n}\n\n.stream-item-header, .stream-item-activity-header, .activity-truncated-tweet *, .js-tweet-text-container, .js-tweet-text-container p {\n    display: inline;\n}\n\n.tweet-row {\n    max-width: none;\n}\n\n.tweet {\n    padding: 8px 0;\n    min-height: 0;\n}\n\n.timeline-tweet-box {\n    border: none;\n}\n\n.home-tweet-box, .stream-item {\n    background: none;\n}\n\nbody {\n    background: white;\n}\n*/"
+      }
+    }
+  }
+}
