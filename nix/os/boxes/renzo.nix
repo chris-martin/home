@@ -28,6 +28,11 @@
   #    sha256 = "015id31c4qs0nzpf7xii7kfcr3dhdrx7drz8iwjs201xpb3h48rg";
   #  }; in true;
 
+  services.postfix = {
+    enable = false;
+    setSendmail = true;
+  };
+
   services.redshift = { enable = true; } //
     config.nixpkgs.config.locations.atlanta;
 
