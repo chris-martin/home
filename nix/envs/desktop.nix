@@ -8,6 +8,8 @@ buildEnv {
 
     ack ansifilter arcanist astyle awscli gksu rsync unetbootin solaar
 
+    ffmpegthumbnailer # Enables video thumbnails in Nautilus
+
     jmtpfs                             # Android
 
     zip unzip file-roller              # Archives
