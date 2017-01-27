@@ -13,6 +13,8 @@ overrides = (with pkgs; rec {
   desktopEnv = callEnv ./envs/desktop.nix;
   serverEnv = callEnv ./envs/server.nix;
 
+  my-emacs = (import "${config.home}/emacs/emacs.nix") unstable.pkgs;
+
   # Python packages is its own separate bucket of overrides
   myPython27Packages = pkgs.python27Packages //
     (callPackage pkgs/python-packages.nix {

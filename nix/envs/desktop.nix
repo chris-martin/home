@@ -35,7 +35,7 @@ buildEnv {
     #idea.idea15-ultimate
     idea.idea-community
 
-    ((import "${config.home}/emacs/emacs.nix") pkgs) # Emacs
+    my-emacs                           # Emacs
 
     go-ethereum                        # Ethereum
 
