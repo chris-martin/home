@@ -32,7 +32,7 @@ stdenv.mkDerivation {
     substituteInPlace src/Pure/IsaMakefile \
       --replace /bin/bash /bin/sh
     substituteInPlace etc/settings \
-      --subst-var-by ML_HOME "${polyml-5-4}/bin" \
+      --subst-var-by ML_HOME "${polyml}/bin" \
       --subst-var-by PROOFGENERAL_HOME "${proofgeneral}/share/emacs/site-lisp/ProofGeneral"
   '';
 
