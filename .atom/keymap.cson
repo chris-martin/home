@@ -1,95 +1,99 @@
-'atom-workspace atom-text-editor':
-  'ctrl-backspace': 'editor:delete-to-beginning-of-subword'
-  'ctrl-left': 'editor:move-to-previous-subword-boundary'
-  'ctrl-right': 'editor:move-to-next-subword-boundary'
-  'alt-right': 'pane:show-next-item'
-  'alt-left': 'pane:show-previous-item'
-  'ctrl-y': 'editor:delete-line'
+# This file is a dict where the keys are CSS selectors. All of the keys have to
+# be different, or else the CSON parser will silently ignore duplicates.
+# Therefore we pad each selector with a dummy entry (starting with __) to make
+# sure no two selectors are the same.
+
+# Make cursor movement respect camelCase.
+'atom-workspace atom-text-editor, __camel-case-movement':
+
+    'ctrl-backspace':   'editor:delete-to-beginning-of-subword'
+    'ctrl-delete':      'editor:delete-to-end-of-subword'
+
+    'ctrl-left':        'editor:move-to-previous-subword-boundary'
+    'ctrl-right':       'editor:move-to-next-subword-boundary'
+
+    'ctrl-shift-left':  'editor:select-to-previous-subword-boundary'
+    'ctrl-shift-right': 'editor:select-to-next-subword-boundary'
+
+# Same as the default emacs shortcut for fill-paragraph.
+'atom-workspace atom-text-editor, __fill-paragraph':
+
+    'alt-q': 'hard-wrap:reflow-selection'
+
+# Switch between tabs like in IntelliJ. The 'atom-text-editor' selector works
+# for most tabs, but the additonal '.pane-item' selector is required to get this
+# working for search-results tabs as well.
+'atom-workspace atom-text-editor, atom-workspace .pane-item, __switch-tabs':
+
+    'alt-right': 'pane:show-next-item'
+    'alt-left':  'pane:show-previous-item'
+
+# Line deletion.
+'atom-workspace atom-text-editor, __delete-line':
+
+    'ctrl-y': 'editor:delete-line'
+
+# A couple familiar ways to close a tab.
+'body, __close-tab':
+
+    'ctrl-f4': 'core:close'
+    'ctrl-w':  'core:close'
+
+# The usual undo and redo.
+'body, __undo-redo':
+
+    'ctl-z':       'core:undo'
+    'ctl-shift-z': 'core:redo'
+
+# Project-wide wearch like IntelliJ.
+'atom-workspace, __project-search':
+
+    'ctrl-shift-f': 'project-find:show'
+    'ctrl-shift-r': 'project-find:show'
+
+    'ctrl-shift-n': 'fuzzy-finder:toggle-file-finder'
+
+# Scroll up and down with the keyboard, without moving the caret.
+'atom-workspace atom-text-editor:not(.mini), __scroll-without-moving':
+
+    'ctrl-down': 'editor:scroll-down'
+    'ctrl-up':   'editor:scroll-up'
+
+# Move the lines under the caret up/down. Problem with this feature: It triggers
+# auto-indentation and therefore tends to mangle things as it moves
+# (https://github.com/atom/atom/issues/10524).
+'atom-workspace atom-text-editor:not([mini]), __move-lines':
+
+    'ctrl-shift-up':   'editor:move-line-up'
+    'ctrl-shift-down': 'editor:move-line-down'
+
+# Comment/uncomment the lines under the caret. Ideally this would also move the
+# cursor down if exactly one line was affected, to let you easily comment
+# multiple lines without selecting them first, but it doesn't.
+'atom-workspace atom-text-editor:not([mini]), __comment-lines':
+
+    'ctrl-/': 'editor:toggle-line-comments'
+
+
+#-------------------------------------------------------------------------------
+#  Unsorted things
+#-------------------------------------------------------------------------------
+
+'atom-workspace atom-text-editor, __d-unset-1':
   'ctrl-alt-d': 'unset!'
   'ctrl-shift-d': 'unset!'
-  'alt-q': 'hard-wrap:reflow-selection'
 
-'atom-workspace':
+'atom-workspace atom-text-editor, atom-workspace, __diff-file':
   'ctrl-d': 'git-difftool:diff-file'
 
-'body':
-  'alt-right': 'pane:show-next-item'
-  'alt-left': 'pane:show-previous-item'
-  'ctrl-f4': 'core:close'
-
-'.platform-linux atom-text-editor':
+'.platform-linux atom-text-editor, __d-unset-2':
   'ctrl-d': 'unset!'
 
-'atom-text-editor[data-grammar~="haskell"]':
-  'cmd-b':         'haskell-ghc-mod:go-to-declaration'
-  'ctrl-b':        'haskell-ghc-mod:go-to-declaration'
-  # 'ctrl-b':        'ide-haskell-hasktags:go-to-declaration'
-  # 'cmd-b':         'ide-haskell-hasktags:go-to-declaration'
-  'ctrl-alt-left': 'ide-haskell-hasktags:go-back'
-  'ctrl-n':        'ide-haskell-hasktags:show-tags'
+'atom-workspace, __nav-things':
+  'ctrl-shift-a': 'command-palette:toggle'  # Find action
+  'ctrl-1': 'tree-view:toggle'              # Open corresponding tool window
+  'ctrl-2': 'ide-haskell:toggle-output'
 
-  'ctrl-alt-t':    'haskell-ghc-mod:show-type'
-  'ctrl-alt-T':    'haskell-ghc-mod:insert-type'
-
-  'ctrl-alt-l':    'ide-haskell:prettify-file'
-  'f3':            'ide-haskell:next-error'
-  'shift-f3':      'ide-haskell:prev-error'
-
-  'ctrl-q':        'haskell-ghc-mod:show-info-fallback-to-type'
-  'ctrl-alt-i':    'haskell-ghc-mod:insert-import'
-
-'atom-text-editor[data-grammar~="cabal"]':
-  'ctrl-alt-l':    'ide-haskell:prettify-file'
-
-'body':
-  'ctl-z':           'core:undo'
-  'ctl-shift-z':     'core:redo'
-
-  'ctrl-home':       'core:move-to-top'
-  'ctrl-end':        'core:move-to-bottom'
-
-'atom-workspace':
-  'ctrl-shift-f':    'project-find:show'
-  'ctrl-shift-r':    'project-find:show'
-
-  'ctrl-shift-n':    'fuzzy-finder:toggle-file-finder'
-
-  'ctrl-shift-a':    'command-palette:toggle'  # Find action
-  'ctrl-1':          'tree-view:toggle'        # Open corresponding tool window
-
-  'ctrl-2':          'ide-haskell:toggle-output'
-
-'atom-text-editor':
-  'ctrl-left':        'editor:move-to-beginning-of-word'
-  'ctrl-right':       'editor:move-to-end-of-word'
-
-  'ctrl-shift-left':  'editor:select-to-beginning-of-word'
-  'ctrl-shift-right': 'editor:select-to-end-of-word'
-
-  'ctrl-down':        'editor:scroll-down'
-  'ctrl-up':          'editor:scroll-up'
-
-'atom-workspace atom-text-editor:not([mini])':
-  # TODO move cursor down if one or no line was selected
-  'ctrl-/': 'editor:toggle-line-comments'
-  # 'cmd-/': 'editor:toggle-line-comments'
-
-  'ctrl-d':          'editor:duplicate-lines'
-  'cmd-d':           'editor:duplicate-lines'
-  'ctrl-w':          'core:close'
-  'ctrl-shift-w':    'editor:select-to-previous-subword-boundary'
-
-  'shift-delete':    'editor:delete-line'
-  'ctrl-y':          'editor:delete-line'
-
-  'ctrl-shift-up':   'editor:move-line-up'
-  'ctrl-shift-down': 'editor:move-line-down'
-
-  'ctrl-r':          'find-and-replace:show'
-
-  'alt-right':       'pane:show-next-item'
-  'alt-left':        'pane:show-previous-item'
-
-  'ctrl-l':          'go-to-line:toggle'
+'atom-workspace atom-text-editor:not([mini]), _____________':
   'ctrl-e':          'fuzzy-finder:toggle-buffer-finder'
   'ctrl-j':          'snippets:available'
