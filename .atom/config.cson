@@ -29,7 +29,6 @@
       "ide-haskell-hasktags"
       "language-coq"
       "language-ocaml"
-      "language-scala"
       "language-tla-pluscal"
       "linter-scalac"
       "tester-go"
