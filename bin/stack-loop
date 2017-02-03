@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+APP="$1"
+
+# Look up the absolute path once upfront because it's a little slow
+APP_BIN=$(stack exec -- which "$APP")
+
+# Loop forever so once the app quits it will start again
+while true; do
+  "$APP_BIN"
+
+  # Brief delay to be polite in case the app exits immediately,
+  # leading to a rapid restart cycle.
+  sleep 0.2
+done
