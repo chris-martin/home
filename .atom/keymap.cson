@@ -7,6 +7,7 @@
   'ctrl-y': 'editor:delete-line'
   'ctrl-alt-d': 'unset!'
   'ctrl-shift-d': 'unset!'
+  'alt-q': 'hard-wrap:reflow-selection'
 
 'atom-workspace':
   'ctrl-d': 'git-difftool:diff-file'
@@ -75,7 +76,7 @@
 
   'ctrl-d':          'editor:duplicate-lines'
   'cmd-d':           'editor:duplicate-lines'
-  'ctrl-w':          'editor:select-to-next-subword-boundary'
+  'ctrl-w':          'core:close'
   'ctrl-shift-w':    'editor:select-to-previous-subword-boundary'
 
   'shift-delete':    'editor:delete-line'

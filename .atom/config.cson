@@ -9,6 +9,7 @@
     autocompleteSmartQuotes: false
   core:
     audioBeep: false
+    automaticallyUpdate: false
     disabledPackages: [
       "exception-reporting"
       "spell-check"
@@ -22,23 +23,40 @@
       "go-config"
       "builder-go"
       "autocomplete-go"
+      "haskell-ghc-mod"
+      "haskell-pointfree"
+      "ide-haskell"
+      "ide-haskell-hasktags"
+      "language-coq"
+      "language-ocaml"
+      "language-scala"
+      "language-tla-pluscal"
+      "linter-scalac"
+      "tester-go"
+      "gorename"
+      "gometalinter-linter"
     ]
     ignoredNames: [
       ".git"
       ".idea"
     ]
-    projectHome: "/home/chris/git"
+    projectHome: "/home/chris/"
     themes: [
-      "one-light-ui"
-      "one-light-syntax"
+      "glacier-dark-ui"
+      "glacier-syntax"
     ]
   editor:
+    atomicSoftTabs: false
+    autoIndentOnPaste: false
     backUpBeforeSaving: true
     fontFamily: "\"DejaVu Sans Mono\""
-    fontSize: 18
+    fontSize: 17
     invisibles: {}
     scrollPastEnd: true
     zoomFontWhenCtrlScrolling: false
+  "git-plus":
+    general:
+      _analyticsUserId: "ece2659b-43fb-401a-a999-f41488fc4170"
   "haskell-ghc-mod": {}
   latex: {}
   "linter-scalac":
