@@ -106,9 +106,11 @@
       <excludeFolder url="file://$MODULE_DIR$/.sbt/boot" />
       <excludeFolder url="file://$MODULE_DIR$/.ssh" />
       <excludeFolder url="file://$MODULE_DIR$/.stack" />
+      <excludeFolder url="file://$MODULE_DIR$/.stack-work" />
       <excludeFolder url="file://$MODULE_DIR$/.steam" />
       <excludeFolder url="file://$MODULE_DIR$/.swt" />
       <excludeFolder url="file://$MODULE_DIR$/.thumbnails" />
+      <excludeFolder url="file://$MODULE_DIR$/.tla-toolbox" />
       <excludeFolder url="file://$MODULE_DIR$/.tla-toolbox/.metadata" />
       <excludeFolder url="file://$MODULE_DIR$/.vagrant.d" />
       <excludeFolder url="file://$MODULE_DIR$/.web3" />
@@ -119,6 +121,8 @@
       <excludeFolder url="file://$MODULE_DIR$/bin/google_appengine" />
       <excludeFolder url="file://$MODULE_DIR$/bin/google_closure" />
       <excludeFolder url="file://$MODULE_DIR$/bin/google_closure_templates" />
+      <excludeFolder url="file://$MODULE_DIR$/blockchain" />
+      <excludeFolder url="file://$MODULE_DIR$/books" />
       <excludeFolder url="file://$MODULE_DIR$/code" />
       <excludeFolder url="file://$MODULE_DIR$/enchiridion" />
       <excludeFolder url="file://$MODULE_DIR$/git" />
@@ -128,7 +132,9 @@
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/luongo" />
       <excludeFolder url="file://$MODULE_DIR$/mnt" />
+      <excludeFolder url="file://$MODULE_DIR$/nix/path" />
       <excludeFolder url="file://$MODULE_DIR$/nix/sys-pkgs" />
+      <excludeFolder url="file://$MODULE_DIR$/nixpkgs" />
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/oseary" />
       <excludeFolder url="file://$MODULE_DIR$/python" />
@@ -136,6 +142,7 @@
       <excludeFolder url="file://$MODULE_DIR$/secrets" />
       <excludeFolder url="file://$MODULE_DIR$/torrent" />
       <excludeFolder url="file://$MODULE_DIR$/virtualbox" />
+      <excludeFolder url="file://$MODULE_DIR$/wizard-people" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
