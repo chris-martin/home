@@ -96,6 +96,7 @@
   <action id="CompareTwoFiles" />
   <action id="CopyPaths" />
   <action id="Diff.ShowDiff" />
+  <action id="EditorContextInfo" />
   <action id="EditorDuplicate" />
   <action id="EditorSelectWord" />
   <action id="FileChooser.GotoDesktop" />
@@ -130,4 +131,8 @@
   </action>
   <action id="UsageView.Rerun" />
   <action id="Vcs.UpdateProject" />
+  <action id="com.andrewbrookins.idea.wrap.WrapAction" />
+  <action id="com.andrewbrookins.idea.wrap.WrapParagraphAction">
+    <keyboard-shortcut first-keystroke="alt q" />
+  </action>
 </keymap>
