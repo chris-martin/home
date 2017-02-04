@@ -25,3 +25,6 @@ ideaHaskellLib
 # Ensime (Sublime plugin for Scala)
 .ensime
 .ensime_cache
+
+# PID files contain IDs of running processes
+*.pid
