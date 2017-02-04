@@ -52,6 +52,7 @@
     fontSize: 17
     invisibles: {}
     scrollPastEnd: true
+    softWrap: true
     zoomFontWhenCtrlScrolling: false
   "git-plus":
     general:
