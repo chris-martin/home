@@ -64,6 +64,8 @@
     desktopManager.gnome3.enable = true;
     windowManager.xmonad.enable  = false;
     displayManager.gdm.enable    = true;
+    autoRepeatDelay    = 250;
+    autoRepeatInterval =  50;
   };
 
   services.unclutter.enable = false;
