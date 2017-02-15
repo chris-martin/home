@@ -1,8 +1,10 @@
 let
 
+home = builtins.getEnv "HOME";
+
 simple-config = {
 
-  home = builtins.getEnv "HOME";
+  inherit home;
   hostName = builtins.getEnv "HOSTNAME";
 
   allowUnfree = true;
@@ -11,6 +13,11 @@ simple-config = {
     enablePepperFlash = true;
     enablePepperPDF = true;
     enableWideVine = true;
+  };
+
+  idea.extraEnv = {
+    NIX_PATH = "${home}/nix/path";
+    NIXPKGS_CONFIG = "${home}/nix/config.nix";
   };
 
   locations = {
