@@ -19,6 +19,8 @@ import qualified Control.Monad as Monad
 import Data.Bool (Bool (True, False), (&&), (||), otherwise, not)
 import qualified Data.Bool as Bool
 
+import Data.Coerce (Coercible, coerce)
+
 import Data.Either (Either (Left, Right), either)
 import qualified Data.Either as Either
 
@@ -32,8 +34,12 @@ import Data.Foldable
     )
 import qualified Data.Foldable as Foldable
 
+import qualified Data.Function as Function
+
 import Data.Functor (Functor (fmap, (<$)), ($>), (<$>), void)
 import qualified Data.Functor as Functor
+
+import Data.Functor.Identity (Identity (runIdentity))
 
 import qualified Data.List as List
 
@@ -156,6 +162,16 @@ import qualified Data.HashMap.Strict as HashMap'
 
 #ifdef MIN_VERSION_lucid
 import qualified Lucid
+#endif
+
+#ifdef MIN_VERSION_transformers
+import Control.Monad.Trans.Class (MonadTrans (lift))
+
+import Control.Monad.Trans.Reader (ReaderT (runReaderT), Reader)
+import qualified Control.Monad.Trans.Reader as Reader
+
+import Control.Monad.Trans.State (StateT (runStateT), State)
+import qualified Control.Monad.Trans.State as State
 #endif
 
 #ifdef MIN_VERSION_vector
