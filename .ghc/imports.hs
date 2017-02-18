@@ -1,26 +1,11 @@
 {-# LANGUAGE CPP #-}
 
-import Data.Monoid
-    ( Monoid (mempty, mappend, mconcat)
-    , Endo (Endo, appEndo), Sum (Sum, getSum), Product (Product, getProduct)
-    )
-
-import Data.Foldable
-    ( Foldable (foldMap, foldr, foldl, null, length, elem)
-    , traverse_, for_, sequenceA_, asum, mapM_, forM_, sequence_
-    , and, or, any, all, find
-    )
-
-import Data.Traversable
-    ( Traversable (traverse, sequenceA, mapM, sequence)
-    , for, forM, mapAccumL, mapAccumR
-    )
-
 import Control.Applicative
     ( Applicative ((<*>), (*>), (<*), pure), liftA, liftA2, liftA3
     , Alternative (empty, (<|>), some, many), optional
     , Const (Const, getConst), ZipList (ZipList, getZipList)
     )
+import qualified Control.Applicative as Applicative
 
 import Control.Monad
     ( Monad ((>>=), (>>), return, fail), (=<<), (>=>), (<=<), (<$!>)
@@ -29,29 +14,75 @@ import Control.Monad
     , forever, join, filterM, foldM, foldM_
     , replicateM, replicateM_, guard, when, unless
     )
+import qualified Control.Monad as Monad
+
+import Data.Bool (Bool (True, False), (&&), (||), otherwise, not)
+import qualified Data.Bool as Bool
+
+import Data.Either (Either (Left, Right), either)
+import qualified Data.Either as Either
+
+import Data.Eq (Eq ((==), (/=)))
+import qualified Data.Eq as Eq
+
+import Data.Foldable
+    ( Foldable (foldMap, foldr, foldl, null, length, elem)
+    , traverse_, for_, sequenceA_, asum, mapM_, forM_, sequence_
+    , and, or, any, all, find
+    )
+import qualified Data.Foldable as Foldable
+
+import Data.Functor (Functor (fmap, (<$)), ($>), (<$>), void)
+import qualified Data.Functor as Functor
+
+import qualified Data.List as List
+
+import Data.List.NonEmpty (NonEmpty ((:|)))
+import qualified Data.List.NonEmpty as NonEmpty
+
+import Data.Maybe (Maybe (Just, Nothing), maybe, isJust, isNothing)
+import qualified Data.Maybe as Maybe
+
+import Data.Monoid
+    ( Monoid (mempty, mappend, mconcat)
+    , Endo (Endo, appEndo), Sum (Sum, getSum), Product (Product, getProduct)
+    )
+import qualified Data.Monoid as Monoid
+
+import Data.Ord (Ord (compare, (<), (<=), (>), (>=), max, min))
+import qualified Data.Ord as Ord
+
+import Data.Semigroup (Semigroup ((<>), sconcat, stimes))
+import qualified Data.Semigroup as Semigroup
+
+import Data.Traversable
+    ( Traversable (traverse, sequenceA, mapM, sequence)
+    , for, forM, mapAccumL, mapAccumR
+    )
+import qualified Data.Traversable as Traversable
+
+import qualified Data.Tuple as Tuple
+
+import Numeric.Natural (Natural)
 
 import Prelude
     ( even, odd, gcd, lcm, (^), (^^)
     , putChar, putStr, putStrLn, print
     )
+import qualified Prelude
 
-import Data.Bool (Bool (True, False), (&&), (||), otherwise, not)
-import Data.Either (Either (Left, Right), either)
-import Data.Eq (Eq ((==), (/=)))
-import Data.Functor (Functor (fmap, (<$)), ($>), (<$>), void)
-import Data.Maybe (Maybe (Just, Nothing), maybe, isJust, isNothing)
-import Numeric.Natural (Natural)
-import Data.Ord (Ord (compare, (<), (<=), (>), (>=), max, min))
-import Data.Semigroup (Semigroup ((<>), sconcat, stimes))
 import System.IO (IO)
+import qualified System.IO as IO
+
+--------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_async
-import           Control.Concurrent.Async (Async)
+import Control.Concurrent.Async (Async)
 import qualified Control.Concurrent.Async as Async
 #endif
 
 #ifdef MIN_VERSION_bytestring
-import           Data.ByteString (ByteString)
+import Data.ByteString (ByteString)
 import qualified Data.ByteString as BS
 
 import qualified Data.ByteString.Lazy as LBS
@@ -62,18 +93,18 @@ import qualified Data.Csv as Csv
 #endif
 
 #ifdef MIN_VERSION_containers
-import           Data.Sequence (Seq)
+import Data.Sequence (Seq)
 import qualified Data.Sequence as Seq
 
-import           Data.Set (Set)
+import Data.Set (Set)
 import qualified Data.Set as Set
 
-import           Data.Map (Map)
+import Data.Map (Map)
 import qualified Data.Map as Map
 #endif
 
 #ifdef MIN_VERSION_path
-import           Path (Path)
+import Path (Path)
 import qualified Path
 #endif
 
@@ -92,21 +123,21 @@ import qualified Control.Retry as Retry
 #ifdef MIN_VERSION_stm
 import qualified Control.Concurrent.STM as STM
 
-import           Control.Concurrent.STM.TBQueue
+import Control.Concurrent.STM.TBQueue
     ( TBQueue, newTBQueue, newTBQueueIO, readTBQueue, tryReadTBQueue
     , peekTBQueue, tryPeekTBQueue, writeTBQueue, unGetTBQueue
     , isEmptyTBQueue, isFullTBQueue
     )
 import qualified Control.Concurrent.STM.TBQueue as TBQueue
 
-import           Control.Concurrent.STM.TChan
+import Control.Concurrent.STM.TChan
     ( TChan, newTChan, newTChanIO, newBroadcastTChan, newBroadcastTChanIO
     , dupTChan, cloneTChan, readTChan, tryReadTChan, peekTChan, tryPeekTChan
     , writeTChan, unGetTChan, isEmptyTChan
     )
 import qualified Control.Concurrent.STM.TChan as TChan
 
-import           Control.Concurrent.STM.TVar
+import Control.Concurrent.STM.TVar
     ( TVar, newTVar, newTVarIO, readTVar, readTVarIO, writeTVar
     , modifyTVar, modifyTVar', swapTVar
     )
@@ -114,18 +145,30 @@ import qualified Control.Concurrent.STM.TVar as TVar
 #endif
 
 #ifdef MIN_VERSION_unordered_containers
-import           Data.HashSet (HashSet)
+import Data.HashSet (HashSet)
 import qualified Data.HashSet as HashSet
 
-import           Data.HashMap.Lazy (HashMap)
+import Data.HashMap.Lazy (HashMap)
 import qualified Data.HashMap.Lazy as HashMap
 
 import qualified Data.HashMap.Strict as HashMap'
 #endif
 
+#ifdef MIN_VERSION_lucid
+import qualified Lucid
+#endif
+
 #ifdef MIN_VERSION_vector
-import           Data.Vector (Vector)
+import Data.Vector (Vector)
 import qualified Data.Vector as Vector
+#endif
+
+#ifdef MIN_VERSION_wai
+import qualified Network.Wai as Wai
+#endif
+
+#ifdef MIN_VERSION_warp
+import qualified Network.Wai.Handler.Warp as Warp
 #endif
 
 #ifdef MIN_VERSION_unordered_containers
