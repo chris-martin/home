@@ -7,3 +7,4 @@ nix:
   pure: false
   shell-file: /home/chris/.stack/shell.nix
   add-gc-roots: true
+  path: [/home/chris/nix/path]
