@@ -32,7 +32,6 @@ buildEnv {
     bridge-utils docker-compose        # Docker
 
     vim sublime atom                   # Editors
-    #idea.idea15-ultimate
     idea.idea-community
 
     my-emacs                           # Emacs
