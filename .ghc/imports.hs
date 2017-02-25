@@ -28,12 +28,13 @@ import Data.Eq (Eq ((==), (/=)))
 import qualified Data.Eq as Eq
 
 import Data.Foldable
-    ( Foldable (foldMap, foldr, foldl, null, length, elem)
+    ( Foldable (fold, foldMap, foldr, foldr', foldl, foldl', null, length, elem)
     , traverse_, for_, sequenceA_, asum, mapM_, forM_, sequence_
     , and, or, any, all, find
     )
 import qualified Data.Foldable as Foldable
 
+import Data.Function ((.), ($), (&), id)
 import qualified Data.Function as Function
 
 import Data.Functor (Functor (fmap, (<$)), ($>), (<$>), void)
@@ -74,6 +75,7 @@ import Numeric.Natural (Natural)
 import Prelude
     ( even, odd, gcd, lcm, (^), (^^)
     , putChar, putStr, putStrLn, print
+    , Show (show)
     )
 import qualified Prelude
 
@@ -87,6 +89,8 @@ import Control.Concurrent.Async (Async)
 import qualified Control.Concurrent.Async as Async
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_bytestring
 import Data.ByteString (ByteString)
 import qualified Data.ByteString as BS
@@ -94,9 +98,13 @@ import qualified Data.ByteString as BS
 import qualified Data.ByteString.Lazy as LBS
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_cassava
 import qualified Data.Csv as Csv
 #endif
+
+--------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_containers
 import Data.Sequence (Seq)
@@ -109,22 +117,32 @@ import Data.Map (Map)
 import qualified Data.Map as Map
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_path
 import Path (Path)
 import qualified Path
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_path_io
 import qualified Path.IO as PathIO
 #endif
+
+--------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_pipes
 import qualified Pipes
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_retry
 import qualified Control.Retry as Retry
 #endif
+
+--------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_stm
 import qualified Control.Concurrent.STM as STM
@@ -150,6 +168,8 @@ import Control.Concurrent.STM.TVar
 import qualified Control.Concurrent.STM.TVar as TVar
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_unordered_containers
 import Data.HashSet (HashSet)
 import qualified Data.HashSet as HashSet
@@ -160,9 +180,13 @@ import qualified Data.HashMap.Lazy as HashMap
 import qualified Data.HashMap.Strict as HashMap'
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_lucid
 import qualified Lucid
 #endif
+
+--------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_transformers
 import Control.Monad.Trans.Class (MonadTrans (lift))
@@ -174,18 +198,26 @@ import Control.Monad.Trans.State (StateT (runStateT), State)
 import qualified Control.Monad.Trans.State as State
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_vector
 import Data.Vector (Vector)
 import qualified Data.Vector as Vector
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_wai
 import qualified Network.Wai as Wai
 #endif
 
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_warp
 import qualified Network.Wai.Handler.Warp as Warp
 #endif
+
+--------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_unordered_containers
 type HashMap' = HashMap'.HashMap
