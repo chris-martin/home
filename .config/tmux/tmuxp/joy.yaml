@@ -1,0 +1,22 @@
+session_name: joy
+windows:
+  - window_name: book
+    focus: true
+    layout: tiled
+    shell_command_before:
+      - cd ~/joyofhaskell/enchiridion
+    panes:
+      - git st
+  - window_name: website
+    layout: tiled
+    shell_command_before:
+      - cd ~/joyofhaskell/joyofhaskell.com
+    panes:
+      - shell_command:
+          - make clean watch
+      - shell_command_before:
+          - tmux resize-pane -y 8
+          - nix shell shell.nix --run 'sassc css/default.scss'
+      - focus: true
+        shell_command_before: git st
+      - ''

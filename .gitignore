@@ -8,6 +8,7 @@
 !/.gitignore
 !/.latexmkrc
 !/.tmux.conf
+!/.tmuxp
 !/.vimrc
 
 !/.config/
@@ -23,6 +24,7 @@
 !/.config/stylebot.json
 !/.config/sublime/
 !/.config/systemd/
+!/.config/tmux/
 !/.config/user-dirs.conf
 !/.config/user-dirs.dirs
 
