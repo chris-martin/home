@@ -76,7 +76,7 @@ import Numeric.Natural (Natural)
 import Prelude
     ( even, odd, gcd, lcm, (^), (^^)
     , putChar, putStr, putStrLn, print
-    , Show (show)
+    , Show (show), undefined
     )
 import qualified Prelude
 
