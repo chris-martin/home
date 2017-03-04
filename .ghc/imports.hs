@@ -42,6 +42,7 @@ import qualified Data.Functor as Functor
 
 import Data.Functor.Identity (Identity (runIdentity))
 
+import Data.List (intercalate, intersperse, sort, zip)
 import qualified Data.List as List
 
 import Data.List.NonEmpty (NonEmpty ((:|)))
