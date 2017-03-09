@@ -42,6 +42,8 @@ import qualified Data.Functor as Functor
 
 import Data.Functor.Identity (Identity (runIdentity))
 
+import Data.Int (Int, Int8, Int16, Int32, Int64)
+
 import Data.List (intercalate, intersperse, sort, zip)
 import qualified Data.List as List
 
@@ -70,6 +72,9 @@ import Data.Traversable
 import qualified Data.Traversable as Traversable
 
 import qualified Data.Tuple as Tuple
+
+import Data.Word (Word, Word8, Word16, Word32, Word64)
+import qualified Data.Word as Word
 
 import Numeric.Natural (Natural)
 
