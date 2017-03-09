@@ -86,7 +86,26 @@ import qualified System.IO as IO
 --------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_async
-import Control.Concurrent.Async (Async)
+import Control.Concurrent.Async
+    ( Async, Concurrently (Concurrently, runConcurrently)
+
+    -- Spawning
+    , async, asyncBound, asyncOn
+    , asyncWithUnmask, asyncOnWithUnmask
+
+    -- Spawning with automatic cancelation
+    , withAsync, withAsyncBound, withAsyncOn
+    , withAsyncWithUnmask, withAsyncOnWithUnmask
+
+    -- Pairs of threads
+    , race, race_
+    , concurrently, concurrently_
+
+    -- Arbitrary numbers of threads
+    , mapConcurrently, mapConcurrently_
+    , forConcurrently, forConcurrently_
+    , replicateConcurrently, replicateConcurrently_
+    )
 import qualified Control.Concurrent.Async as Async
 #endif
 
