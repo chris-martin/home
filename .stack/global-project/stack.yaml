@@ -9,5 +9,7 @@
 flags: {}
 extra-package-dbs: []
 packages: []
-extra-deps: []
-resolver: lts-8.0
+extra-deps:
+  - diagrams-pgf-1.4
+  - texrunner-0.0.1.1
+resolver: lts-8.4
