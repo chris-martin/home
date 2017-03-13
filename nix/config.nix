@@ -15,11 +15,6 @@ simple-config = {
     enableWideVine = true;
   };
 
-  idea.extraEnv = {
-    NIX_PATH = "${home}/nix/path";
-    NIXPKGS_CONFIG = "${home}/nix/config.nix";
-  };
-
   locations = {
     lexington = { latitude = "38.062373"; longitude = "-84.50178"; };
     sanMateo = { latitude = "37.56"; longitude = "-122.33"; };
