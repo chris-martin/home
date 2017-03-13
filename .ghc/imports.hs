@@ -32,12 +32,7 @@ import Control.Exception
     -- Throwing exceptions
     , throw, throwIO, ioError, throwTo
 
-    -- Catching exceptions
-    , catch, try, tryJust
-    , bracket, bracket_, bracketOnError, finally, onException
-
     -- Masking async exceptions
-    , mask, mask_, uninterruptibleMask, uninterruptibleMask_
     , MaskingState (Unmasked, MaskedInterruptible, MaskedUninterruptible)
     , getMaskingState, interruptible, allowInterrupt
     )
@@ -51,6 +46,8 @@ import Control.Monad
     , replicateM, replicateM_, guard, when, unless
     )
 import qualified Control.Monad as Monad
+
+import Control.Monad.IO.Class (MonadIO (liftIO))
 
 import Data.Bool (Bool (True, False), (&&), (||), otherwise, not)
 import qualified Data.Bool as Bool
@@ -79,6 +76,13 @@ import qualified Data.Functor as Functor
 import Data.Functor.Identity (Identity (runIdentity))
 
 import Data.Int (Int, Int8, Int16, Int32, Int64)
+
+import Data.IORef
+    ( IORef, newIORef, mkWeakIORef
+    , readIORef, writeIORef
+    , modifyIORef, modifyIORef'
+    , atomicModifyIORef, atomicModifyIORef'
+    )
 
 import Data.List
     ( intercalate, intersperse, sort
@@ -121,7 +125,7 @@ import Prelude
     ( even, odd, gcd, lcm, (^), (^^)
     , putChar, putStr, putStrLn, print
     , String, Show (show), undefined, error
-    , Num (..), Integer
+    , Num (..), Integer, Float, Double
     )
 import qualified Prelude
 
@@ -180,6 +184,19 @@ import qualified Data.Set as Set
 
 import Data.Map (Map)
 import qualified Data.Map as Map
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_exceptions
+import Control.Monad.Catch
+    ( MonadThrow (throwM)
+
+    , MonadCatch (catch), try, tryJust, finally, onException
+    , bracket, bracket_, bracketOnError
+
+    , MonadMask (mask, uninterruptibleMask), mask_, uninterruptibleMask_
+    )
 #endif
 
 --------------------------------------------------------------------------------
@@ -255,6 +272,12 @@ import qualified Data.HashMap.Strict as HashMap'
 
 #ifdef MIN_VERSION_lucid
 import qualified Lucid
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_time
+import Data.Time.Clock (getCurrentTime)
 #endif
 
 --------------------------------------------------------------------------------
