@@ -36,8 +36,26 @@
       "gometalinter-linter"
     ]
     ignoredNames: [
+      ".aws"
+      ".btcd/data"
+      ".cabal"
+      ".cabal-sandbox"
+      "*.egg"
+      ".ensime"
+      ".ensime_cache"
       ".git"
       ".idea"
+      "ideaHaskellLib"
+      "*.iml"
+      "*.ipr"
+      ".nix-profile"
+      ".npm"
+      ".projectile"
+      "*.pyc"
+      ".stack-work"
+      "*.sublime-workspace"
+      "*.swp"
+      ".vagrant"
     ]
     projectHome: "/home/chris/"
     themes: [
