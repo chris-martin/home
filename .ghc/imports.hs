@@ -7,6 +7,42 @@ import Control.Applicative
     )
 import qualified Control.Applicative as Applicative
 
+import Control.Concurrent
+    ( ThreadId, myThreadId, killThread, yield, threadDelay
+
+    -- Forking new Haskell threads
+    , forkIO, forkFinally, forkIOWithUnmask, forkOn, forkOnWithUnmask
+
+    -- Waiting on file desriptors
+    , threadWaitRead, threadWaitWrite
+    , threadWaitReadSTM, threadWaitWriteSTM
+
+    -- Haskell threads bound to operating system threads
+    , forkOS, forkOSWithUnmask
+    , isCurrentThreadBound, runInBoundThread, runInUnboundThread
+    )
+import qualified Control.Concurrent as Concurrent
+
+import Control.Exception
+    ( SomeException (SomeException), SomeAsyncException, AsyncException
+    , Exception (toException, fromException, displayException)
+    , IOException, ArithException, ArrayException, AssertionFailed
+    , evaluate, mapException, assert
+
+    -- Throwing exceptions
+    , throw, throwIO, ioError, throwTo
+
+    -- Catching exceptions
+    , catch, try, tryJust
+    , bracket, bracket_, bracketOnError, finally, onException
+
+    -- Masking async exceptions
+    , mask, mask_, uninterruptibleMask, uninterruptibleMask_
+    , MaskingState (Unmasked, MaskedInterruptible, MaskedUninterruptible)
+    , getMaskingState, interruptible, allowInterrupt
+    )
+import qualified Control.Exception as Exception
+
 import Control.Monad
     ( Monad ((>>=), (>>), return, fail), (=<<), (>=>), (<=<), (<$!>)
     , MonadPlus (mzero, mplus), msum, mfilter
@@ -34,7 +70,7 @@ import Data.Foldable
     )
 import qualified Data.Foldable as Foldable
 
-import Data.Function ((.), ($), (&), id)
+import Data.Function ((.), ($), (&), id, const)
 import qualified Data.Function as Function
 
 import Data.Functor (Functor (fmap, (<$)), ($>), (<$>), void)
@@ -44,7 +80,10 @@ import Data.Functor.Identity (Identity (runIdentity))
 
 import Data.Int (Int, Int8, Int16, Int32, Int64)
 
-import Data.List (intercalate, intersperse, sort, zip)
+import Data.List
+    ( intercalate, intersperse, sort
+    , zip, zipWith, zipWith3, zipWith4, zipWith5, zipWith6, zipWith7
+    )
 import qualified Data.List as List
 
 import Data.List.NonEmpty (NonEmpty ((:|)))
@@ -81,7 +120,8 @@ import Numeric.Natural (Natural)
 import Prelude
     ( even, odd, gcd, lcm, (^), (^^)
     , putChar, putStr, putStrLn, print
-    , Show (show), undefined
+    , String, Show (show), undefined, error
+    , Num (..), Integer
     )
 import qualified Prelude
 
@@ -165,6 +205,12 @@ import qualified Pipes
 
 #ifdef MIN_VERSION_retry
 import qualified Control.Retry as Retry
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_safe_exceptions
+import qualified Control.Exception.Safe as SafeException
 #endif
 
 --------------------------------------------------------------------------------
