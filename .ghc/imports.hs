@@ -125,7 +125,17 @@ import Prelude
     ( even, odd, gcd, lcm, (^), (^^)
     , putChar, putStr, putStrLn, print
     , String, Show (show), undefined, error
-    , Num (..), Integer, Float, Double
+    , Enum ( succ, pred, toEnum, fromEnum
+           , enumFrom, enumFromThen, enumFromTo, enumFromThenTo)
+    , Integer, Float, Double
+    , Num ((+), (-), (*), negate, abs, signum, fromInteger)
+    , Real (toRational)
+    , Integral (quot, rem, div, mod, quotRem, divMod, toInteger)
+    , RealFrac (properFraction, truncate, round, ceiling, floor)
+    , Fractional ((/), recip, fromRational)
+    , Floating ( pi, exp, log, sqrt, (**), logBase
+               , sin, cos, tan , asin, acos, atan
+               , sinh, cosh, tanh, asinh, acosh, atanh )
     )
 import qualified Prelude
 
@@ -277,7 +287,15 @@ import qualified Lucid
 --------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_time
-import Data.Time.Clock (getCurrentTime)
+import Data.Time.Clock (UTCTime, getCurrentTime)
+
+import Data.Time.LocalTime (utcToLocalTime, utc, localTimeOfDay)
+import qualified Data.Time.LocalTime as LocalTime
+
+import Data.Time.Clock.POSIX
+    ( POSIXTime, posixDayLength, posixSecondsToUTCTime
+    , utcTimeToPOSIXSeconds, getPOSIXTime
+    )
 #endif
 
 --------------------------------------------------------------------------------
