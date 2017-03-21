@@ -1,5 +1,7 @@
 {-# LANGUAGE CPP #-}
 
+module MyFavoriteImports where
+
 import Control.Applicative
     ( Applicative ((<*>), (*>), (<*), pure), liftA, liftA2, liftA3
     , Alternative (empty, (<|>), some, many), optional
