@@ -102,9 +102,8 @@
   };
 
   virtualisation.docker = {
-    enable           = false;
-    storageDriver    = "devicemapper";
-    socketActivation = false;
+    enable        = false;
+    storageDriver = "devicemapper";
   };
 
   fonts = {

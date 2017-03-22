@@ -150,6 +150,10 @@
 /nix/.idea
 /nix/pkgs/choose/dist/
 /nix/pkgs/wordlist/dist/
+/nix/nixpkgs/
+/nix/path/*
+!/nix/path/nixpkgs
+!/nix/path/stable
 
 !/.idea/
 /.idea/*
