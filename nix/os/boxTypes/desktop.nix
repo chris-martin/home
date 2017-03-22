@@ -125,9 +125,14 @@
     uid = 1000;
   };
 
-  # Yubikey
+  # https://raw.githubusercontent.com/Yubico/libu2f-host/e2ce7b157b76bb384f8aba7acbfa73af2dd2fee7/70-u2f.rules
   services.udev.extraRules = ''
+    ACTION!="add|change", GOTO="u2f_end"
+
+    # Yubico YubiKey
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0402|0403|0406|0407|0410", TAG+="uaccess"
+
+    LABEL="u2f_end"
   '';
 
   # https://stackoverflow.com/questions/33180784
