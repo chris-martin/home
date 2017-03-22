@@ -226,7 +226,7 @@ in {
   #  Kernel
   #-----------------------------------------------------------------------------
 
-  boot.kernelPackages = pkgs.linuxPackages_4_4;
+  boot.kernelPackages = pkgs.linuxPackages_4_10;
   boot.kernelModules  = ["snd-hda-intel"];
   boot.kernelParams = ["pci=nocrs"];
 
