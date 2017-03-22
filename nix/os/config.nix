@@ -10,89 +10,128 @@ let
 
 in {
 
-  system.stateVersion = "17.03";
-
   nixpkgs.config = pkgsConfig;
 
   imports = [ ./hardware.nix ./secret.nix ];
 
-  #time.timeZone = "America/Los_Angeles"; # Pacific
-  #time.timeZone = "America/Denver"; # Mountain
-  #time.timeZone = "America/Chicago"; # Central
-  time.timeZone = "America/New_York"; # Eastern
+  users.defaultUserShell = "/run/current-system/sw/bin/bash";
+
+
+  #-----------------------------------------------------------------------------
+  #  Networking
+  #-----------------------------------------------------------------------------
+
+  networking.hostName = "renzo";
+  networking.networkmanager.enable = true;
+  networking.nameservers = [ "208.67.222.222" "208.67.220.220" ];
+
+
+  #-----------------------------------------------------------------------------
+  #  Software
+  #-----------------------------------------------------------------------------
 
   environment.systemPackages = with pkgs; [
     android-udev-rules curl docker emacs gparted gptfdisk
     htop lsof man_db openssl tree vim wget which
   ];
 
-  fonts = {
-    enableFontDir          = true;
-    enableGhostscriptFonts = true;
-    fonts = with pkgs; [
-      corefonts fira fira-code fira-mono lato inconsolata
-      symbola ubuntu_font_family unifont vistafonts
-    ];
-  };
+
+  #-----------------------------------------------------------------------------
+  #  Locale
+  #-----------------------------------------------------------------------------
 
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.consoleFont = "Fira Mono";
   i18n.consoleKeyMap = "us";
+  services.xserver.layout = "us";
 
-  users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
-  services.redshift = { enable = true; } //
-    config.nixpkgs.config.locations.atlanta;
+  #-----------------------------------------------------------------------------
+  #  Graphical environment
+  #-----------------------------------------------------------------------------
 
-  services.xserver.synaptics = {
-    enable      = true;
-    minSpeed    = "0.8";
-    maxSpeed    = "1.4";
-    accelFactor = "0.05";
-    tapButtons  = false;
-    twoFingerScroll = true;
-  };
+  services.xserver.enable = true;
 
-  services.postgresql.enable = true;
-  services.postgresql.package = pkgs.postgresql94;
-  services.postgresql.authentication = "local all all ident";
+  services.xserver.desktopManager.gnome3.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.windowManager.xmonad.enable = false;
 
-  networking.hostName = "renzo";
 
-  networking.networkmanager.enable = true;
-
-  networking.nameservers = [ "208.67.222.222" "208.67.220.220" ];
+  #-----------------------------------------------------------------------------
+  #  Firewall
+  #-----------------------------------------------------------------------------
 
   networking.firewall.allowPing = true;
   networking.firewall.allowedTCPPorts = [
     51413 # bittorrent
   ];
 
-  services.avahi = {
-    enable = true;
-    nssmdns = true;
-    publish.enable = true;
-    publish.addresses = true;
-  };
 
-  services.xserver.enable = true;
-  services.xserver.layout = "us";
+  #-----------------------------------------------------------------------------
+  #  Fonts
+  #-----------------------------------------------------------------------------
 
-  services.xserver.desktopManager.gnome3.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.windowManager.xmonad.enable = false;
+  fonts.enableFontDir = true;
+  fonts.enableGhostscriptFonts = true;
+
+  fonts.fonts = with pkgs; [
+    corefonts fira fira-code fira-mono lato inconsolata
+    symbola ubuntu_font_family unifont vistafonts
+  ];
+
+  i18n.consoleFont = "Fira Mono";
+
+
+  #-----------------------------------------------------------------------------
+  #  Location
+  #-----------------------------------------------------------------------------
+
+  services.redshift = { enable = true; } //
+    { latitude = "33.784190"; longitude = "-84.374263"; } # atlanta
+    #{ latitude = "38.062373"; longitude = "-84.50178"; } # lexington
+    #{ latitude = "37.56"; longitude = "-122.33"; } # san mateo
+    ;
+
+  time.timeZone = "America/New_York"; # Eastern
+  #time.timeZone = "America/Chicago"; # Central
+  #time.timeZone = "America/Denver"; # Mountain
+  #time.timeZone = "America/Los_Angeles"; # Pacific
+
+
+  #-----------------------------------------------------------------------------
+  #  DNS service discovery
+  #-----------------------------------------------------------------------------
+
+  services.avahi.enable = true;
+  services.avahi.nssmdns = true;
+  services.avahi.publish.enable = true;
+  services.avahi.publish.addresses = true;
+
+
+  #-----------------------------------------------------------------------------
+  #  Mouse
+  #-----------------------------------------------------------------------------
+
+  services.xserver.synaptics.enable = true;
+  services.xserver.synaptics.minSpeed = "0.8";
+  services.xserver.synaptics.maxSpeed = "1.4";
+  services.xserver.synaptics.accelFactor = "0.05";
+  services.xserver.synaptics.tapButtons = false;
+  services.xserver.synaptics.twoFingerScroll = true;
+
+  services.xserver.libinput.enable = false;
+
+
+  #-----------------------------------------------------------------------------
+  #  Keyboard
+  #-----------------------------------------------------------------------------
 
   services.xserver.autoRepeatDelay = 250;
   services.xserver.autoRepeatInterval = 50;
 
-  services.xserver.libinput.enable = false;
 
-  # https://github.com/NixOS/nixpkgs/issues/24184
-  services.xserver.displayManager.sessionCommands = ''
-    amixer -c 0 cset 'numid=10' 1
-  '';
-
-  services.unclutter.enable = false;
+  #-----------------------------------------------------------------------------
+  #  Emacs
+  #-----------------------------------------------------------------------------
 
   systemd.user.services.emacs = {
 
@@ -119,16 +158,27 @@ in {
 
   systemd.services.emacs.enable = true;
 
-  virtualisation.virtualbox.host = {
-    enable              = false;
-    enableHardening     = false;
-    addNetworkInterface = true;
-  };
 
-  virtualisation.docker = {
-    enable        = false;
-    storageDriver = "devicemapper";
-  };
+  #-----------------------------------------------------------------------------
+  #  VirtualBox
+  #-----------------------------------------------------------------------------
+
+  virtualisation.virtualbox.host.enable = false;
+  virtualisation.virtualbox.host.enableHardening = false;
+  virtualisation.virtualbox.host.addNetworkInterface = true;
+
+
+  #-----------------------------------------------------------------------------
+  #  Docker
+  #-----------------------------------------------------------------------------
+
+  virtualisation.docker.enable = false;
+  virtualisation.docker.storageDriver = "devicemapper";
+
+
+  #-----------------------------------------------------------------------------
+  #  Users
+  #-----------------------------------------------------------------------------
 
   users.extraUsers.chris = {
     isNormalUser = true;
@@ -140,6 +190,11 @@ in {
     uid = 1000;
   };
 
+
+  #-----------------------------------------------------------------------------
+  #  YubiKey
+  #-----------------------------------------------------------------------------
+
   # https://raw.githubusercontent.com/Yubico/libu2f-host/e2ce7b157b76bb384f8aba7acbfa73af2dd2fee7/70-u2f.rules
   services.udev.extraRules = ''
     ACTION!="add|change", GOTO="u2f_end"
@@ -150,6 +205,11 @@ in {
     LABEL="u2f_end"
   '';
 
+
+  #-----------------------------------------------------------------------------
+  #  Boot
+  #-----------------------------------------------------------------------------
+
   boot.initrd.luks.devices = [{
     name   = "root";
     device = "/dev/nvme0n1p3";
@@ -159,31 +219,73 @@ in {
   boot.loader.grub.device = "/dev/nvme0n1";
   boot.loader.systemd-boot.enable = false;
 
+  boot.cleanTmpDir = true;
+
+
+  #-----------------------------------------------------------------------------
+  #  Kernel
+  #-----------------------------------------------------------------------------
+
   boot.kernelPackages = pkgs.linuxPackages_4_4;
   boot.kernelModules  = ["snd-hda-intel"];
   boot.kernelParams = ["pci=nocrs"];
 
-  boot.cleanTmpDir = true;
 
-  hardware.pulseaudio = {
-    enable = true;
-    package = pkgs.pulseaudioFull;
-    support32Bit = true; # needed for Steam
-  };
+  #-----------------------------------------------------------------------------
+  #  Mounting
+  #-----------------------------------------------------------------------------
 
-  hardware.bluetooth.enable = false;
+  environment.etc."fuse.conf".text = ''
+    user_allow_other
+  '';
+
+
+  #-----------------------------------------------------------------------------
+  #  Video
+  #-----------------------------------------------------------------------------
 
   hardware.opengl.driSupport32Bit = true; # needed for Steam
+
+
+  #-----------------------------------------------------------------------------
+  #  Audio
+  #-----------------------------------------------------------------------------
+
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
+
+  # needed for Steam
+  hardware.pulseaudio.support32Bit = true;
+
+  hardware.bluetooth.enable = false;
 
   environment.etc."modprobe.d/alsa-base.conf".text = ''
     options snd-hda-intel index=1 model=dell-headset-multi
     options snd-hda-intel index=0 model=auto vid=8086 pid=9d70
   '';
 
-  environment.etc."fuse.conf".text = ''
-    user_allow_other
+  # https://github.com/NixOS/nixpkgs/issues/24184
+  services.xserver.displayManager.sessionCommands = ''
+    amixer -c 0 cset 'numid=10' 1
   '';
+
+
+  #-----------------------------------------------------------------------------
+  #  Postgres
+  #-----------------------------------------------------------------------------
+
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql94;
+  services.postgresql.authentication = "local all all ident";
+
+
+  #-----------------------------------------------------------------------------
+  #  NixOS
+  #-----------------------------------------------------------------------------
+
+  system.stateVersion = "17.03";
 
   # https://stackoverflow.com/questions/33180784
   nix.extraOptions = "binary-caches-parallel-connections = 5";
+
 }

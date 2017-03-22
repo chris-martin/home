@@ -14,12 +14,6 @@ simple-config = {
     enablePepperPDF = true;
     enableWideVine = true;
   };
-
-  locations = {
-    lexington = { latitude = "38.062373"; longitude = "-84.50178"; };
-    sanMateo = { latitude = "37.56"; longitude = "-122.33"; };
-    atlanta = { latitude = "33.784190"; longitude = "-84.374263"; };
-  };
 };
 
 config = simple-config // {
