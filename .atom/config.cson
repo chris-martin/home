@@ -66,7 +66,7 @@
     atomicSoftTabs: false
     autoIndentOnPaste: false
     backUpBeforeSaving: true
-    fontFamily: "\"DejaVu Sans Mono\""
+    fontFamily: "\"Fira Code\""
     fontSize: 17
     invisibles: {}
     scrollPastEnd: true
