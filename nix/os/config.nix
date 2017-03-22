@@ -14,8 +14,6 @@ in {
 
   nixpkgs.config = pkgsConfig;
 
-  networking.hostName = pkgsConfig.hostName;
-
   imports = [ ./hardware.nix ./secret.nix ];
 
   #time.timeZone = "America/Los_Angeles"; # Pacific
@@ -37,18 +35,14 @@ in {
     ];
   };
 
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-    consoleFont = "Fira Mono";
-    consoleKeyMap = "us";
-  };
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.consoleFont = "Fira Mono";
+  i18n.consoleKeyMap = "us";
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
   services.redshift = { enable = true; } //
     config.nixpkgs.config.locations.atlanta;
-
-  services.xserver.libinput.enable = false;
 
   services.xserver.synaptics = {
     enable      = true;
@@ -63,14 +57,16 @@ in {
   services.postgresql.package = pkgs.postgresql94;
   services.postgresql.authentication = "local all all ident";
 
-  networking = {
-    networkmanager.enable = true;
-    nameservers = [ "208.67.222.222" "208.67.220.220" ];
-    firewall.allowPing = true;
-    firewall.allowedTCPPorts = [
-      51413 # bittorrent
-    ];
-  };
+  networking.hostName = "renzo";
+
+  networking.networkmanager.enable = true;
+
+  networking.nameservers = [ "208.67.222.222" "208.67.220.220" ];
+
+  networking.firewall.allowPing = true;
+  networking.firewall.allowedTCPPorts = [
+    51413 # bittorrent
+  ];
 
   services.avahi = {
     enable = true;
@@ -79,15 +75,22 @@ in {
     publish.addresses = true;
   };
 
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    desktopManager.gnome3.enable = true;
-    windowManager.xmonad.enable  = false;
-    displayManager.gdm.enable    = true;
-    autoRepeatDelay    = 250;
-    autoRepeatInterval =  50;
-  };
+  services.xserver.enable = true;
+  services.xserver.layout = "us";
+
+  services.xserver.desktopManager.gnome3.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.windowManager.xmonad.enable = false;
+
+  services.xserver.autoRepeatDelay = 250;
+  services.xserver.autoRepeatInterval = 50;
+
+  services.xserver.libinput.enable = false;
+
+  # https://github.com/NixOS/nixpkgs/issues/24184
+  services.xserver.displayManager.sessionCommands = ''
+    amixer -c 0 cset 'numid=10' 1
+  '';
 
   services.unclutter.enable = false;
 
@@ -147,21 +150,20 @@ in {
     LABEL="u2f_end"
   '';
 
-  boot = {
-    initrd.luks.devices = [{
-      name   = "root";
-      device = "/dev/nvme0n1p3";
-      preLVM = true;
-    }];
-    loader = {
-      grub.device = "/dev/nvme0n1";
-      systemd-boot.enable = false;
-    };
-    kernelPackages = pkgs.linuxPackages_4_4;
-    kernelModules  = ["snd-hda-intel"];
-    kernelParams = ["pci=nocrs"];
-    cleanTmpDir = true;
-  };
+  boot.initrd.luks.devices = [{
+    name   = "root";
+    device = "/dev/nvme0n1p3";
+    preLVM = true;
+  }];
+
+  boot.loader.grub.device = "/dev/nvme0n1";
+  boot.loader.systemd-boot.enable = false;
+
+  boot.kernelPackages = pkgs.linuxPackages_4_4;
+  boot.kernelModules  = ["snd-hda-intel"];
+  boot.kernelParams = ["pci=nocrs"];
+
+  boot.cleanTmpDir = true;
 
   hardware.pulseaudio = {
     enable = true;
