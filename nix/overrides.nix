@@ -10,8 +10,11 @@ callEnv = path: import path {
 
 overrides = (with pkgs; rec {
 
-  desktopEnv = callEnv ./envs/desktop.nix;
-  serverEnv = callEnv ./envs/server.nix;
+  desktopEnv = callEnv ./desktopEnv.nix;
+
+  idea = unstable.idea;
+
+  inherit (unstable) stylish-haskell;
 
   my-emacs = (import "${config.home}/emacs/emacs.nix") unstable.pkgs;
 
@@ -52,6 +55,8 @@ overrides = (with pkgs; rec {
   # https://github.com/NixOS/nixpkgs/issues/18640
   tla-plus = callPackage pkgs/tla-plus {};
 
+  inherit (unstable) google-chrome;
+
   # BigchainDB requires rethinkdb version higher than what's in 16.03
   inherit (unstable) rethinkdb;
 
@@ -66,15 +71,6 @@ overrides = (with pkgs; rec {
   stellar-horizon = callPackage pkgs/stellar-horizon {};
 
   chain-core = callPackage pkgs/chain-core {};
-
-  # Fall back to unstable for Haskell LTS releases that aren't in stable
-  haskell = pkgs.haskell // {
-
-    # https://github.com/NixOS/nixpkgs/issues/16629
-    compiler = pkgs.haskell.compiler // { ghc801 = unstable.haskell.compiler.ghc801; };
-
-    packages = unstable.haskell.packages // pkgs.haskell.packages;
-  };
 
   latex = texlive.combine {
     inherit (texlive) scheme-medium mathabx-type1 latexmk;

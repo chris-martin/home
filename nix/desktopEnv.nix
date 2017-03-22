@@ -47,7 +47,7 @@ buildEnv {
 
     go go2nix                          # Go
 
-    cabal stylish-haskell hlint        # Haskell
+    cabal stylish-haskell #hlint       # Haskell
     cabal2nix hasktags
     pointfree pointful ghc ghc-mod
     hdevtools hoogle intero
@@ -78,9 +78,9 @@ buildEnv {
 
     scrot gnome-screenshot             # Screenshots
 
-    fish tmux man rlwrap tree which    # Shell
-    moreutils mtools silver-searcher
-    pssh
+    fish tmux tmuxp man rlwrap tree    # Shell
+    which moreutils mtools
+    silver-searcher pssh
 
     sshfsFuse                          # SSH mount
 
