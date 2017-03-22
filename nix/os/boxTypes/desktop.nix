@@ -26,7 +26,7 @@
     ];
   };
 
-  i18n.consoleFont = "Lat2-Terminus16";
+  i18n.consoleFont = "Fira Mono"; # "Lat2-Terminus16";
   i18n.consoleKeyMap = "us";
 
   #time.timeZone = "America/Los_Angeles"; # Pacific
@@ -110,8 +110,8 @@
     enableFontDir          = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
-      corefonts lato inconsolata symbola ubuntu_font_family
-      unifont vistafonts
+      corefonts fira fira-code fira-mono lato inconsolata
+      symbola ubuntu_font_family unifont vistafonts
     ];
   };
 
