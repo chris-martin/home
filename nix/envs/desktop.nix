@@ -55,7 +55,7 @@ buildEnv {
     curl wget                          # HTTP
 
     gimp imagemagick inkscape          # Image editing
-    kcolorchooser
+    kcolorchooser pdftk
 
     openjdk8 sbt scala                 # JVM
 
