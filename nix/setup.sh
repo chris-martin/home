@@ -2,12 +2,22 @@
 
 set -e
 
-echo "$0: Initializing nixpkgs git repository"
+script="$0"
 
-git init nixpkgs
-cd nixpkgs
+print () {
+    echo "$script: $1"
+}
 
-echo "$0: Adding remotes"
+#-------------------------------------------------------------------------------
+
+print "Initializing nixpkgs git repository"
+
+git init path/master
+cd path/master
+
+#-------------------------------------------------------------------------------
+
+print "Adding remotes"
 
 add-remote () {
     git remote add "$1" "$2" || git remote set-url "$1" "$2"
@@ -19,22 +29,33 @@ add-remote origin git@github.com:chris-martin/nixpkgs.git
 add-remote upstream https://github.com/NixOS/nixpkgs.git
 add-remote channels https://github.com/NixOS/nixpkgs-channels.git
 
-echo "$0: Fetching from remotes"
+#-------------------------------------------------------------------------------
+
+print "Fetching from remotes"
 
 git fetch --all
 
-echo "$0: Setting up git branches"
+#-------------------------------------------------------------------------------
 
-git branch master --set-upstream-to origin/master
-git branch unstable --set-upstream-to origin/unstable
-git branch release/16.09 --set-upstream-to origin/release/16.09
-git branch release/17.03 --set-upstream-to origin/release/17.03
+print "Setting up git branches"
 
-echo "$0: Setting up git worktrees"
+add-branch () {
+    git branch "$1" "$2" || print "Skipping"
+}
 
-git checkout --detach
+add-branch master origin/master
+add-branch unstable origin/unstable
+add-branch release/16.09 origin/release/16.09
+add-branch release/17.03 origin/release/17.03
 
-git worktree add ../path/master master || echo "$0: Skipping"
-git worktree add ../path/unstable unstable || echo "$0: Skipping"
-git worktree add ../path/release-16.09 release/16.09 || echo "$0: Skipping"
-git worktree add ../path/release-17.03 release/17.03 || echo "$0: Skipping"
+#-------------------------------------------------------------------------------
+
+print "Setting up git worktrees"
+
+add-worktree () {
+    git worktree add "$1" "$2" || print "Skipping"
+}
+
+add-worktree ../unstable unstable
+add-worktree ../release-16.09 release/16.09
+add-worktree ../release-17.03 release/17.03
