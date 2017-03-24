@@ -44,6 +44,8 @@ add-branch () {
 }
 
 add-branch master origin/master
+git checkout master
+
 add-branch unstable origin/unstable
 add-branch release/16.09 origin/release/16.09
 add-branch release/17.03 origin/release/17.03
