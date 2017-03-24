@@ -53,7 +53,7 @@ in {
 
   services.xserver.desktopManager.gnome3.enable = true;
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.windowManager.xmonad.enable = false;
+  services.xserver.windowManager.xmonad.enable = true;
 
 
   #-----------------------------------------------------------------------------
