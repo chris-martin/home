@@ -13,7 +13,11 @@ let
 in haskell.lib.buildStackProject {
   name = "default-stack-shell";
   inherit ghc;
-  buildInputs = [ cairo latex pango pcre zlib ];
+  buildInputs = [
+    # cairo latex pango
+    # leveldb
+    pcre zlib
+  ];
 
   # https://github.com/commercialhaskell/stack/issues/2358
   LANG = "en_US.UTF-8";
