@@ -4,6 +4,7 @@
 .idea
 *.iml
 ideaHaskellLib
+.ideaHaskellLib
 
 # Vagrant
 .vagrant
