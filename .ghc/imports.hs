@@ -201,14 +201,14 @@ import qualified Data.Map as Map
 --------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_exceptions
-import Control.Monad.Catch
-    ( MonadThrow (throwM)
+import Control.Monad.Catch (MonadThrow (throwM), MonadCatch (catch))
+import qualified Control.Monad.Catch
+#endif
 
-    , MonadCatch (catch), try, tryJust, finally, onException
-    , bracket, bracket_, bracketOnError
+--------------------------------------------------------------------------------
 
-    , MonadMask (mask, uninterruptibleMask), mask_, uninterruptibleMask_
-    )
+#ifdef MIN_VERSION_lucid
+import qualified Lucid
 #endif
 
 --------------------------------------------------------------------------------
@@ -232,6 +232,14 @@ import qualified Pipes
 
 --------------------------------------------------------------------------------
 
+#ifdef MIN_VERSION_resourcet
+import Control.Monad.Trans.Resource
+    ( ResourceT, ResIO, ReleaseKey, runResourceT )
+import qualified Control.Monad.Trans.Resource as Resource
+#endif
+
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_retry
 import qualified Control.Retry as Retry
 #endif
@@ -240,11 +248,19 @@ import qualified Control.Retry as Retry
 
 #ifdef MIN_VERSION_safe_exceptions
 import qualified Control.Exception.Safe as SafeException
+
+import Control.Exception.Safe
+    ( try, tryJust, finally, onException
+    , bracket, bracket_, bracketOnError, bracketOnError_
+
+    , MonadMask (mask, uninterruptibleMask), mask_, uninterruptibleMask_
+    )
 #endif
 
 --------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_stm
+import Control.Concurrent.STM (atomically)
 import qualified Control.Concurrent.STM as STM
 
 import Control.Concurrent.STM.TBQueue
@@ -261,29 +277,18 @@ import Control.Concurrent.STM.TChan
     )
 import qualified Control.Concurrent.STM.TChan as TChan
 
+import Control.Concurrent.STM.TMVar
+    ( TMVar, newTMVar, newEmptyTMVar, newTMVarIO, newEmptyTMVarIO
+    , takeTMVar, putTMVar, readTMVar, tryReadTMVar, swapTMVar
+    , tryTakeTMVar, tryPutTMVar, isEmptyTMVar, mkWeakTMVar
+    )
+import qualified Control.Concurrent.STM.TMVar as TMVar
+
 import Control.Concurrent.STM.TVar
     ( TVar, newTVar, newTVarIO, readTVar, readTVarIO, writeTVar
     , modifyTVar, modifyTVar', swapTVar
     )
 import qualified Control.Concurrent.STM.TVar as TVar
-#endif
-
---------------------------------------------------------------------------------
-
-#ifdef MIN_VERSION_unordered_containers
-import Data.HashSet (HashSet)
-import qualified Data.HashSet as HashSet
-
-import Data.HashMap.Lazy (HashMap)
-import qualified Data.HashMap.Lazy as HashMap
-
-import qualified Data.HashMap.Strict as HashMap'
-#endif
-
---------------------------------------------------------------------------------
-
-#ifdef MIN_VERSION_lucid
-import qualified Lucid
 #endif
 
 --------------------------------------------------------------------------------
@@ -310,6 +315,30 @@ import qualified Control.Monad.Trans.Reader as Reader
 
 import Control.Monad.Trans.State (StateT (runStateT), State)
 import qualified Control.Monad.Trans.State as State
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_twitter_conduit
+import qualified Web.Twitter.Conduit as TwitterConduit
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_twitter_types
+import qualified Web.Twitter.Types as Twitter
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_unordered_containers
+import Data.HashSet (HashSet)
+import qualified Data.HashSet as HashSet
+
+import Data.HashMap.Lazy (HashMap)
+import qualified Data.HashMap.Lazy as HashMap
+
+import qualified Data.HashMap.Strict as HashMap'
 #endif
 
 --------------------------------------------------------------------------------
