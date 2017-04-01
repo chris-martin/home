@@ -53,7 +53,7 @@ in {
 
   services.xserver.desktopManager.gnome3.enable = true;
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.windowManager.xmonad.enable = true;
+  services.xserver.windowManager.xmonad.enable = false;
 
 
   #-----------------------------------------------------------------------------
@@ -226,7 +226,7 @@ in {
   #  Kernel
   #-----------------------------------------------------------------------------
 
-  boot.kernelPackages = pkgs.linuxPackages_4_10;
+  boot.kernelPackages = pkgs.linuxPackages_4_4;
   boot.kernelModules  = ["snd-hda-intel"];
   boot.kernelParams = ["pci=nocrs"];
 
