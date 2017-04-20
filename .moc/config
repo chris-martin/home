@@ -234,7 +234,7 @@ MusicDir = /run/user/1000/oseary/array1/chris/music
 
 # MOC directory (where pid file, socket and state files are stored).
 # You can use ~ at the beginning.
-#MOCDir = ~/.moc
+MOCDir = ${XDG_RUNTIME_DIR}/moc
 
 # Use mmap() to read files.  mmap() is much slower on NFS.
 #UseMMap = no
