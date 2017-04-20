@@ -69,7 +69,7 @@
 #
 # Example:    MusicDir = "/home/joe/music"
 #
-#MusicDir =
+MusicDir = /run/user/1000/oseary/array1/chris/music
 
 # Start in the music directory by default?  If set to 'no', start
 # in the current directory by default.  A single directory on
