@@ -17,6 +17,8 @@ in haskell.lib.buildStackProject {
     # cairo latex pango
     # leveldb
     pcre zlib
+
+    bzip2 # Needed by bzlib
   ];
 
   # https://github.com/commercialhaskell/stack/issues/2358
