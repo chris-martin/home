@@ -18,10 +18,12 @@ simple-config = {
 
 config = simple-config // {
   packageOverrides = pkgs: import ./overrides.nix {
-    inherit pkgs config unstable;
+    inherit pkgs config unstable master;
   };
 };
 
 unstable = (import <unstable> { config = simple-config; });
+
+master = (import <master> { config = simple-config; });
 
 in config
