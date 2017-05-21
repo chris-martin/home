@@ -152,6 +152,7 @@
 
 !/nix/
 !/nix/*
+!/nix/os
 /nix/os/config.nix
 /nix/os/hardware.nix
 /nix/os/secret.nix
