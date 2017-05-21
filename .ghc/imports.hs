@@ -56,6 +56,9 @@ import qualified Data.Bool as Bool
 
 import Data.Coerce (Coercible, coerce)
 
+import Data.Char (Char)
+import qualified Data.Char as Char
+
 import Data.Either (Either (Left, Right), either)
 import qualified Data.Either as Either
 
@@ -65,7 +68,7 @@ import qualified Data.Eq as Eq
 import Data.Foldable
     ( Foldable (fold, foldMap, foldr, foldr', foldl, foldl', null, length, elem)
     , traverse_, for_, sequenceA_, asum, mapM_, forM_, sequence_
-    , and, or, any, all, find
+    , and, or, any, all, find, minimum, maximum
     )
 import qualified Data.Foldable as Foldable
 
@@ -87,7 +90,7 @@ import Data.IORef
     )
 
 import Data.List
-    ( intercalate, intersperse, sort
+    ( intercalate, intersperse, sort, drop, take, repeat
     , zip, zipWith, zipWith3, zipWith4, zipWith5, zipWith6, zipWith7
     )
 import qualified Data.List as List
@@ -107,7 +110,9 @@ import qualified Data.Monoid as Monoid
 import Data.Ord (Ord (compare, (<), (<=), (>), (>=), max, min))
 import qualified Data.Ord as Ord
 
-import Data.Semigroup (Semigroup ((<>), sconcat, stimes))
+import Data.Semigroup ( Semigroup ((<>), sconcat, stimes)
+                      , Min (Min, getMin), Max (Max, getMax)
+                      )
 import qualified Data.Semigroup as Semigroup
 
 import Data.Traversable
@@ -141,7 +146,7 @@ import Prelude
     )
 import qualified Prelude
 
-import System.IO (IO)
+import System.IO (IO, hPutStrLn, stdin, stdout, stderr)
 import qualified System.IO as IO
 
 --------------------------------------------------------------------------------
@@ -207,8 +212,39 @@ import qualified Control.Monad.Catch
 
 --------------------------------------------------------------------------------
 
+#ifdef MIN_VERSION_haskell_src_exts
+import qualified Language.Haskell.Exts
+import qualified Language.Haskell.Exts as Haskell
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_hedgehog
+import Hedgehog.Gen (Gen)
+import Hedgehog.Range (Range)
+import qualified Hedgehog
+import qualified Hedgehog.Gen as Gen
+import qualified Hedgehog.Range as Range
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_lens
+import Control.Lens ((<&>), (^.))
+#endif
+
+--------------------------------------------------------------------------------
+
 #ifdef MIN_VERSION_lucid
 import qualified Lucid
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_network
+import Network.Socket (Socket)
+import qualified Network.Socket
+import qualified Network.Socket as Socket
 #endif
 
 --------------------------------------------------------------------------------
@@ -289,6 +325,17 @@ import Control.Concurrent.STM.TVar
     , modifyTVar, modifyTVar', swapTVar
     )
 import qualified Control.Concurrent.STM.TVar as TVar
+#endif
+
+--------------------------------------------------------------------------------
+
+#ifdef MIN_VERSION_text
+import Data.Text (Text)
+
+import qualified Data.Text as Text
+import qualified Data.Text.IO as TextIO
+import qualified Data.Text.Lazy as LText
+import qualified Data.Text.Lazy.IO as LTextIO
 #endif
 
 --------------------------------------------------------------------------------
