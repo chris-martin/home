@@ -7,6 +7,14 @@
       }
     }
   },
+  "github.com": {
+    "_enabled": true,
+    "_rules": {
+      ".blob-code-inner": {
+        "font-family": "\"Fira Code\""
+      }
+    }
+  },
   "hackage.haskell.org": {
     "_enabled": true,
     "_rules": {
@@ -21,6 +29,100 @@
       },
       ".src, pre, code": {
         "font-family": "\"Fira Code\""
+      }
+    }
+  },
+  "icosahedron.website": {
+    "_enabled": true,
+    "_rules": {
+      ".app-holder, .ui, .columns-area, .drawer__header, .drawer__inner, .compose-form__buttons, .column-header, .column-icon, .column-back-button, .column>.scrollable, .compose-form__modifiers, .detailed-status, .column-link": {
+        "background": "none"
+      },
+      ".column": {
+        "padding": "0"
+      },
+      ".column-header, .column-back-button": {
+        "border-bottom": "1px solid black"
+      },
+      ".column-icon-clear": {
+        "top": "0"
+      },
+      ".compose-form__buttons": {
+        "box-shadow": "none"
+      },
+      ".detailed-status, .detailed-status__action-bar": {
+        "background": "#eafbe9"
+      },
+      ".detailed-status__action-bar": {
+        "border-top": "0"
+      },
+      ".drawer": {
+        "border-right": "1px solid black"
+      },
+      ".drawer, .column-header, .column-back-button": {
+        "background": "#e0e8f0"
+      },
+      ".drawer__header a:hover, .column-icon:hover": {
+        "background": "#f0f0f0"
+      },
+      ".navigation-bar strong": {
+        "color": "#333333"
+      },
+      ".notification-favourite .status__content p, .notification-reblog .status__content p": {
+        "display": "none"
+      },
+      ".notification-favourite .status__content p:nth-child(1), .notification-reblog .status__content p:nth-child(1)": {
+        "display": "block"
+      },
+      ".notification-favourite p, .notification-reblog p": {
+        "margin": "0",
+        "overflow": "hidden",
+        "text-overflow": "ellipsis",
+        "white-space": "nowrap"
+      },
+      ".search__input, .search__icon .fa": {
+        "color": "inherit"
+      },
+      ".status__content": {
+        "font-family": "Lato"
+      },
+      ".status__content__spoiler-link": {
+        "background": "#f0f0f0",
+        "border": "1px solid"
+      },
+      "a, .drawer__header a, .drawer__header a:hover, .column-icon, .column-icon:hover, .detailed-status a, .navigation-bar": {
+        "color": "#4ea92f"
+      },
+      "at62": {
+        "at": true,
+        "text": "@media  (min-width: 1100px) {\n  .column {    \n    -webkit-flex-grow: 1;\n  }\n}",
+        "type": "@media"
+      },
+      "body": {
+        "background": "#fcfcfc",
+        "color": "black"
+      },
+      "input, textarea": {
+        "background": "white",
+        "border": "1px solid black",
+        "color": "black"
+      },
+      "strong": {
+        "color": "black"
+      }
+    }
+  },
+  "mastodon.social": {
+    "_enabled": true,
+    "_rules": {
+      ".status__content": {
+        "font-family": "Lato"
+      },
+      "at5": {
+        "at": true,
+        "expanded_text": "",
+        "text": "@media  (min-width: 1100px) {\n  .drawer {    \n    width: 24%;\n  }\n  .column {    \n    width: 24.5%;\n  }\n}",
+        "type": "@media"
       }
     }
   },
@@ -49,14 +151,6 @@
       },
       "comment0": {
         "comment": "/*\n.dashboard {\n    display: none;\n}\n\n.content-main {\n    float: none;\n    width: auto;\n}\n\n.js-adaptive-photo {\n    height: 80px;\n}\n\n.u-hiddenVisually, .time, .stream-item-footer, .avatar, .stream-item-header .fullname {\n    display: none;\n}\n\n.stream-item-header, .stream-item-activity-header, .activity-truncated-tweet *, .js-tweet-text-container, .js-tweet-text-container p {\n    display: inline;\n}\n\n.tweet-row {\n    max-width: none;\n}\n\n.tweet {\n    padding: 8px 0;\n    min-height: 0;\n}\n\n.timeline-tweet-box {\n    border: none;\n}\n\n.home-tweet-box, .stream-item {\n    background: none;\n}\n\nbody {\n    background: white;\n}\n*/"
-      }
-    }
-  },
-  "github.com": {
-    "_enabled": true,
-    "_rules": {
-      ".blob-code-inner": {
-        "font-family": "\"Fira Code\""
       }
     }
   },
