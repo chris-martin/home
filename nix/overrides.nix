@@ -1,4 +1,4 @@
-{ pkgs, config, unstable }:
+{ pkgs, config, unstable, master }:
 let
 
 pkgsWithOverrides = pkgs // overrides;
@@ -12,9 +12,7 @@ overrides = (with pkgs; rec {
 
   desktopEnv = callEnv ./desktopEnv.nix;
 
-  idea = unstable.idea;
-
-  inherit (unstable) stylish-haskell;
+  inherit (unstable) stylish-haskell stack jetbrains;
 
   my-emacs = (import "${config.home}/emacs/emacs.nix") unstable.pkgs;
 
@@ -31,13 +29,6 @@ overrides = (with pkgs; rec {
       self = myPython34Packages;
     });
 
-  inherit (unstable) glide;
-
-  go = go_1_7;
-
-  inherit (unstable) sublime3;
-  sublime = sublime3;
-
   ppl-address-book = callPackage ./pkgs/ppl-address-book {};
 
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
@@ -48,17 +39,8 @@ overrides = (with pkgs; rec {
   # - https://github.com/NixOS/nixpkgs/commit/08575ee
   #gore = unstable.goPackages.gore;
 
-  # https://github.com/NixOS/nixpkgs/issues/18637
-  # https://github.com/NixOS/nixpkgs/issues/18638
-  secp256k1 = callPackage pkgs/secp256k1 {};
-
   # https://github.com/NixOS/nixpkgs/issues/18640
-  tla-plus = callPackage pkgs/tla-plus {};
-
-  inherit (unstable) google-chrome;
-
-  # BigchainDB requires rethinkdb version higher than what's in 16.03
-  inherit (unstable) rethinkdb;
+  # tla-plus = callPackage pkgs/tla-plus {};
 
   # https://github.com/NixOS/nixpkgs/issues/18640
   isabelle2011-1 = callPackage pkgs/isabelle2011-1 {
@@ -75,17 +57,6 @@ overrides = (with pkgs; rec {
   latex = texlive.combine {
     inherit (texlive) scheme-medium mathabx-type1 latexmk;
   };
-
-  # Workaround for Atom not working in 16.09
-  # https://github.com/NixOS/nixpkgs/issues/16888#issuecomment-232351368
-  atom = let v = "1.10.2"; in ( lib.overrideDerivation pkgs.atom (attrs: {
-    name = "atom-${v}";
-    src = fetchurl {
-      url = "https://github.com/atom/atom/releases/download/v${v}/atom-amd64.deb";
-      sha256 = "1pizmr5i4fnbxykrrqk7g837fj0plazgxrbgyqb9bns5nvwcrk6p";
-      name = "atom-${v}.deb";
-    };
-  }));
 
   # Convenience aliases for nested packages
 
