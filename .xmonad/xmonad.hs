@@ -1,5 +1,5 @@
 import XMonad
 import XMonad.Hooks.EwmhDesktops
 
-main = xmonad $ ewmh defaultConfig{ handleEventHook =
-           handleEventHook defaultConfig <+> fullscreenEventHook }
+main = xmonad $ ewmh def{ handleEventHook =
+           handleEventHook def <+> fullscreenEventHook }
