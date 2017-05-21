@@ -6,7 +6,7 @@ buildEnv {
 
     choose wordlist
 
-    ack ansifilter arcanist astyle awscli gksu rsync unetbootin solaar
+    ack ansifilter arcanist astyle awscli gksu rsync unetbootin solaar libnotify
 
     ffmpegthumbnailer # Enables video thumbnails in Nautilus
 
@@ -21,7 +21,7 @@ buildEnv {
     google-chrome                      # Chrome
 
     gnupg1compat keepassx2 easyrsa     # Crypto
-    #libbitcoin-explorer
+    libbitcoin-explorer
 
     sassc                              # CSS
 
@@ -32,7 +32,7 @@ buildEnv {
     bridge-utils docker-compose        # Docker
 
     vim sublime atom                   # Editors
-    idea.idea-community
+    jetbrains.idea-community
 
     my-emacs                           # Emacs
 
