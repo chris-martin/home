@@ -2,11 +2,14 @@ function oseary --argument command
   switch $command
 
   case mount
+    mkdir -p $XDG_RUNTIME_DIR/oseary
     env USER=chris PASSWORD=(cat ~/secrets/oseary) \
-      HOST=192.168.0.100 MOUNT=$HOME/mnt/oseary sshfs-mount
+      HOST=192.168.0.100 MOUNT=$XDG_RUNTIME_DIR/oseary sshfs-mount
 
   case umount
-    fusermount -u $HOME/mnt/oseary; and echo "Unmounted."
+    fusermount -z -u $XDG_RUNTIME_DIR/oseary; and echo "Unmounting"
+    sleep 1
+    rmdir $XDG_RUNTIME_DIR/oseary
 
   case '*'
     echo "???"
