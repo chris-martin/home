@@ -130,7 +130,7 @@ import Numeric.Natural (Natural)
 
 import Prelude
     ( even, odd, gcd, lcm, (^), (^^)
-    , putChar, putStr, putStrLn, print
+    , putChar, putStr, putStrLn, print, ($!)
     , String, Show (show), undefined, error
     , Enum ( succ, pred, toEnum, fromEnum
            , enumFrom, enumFromThen, enumFromTo, enumFromThenTo)
@@ -148,6 +148,8 @@ import qualified Prelude
 
 import System.IO (IO, hPutStrLn, stdin, stdout, stderr)
 import qualified System.IO as IO
+
+import Unsafe.Coerce (unsafeCoerce)
 
 --------------------------------------------------------------------------------
 
