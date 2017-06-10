@@ -89,7 +89,7 @@ in {
   #  Location
   #-----------------------------------------------------------------------------
 
-  services.redshift = { enable = true; } //
+  services.redshift = { enable = false; } //
     { latitude = "33.784190"; longitude = "-84.374263"; } # atlanta
     #{ latitude = "38.062373"; longitude = "-84.50178"; } # lexington
     #{ latitude = "37.56"; longitude = "-122.33"; } # san mateo
