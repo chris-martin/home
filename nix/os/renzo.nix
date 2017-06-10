@@ -78,7 +78,7 @@ in {
   fonts.enableGhostscriptFonts = true;
 
   fonts.fonts = with pkgs; [
-    corefonts fira fira-code fira-mono lato inconsolata
+    corefonts fira fira-code fira-mono lato google-fonts inconsolata
     symbola ubuntu_font_family unifont vistafonts
   ];
 
