@@ -27,7 +27,7 @@ buildEnv {
 
     meld                               # Diff tools
 
-    evince eog                         # Doc/image viewers
+    evince eog okular                  # Doc/image viewers
 
     bridge-utils docker-compose        # Docker
 
