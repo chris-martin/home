@@ -15,4 +15,4 @@ extra-deps:
   - texrunner-0.0.1.1
   - sr-extra-1.46.3.2
   - X11-extras-0.4
-resolver: lts-8.16
+resolver: lts-8.19
