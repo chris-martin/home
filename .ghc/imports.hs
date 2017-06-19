@@ -113,6 +113,8 @@ import qualified Data.Monoid as Monoid
 import Data.Ord (Ord (compare, (<), (<=), (>), (>=), max, min))
 import qualified Data.Ord as Ord
 
+import Data.Ratio (Ratio, Rational, (%), numerator, denominator, approxRational)
+
 import Data.Semigroup ( Semigroup ((<>), sconcat, stimes)
                       , Min (Min, getMin), Max (Max, getMax)
                       )
