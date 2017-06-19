@@ -15,6 +15,9 @@ import Control.Concurrent
     -- Forking new Haskell threads
     , forkIO, forkFinally, forkIOWithUnmask, forkOn, forkOnWithUnmask
 
+    -- Capabilities
+    , getNumCapabilities, setNumCapabilities, threadCapability
+
     -- Waiting on file desriptors
     , threadWaitRead, threadWaitWrite
     , threadWaitReadSTM, threadWaitWriteSTM
