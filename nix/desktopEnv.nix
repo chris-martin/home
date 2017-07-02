@@ -49,7 +49,7 @@ buildEnv {
 
     cabal stylish-haskell #hlint       # Haskell
     cabal2nix hasktags
-    pointfree pointful ghc ghc-mod
+    pointfree pointful ghc
     hdevtools hoogle intero
 
     curl wget                          # HTTP
