@@ -209,6 +209,7 @@ in {
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.device = "/dev/sda";
   boot.kernelParams = [ "nomodeset" ];
+  boot.kernelPackages = pkgs.linuxPackages_4_11;
 
   boot.cleanTmpDir = true;
 
