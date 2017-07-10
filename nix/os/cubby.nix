@@ -89,8 +89,6 @@ in {
     symbola ubuntu_font_family unifont vistafonts
   ];
 
-  i18n.consoleFont = "Fira Mono";
-
 
   #-----------------------------------------------------------------------------
   #  Location
