@@ -227,7 +227,7 @@ import qualified Language.Haskell.Exts as Haskell
 --------------------------------------------------------------------------------
 
 #ifdef MIN_VERSION_hedgehog
-import Hedgehog.Gen (Gen)
+import Hedgehog (Gen)
 import Hedgehog.Range (Range)
 import qualified Hedgehog
 import qualified Hedgehog.Gen as Gen

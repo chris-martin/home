@@ -12,9 +12,9 @@ packages: []
 extra-deps:
   - diagrams-pgf-1.4
   - generic-lens-0.2.0.0
-  - hedgehog-0.4.1
+  - hedgehog-0.5
   - ipprint-0.6
   - texrunner-0.0.1.1
   - sr-extra-1.46.3.2
   - X11-extras-0.4
-resolver: lts-8.19
+resolver: lts-8.23

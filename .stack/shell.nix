@@ -18,8 +18,13 @@ in haskell.lib.buildStackProject {
     # leveldb
     pcre zlib
 
+    mesa # opengl
+
+    openal freealut
+
     bzip2 # Needed by bzlib
-  ];
+
+  ] ++ (with xorg; [libX11 libXi libXrandr libXxf86vm libXcursor libXinerama]);
 
   # https://github.com/commercialhaskell/stack/issues/2358
   LANG = "en_US.UTF-8";
