@@ -16,7 +16,7 @@ in haskell.lib.buildStackProject {
   buildInputs = [
     # cairo latex pango
     # leveldb
-    pcre zlib
+    pam pcre zlib
 
     mesa # opengl
 
