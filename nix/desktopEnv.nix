@@ -36,10 +36,6 @@ buildEnv {
 
     my-emacs                           # Emacs
 
-    go-ethereum                        # Ethereum
-
-    steam minecraft                    # Gaming
-
     gitAndTools.gitFull                # Git
     gitAndTools.hub
     gitAndTools.git-extras
