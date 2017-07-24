@@ -95,8 +95,8 @@ in {
     #{ latitude = "37.56"; longitude = "-122.33"; } # san mateo
     ;
 
-  time.timeZone = "America/New_York"; # Eastern
-  #time.timeZone = "America/Chicago"; # Central
+  #time.timeZone = "America/New_York"; # Eastern
+  time.timeZone = "America/Chicago"; # Central
   #time.timeZone = "America/Denver"; # Mountain
   #time.timeZone = "America/Los_Angeles"; # Pacific
 
