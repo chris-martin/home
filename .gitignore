@@ -198,7 +198,7 @@
 /.IdeaIC2017.2/config/options/proxy.settings.pwd
 /.IdeaIC2017.2/config/options/recentProjects.xml
 /.IdeaIC2017.2/config/options/security.xml
-/.IdeaIC2017.2/config/options/statistics.application.usages.xml
+/.IdeaIC2017.2/config/options/statistics.*.xml
 /.IdeaIC2017.2/config/options/stubIndex.xml
 /.IdeaIC2017.2/config/options/ui.lnf.xml
 /.IdeaIC2017.2/config/options/updates.xml
