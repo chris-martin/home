@@ -3,6 +3,7 @@
 !/.bash_profile
 !/.bashrc
 !/bin/
+!/.darcs
 !/dropbox
 !/.emacs
 !/.gitignore
