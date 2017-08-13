@@ -31,7 +31,7 @@ buildEnv {
 
     bridge-utils docker-compose        # Docker
 
-    vim sublime atom                   # Editors
+    vim sublime3 atom                  # Editors
     jetbrains.idea-community
 
     my-emacs                           # Emacs
