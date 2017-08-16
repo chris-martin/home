@@ -12,7 +12,7 @@ overrides = (with pkgs; rec {
 
   desktopEnv = callEnv ./desktopEnv.nix;
 
-  inherit (unstable) stack jetbrains;
+  inherit (unstable) haskell stack jetbrains;
 
   # workaround for https://github.com/NixOS/nixpkgs/issues/25880
   inherit (unstable) google-chrome;
