@@ -34,6 +34,7 @@
       "tester-go"
       "gorename"
       "gometalinter-linter"
+      "haskell-grammar"
     ]
     ignoredNames: [
       ".aws"
