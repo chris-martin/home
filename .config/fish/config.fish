@@ -18,6 +18,10 @@ alias trash gvfs-trash
 
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
+function rip-cd
+  abcde -a cddb,read,encode,tag,move,playlist,clean -d /dev/cdrom -o ogg -V
+end
+
 function stylish-haskell --argument dir
   cd "$dir"
   and find . -name "*.hs" -not -path '*/\.*' -exec stylish-haskell -i "{}" \;
