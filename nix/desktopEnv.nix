@@ -56,7 +56,6 @@ buildEnv {
     openjdk8 sbt scala                 # JVM
 
     nodejs npm2nix grunt bower         # Javascript
-    purescript
 
     jq                                 # JSON
 
