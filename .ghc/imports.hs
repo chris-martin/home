@@ -81,7 +81,7 @@ import qualified Data.Function as Function
 import Data.Functor (Functor (fmap, (<$)), ($>), (<$>), void)
 import qualified Data.Functor as Functor
 
-import Data.Functor.Identity (Identity (runIdentity))
+import Data.Functor.Identity (Identity (Identity, runIdentity))
 
 import Data.Int (Int, Int8, Int16, Int32, Int64)
 
