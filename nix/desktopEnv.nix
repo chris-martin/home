@@ -21,7 +21,7 @@ buildEnv {
     google-chrome                      # Chrome
 
     gnupg1compat keepassx2 easyrsa     # Crypto
-    libbitcoin-explorer
+    libbitcoin-explorer cryptsetup
 
     sassc                              # CSS
 
