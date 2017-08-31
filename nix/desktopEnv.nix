@@ -43,7 +43,7 @@ buildEnv {
 
     go go2nix                          # Go
 
-    cabal stylish-haskell #hlint       # Haskell
+    cabal stylish-haskell              # Haskell
     cabal2nix hasktags
     pointfree pointful ghc
     hdevtools hoogle intero
