@@ -6,7 +6,7 @@ buildEnv {
 
     choose wordlist
 
-    ack alock ansifilter arcanist astyle awscli gksu rsync unetbootin solaar libnotify
+    ack alock ansifilter arcanist astyle awscli gksu rsync unetbootin solaar libnotify abcde
 
     ffmpegthumbnailer # Enables video thumbnails in Nautilus
 
