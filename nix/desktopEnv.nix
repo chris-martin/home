@@ -53,6 +53,7 @@ buildEnv {
 
     gimp imagemagick inkscape          # Image editing
     kcolorchooser pdftk
+    graphviz ghostscript
 
     openjdk8 sbt scala                 # JVM
 
