@@ -47,6 +47,7 @@ buildEnv {
     cabal2nix hasktags
     pointfree pointful ghc
     hdevtools hoogle intero
+    stack
 
     curl wget                          # HTTP
 
