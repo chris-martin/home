@@ -35,6 +35,7 @@
       "gorename"
       "gometalinter-linter"
       "haskell-grammar"
+      "language-gfm"
     ]
     ignoredNames: [
       ".aws"
