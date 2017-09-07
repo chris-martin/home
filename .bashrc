@@ -14,6 +14,8 @@ export EDITOR=e
 
 export PYTHONSTARTUP="$HOME/.config/python"
 
+alias ls='ls --color --group-directories-first'
+
 # https://twitter.com/chris__martin/status/420992421673988096
 alias such=git
 alias very=git

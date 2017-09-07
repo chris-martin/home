@@ -18,6 +18,8 @@ alias trash gvfs-trash
 
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
+alias ls 'ls --color --group-directories-first'
+
 function rip-cd
   abcde -a cddb,read,encode,tag,move,playlist,clean -d /dev/cdrom -o ogg -V
 end
