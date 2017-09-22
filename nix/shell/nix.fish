@@ -55,18 +55,6 @@ function nix
   end
 end
 
-function __fish_nix_set_channels
-
-  for c in (nix-channel --list | cut -d ' ' -f 1)
-    nix-channel --remove $c
-  end
-
-  nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
-  nix-channel --add https://nixos.org/channels/nixos-16.09    nixos-16.09
-  nix-channel --add https://nixos.org/channels/nixos-16.03    nixos-16.03
-  nix-channel --add https://nixos.org/channels/nixos-15.09    nixos-15.09
-end
-
 
 #-------------------------------------------------------------------
 #  Tab completion for the nix function
