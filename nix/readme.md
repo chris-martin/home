@@ -4,11 +4,4 @@ to set up environment variables for Nix stuff.
 The Fish script provides a `nix` function that can be used to do everything
 I do with Nix.
 
-## Channels
-
-The `nix` script will update the channel list automatically.
-
-The root channel list can be empty.
-
-    > sudo nix-channel --list
-    [no output]
+Run `./setup.sh` to do a git checkout of the appropriate nixpkgs branches.
