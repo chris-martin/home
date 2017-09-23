@@ -12,9 +12,6 @@ overrides = (with pkgs; rec {
 
   desktopEnv = callEnv ./desktopEnv.nix;
 
-  # Workaround for https://github.com/NixOS/nixpkgs/issues/25957
-  steam = pkgs.steam.override { newStdcpp = true; };
-
   inherit (unstable) haskell slack-latex stack jetbrains;
 
   # workaround for https://github.com/NixOS/nixpkgs/issues/25880
