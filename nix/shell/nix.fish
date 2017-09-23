@@ -44,7 +44,7 @@ function nix
     nix-shell '<nixpkgs>' -A $argv[2] --pure
 
   case gc
-    nix-collect-garbage --delete-older-than $argv[2]
+    sudo nix-collect-garbage --delete-older-than $argv[2]
 
   case optimise optimize
     nix-store --optimise
