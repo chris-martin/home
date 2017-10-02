@@ -8,7 +8,7 @@ paths=(
 
 export PATH="$(printf '%s:' "${paths[@]%/}")$PATH"
 
-export EDITOR=e
+export EDITOR=vim
 
 . $HOME/nix/shell/nix.bash
 

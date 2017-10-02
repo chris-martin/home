@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-env ALTERNATE_EDITOR=vim \
-  emacsclient -s /tmp/emacs$(id -u)/server "$@" || vim "$@"

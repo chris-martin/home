@@ -34,8 +34,6 @@ buildEnv {
     vim sublime3 atom                  # Editors
     jetbrains.idea-community
 
-    my-emacs                           # Emacs
-
     gitAndTools.gitFull                # Git
     gitAndTools.hub
     gitAndTools.git-extras

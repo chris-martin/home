@@ -17,8 +17,6 @@ overrides = (with pkgs; rec {
   # workaround for https://github.com/NixOS/nixpkgs/issues/25880
   inherit (unstable) google-chrome;
 
-  my-emacs = (import "${config.home}/emacs/emacs.nix") unstable.pkgs;
-
   # Python packages is its own separate bucket of overrides
   myPython27Packages = pkgs.python27Packages //
     (callPackage pkgs/python-packages.nix {
