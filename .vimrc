@@ -55,3 +55,6 @@ set incsearch
 filetype on
 
 filetype plugin on
+
+set ttymouse=xterm2
+set mouse=a
