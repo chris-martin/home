@@ -9,6 +9,7 @@ set fish_user_paths       \
   $HOME/.local/share/npm/node_modules/.bin
 
 set -x EDITOR vim
+set -x GIT_EDITOR 'vim +start'
 
 set -x GOPATH ~/go
 
