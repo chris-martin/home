@@ -1,5 +1,13 @@
 set lbr
 
+" Rename : to ; so you can type it more easily without shift
+nnoremap ; :
+
+" Aliases for common typos
+command Wq wq
+command WQ wq
+command Q q
+
 function! s:Saving_scroll(cmd)
   let save_scroll = &scroll
   execute 'normal! ' . a:cmd
