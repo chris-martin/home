@@ -20,16 +20,11 @@ buildEnv {
 
     google-chrome                      # Chrome
 
-    gnupg1compat keepassx2 easyrsa     # Crypto
-    libbitcoin-explorer cryptsetup
-
-    sassc                              # CSS
+    keepassx2 cryptsetup               # Crypto
 
     meld                               # Diff tools
 
     evince eog okular                  # Doc/image viewers
-
-    bridge-utils docker-compose        # Docker
 
     vim sublime3 atom                  # Editors
     jetbrains.idea-community
@@ -39,25 +34,16 @@ buildEnv {
     gitAndTools.git-extras
     gitAndTools.git-bz
 
-    go go2nix                          # Go
-
-    cabal stylish-haskell              # Haskell
-    cabal2nix hasktags
-    pointfree pointful ghc
-    hdevtools hoogle intero
-    stack
+    stack stylish-haskell              # Haskell
+    (haskell.packages.ghc821.ghcWithPackages (p: with p; [
+      ghc cabal-install
+    ]))
 
     curl wget                          # HTTP
 
     gimp imagemagick inkscape          # Image editing
     kcolorchooser pdftk
     graphviz ghostscript
-
-    openjdk8 sbt scala                 # JVM
-
-    nodejs npm2nix grunt bower         # Javascript
-
-    jq                                 # JSON
 
     moc pandora                        # Music
 
@@ -69,7 +55,7 @@ buildEnv {
 
     gparted gptfdisk                   # Partitioning
 
-    python python35Packages.ipython    # Python
+    python35Packages.ipython           # Python
 
     scrot gnome-screenshot             # Screenshots
 
@@ -81,8 +67,6 @@ buildEnv {
 
     htop lsof psmisc pciutils          # System inspection
     baobab ncdu glances
-
-    skype                              # Telephony
 
     transmission_gtk                   # Torrent
 

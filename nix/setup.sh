@@ -56,7 +56,6 @@ git init path/master
   git checkout master
 
   add-branch unstable origin/unstable
-  add-branch release/17.03 origin/release/17.03
   add-branch release/17.09 origin/release/17.09
 
 )
@@ -72,7 +71,6 @@ git init path/master
   }
 
   add-worktree ../unstable unstable
-  add-worktree ../release-17.03 release/17.03
   add-worktree ../release-17.09 release/17.09
 
 )

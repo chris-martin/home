@@ -12,10 +12,12 @@ overrides = (with pkgs; rec {
 
   desktopEnv = callEnv ./desktopEnv.nix;
 
-  inherit (unstable) haskell slack-latex stack jetbrains;
+  inherit (master) secp256k1 gtetrinet tetrinetx jetrix;
+
+  inherit (unstable) stack jetbrains;
 
   # workaround for https://github.com/NixOS/nixpkgs/issues/25880
-  inherit (unstable) google-chrome;
+  #inherit (unstable) google-chrome;
 
   # Python packages is its own separate bucket of overrides
   myPython27Packages = pkgs.python27Packages //
@@ -30,15 +32,8 @@ overrides = (with pkgs; rec {
       self = myPython34Packages;
     });
 
-  ppl-address-book = callPackage ./pkgs/ppl-address-book {};
-
   # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
   google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
-
-  # Gore isn't backported to 16.03, and now it's gone from unstable.
-  # - https://github.com/NixOS/nixpkgs/pull/15440
-  # - https://github.com/NixOS/nixpkgs/commit/08575ee
-  #gore = unstable.goPackages.gore;
 
   # https://github.com/NixOS/nixpkgs/issues/18640
   # tla-plus = callPackage pkgs/tla-plus {};
@@ -55,25 +50,6 @@ overrides = (with pkgs; rec {
 
   chain-core = callPackage pkgs/chain-core {};
 
-  latex = texlive.combine {
-    inherit (texlive) scheme-medium mathabx-type1 latexmk;
-  };
-
-  # Convenience aliases for nested packages
-
-  inherit (pkgsWithOverrides.myPython34Packages) bigchaindb pyethereum;
-
 });
-
-# Ethereum work-in-progress
-#
-# I think we just need unstable here to get gcc49; we may be
-# able to do with with an explicit dependency instead by passing
-# an { stdenv = overrideCC stdenv gcc49; } override on 16.03
-#(with unstable; rec {
-#  ethereum = callPackage ./pkgs/ethereum {
-#    llvm = llvm_38;
-#  };
-#});
 
 in overrides
