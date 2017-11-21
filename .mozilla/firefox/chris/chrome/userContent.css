@@ -1,0 +1,40 @@
+@-moz-document domain(github.com) {
+  .blob-code-inner {
+    font-family: "Fira Code" !important;
+  }
+}
+
+@-moz-document domain(hackage.haskell.org) {
+  #table-of-contents li {
+    line-height: 1.15em;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+  }
+  #table-of-contents ul {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+  .src, pre, code {
+    font-family: "Fira Code" !important;
+  }
+}
+
+@-moz-document domain(stackage.org) {
+  .src, pre, code {
+    font-family: "Fira Code" !important;
+  }
+}
+
+@-moz-document domain(twitter.com) {
+  *[data-global-action="moments"] {
+    display: none;
+  }
+  @media (max-width: 950px) {
+    .dashboard-left {
+      display: none;
+    }
+    .content-main {
+      float: none;
+    }
+  }
+}

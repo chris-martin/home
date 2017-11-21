@@ -130,6 +130,14 @@
 /.moc/*
 !/.moc/config
 
+!/.mozilla
+/.mozilla/*
+!/.mozilla/firefox
+/.mozilla/firefox/*
+!/.mozilla/firefox/chris
+/.mozilla/firefox/chris/*
+!/.mozilla/firefox/chris/chrome
+
 !/.sbt/
 /.sbt/boot/
 /.sbt/0.13/dependency/
