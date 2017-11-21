@@ -134,6 +134,7 @@
 /.mozilla/*
 !/.mozilla/firefox
 /.mozilla/firefox/*
+!/.mozilla/firefox/profiles.ini
 !/.mozilla/firefox/chris
 /.mozilla/firefox/chris/*
 !/.mozilla/firefox/chris/chrome
