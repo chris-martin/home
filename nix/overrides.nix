@@ -16,6 +16,8 @@ overrides = (with pkgs; rec {
 
   inherit (unstable) stack jetbrains nodePackages;
 
+  nix-deploy = unstable.haskellPackages.nix-deploy;
+
   # workaround for https://github.com/NixOS/nixpkgs/issues/25880
   #inherit (unstable) google-chrome;
 
