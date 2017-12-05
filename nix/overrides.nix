@@ -18,9 +18,6 @@ overrides = (with pkgs; rec {
 
   nix-deploy = unstable.haskellPackages.nix-deploy;
 
-  # workaround for https://github.com/NixOS/nixpkgs/issues/25880
-  #inherit (unstable) google-chrome;
-
   # Python packages is its own separate bucket of overrides
   myPython27Packages = pkgs.python27Packages //
     (callPackage pkgs/python-packages.nix {
