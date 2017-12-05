@@ -36,6 +36,12 @@
       "gometalinter-linter"
       "haskell-grammar"
       "language-gfm"
+      "sort-lines"
+      "scratch"
+      "navigator-go"
+      "linter"
+      "language-scala"
+      "git-plus"
     ]
     ignoredNames: [
       ".aws"
