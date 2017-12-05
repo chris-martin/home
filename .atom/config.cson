@@ -75,7 +75,7 @@
     autoIndentOnPaste: false
     backUpBeforeSaving: true
     fontFamily: "\"Fira Code\""
-    fontSize: 17
+    fontSize: 16
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
