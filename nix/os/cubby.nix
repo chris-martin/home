@@ -125,6 +125,16 @@ in {
 
 
   #-----------------------------------------------------------------------------
+  #  Hoogle
+  #-----------------------------------------------------------------------------
+
+  services.hoogle.enable = true;
+  services.hoogle.port = 13723;
+  services.hoogle.haskellPackages = pkgsConfig.unstable.haskellPackages;
+  services.hoogle.packages = p: [ p.bytestring p.lens p.optparse-applicative p.optparse-generic p.text ];
+
+
+  #-----------------------------------------------------------------------------
   #  VirtualBox
   #-----------------------------------------------------------------------------
 
