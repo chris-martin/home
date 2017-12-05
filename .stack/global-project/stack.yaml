@@ -1,14 +1,7 @@
-# This is the implicit global project's config file, which is only used when
-# 'stack' is run outside of a real project.  Settings here do _not_ act as
-# defaults for all projects.  To change stack's default settings, edit
-# '/home/chris/.stack/config.yaml' instead.
-#
-# For more information about stack's configuration, see
-# http://docs.haskellstack.org/en/stable/yaml_configuration/
-#
-flags: {}
-extra-package-dbs: []
+resolver: nightly-2017-11-17
+
 packages: []
+
 extra-deps:
   - diagrams-pgf-1.4
   - generic-lens-0.2.0.0
@@ -17,4 +10,3 @@ extra-deps:
   - texrunner-0.0.1.1
   - sr-extra-1.46.3.2
   - X11-extras-0.4
-resolver: lts-9.0
