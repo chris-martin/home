@@ -16,6 +16,8 @@ overrides = (with pkgs; rec {
 
   inherit (unstable) stack jetbrains;
 
+  inherit (unstable) firefox;
+
   # workaround for https://github.com/NixOS/nixpkgs/issues/25880
   #inherit (unstable) google-chrome;
 
