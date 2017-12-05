@@ -12,16 +12,15 @@ overrides = (with pkgs; rec {
 
   desktopEnv = callEnv ./desktopEnv.nix;
 
-  inherit (master) secp256k1 gtetrinet tetrinetx jetrix;
+  inherit (master) secp256k1 tetrinetx jetrix;
 
-  inherit (unstable) stack jetbrains;
+  inherit (unstable) stack jetbrains nodePackages gtetrinet;
+
+  nix-deploy = unstable.haskellPackages.nix-deploy;
 
   inherit (unstable) firefox;
 
   inherit (unstable) cabal2nix;
-
-  # workaround for https://github.com/NixOS/nixpkgs/issues/25880
-  #inherit (unstable) google-chrome;
 
   # Python packages is its own separate bucket of overrides
   myPython27Packages = pkgs.python27Packages //
@@ -35,9 +34,6 @@ overrides = (with pkgs; rec {
       python = python34;
       self = myPython34Packages;
     });
-
-  # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
-  google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
 
   # https://github.com/NixOS/nixpkgs/issues/18640
   # tla-plus = callPackage pkgs/tla-plus {};

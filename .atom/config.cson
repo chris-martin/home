@@ -36,6 +36,12 @@
       "gometalinter-linter"
       "haskell-grammar"
       "language-gfm"
+      "sort-lines"
+      "scratch"
+      "navigator-go"
+      "linter"
+      "language-scala"
+      "git-plus"
     ]
     ignoredNames: [
       ".aws"
@@ -69,7 +75,7 @@
     autoIndentOnPaste: false
     backUpBeforeSaving: true
     fontFamily: "\"Fira Code\""
-    fontSize: 17
+    fontSize: 16
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
