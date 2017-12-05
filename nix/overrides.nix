@@ -12,9 +12,9 @@ overrides = (with pkgs; rec {
 
   desktopEnv = callEnv ./desktopEnv.nix;
 
-  inherit (master) secp256k1 gtetrinet tetrinetx jetrix;
+  inherit (master) secp256k1 tetrinetx jetrix;
 
-  inherit (unstable) stack jetbrains nodePackages;
+  inherit (unstable) stack jetbrains nodePackages gtetrinet;
 
   nix-deploy = unstable.haskellPackages.nix-deploy;
 
