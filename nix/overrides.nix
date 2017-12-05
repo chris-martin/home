@@ -31,9 +31,6 @@ overrides = (with pkgs; rec {
       self = myPython34Packages;
     });
 
-  # App engine init: https://github.com/NixOS/nixpkgs/pull/14237
-  google-app-engine-sdk = callPackage ./pkgs/google-app-engine-sdk {};
-
   # https://github.com/NixOS/nixpkgs/issues/18640
   # tla-plus = callPackage pkgs/tla-plus {};
 
