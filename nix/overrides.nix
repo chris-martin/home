@@ -14,7 +14,7 @@ overrides = (with pkgs; rec {
 
   inherit (master) secp256k1 gtetrinet tetrinetx jetrix;
 
-  inherit (unstable) stack jetbrains;
+  inherit (unstable) stack jetbrains nodePackages;
 
   # workaround for https://github.com/NixOS/nixpkgs/issues/25880
   #inherit (unstable) google-chrome;
