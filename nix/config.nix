@@ -1,29 +1,76 @@
 let
 
-home = builtins.getEnv "HOME";
-
-simple-config = {
-
-  inherit home;
-  hostName = builtins.getEnv "HOSTNAME";
-
-  allowUnfree = true;
-
-  chromium = {
-    enablePepperFlash = true;
-    enablePepperPDF = true;
-    enableWideVine = true;
+  # all of the configuration except the package overrides
+  config-without-overrides = {
+    allowUnfree = true;
+    chromium = {
+      enablePepperFlash = true;
+      enablePepperPDF = true;
+      enableWideVine = true;
+    };
   };
-};
 
-config = simple-config // {
-  packageOverrides = pkgs: import ./overrides.nix {
-    inherit pkgs config unstable master;
+  # packages defined locally that aren't in nixpkgs
+  new-packages = pkgs: {
+    desktop-env = pkgs.callPackage ./pkgs/desktop-env { };
+    fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
+    jetrix = pkgs.callPackage ./pkgs/jetrix { };
+    pandora = pkgs.callPackage ./pkgs/pandora { };
+    tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
+    wordlist = pkgs.callPackage ./pkgs/wordlist { };
   };
-};
 
-unstable = (import <unstable> { config = simple-config; });
+  # slightly more convenient aliases for packages defined in nixpkgs
+  aliases = pkgs: {
+    choose = pkgs.haskell.lib.justStaticExecutables pkgs.haskellPackages.choose;
+    inherit (pkgs.gnome3) cheese;
+    inherit (pkgs.gnome3) eog;
+    inherit (pkgs.gnome3) file-roller;
+    inherit (pkgs.python27Packages) glances;
+    inherit (pkgs.gnome3) gnome-screenshot;
+    intellij = pkgs.jetbrains.idea-community;
+    nix-deploy = pkgs.haskellPackages.nix-deploy;
+    stylish-haskell = pkgs.haskell.lib.justStaticExecutables pkgs.haskellPackages.stylish-haskell;
+    inherit (pkgs.xorg) xkill;
+  };
 
-master = (import <master> { config = simple-config; });
+  # the packages that we cherry-pick from the 'unstable' channel
+  from-unstable = pkgs: {
+    inherit (unstable)
+      cabal2nix
+      firefox
+      gtetrinet
+      intellij
+      nix-deploy
+      nodePackages
+      secp256k1
+      stack
+      ;
+  };
+
+  # all of the package overrides
+  package-overrides = pkgs:
+    new-packages pkgs //
+    aliases pkgs //
+    from-unstable pkgs //
+    { nixpkgs-unstable = unstable; };
+
+  # the full nixpkgs configuration
+  config =
+    config-without-overrides //
+    { packageOverrides = package-overrides; };
+
+  # the package overrides for the 'unstable' channel
+  unstable-package-overrides = pkgs:
+    new-packages pkgs //
+    aliases pkgs;
+
+  # the nixpkgs configuration we use to instantiate the package set from the 'unstable' channel
+  config-for-unstable =
+    config-without-overrides //
+    { packageOverrides = unstable-package-overrides; };
+
+  # the package set from the 'unstable' channel
+  unstable = import <unstable> { config = config-for-unstable; };
 
 in config

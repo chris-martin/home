@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!DOCTYPE tetrinet-channels PUBLIC "-//LFJR//Jetrix Channels//EN" "http://jetrix.sourceforge.net/dtd/tetrinet-channels.dtd">
+
+<tetrinet-channels>
+
+  <!-- Message Of The Day -->
+  <motd><![CDATA[
+<b>
+Welcome on <b>Jetrix TetriNET Server</b>!
+<u><blue>http://jetrix.sourceforge.net/</blue></u>
+<b>
+  ]]></motd>
+
+  <!-- Channel filters -->
+  <filter-definitions>
+    <alias name="flood"        class="net.jetrix.filter.FloodFilter"/>
+    <alias name="start"        class="net.jetrix.filter.StartFilter"/>
+    <alias name="amplifier"    class="net.jetrix.filter.AmplifierFilter"/>
+    <alias name="ping"         class="net.jetrix.filter.PingFilter"/>
+    <alias name="7tetris"      class="net.jetrix.filter.TetrisFilter"/>
+    <alias name="stats"        class="net.jetrix.filter.StatsFilter"/>
+    <alias name="logo"         class="net.jetrix.filter.LogoFilter"/>
+    <alias name="sudden-death" class="net.jetrix.filter.SuddenDeathFilter"/>
+    <alias name="command"      class="net.jetrix.filter.CommandFilter"/>
+  </filter-definitions>
+
+  <!-- Global filters -->
+  <default-filters>
+    <filter name="flood">
+      <param name="capacity" value="8"/>
+      <param name="delay"    value="5000"/>
+    </filter>
+    <filter name="start">
+      <param name="delay" value="10000"/>
+    </filter>
+    <filter name="ping"/>
+    <filter name="stats"/>
+    <filter name="logo"/>
+    <filter name="sudden-death"/>
+  </default-filters>
+
+  <!-- Winlists -->
+  <winlists>
+    <winlist name="default" class="net.jetrix.winlist.SimpleWinlist">
+      <param name="display.score" value="true"/>
+    </winlist>
+    <winlist name="pure" class="net.jetrix.winlist.SimpleWinlist">
+      <param name="display.score" value="true"/>
+    </winlist>
+    <winlist name="duel" class="net.jetrix.winlist.SimpleWinlist">
+      <param name="display.score" value="true"/>
+    </winlist>
+  </winlists>
+
+  <!-- Default game settings -->
+  <default-settings>
+    <!-- What level each player starts at -->
+    <starting-level>1</starting-level>
+
+    <!-- How many lines to make before player level increases -->
+    <lines-per-level>2</lines-per-level>
+
+    <!-- Number of levels to increase each time -->
+    <level-increase>1</level-increase>
+
+    <!-- Lines to make to get a special block -->
+    <lines-per-special>2</lines-per-special>
+
+    <!-- Number of special blocks added each time -->
+    <special-added>1</special-added>
+
+    <!-- Capacity of Special block inventory -->
+    <special-capacity>18</special-capacity>
+
+    <!-- Play by classic rules? -->
+    <classic-rules>true</classic-rules>
+
+    <!-- Average together all player's game level? -->
+    <average-levels>true</average-levels>
+
+    <!-- Same sequence of blocks for all players? (tetrinet 1.14 clients only) -->
+    <same-blocks>true</same-blocks>
+
+    <block-occurancy>
+      <line>15</line>
+      <square>15</square>
+      <leftl>14</leftl>
+      <rightl>14</rightl>
+      <leftz>14</leftz>
+      <rightz>14</rightz>
+      <halfcross>14</halfcross>
+    </block-occurancy>
+
+    <special-occurancy>
+      <addline>31</addline>
+      <clearline>21</clearline>
+      <nukefield>1</nukefield>
+      <randomclear>13</randomclear>
+      <switchfield>1</switchfield>
+      <clearspecial>14</clearspecial>
+      <gravity>1</gravity>
+      <quakefield>7</quakefield>
+      <blockbomb>11</blockbomb>
+    </special-occurancy>
+
+    <!-- Sudden death parameters -->
+    <sudden-death>
+      <!-- Time in seconds before the sudden death begins, 0 to disable the sudden death -->
+      <time>600</time>
+
+      <!-- The message displayed when the sudden death begins. Use "key:" prefix to display an internationalized message -->
+      <message>key:filter.suddendeath.message</message>
+
+      <!-- The delay in seconds between lines additions -->
+      <delay>10</delay>
+
+      <!-- The number of lines added -->
+      <lines-added>1</lines-added>
+    </sudden-death>
+
+  </default-settings>
+
+
+  <channels>
+    <channel name="tetrinet1">
+      <description>2:1</description>
+      <winlist name="default"/>
+    </channel>
+
+    <channel name="tetrinet2">
+      <description>2:1</description>
+      <winlist name="default"/>
+    </channel>
+
+    <channel name="tetrinet3">
+      <description>2:1</description>
+      <winlist name="default"/>
+    </channel>
+
+    <channel name="pure">
+      <description>Pure</description>
+      <winlist name="pure"/>
+      <settings>
+        <special-added>0</special-added>
+      </settings>
+    </channel>
+
+    <channel name="pure2">
+      <description>Pure</description>
+      <winlist name="pure"/>
+      <settings>
+        <special-added>0</special-added>
+      </settings>
+    </channel>
+
+    <channel name="custom">
+      <description>Custom mode</description>
+      <topic>Type /mode to change the settings</topic>
+      <filters>
+        <filter name="command">
+          <param name="class" value="net.jetrix.commands.ModeCommand"/>
+        </filter>
+      </filters>
+    </channel>
+
+    <channel name="duel1">
+      <description>Duel 2:1</description>
+      <max-players>2</max-players>
+      <winlist name="duel"/>
+    </channel>
+
+    <channel name="duel2">
+      <description>Duel 2:1</description>
+      <max-players>2</max-players>
+      <winlist name="duel"/>
+    </channel>
+
+    <channel name="pureduel">
+      <description>Pure - No Specials</description>
+      <max-players>2</max-players>
+      <winlist name="default"/>
+      <settings>
+        <special-added>0</special-added>
+        <same-blocks>true</same-blocks>
+      </settings>
+    </channel>
+
+    <channel name="sticks">
+      <description>Sticks Only</description>
+      <settings>
+        <special-added>0</special-added>
+        <block-occurancy>
+          <line>100</line>
+        </block-occurancy>
+      </settings>
+    </channel>
+
+    <channel name="SnS">
+      <description><![CDATA[Sticks <i>and</i> Squares]]></description>
+      <settings>
+        <special-added>0</special-added>
+        <block-occurancy>
+          <line>50</line>
+          <square>50</square>
+        </block-occurancy>
+      </settings>
+    </channel>
+
+    <channel name="7Tetris">
+      <description>7 tetris to win!</description>
+      <topic>
+<![CDATA[
+<b>
+Welcome to the 7 tetris channel! The first player completing 7 tetris
+win. There is no special in this game, and the lines are not added to
+your opponents. Good luck!
+<b>
+]]>
+      </topic>
+      <settings>
+        <special-added>0</special-added>
+      </settings>
+      <filters>
+        <filter name="7tetris"/>
+      </filters>
+    </channel>
+
+    <channel name="admins">
+      <description>Administrators' Lair</description>
+      <access-level>1</access-level>
+      <idle>true</idle>
+    </channel>
+
+  </channels>
+
+</tetrinet-channels>

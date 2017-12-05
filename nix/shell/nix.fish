@@ -1,10 +1,6 @@
+set -x NIX_PATH "$HOME/nix/path"
 set -x NIXPKGS_CONFIG "$HOME/nix/config.nix"
-
-set NIXOS_CONFIG "$HOME/nix/os/config.nix"
-
-set -x NIX_PATH $HOME/nix/path
-
-set -x NIXOS_PATH $HOME/nix/path:nixos-config=$NIXOS_CONFIG
+set -x NIXOS_CONFIG "$HOME/nix/os/config.nix"
 
 
 #-------------------------------------------------------------------
@@ -14,8 +10,17 @@ set -x NIXOS_PATH $HOME/nix/path:nixos-config=$NIXOS_CONFIG
 function nix
   switch $argv[1]
 
+  case channels
+    nix-channel --list
+
+  case update
+    nix-channel --update
+
   case rebuild-os
-    sudo env NIX_PATH=$NIXOS_PATH nixos-rebuild switch
+    sudo env \
+      NIX_PATH="$NIX_PATH" \
+      NIXOS_CONFIG="$NIXOS_CONFIG" \
+      nixos-rebuild switch
 
   case packages
     nix-env -q
