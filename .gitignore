@@ -169,7 +169,6 @@
 /nix/os/secret.nix
 /nix/.idea
 /nix/nixpkgs/
-/nix/path/
 
 !/.idea/
 /.idea/*
