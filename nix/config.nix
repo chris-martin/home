@@ -21,18 +21,22 @@ let
   };
 
   # slightly more convenient aliases for packages defined in nixpkgs
-  aliases = pkgs: {
-    choose = pkgs.haskell.lib.justStaticExecutables pkgs.haskellPackages.choose;
-    inherit (pkgs.gnome3) cheese;
-    inherit (pkgs.gnome3) eog;
-    inherit (pkgs.gnome3) file-roller;
-    inherit (pkgs.python27Packages) glances;
-    inherit (pkgs.gnome3) gnome-screenshot;
-    intellij = pkgs.jetbrains.idea-community;
-    nix-deploy = pkgs.haskellPackages.nix-deploy;
-    stylish-haskell = pkgs.haskell.lib.justStaticExecutables pkgs.haskellPackages.stylish-haskell;
-    inherit (pkgs.xorg) xkill;
-  };
+  aliases = pkgs:
+    let
+      haskell-app = name:
+        pkgs.haskell.lib.justStaticExecutables pkgs.haskellPackages.${name};
+    in {
+      choose = haskell-app "choose";
+      inherit (pkgs.gnome3) cheese;
+      inherit (pkgs.gnome3) eog;
+      inherit (pkgs.gnome3) file-roller;
+      inherit (pkgs.python27Packages) glances;
+      inherit (pkgs.gnome3) gnome-screenshot;
+      intellij = pkgs.jetbrains.idea-community;
+      nix-deploy = haskell-app "nix-deploy";
+      stylish-haskell = haskell-app "stylish-haskell";
+      inherit (pkgs.xorg) xkill;
+    };
 
   # the packages that we cherry-pick from the 'unstable' channel
   from-unstable = pkgs: {
