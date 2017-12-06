@@ -4,13 +4,8 @@
 
 { config, pkgs, ... }:
 
-let
-
-  pkgsConfig = import ../config.nix;
-
-in {
-
-  nixpkgs.config = pkgsConfig;
+{
+  nixpkgs.config.allowUnfree = true;
 
   imports = [ ./hardware.nix ./secret.nix ];
 
