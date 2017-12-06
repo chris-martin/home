@@ -4,13 +4,8 @@
 
 { config, pkgs, ... }:
 
-let
-
-  pkgsConfig = import ../config.nix;
-
-in {
-
-  nixpkgs.config = pkgsConfig;
+{
+  nixpkgs.config.allowUnfree = true;
 
   imports = [ ./hardware.nix ./secret.nix ];
 
@@ -130,7 +125,7 @@ in {
 
   services.hoogle.enable = true;
   services.hoogle.port = 13723;
-  services.hoogle.haskellPackages = pkgs.nixpkgs-unstable.haskellPackages;
+  services.hoogle.haskellPackages = (import <unstable> { }).haskellPackages;
   services.hoogle.packages = p: [ p.bytestring p.lens p.optparse-applicative p.optparse-generic p.text ];
 
 
