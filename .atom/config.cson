@@ -42,6 +42,7 @@
       "linter"
       "language-scala"
       "git-plus"
+      "hard-wrap"
     ]
     ignoredNames: [
       ".aws"
