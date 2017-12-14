@@ -80,6 +80,7 @@
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
+    softWrapAtPreferredLineLength: true
     zoomFontWhenCtrlScrolling: false
   "git-plus":
     general:
