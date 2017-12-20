@@ -109,6 +109,7 @@
   </action>
   <action id="GotoSuperMethod" />
   <action id="Images.Thumbnails.Hide" />
+  <action id="InsertLiveTemplate" />
   <action id="OpenFile">
     <keyboard-shortcut first-keystroke="shift ctrl o" />
   </action>
@@ -116,6 +117,7 @@
   <action id="Refresh" />
   <action id="Rerun" />
   <action id="SendEOF" />
+  <action id="SurroundWithLiveTemplate" />
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>
