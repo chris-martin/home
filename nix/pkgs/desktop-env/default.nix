@@ -76,7 +76,7 @@ pkgs.buildEnv {
     pkgs.sshfsFuse # SSH mount
     pkgs.stack # Haskell build tool
     pkgs.stylish-haskell # Haskell code formatter
-    pkgs.sublime3 # text editor
+    pkgs.sublime # text editor
     pkgs.tesseract # OCR
     pkgs.tmux
     pkgs.transmission_gtk # bittorrent
