@@ -28,6 +28,7 @@ let
     in {
       choose = haskell-app "choose";
       inherit (pkgs.gnome3) cheese;
+      doctest = haskell-app "doctest";
       inherit (pkgs.gnome3) eog;
       inherit (pkgs.gnome3) file-roller;
       inherit (pkgs.python27Packages) glances;
