@@ -68,8 +68,8 @@
     ]
     projectHome: "/home/chris/"
     themes: [
-      "glacier-dark-ui"
-      "glacier-syntax"
+      "atom-dark-ui"
+      "atom-dark-syntax"
     ]
   editor:
     atomicSoftTabs: false

@@ -129,36 +129,6 @@
 
 
   #-----------------------------------------------------------------------------
-  #  Emacs
-  #-----------------------------------------------------------------------------
-
-  systemd.user.services.emacs = {
-
-    description = "Emacs Daemon";
-
-    environment = {
-      GTK_DATA_PREFIX = config.system.path;
-      SSH_AUTH_SOCK   = "%t/ssh-agent";
-      GTK_PATH        = "${config.system.path}/lib/gtk-3.0:${config.system.path}/lib/gtk-2.0";
-      NIX_PROFILES    = "${pkgs.lib.concatStringsSep " " config.environment.profiles}";
-      TERMINFO_DIRS   = "/run/current-system/sw/share/terminfo";
-      ASPELL_CONF     = "dict-dir /run/current-system/sw/lib/aspell";
-    };
-
-    serviceConfig = {
-      Type      = "forking";
-      ExecStart = "${pkgs.bash}/bin/bash -c 'source ${config.system.build.setEnvironment}; emacs --daemon --no-desktop'";
-      ExecStop  = "${pkgs.emacs}/bin/emacsclient --eval '(kill-emacs)'";
-      Restart   = "always";
-    };
-
-    wantedBy = [ "default.target" ];
-  };
-
-  systemd.services.emacs.enable = true;
-
-
-  #-----------------------------------------------------------------------------
   #  VirtualBox
   #-----------------------------------------------------------------------------
 
@@ -265,7 +235,7 @@
   #  Postgres
   #-----------------------------------------------------------------------------
 
-  services.postgresql.enable = true;
+  services.postgresql.enable = false;
   services.postgresql.package = pkgs.postgresql94;
   services.postgresql.authentication = "local all all ident";
 
@@ -274,7 +244,7 @@
   #  NixOS
   #-----------------------------------------------------------------------------
 
-  system.stateVersion = "17.03";
+  system.stateVersion = "17.09";
 
   # https://stackoverflow.com/questions/33180784
   nix.extraOptions = "binary-caches-parallel-connections = 5";

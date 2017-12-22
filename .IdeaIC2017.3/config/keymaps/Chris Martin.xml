@@ -100,6 +100,7 @@
   <action id="EditorDuplicate" />
   <action id="EditorSelectWord" />
   <action id="FileChooser.GotoDesktop" />
+  <action id="FileChooser.TogglePathShowing" />
   <action id="FindUsages">
     <keyboard-shortcut first-keystroke="ctrl u" />
   </action>
@@ -108,12 +109,15 @@
   </action>
   <action id="GotoSuperMethod" />
   <action id="Images.Thumbnails.Hide" />
+  <action id="InsertLiveTemplate" />
   <action id="OpenFile">
     <keyboard-shortcut first-keystroke="shift ctrl o" />
   </action>
+  <action id="ParameterInfo" />
   <action id="Refresh" />
   <action id="Rerun" />
   <action id="SendEOF" />
+  <action id="SurroundWithLiveTemplate" />
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>
@@ -128,6 +132,9 @@
   </action>
   <action id="SwitchUp">
     <keyboard-shortcut first-keystroke="shift alt up" />
+  </action>
+  <action id="TogglePresentationMode">
+    <keyboard-shortcut first-keystroke="ctrl p" />
   </action>
   <action id="UsageView.Rerun" />
   <action id="Vcs.UpdateProject" />
