@@ -17,6 +17,7 @@ let
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
+    text-replace = pkgs.callPackage ./pkgs/text-replace { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
   };
 
