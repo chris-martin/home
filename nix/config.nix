@@ -50,7 +50,6 @@ let
       nix-deploy
       nodePackages
       secp256k1
-      stack
       ;
   };
 
