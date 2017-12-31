@@ -23,22 +23,32 @@ let
 
   # slightly more convenient aliases for packages defined in nixpkgs
   aliases = pkgs:
-    let
-      haskell-app = name:
-        pkgs.haskell.lib.justStaticExecutables pkgs.haskellPackages.${name};
-    in {
-      choose = haskell-app "choose";
+    {
       inherit (pkgs.gnome3) cheese;
-      doctest = haskell-app "doctest";
       inherit (pkgs.gnome3) eog;
       inherit (pkgs.gnome3) file-roller;
       inherit (pkgs.python27Packages) glances;
       inherit (pkgs.gnome3) gnome-screenshot;
       intellij = pkgs.jetbrains.idea-community;
-      nix-deploy = haskell-app "nix-deploy";
-      stylish-haskell = haskell-app "stylish-haskell";
       inherit (pkgs.xorg) xkill;
     };
+
+  haskell-apps = pkgs:
+    let
+      package-names = [
+        "choose"
+        "doctest"
+        "hoogle"
+        "nix-deploy"
+        "stylish-haskell"
+      ];
+      f = x: {
+        name = x;
+        value = pkgs.haskell.lib.justStaticExecutables
+                  pkgs.haskellPackages.${x};
+      };
+    in
+      builtins.listToAttrs (builtins.map f package-names);
 
   # the packages that we cherry-pick from the 'unstable' channel
   from-unstable = pkgs: {
@@ -55,8 +65,7 @@ let
 
   # all of the package overrides
   package-overrides = pkgs:
-    new-packages pkgs //
-    aliases pkgs //
+    unstable-package-overrides pkgs //
     from-unstable pkgs //
     { nixpkgs-unstable = unstable; };
 
@@ -68,7 +77,8 @@ let
   # the package overrides for the 'unstable' channel
   unstable-package-overrides = pkgs:
     new-packages pkgs //
-    aliases pkgs;
+    aliases pkgs //
+    haskell-apps pkgs;
 
   # the nixpkgs configuration we use to instantiate the package set from the 'unstable' channel
   config-for-unstable =
