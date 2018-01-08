@@ -16,6 +16,7 @@ let
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
+    slack-latex = pkgs.callPackage ./pkgs/slack-latex { };
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
     text-replace = pkgs.callPackage ./pkgs/text-replace { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
