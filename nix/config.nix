@@ -40,6 +40,7 @@ let
         "doctest"
         "hoogle"
         "nix-deploy"
+        "pandoc-sidenote"
         "stylish-haskell"
       ];
       f = x: {
