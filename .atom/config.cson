@@ -86,6 +86,9 @@
     general:
       _analyticsUserId: "ece2659b-43fb-401a-a999-f41488fc4170"
   "haskell-ghc-mod": {}
+  "ide-haskell-hie":
+    hiePath: "/home/chris/.local/bin/hie"
+    isDebug: true
   latex: {}
   "linter-scalac":
     compileAllClassesOnLint: true
