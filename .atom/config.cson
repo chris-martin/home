@@ -19,7 +19,6 @@
       "gofmt"
       "godoc"
       "go-get"
-      "go-debug"
       "go-config"
       "builder-go"
       "autocomplete-go"
