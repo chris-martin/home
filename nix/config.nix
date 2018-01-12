@@ -39,6 +39,7 @@ let
       package-names = [
         "choose"
         "doctest"
+        "ghcid"
         "hoogle"
         "nix-deploy"
         "pandoc-sidenote"
