@@ -26,7 +26,7 @@
   #-----------------------------------------------------------------------------
 
   environment.systemPackages = with pkgs; [
-    android-udev-rules curl docker gparted gptfdisk
+    android-udev-rules curl gparted gptfdisk
     htop lsof man_db openssl tree vim wget which
   ];
 
