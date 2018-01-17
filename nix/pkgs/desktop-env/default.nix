@@ -13,6 +13,7 @@ pkgs.buildEnv {
     pkgs.atom # text editor
     pkgs.awscli
     pkgs.baobab # disk usage inspector
+    pkgs.cabal-install
     pkgs.cabal2nix
     pkgs.cheese # Camera GUI
     pkgs.choose # Chooses random elements from a stream
@@ -41,7 +42,7 @@ pkgs.buildEnv {
     pkgs.gparted # partitioning tool
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
-    (pkgs.haskell.packages.ghc821.ghcWithPackages (p: [ p.ghc p.cabal-install ])) # GHC and Cabal
+    pkgs.ghc
     pkgs.htop
     pkgs.imagemagick # CLI image editor
     pkgs.inkscape # SVG editor

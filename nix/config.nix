@@ -59,6 +59,7 @@ let
       cabal-install
       cabal2nix
       firefox
+      ghc
       gtetrinet
       intellij
       nix-deploy
