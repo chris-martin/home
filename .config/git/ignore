@@ -16,6 +16,7 @@ ideaHaskellLib
 # Haskell
 .cabal-sandbox
 .stack-work
+dist-newstyle
 
 # Emacs
 .projectile
