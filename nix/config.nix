@@ -56,6 +56,7 @@ let
   # the packages that we cherry-pick from the 'unstable' channel
   from-unstable = pkgs: {
     inherit (unstable)
+      cabal-install
       cabal2nix
       firefox
       gtetrinet
