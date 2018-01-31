@@ -41,6 +41,7 @@ let
         "doctest"
         "ghcid"
         "hoogle"
+        "hindent"
         "nix-deploy"
         "pandoc-sidenote"
         "stylish-haskell"
