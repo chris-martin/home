@@ -37,7 +37,7 @@ let
   haskell-apps = pkgs:
     let
       package-names = [
-        "choose"
+        "choose-exe"
         "doctest"
         "ghcid"
         "hoogle"

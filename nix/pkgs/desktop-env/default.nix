@@ -16,7 +16,7 @@ pkgs.buildEnv {
     pkgs.cabal-install
     pkgs.cabal2nix
     pkgs.cheese # Camera GUI
-    pkgs.choose # Chooses random elements from a stream
+    pkgs.choose-exe # Chooses random elements from a stream
     pkgs.cryptsetup # LUKS disk encryption
     pkgs.curl
     pkgs.entr
