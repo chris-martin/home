@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-: ${RABBITMQ_VERSION:="3.4.3"}
-python .rabbitmq/$RABBITMQ_VERSION/var/lib/rabbitmq/mnesia/rabbit@$HOSTNAME-plugins-expand/rabbitmq_management-$RABBITMQ_VERSION/priv/www/cli/rabbitmqadmin "$@"

@@ -81,9 +81,6 @@
     softWrap: true
     softWrapAtPreferredLineLength: true
     zoomFontWhenCtrlScrolling: false
-  "git-plus":
-    general:
-      _analyticsUserId: "ece2659b-43fb-401a-a999-f41488fc4170"
   "haskell-ghc-mod": {}
   "ide-haskell-hie":
     hiePath: "/home/chris/.local/bin/hie"
@@ -99,3 +96,6 @@
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+".c2hs.source":
+  editor:
+    autoIndent: false

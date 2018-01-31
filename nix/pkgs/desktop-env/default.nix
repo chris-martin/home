@@ -28,6 +28,7 @@ pkgs.buildEnv {
     pkgs.fish # shell
     pkgs.fullwidth # converts strings to their fullwidth forms
     pkgs.gcc # C compiler
+    pkgs.ghcid # Haskell GHCi daemon
     pkgs.ghostscript
     pkgs.gimp # umage editor
     pkgs.gitAndTools.gitFull
