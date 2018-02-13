@@ -1,11 +1,9 @@
-resolver: nightly-2018-01-01
+resolver: lts-10.5
 
 packages: []
 
 extra-deps:
   - diagrams-pgf-1.4
-  - generic-lens-0.2.0.0
-  - hedgehog-0.5
   - ipprint-0.6
   - texrunner-0.0.1.1
   - sr-extra-1.46.3.2
