@@ -60,6 +60,7 @@ let
     inherit (unstable)
       cabal-install
       cabal2nix
+      doctest
       firefox
       ghc
       gtetrinet
