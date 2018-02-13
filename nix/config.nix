@@ -65,6 +65,7 @@ let
       gtetrinet
       intellij
       nix-deploy
+      nixUnstable
       nodePackages
       secp256k1
       stack2nix
