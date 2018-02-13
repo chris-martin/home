@@ -13,6 +13,7 @@ let
   # packages defined locally that aren't in nixpkgs
   new-packages = pkgs: {
     desktop-env = pkgs.callPackage ./pkgs/desktop-env { };
+    ede = pkgs.callPackages ./pkgs/ede { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
