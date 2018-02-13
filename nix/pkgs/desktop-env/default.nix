@@ -83,6 +83,7 @@ pkgs.buildEnv {
     pkgs.stylish-haskell # Haskell code formatter
     pkgs.sublime # text editor
     pkgs.tesseract # OCR
+    pkgs.text-replace
     pkgs.tmux
     pkgs.transmission_gtk # bittorrent
     pkgs.tree
