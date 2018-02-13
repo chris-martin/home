@@ -38,10 +38,11 @@ let
   haskell-apps = pkgs:
     let
       package-names = [
-        "choose"
+        "choose-exe"
         "doctest"
         "ghcid"
         "hoogle"
+        "hindent"
         "nix-deploy"
         "pandoc-sidenote"
         "stylish-haskell"
@@ -66,6 +67,8 @@ let
       nix-deploy
       nodePackages
       secp256k1
+      stack2nix
+      yi
       ;
   };
 

@@ -16,7 +16,7 @@ pkgs.buildEnv {
     pkgs.cabal-install
     pkgs.cabal2nix
     pkgs.cheese # Camera GUI
-    pkgs.choose # Chooses random elements from a stream
+    pkgs.choose-exe # Chooses random elements from a stream
     pkgs.cryptsetup # LUKS disk encryption
     pkgs.curl
     pkgs.entr
@@ -92,6 +92,7 @@ pkgs.buildEnv {
     pkgs.which
     pkgs.xclip # CLI utility for the X clipboard
     pkgs.xkill # kill X windows by clicking on them
+    pkgs.yi
     pkgs.zip
   ];
 }

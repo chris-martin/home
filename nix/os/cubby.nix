@@ -11,6 +11,8 @@
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
+  services.keybase.enable = true;
+
 
   #-----------------------------------------------------------------------------
   #  Networking
@@ -120,13 +122,23 @@
 
 
   #-----------------------------------------------------------------------------
+  #  Hydra
+  #-----------------------------------------------------------------------------
+
+  services.hydra.enable = true;
+  services.hydra.hydraURL = "http://localhost:30329";
+  services.hydra.port = 30329;
+  services.hydra.notificationSender = "ch.martin@gmail.com";
+
+
+  #-----------------------------------------------------------------------------
   #  Hoogle
   #-----------------------------------------------------------------------------
 
   services.hoogle.enable = true;
   services.hoogle.port = 13723;
   services.hoogle.haskellPackages = (import <unstable> { }).haskellPackages;
-  services.hoogle.packages = p: [ p.bytestring p.lens p.optparse-applicative p.optparse-generic p.text ];
+  services.hoogle.packages = (import ./hoogle.nix).packages;
 
 
   #-----------------------------------------------------------------------------
