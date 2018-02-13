@@ -63,6 +63,7 @@ let
       doctest
       firefox
       ghc
+      ghcid
       gtetrinet
       intellij
       nix-deploy
