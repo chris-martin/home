@@ -45,6 +45,7 @@ pkgs.buildEnv {
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
     pkgs.ghc
+    pkgs.hindent
     pkgs.htop
     pkgs.imagemagick # CLI image editor
     pkgs.inkscape # SVG editor
