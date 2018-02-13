@@ -14,4 +14,7 @@
     <option name="IS_DND_ENABLED" value="false" />
     <option name="IS_WHEEL_FONTCHANGE_ENABLED" value="true" />
   </component>
+  <component name="XmlEditorOptions">
+    <option name="syncTagEditing" value="false" />
+  </component>
 </application>
