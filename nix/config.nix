@@ -40,6 +40,7 @@ let
       package-names = [
         "choose-exe"
         "doctest"
+        "FractalArt"
         "ghcid"
         "hoogle"
         "hindent"
