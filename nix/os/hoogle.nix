@@ -9,6 +9,7 @@
     p.choose
     p.choose-exe
     p.cookie
+    p.conduit-combinators
     p.containers
     p.data-forest
     p.directory
