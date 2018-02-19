@@ -2,7 +2,7 @@
   packages = p: [
     p.acme-functors
     p.aeson
-    # p.atomic-modify
+    p.atomic-modify
     p.binary
     # p.bricks
     p.bytestring
@@ -10,27 +10,27 @@
     p.choose-exe
     p.cookie
     p.containers
-    # p.data-forest
+    p.data-forest
     p.directory
     p.ede
-    # p.either-list-functions
-    # p.fizzbuzz-as-a-service
+    p.either-list-functions
+    p.fizzbuzz-as-a-service
     p.hedgehog
     p.http-types
-    # p.human-parse
-    # p.human-text
+    p.human-parse
+    p.human-text
     p.lens
     p.loc
     p.loc-test
-    # p.multi-instance
-    # p.mvar-lock
+    p.multi-instance
+    p.mvar-lock
     p.neat-interpolation
     p.network-uri
     p.one-liner
     p.optparse-applicative
     p.optparse-generic
     p.pam
-    # p.pandoc
+    p.pandoc
     p.pandoc-types
     p.partial-semigroup
     p.partial-semigroup-hedgehog
@@ -45,7 +45,7 @@
     p.scotty
     p.stm
     p.text
-    p.text-replace
+    # p.text-replace
     p.time
     p.utf8-string
     p.var-monad
