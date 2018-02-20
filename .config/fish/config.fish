@@ -8,8 +8,8 @@ set fish_user_paths       \
   $HOME/.nix-profile/bin  \
   $HOME/.local/share/npm/node_modules/.bin
 
-set -x EDITOR vim
-set -x GIT_EDITOR 'vim +start'
+set -x EDITOR yi
+set -x GIT_EDITOR yi
 
 set -x GOPATH ~/go
 
