@@ -12,6 +12,9 @@
 !/.tmuxp
 !/.vimrc
 
+!/yi
+/yi/cabal.config
+
 !/.config/
 /.config/*
 !/.config/autostart/

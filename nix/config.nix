@@ -21,6 +21,8 @@ let
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
     text-replace = pkgs.callPackage ./pkgs/text-replace { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
+    yi-chris-martin = pkgs.haskell.lib.justStaticExecutables
+      (pkgs.haskellPackages.callPackage ../yi/yi.nix { });
   };
 
   # slightly more convenient aliases for packages defined in nixpkgs
@@ -73,7 +75,6 @@ let
       secp256k1
       stack2nix
       stylish-haskell
-      yi
       ;
   };
 

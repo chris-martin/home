@@ -96,7 +96,7 @@ pkgs.buildEnv {
     pkgs.which
     pkgs.xclip # CLI utility for the X clipboard
     pkgs.xkill # kill X windows by clicking on them
-    pkgs.yi
+    pkgs.yi-chris-martin
     pkgs.zip
   ];
 }
