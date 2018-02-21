@@ -8,14 +8,13 @@ set fish_user_paths       \
   $HOME/.nix-profile/bin  \
   $HOME/.local/share/npm/node_modules/.bin
 
-set -x EDITOR yi
+set -x EDITOR     yi
 set -x GIT_EDITOR yi
+alias e           yi
 
 set -x GOPATH ~/go
 
 set -x PYTHONSTARTUP $HOME/.config/python
-
-alias e vim
 
 alias trash gvfs-trash
 
