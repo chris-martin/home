@@ -22,10 +22,6 @@ alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
 alias ls 'ls --color --group-directories-first'
 
-function rip-cd
-  abcde -a cddb,read,encode,tag,move,playlist,clean -d /dev/cdrom -o ogg -V
-end
-
 function stylish-haskell --argument dir
   cd "$dir"
   and find . -name "*.hs" -not -path '*/\.*' -exec stylish-haskell -i "{}" \;
@@ -43,17 +39,10 @@ function alias2 --argument alias command
   )"
 end
 
-# https://github.com/fish-shell/fish-shell/issues/838
-function readSilent # prompt targetVar
-    echo -n $argv[1]
-    stty -echo
-    head -n 1 | read -g $argv[2]
-    stty echo
-    echo
-end
-
 source ~/nix/shell/nix.fish
 source ~/.config/fish/bitcoin.fish
 source ~/.config/fish/git.fish
 source ~/.config/fish/oseary.fish
 source ~/.config/fish/prompt.fish
+source ~/.config/fish/readSilent.fish
+source ~/.config/fish/rip-cd.fish
