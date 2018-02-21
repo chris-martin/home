@@ -5,7 +5,7 @@
 mkDerivation {
   pname = "yi-chris-martin";
   version = "0.1.0.0";
-  src = /home/chris/yi;
+  src = builtins.filterSource (path: type: (builtins.substring 0 1 (baseNameOf path) != ".") && (baseNameOf path != "yi.nix")) ./.;
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
