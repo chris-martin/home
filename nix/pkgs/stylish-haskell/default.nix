@@ -1,4 +1,4 @@
-{ writeShellScriptBin, bash, haskell, haskellPackages }:
+{ writeShellScriptBin, haskell, haskellPackages }:
 
 let
   stylish-haskell =

@@ -40,4 +40,3 @@ source ~/.config/fish/git.fish
 source ~/.config/fish/oseary.fish
 source ~/.config/fish/prompt.fish
 source ~/.config/fish/readSilent.fish
-source ~/.config/fish/rip-cd.fish

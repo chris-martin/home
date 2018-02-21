@@ -73,6 +73,7 @@ pkgs.buildEnv {
     pkgs.psmisc
     pkgs.pssh
     pkgs.python35Packages.ipython # Python REPL
+    pkgs.rip-cd
     pkgs.rsync
     pkgs.scrot # screenshot tool
     pkgs.silver-searcher # the "ag" command

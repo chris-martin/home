@@ -17,6 +17,7 @@ let
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
+    rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
     slack-latex = pkgs.callPackage ./pkgs/slack-latex { };
     stylish-haskell = pkgs.callPackage ./pkgs/stylish-haskell { };
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
