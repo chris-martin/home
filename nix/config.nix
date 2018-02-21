@@ -18,6 +18,7 @@ let
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
     slack-latex = pkgs.callPackage ./pkgs/slack-latex { };
+    stylish-haskell = pkgs.callPackage ./pkgs/stylish-haskell { };
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
     text-replace = pkgs.callPackage ./pkgs/text-replace { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
@@ -48,7 +49,6 @@ let
         "hindent"
         "nix-deploy"
         "pandoc-sidenote"
-        "stylish-haskell"
       ];
       f = x: {
         name = x;

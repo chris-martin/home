@@ -22,12 +22,6 @@ alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
 alias ls 'ls --color --group-directories-first'
 
-function stylish-haskell --argument dir
-  pushd "$dir"
-  find . -name "*.hs" -not -path '*/\.*' -exec stylish-haskell -i "{}" \;
-  popd
-end
-
 function alias2 --argument alias command
   alias "$alias" "$command"
 
