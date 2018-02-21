@@ -14,9 +14,14 @@ import System.Environment       (getArgs)
 
 main :: IO ()
 main = do
-  files <- getArgs
+  args <- getArgs
 
   let
+    files = case args of
+              -- If no args are given, open the current directory
+              [] -> ["."]
+              xs -> xs
+
     openFileActions = intersperse (EditorA newTabE)
                         (map (YiA . openNewFile) files)
 
