@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = import ../config.nix;
 
   imports = [ ./hardware.nix ./secret.nix ];
 
