@@ -64,6 +64,7 @@
     p.warp
     p.wreq
     p.yi-core
+    p.yi-keymap-cua
     p.yi-keymap-vim
     p.yi-misc-modes
     p.yi-mode-haskell
