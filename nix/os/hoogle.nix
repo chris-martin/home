@@ -3,6 +3,7 @@
     p.acme-functors
     p.aeson
     p.atomic-modify
+    p.base16-bytestring
     p.binary
     # p.bricks
     p.bytestring
@@ -16,6 +17,7 @@
     p.directory
     p.ede
     p.either-list-functions
+    p.filemanip
     p.fizzbuzz-as-a-service
     p.hedgehog
     p.http-client
