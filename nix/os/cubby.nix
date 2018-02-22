@@ -83,7 +83,7 @@
 
   fonts.fonts = with pkgs; [
     corefonts fira fira-code fira-mono lato inconsolata
-    symbola ubuntu_font_family unifont vistafonts
+    rollandin-emilie symbola ubuntu_font_family unifont vistafonts
   ];
 
 

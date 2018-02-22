@@ -18,6 +18,7 @@ let
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
     rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
+    rollandin-emilie = pkgs.callPackage ./pkgs/rollandin-emilie { };
     slack-latex = pkgs.callPackage ./pkgs/slack-latex { };
     stylish-haskell = pkgs.callPackage ./pkgs/stylish-haskell { };
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
