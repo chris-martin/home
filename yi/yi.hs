@@ -48,11 +48,8 @@ delLine = withCurrentBuffer delLineB
 
 delLineB :: BufferM ()
 delLineB = do
-  e <- atEndB
+  e <- (&&) <$> atEof <*> atSol
   unless e $ do
     r <- inclusiveRegionB =<< regionOfB Line
     lineDown
     deleteRegionB r
-
-atEndB :: BufferM Bool
-atEndB = (&&) <$> atEof <*> atSol
