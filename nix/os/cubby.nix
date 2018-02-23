@@ -125,7 +125,7 @@
   #  Hydra
   #-----------------------------------------------------------------------------
 
-  services.hydra.enable = true;
+  services.hydra.enable = false;
   services.hydra.hydraURL = "http://localhost:30329";
   services.hydra.port = 30329;
   services.hydra.notificationSender = "ch.martin@gmail.com";
