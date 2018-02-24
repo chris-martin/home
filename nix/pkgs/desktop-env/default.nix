@@ -45,6 +45,7 @@ pkgs.buildEnv {
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
     pkgs.ghc
+    pkgs.gnupg
     pkgs.hindent
     pkgs.htop
     pkgs.imagemagick # CLI image editor
@@ -68,6 +69,7 @@ pkgs.buildEnv {
     pkgs.nixops # the Nix ops tool
     pkgs.okular # PDF viewer
     pkgs.pandora # internet music
+    pkgs.pass
     pkgs.pciutils
     pkgs.pdftk
     pkgs.psmisc
