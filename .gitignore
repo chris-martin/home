@@ -8,6 +8,7 @@
 !/.emacs
 !/.gitignore
 !/.latexmkrc
+!/.password-store
 !/.tmux.conf
 !/.tmuxp
 !/.vimrc
