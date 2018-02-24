@@ -21,7 +21,6 @@
 !/.config/dconf/
 /.config/dconf/*
 !/.config/dconf/setup-*.sh
-!/.config/fish/*
 !/.config/git/
 /.config/git/gitk
 !/.config/python/
@@ -34,8 +33,7 @@
 
 !/.config/fish/
 /.config/fish/*
-/.config/fish/fishd.*
-/.config/fish/fish_history
+!/.config/fish/*.fish
 
 !/.config/LightTable/
 /.config/LightTable/*
