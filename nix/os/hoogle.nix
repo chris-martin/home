@@ -49,6 +49,7 @@
     p.QuickCheck
     p.random
     p.resourcet
+    #p.rss
     p.safe-exceptions
     p.scotty
     p.stm
