@@ -5,7 +5,7 @@
     p.atomic-modify
     p.base16-bytestring
     p.binary
-    # p.bricks
+    #p.bricks
     p.bytestring
     p.choose
     p.choose-exe
@@ -20,6 +20,7 @@
     p.filemanip
     p.fizzbuzz-as-a-service
     p.hedgehog
+    #p.hex-text
     p.http-client
     p.http-client-tls
     p.http-conduit
@@ -57,7 +58,7 @@
     p.stripe-haskell
     p.stripe-http-streams
     p.text
-    # p.text-replace
+    p.text-replace
     p.time
     p.transformers
     p.utf8-string
