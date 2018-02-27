@@ -72,7 +72,7 @@ pkgs.buildEnv {
     pkgs.pass
     pkgs.pciutils
     pkgs.pdftk
-    pkgs.psmisc
+    pkgs.psmisc # contains killall
     pkgs.pssh
     pkgs.python35Packages.ipython # Python REPL
     pkgs.rip-cd
