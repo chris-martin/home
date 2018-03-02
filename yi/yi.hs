@@ -7,6 +7,7 @@ import Yi.Config.Default.MiscModes      (configureMiscModes)
 import Yi.Config.Default.Vty            (configureVty)
 import Yi.Config.Simple
 import Yi.Config.Simple.Types           (ConfigM, runConfigM)
+import Yi.Modes
 
 import Control.Monad            (unless)
 import Control.Monad.State.Lazy (execStateT)
@@ -30,7 +31,22 @@ main = do
     config = do
       configureHaskellMode
       configureJavaScriptMode
-      configureMiscModes
+      addMode cMode
+      addMode objectiveCMode
+      addMode cppMode
+      addMode cabalMode
+      addMode clojureMode
+      addMode srmcMode
+      addMode gitCommitMode
+      addMode svnCommitMode
+      addMode ocamlMode
+      addMode perlMode
+      addMode rubyMode
+      addMode pythonMode
+      addMode jsonMode
+      addMode gnuMakeMode
+      addMode ottMode
+      addMode whitespaceMode
       configureCua
       configureVty
       globalBindKeys (ctrlCh 'y' ?>>! delLine)
