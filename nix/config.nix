@@ -12,6 +12,7 @@ let
 
   # packages defined locally that aren't in nixpkgs
   new-packages = pkgs: {
+    acherus-militant = pkgs.callPackage ./pkgs/acherus-militant { };
     desktop-env = pkgs.callPackage ./pkgs/desktop-env { };
     ede = pkgs.callPackages ./pkgs/ede { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
