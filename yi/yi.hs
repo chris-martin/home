@@ -34,6 +34,7 @@ main = do
       configureCua
       configureVty
       globalBindKeys (ctrlCh 'y' ?>>! delLine)
+      globalBindKeys (metaCh 'q' ?>>! withSyntax modePrettify)
       startActionsA .= openFileActions
 
   cfg <- execStateT (runConfigM config) defaultConfig
