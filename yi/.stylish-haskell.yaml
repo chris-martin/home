@@ -3,7 +3,7 @@ steps:
   - imports:
       align: group
       list_align: after_alias
-      long_list_align: inline
+      long_list_align: new_line
       list_padding: 4
       separate_lists: true
 
