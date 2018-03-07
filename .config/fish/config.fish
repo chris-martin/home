@@ -16,7 +16,7 @@ set -x GOPATH ~/go
 
 set -x PYTHONSTARTUP $HOME/.config/python
 
-alias trash gvfs-trash
+alias trash 'gio trash'
 
 alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
