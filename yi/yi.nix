@@ -1,6 +1,6 @@
-{ mkDerivation, base, microlens-platform, mtl, stdenv, yi-core
-, yi-frontend-vty, yi-keymap-cua, yi-misc-modes, yi-mode-haskell
-, yi-mode-javascript
+{ mkDerivation, base, lens, microlens-platform, mtl, stdenv
+, yi-core, yi-frontend-vty, yi-keymap-cua, yi-misc-modes
+, yi-mode-haskell, yi-mode-javascript, yi-rope
 }:
 mkDerivation {
   pname = "yi-chris-martin";
@@ -9,8 +9,9 @@ mkDerivation {
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
-    base microlens-platform mtl yi-core yi-frontend-vty yi-keymap-cua
-    yi-misc-modes yi-mode-haskell yi-mode-javascript
+    base lens microlens-platform mtl yi-core yi-frontend-vty
+    yi-keymap-cua yi-misc-modes yi-mode-haskell yi-mode-javascript
+    yi-rope
   ];
   license = stdenv.lib.licenses.unfree;
   hydraPlatforms = stdenv.lib.platforms.none;
