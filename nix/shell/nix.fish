@@ -26,7 +26,7 @@ function nix
     nix-env -q
 
   case install
-    nix-env -f '<nixpkgs>' -iA $argv[2]
+    nix-env --keep-going --file '<nixpkgs>' --install --attr $argv[2]
 
   case uninstall remove
     nix-env -f '<nixpkgs>' -e $argv[2]
