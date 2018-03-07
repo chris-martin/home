@@ -11,8 +11,6 @@
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
-  services.keybase.enable = true;
-
 
   #-----------------------------------------------------------------------------
   #  Networking
