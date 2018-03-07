@@ -3,7 +3,7 @@ pkgs.buildEnv {
   name = "desktop-env";
   meta.priority = 10; # make this a low-priority package so ad hoc installs can override it
   paths = [
-    pkgs.abcde # audio CD ripping
+    #pkgs.abcde # audio CD ripping
     pkgs.ack
     pkgs.alock
     pkgs.alsamixer # audio controls
@@ -86,7 +86,7 @@ pkgs.buildEnv {
     pkgs.stylish-haskell # Haskell code formatter
     pkgs.sublime # text editor
     pkgs.tesseract # OCR
-    pkgs.text-replace
+    #pkgs.text-replace
     pkgs.tmux
     pkgs.transmission_gtk # bittorrent
     pkgs.tree
