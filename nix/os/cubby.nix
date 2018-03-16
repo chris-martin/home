@@ -80,7 +80,7 @@
   fonts.enableGhostscriptFonts = true;
 
   fonts.fonts = with pkgs; [
-    corefonts fira fira-code fira-mono lato inconsolata
+    acherus-militant corefonts fira fira-code fira-mono lato inconsolata
     rollandin-emilie symbola ubuntu_font_family unifont vistafonts
   ];
 
