@@ -2,6 +2,7 @@
   packages = p: [
     p.acme-functors
     p.aeson
+    p.async
     p.atomic-modify
     p.base16-bytestring
     p.binary
@@ -19,8 +20,11 @@
     p.either-list-functions
     p.filemanip
     p.fizzbuzz-as-a-service
+    p.gd
+    p.hashable
     p.hedgehog
     #p.hex-text
+    #p.html-entities
     p.http-client
     p.http-client-tls
     p.http-conduit
@@ -28,13 +32,16 @@
     p.human-parse
     p.human-text
     p.lens
+    p.lens-aeson
     p.loc
     p.loc-test
+    p.memory
     p.mtl
     p.multi-instance
     p.mvar-lock
     p.neat-interpolation
     p.network-uri
+    p.one-line-aeson-text
     p.one-liner
     p.optparse-applicative
     p.optparse-generic
@@ -49,18 +56,22 @@
     p.postmark
     p.QuickCheck
     p.random
+    p.resource-pool
     p.resourcet
     #p.rss
     p.safe-exceptions
     p.scotty
     p.stm
+    p.stm-containers
     p.stripe-core
     p.stripe-haskell
     p.stripe-http-streams
+    p.template
     p.text
     p.text-replace
     p.time
     p.transformers
+    p.unordered-containers
     p.utf8-string
     p.var-monad
     p.vector
