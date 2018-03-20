@@ -240,7 +240,7 @@
   #  NixOS
   #-----------------------------------------------------------------------------
 
-  system.stateVersion = "17.09";
+  system.stateVersion = "18.03";
 
   # https://stackoverflow.com/questions/33180784
   nix.extraOptions = "binary-caches-parallel-connections = 5";
