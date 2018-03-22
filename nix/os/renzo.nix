@@ -11,6 +11,8 @@
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
+  nix.trustedUsers = [ "@wheel" ];
+
 
   #-----------------------------------------------------------------------------
   #  Networking
