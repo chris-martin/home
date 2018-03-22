@@ -41,7 +41,7 @@
     p.mvar-lock
     p.neat-interpolation
     p.network-uri
-    p.one-line-aeson-text
+    #p.one-line-aeson-text
     p.one-liner
     p.optparse-applicative
     p.optparse-generic

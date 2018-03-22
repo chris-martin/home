@@ -77,6 +77,7 @@ let
       nodePackages
       secp256k1
       stack2nix
+      steam
       stylish-haskell
       ;
   };
