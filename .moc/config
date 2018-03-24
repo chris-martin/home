@@ -69,7 +69,7 @@
 #
 # Example:    MusicDir = "/home/joe/music"
 #
-MusicDir = /run/user/1000/oseary/array1/chris/music
+MusicDir = /home/chris/.oseary/array1/chris/music
 
 # Start in the music directory by default?  If set to 'no', start
 # in the current directory by default.  A single directory on
@@ -234,7 +234,7 @@ MusicDir = /run/user/1000/oseary/array1/chris/music
 
 # MOC directory (where pid file, socket and state files are stored).
 # You can use ~ at the beginning.
-MOCDir = ${XDG_RUNTIME_DIR}/moc
+MOCDir = ~/.moc/run
 
 # Use mmap() to read files.  mmap() is much slower on NFS.
 #UseMMap = no
