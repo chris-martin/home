@@ -13,6 +13,8 @@
 
   nix.trustedUsers = [ "@wheel" ];
 
+  time.timeZone = "America/New_York"; # Eastern
+
 
   #-----------------------------------------------------------------------------
   #  Networking
@@ -88,19 +90,13 @@
 
 
   #-----------------------------------------------------------------------------
-  #  Location
+  #  Location-based services
   #-----------------------------------------------------------------------------
 
-  services.redshift = { enable = true; } //
-    #{ latitude = "33.784190"; longitude = "-84.374263"; } # atlanta
-    { latitude = "38.062373"; longitude = "-84.50178"; } # lexington
-    #{ latitude = "37.56"; longitude = "-122.33"; } # san mateo
-    ;
+  services.redshift.enable = true;
+  services.redshift.provider = "geoclue2";
 
-  time.timeZone = "America/New_York"; # Eastern
-  #time.timeZone = "America/Chicago"; # Central
-  #time.timeZone = "America/Denver"; # Mountain
-  #time.timeZone = "America/Los_Angeles"; # Pacific
+  services.localtime.enable = true;
 
 
   #-----------------------------------------------------------------------------
@@ -188,7 +184,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.device = "/dev/sda";
   boot.kernelParams = [ "nomodeset" ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.cleanTmpDir = true;
 
