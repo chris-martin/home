@@ -16,7 +16,7 @@
     p.cryptonite
     p.data-forest
     p.directory
-    p.ede
+    #p.ede
     p.either-list-functions
     p.filemanip
     p.fizzbuzz-as-a-service
@@ -53,7 +53,7 @@
     p.partial-semigroup-test
     p.path-text-utf8
     p.postgresql-simple
-    p.postmark
+    #p.postmark
     p.QuickCheck
     p.random
     p.resource-pool
@@ -62,7 +62,7 @@
     p.safe-exceptions
     p.scotty
     p.stm
-    p.stm-containers
+    #p.stm-containers
     p.stripe-core
     p.stripe-haskell
     p.stripe-http-streams
