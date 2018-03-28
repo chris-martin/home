@@ -67,6 +67,7 @@ pkgs.buildEnv {
     pkgs.nix-prefetch-scripts
     pkgs.nix-repl # REPL for the Nix language
     pkgs.nixops # the Nix ops tool
+    pkgs.nodejs # javascript repl
     pkgs.okular # PDF viewer
     pkgs.pandora # internet music
     pkgs.pass
@@ -75,6 +76,7 @@ pkgs.buildEnv {
     pkgs.psmisc # contains killall
     pkgs.pssh
     pkgs.python35Packages.ipython # Python REPL
+    pkgs.rlwrap
     pkgs.rip-cd
     pkgs.rsync
     pkgs.scrot # screenshot tool
