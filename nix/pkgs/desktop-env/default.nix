@@ -84,7 +84,7 @@ pkgs.buildEnv {
     pkgs.solaar
     pkgs.sshfsFuse # SSH mount
     pkgs.stack # Haskell build tool
-    pkgs.stack2nix
+    #pkgs.stack2nix
     pkgs.stylish-haskell # Haskell code formatter
     pkgs.sublime # text editor
     pkgs.tesseract # OCR
