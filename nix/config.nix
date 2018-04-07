@@ -52,6 +52,7 @@ let
         "hindent"
         "nix-deploy"
         "pandoc-sidenote"
+        "sws"
       ];
       f = x: {
         name = x;
