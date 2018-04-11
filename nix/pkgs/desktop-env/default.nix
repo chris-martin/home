@@ -35,7 +35,6 @@ pkgs.buildEnv {
     pkgs.gitAndTools.gitFull
     pkgs.gitAndTools.git-bz
     pkgs.gitAndTools.git-extras
-    pkgs.gitAndTools.hub
     pkgs.gksu
     pkgs.glances
     pkgs.gnome-screenshot # screenshot tool
