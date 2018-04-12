@@ -56,6 +56,8 @@
     #p.postmark
     p.QuickCheck
     p.random
+    #p.reflex
+    #p.reflex-dom
     p.resource-pool
     p.resourcet
     #p.rss
