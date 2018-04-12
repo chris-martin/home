@@ -143,6 +143,9 @@
   </action>
   <action id="UsageView.Rerun" />
   <action id="Vcs.UpdateProject" />
+  <action id="View PSI element at caret" />
+  <action id="View event PSI element" />
+  <action id="View event PSI file " />
   <action id="com.andrewbrookins.idea.wrap.WrapAction" />
   <action id="com.andrewbrookins.idea.wrap.WrapParagraphAction">
     <keyboard-shortcut first-keystroke="alt q" />

@@ -35,7 +35,6 @@ pkgs.buildEnv {
     pkgs.gitAndTools.gitFull
     pkgs.gitAndTools.git-bz
     pkgs.gitAndTools.git-extras
-    pkgs.gitAndTools.hub
     pkgs.gksu
     pkgs.glances
     pkgs.gnome-screenshot # screenshot tool
@@ -67,6 +66,7 @@ pkgs.buildEnv {
     pkgs.nix-prefetch-scripts
     pkgs.nix-repl # REPL for the Nix language
     pkgs.nixops # the Nix ops tool
+    pkgs.nodejs # javascript repl
     pkgs.okular # PDF viewer
     pkgs.pandora # internet music
     pkgs.pass
@@ -75,6 +75,7 @@ pkgs.buildEnv {
     pkgs.psmisc # contains killall
     pkgs.pssh
     pkgs.python35Packages.ipython # Python REPL
+    pkgs.rlwrap
     pkgs.rip-cd
     pkgs.rsync
     pkgs.scrot # screenshot tool
@@ -82,7 +83,7 @@ pkgs.buildEnv {
     pkgs.solaar
     pkgs.sshfsFuse # SSH mount
     pkgs.stack # Haskell build tool
-    pkgs.stack2nix
+    #pkgs.stack2nix
     pkgs.stylish-haskell # Haskell code formatter
     pkgs.sublime # text editor
     pkgs.tesseract # OCR
