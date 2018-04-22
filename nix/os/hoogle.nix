@@ -45,7 +45,7 @@
     p.one-liner
     p.optparse-applicative
     p.optparse-generic
-    p.pam
+    #p.pam
     p.pandoc
     p.pandoc-types
     p.partial-semigroup
@@ -73,6 +73,7 @@
     p.transformers
     p.unordered-containers
     p.utf8-string
+    p.validation
     p.var-monad
     p.vector
     p.wai
