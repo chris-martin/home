@@ -30,8 +30,8 @@
   #-----------------------------------------------------------------------------
 
   environment.systemPackages = with pkgs; [
-    android-udev-rules curl gparted gptfdisk
-    htop lsof man_db openssl tree vim wget which
+    android-udev-rules curl fish gparted gptfdisk
+    htop lsof man_db openssl tmux tree vim wget which
   ];
 
 
