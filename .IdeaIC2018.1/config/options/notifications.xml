@@ -1,0 +1,6 @@
+<application>
+  <component name="NotificationConfiguration" showBalloons="false">
+    <notification groupId="Docker: Dockerfile detection" displayType="NONE" shouldLog="false" />
+    <notification groupId="Unindexed maven repositories gradle detection" displayType="NONE" shouldLog="false" />
+  </component>
+</application>
