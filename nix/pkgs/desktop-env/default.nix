@@ -53,7 +53,6 @@ pkgs.buildEnv {
     pkgs.iw # wireless network manager
     pkgs.jmtpfs # Android filesystem mounting
     pkgs.kcolorchooser
-    pkgs.keepassx2 # password manager
     pkgs.libnotify
     pkgs.lsof # list open files
     pkgs.man
