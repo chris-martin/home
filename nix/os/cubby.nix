@@ -17,6 +17,16 @@
 
 
   #-----------------------------------------------------------------------------
+  #  SSH
+  #-----------------------------------------------------------------------------
+
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = false;
+  };
+
+
+  #-----------------------------------------------------------------------------
   #  Networking
   #-----------------------------------------------------------------------------
 
@@ -158,14 +168,19 @@
   #  Users
   #-----------------------------------------------------------------------------
 
-  users.extraUsers.chris = {
-    isNormalUser = true;
-    description = "Chris Martin";
-    extraGroups = [
-      "audio" "disk" "docker" "networkmanager" "plugdev"
-      "systemd-journal" "wheel" "vboxusers" "video"
-    ];
-    uid = 1000;
+  users.users = {
+    chris = {
+      isNormalUser = true;
+      description = "Chris Martin";
+      extraGroups = ["wheel"];
+      uid = 1000;
+      openssh.authorizedKeys.keys = import ./keys.nix;
+    };
+    julie = {
+      isNormalUser = true;
+      description = "Julie Moronuki";
+      uid = 1001;
+    };
   };
 
 
