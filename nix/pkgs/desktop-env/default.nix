@@ -37,6 +37,7 @@ pkgs.buildEnv {
     pkgs.gitAndTools.git-extras
     pkgs.gksu
     pkgs.glances
+    pkgs.glib.dev # provides the "gio" command
     pkgs.gnome-screenshot # screenshot tool
     pkgs.gnumake # make
     pkgs.google-chrome # The web browser
