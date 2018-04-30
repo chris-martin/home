@@ -65,21 +65,21 @@ let
   # the packages that we cherry-pick from the 'unstable' channel
   from-unstable = pkgs: {
     inherit (unstable)
-      cabal-install
-      cabal2nix
-      doctest
-      firefox
-      ghc
-      ghcid
-      gtetrinet
-      intellij
-      nix-deploy
-      nixUnstable
-      nodePackages
-      secp256k1
-      stack2nix
-      steam
-      stylish-haskell
+      #cabal-install
+      #cabal2nix
+      #doctest
+      #firefox
+      #ghc
+      #ghcid
+      #gtetrinet
+      #intellij
+      #nix-deploy
+      #nixUnstable
+      #nodePackages
+      #secp256k1
+      #stack2nix
+      #steam
+      #stylish-haskell
       ;
   };
 
