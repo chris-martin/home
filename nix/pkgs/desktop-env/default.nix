@@ -86,6 +86,7 @@ pkgs.buildEnv {
     #pkgs.stack2nix
     pkgs.stylish-haskell # Haskell code formatter
     pkgs.sublime # text editor
+    pkgs.sws
     pkgs.tesseract # OCR
     #pkgs.text-replace
     pkgs.tmux
