@@ -35,6 +35,7 @@
     p.lens-aeson
     p.loc
     p.loc-test
+    p.lucid
     p.memory
     p.mtl
     p.multi-instance
