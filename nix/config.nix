@@ -77,6 +77,7 @@ let
       #nixUnstable
       #nodePackages
       #secp256k1
+      stack
       #stack2nix
       #steam
       #stylish-haskell
