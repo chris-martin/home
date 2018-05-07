@@ -43,6 +43,7 @@
     pkgs.gksu
     pkgs.glances
     pkgs.glib.dev # provides the "gio" command
+    pkgs.gmrun
     pkgs.gnome-screenshot # screenshot tool
     pkgs.gnumake # make
     pkgs.google-chrome # The web browser
