@@ -18,6 +18,7 @@
     ./hoogle.nix
     ./avahi.nix
     ./touchpad.nix
+    ./steam.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
@@ -156,21 +157,11 @@
 
 
   #-----------------------------------------------------------------------------
-  #  Video
-  #-----------------------------------------------------------------------------
-
-  hardware.opengl.driSupport32Bit = true; # needed for Steam
-
-
-  #-----------------------------------------------------------------------------
   #  Audio
   #-----------------------------------------------------------------------------
 
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
-
-  # needed for Steam
-  hardware.pulseaudio.support32Bit = true;
 
   hardware.bluetooth.enable = false;
 

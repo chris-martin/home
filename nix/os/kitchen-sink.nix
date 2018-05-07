@@ -89,7 +89,6 @@
     pkgs.silver-searcher # the "ag" command
     pkgs.solaar
     pkgs.sshfsFuse # SSH mount
-    pkgs.steam
     pkgs.stack # Haskell build tool
     #pkgs.stack2nix
     pkgs.stylish-haskell # Haskell code formatter
