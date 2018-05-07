@@ -1,5 +1,9 @@
+{ pkgs, ... }:
 {
-  packages = p: [
+  services.hoogle.enable = true;
+  services.hoogle.port = 13723;
+  services.hoogle.haskellPackages = (import <unstable> { }).haskellPackages;
+  services.hoogle.packages = p: [
     p.acme-functors
     p.aeson
     p.async

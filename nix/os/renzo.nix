@@ -7,7 +7,18 @@
 {
   nixpkgs.config = import ../config.nix;
 
-  imports = [ ./hardware.nix ./secret.nix ];
+  imports = [
+    ./hardware.nix
+    ./secret.nix
+    ./essentials.nix
+    ./kitchen-sink.nix
+    ./locale.nix
+    ./fonts.nix
+    ./keyboard.nix
+    ./hoogle.nix
+    ./avahi.nix
+    ./touchpad.nix
+  ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
@@ -23,25 +34,6 @@
   networking.hostName = "renzo";
   networking.networkmanager.enable = true;
   networking.nameservers = [ "208.67.222.222" "208.67.220.220" ];
-
-
-  #-----------------------------------------------------------------------------
-  #  Software
-  #-----------------------------------------------------------------------------
-
-  environment.systemPackages = with pkgs; [
-    alsaUtils android-udev-rules curl fish gparted gptfdisk
-    htop lsof man_db openssl tmux tree vim wget which
-  ];
-
-
-  #-----------------------------------------------------------------------------
-  #  Locale
-  #-----------------------------------------------------------------------------
-
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.consoleKeyMap = "us";
-  services.xserver.layout = "us";
 
 
   #-----------------------------------------------------------------------------
@@ -70,21 +62,6 @@
 
 
   #-----------------------------------------------------------------------------
-  #  Fonts
-  #-----------------------------------------------------------------------------
-
-  fonts.enableFontDir = true;
-  fonts.enableGhostscriptFonts = true;
-
-  fonts.fonts = with pkgs; [
-    corefonts fira fira-code fira-mono lato google-fonts inconsolata
-    rollandin-emilie symbola ubuntu_font_family unifont vistafonts
-  ];
-
-  i18n.consoleFont = "Fira Mono";
-
-
-  #-----------------------------------------------------------------------------
   #  Location-based services
   #-----------------------------------------------------------------------------
 
@@ -92,48 +69,6 @@
   services.redshift.provider = "geoclue2";
 
   services.localtime.enable = true;
-
-
-  #-----------------------------------------------------------------------------
-  #  DNS service discovery
-  #-----------------------------------------------------------------------------
-
-  services.avahi.enable = true;
-  services.avahi.nssmdns = true;
-  services.avahi.publish.enable = true;
-  services.avahi.publish.addresses = true;
-
-
-  #-----------------------------------------------------------------------------
-  #  Mouse
-  #-----------------------------------------------------------------------------
-
-  services.xserver.synaptics.enable = true;
-  services.xserver.synaptics.minSpeed = "0.8";
-  services.xserver.synaptics.maxSpeed = "1.4";
-  services.xserver.synaptics.accelFactor = "0.05";
-  services.xserver.synaptics.tapButtons = false;
-  services.xserver.synaptics.twoFingerScroll = true;
-
-  services.xserver.libinput.enable = false;
-
-
-  #-----------------------------------------------------------------------------
-  #  Keyboard
-  #-----------------------------------------------------------------------------
-
-  services.xserver.autoRepeatDelay = 250;
-  services.xserver.autoRepeatInterval = 50;
-
-
-  #-----------------------------------------------------------------------------
-  #  Hoogle
-  #-----------------------------------------------------------------------------
-
-  services.hoogle.enable = true;
-  services.hoogle.port = 13723;
-  services.hoogle.haskellPackages = (import <unstable> { }).haskellPackages;
-  services.hoogle.packages = (import ./hoogle.nix).packages;
 
 
   #-----------------------------------------------------------------------------
@@ -240,15 +175,6 @@
 
 
   #-----------------------------------------------------------------------------
-  #  Postgres
-  #-----------------------------------------------------------------------------
-
-  services.postgresql.enable = false;
-  services.postgresql.package = pkgs.postgresql94;
-  services.postgresql.authentication = "local all all ident";
-
-
-  #-----------------------------------------------------------------------------
   #  NixOS
   #-----------------------------------------------------------------------------
 
@@ -256,8 +182,5 @@
 
   # https://stackoverflow.com/questions/33180784
   nix.extraOptions = "binary-caches-parallel-connections = 5";
-
-  nix.binaryCaches = [ "https://cache.nixos.org/" "https://nixcache.reflex-frp.org" ];
-  nix.binaryCachePublicKeys = [ "ryantrinkle.com-1:JJiAKaRv9mWgpVAz8dwewnZe0AzzEAzPkagE9SP5NWI=" ];
 
 }

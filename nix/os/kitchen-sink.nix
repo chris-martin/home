@@ -1,12 +1,11 @@
-{ pkgs }:
-pkgs.buildEnv {
-  name = "desktop-env";
-  meta.priority = 10; # make this a low-priority package so ad hoc installs can override it
-  paths = [
+{ pkgs, ... }:
+{
+  environment.systemPackages = [
     #pkgs.abcde # audio CD ripping
     pkgs.ack
     pkgs.alock
-    pkgs.alsamixer # audio controls
+    #pkgs.alsamixer # audio controls
+    pkgs.android-udev-rules
     pkgs.ansifilter
     pkgs.arcanist
     pkgs.astyle
@@ -45,6 +44,7 @@ pkgs.buildEnv {
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
     pkgs.ghc
+    pkgs.gnumake
     pkgs.gnupg
     pkgs.hindent
     pkgs.htop
@@ -67,6 +67,7 @@ pkgs.buildEnv {
     pkgs.nix-repl # REPL for the Nix language
     pkgs.nixops # the Nix ops tool
     pkgs.nodejs # javascript repl
+    pkgs.obs-studio
     pkgs.okular # PDF viewer
     pkgs.pandora # internet music
     pkgs.pass
