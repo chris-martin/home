@@ -31,6 +31,12 @@ function nix
   case uninstall remove
     nix-env -f '<nixpkgs>' -e $argv[2]
 
+  case path
+    nix-store -r (nix drv $argv[2])
+
+  case drv
+    nix-instantiate '<nixpkgs>' -A $argv[2]
+
   case gc
     sudo nix-collect-garbage --delete-older-than $argv[2]
 
