@@ -20,6 +20,7 @@
     ./steam.nix
     ./dns.nix
     ./web-browsers.nix
+    ./cubby-display.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
@@ -52,28 +53,6 @@
 
   # https://stackoverflow.com/questions/33180784
   nix.extraOptions = "binary-caches-parallel-connections = 5";
-
-
-  #-----------------------------------------------------------------------------
-  #  Graphical environment
-  #-----------------------------------------------------------------------------
-
-  services.xserver.enable = true;
-
-  services.xserver.desktopManager.gnome3.enable = true;
-
-  #services.xserver.desktopManager.default = "none";
-
-  #services.xserver.desktopManager.xterm.enable = false;
-
-  #services.xserver.windowManager.default = "xmonad";
-
-  services.xserver.windowManager.xmonad = {
-    #enable = true;
-    extraPackages = haskellPackages: with haskellPackages; [
-      xmonad-contrib xmonad-extras
-    ];
-  };
 
 
   #-----------------------------------------------------------------------------
