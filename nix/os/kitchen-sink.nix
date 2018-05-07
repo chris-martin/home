@@ -1,13 +1,16 @@
-{ pkgs }:
-pkgs.buildEnv {
-  name = "desktop-env";
-  meta.priority = 10; # make this a low-priority package so ad hoc installs can override it
-  paths = [
+{ pkgs, ... }:
+{
+  hardware.u2f.enable = true; # enable yubikey
+
+  environment.systemPackages = [
     #pkgs.abcde # audio CD ripping
     pkgs.ack
     pkgs.alock
-    pkgs.alsamixer # audio controls
+    pkgs.alsaUtils
+    #pkgs.alsamixer # audio controls
+    pkgs.android-udev-rules
     pkgs.ansifilter
+    pkgs.audacity
     pkgs.arcanist
     pkgs.astyle
     pkgs.atom # text editor
@@ -27,6 +30,7 @@ pkgs.buildEnv {
     pkgs.ffmpegthumbnailer # enables video thumbnails in Nautilus
     pkgs.file-roller # zip GUI
     pkgs.fish # shell
+    pkgs.FractalArt
     pkgs.fullwidth # converts strings to their fullwidth forms
     pkgs.gcc # C compiler
     pkgs.ghcid # Haskell GHCi daemon
@@ -45,6 +49,7 @@ pkgs.buildEnv {
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
     pkgs.ghc
+    pkgs.gnumake
     pkgs.gnupg
     pkgs.hindent
     pkgs.htop
@@ -54,7 +59,10 @@ pkgs.buildEnv {
     pkgs.iw # wireless network manager
     pkgs.jmtpfs # Android filesystem mounting
     pkgs.kcolorchooser
+    pkgs.kdenlive
+    pkgs.libav
     pkgs.libnotify
+    pkgs.libreoffice
     pkgs.lsof # list open files
     pkgs.man
     pkgs.meld # diff tool
@@ -67,6 +75,7 @@ pkgs.buildEnv {
     pkgs.nix-repl # REPL for the Nix language
     pkgs.nixops # the Nix ops tool
     pkgs.nodejs # javascript repl
+    pkgs.obs-studio
     pkgs.okular # PDF viewer
     pkgs.pandora # internet music
     pkgs.pass
