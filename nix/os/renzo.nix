@@ -19,6 +19,7 @@
     ./avahi.nix
     ./touchpad.nix
     ./steam.nix
+    ./dns.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
@@ -34,7 +35,6 @@
 
   networking.hostName = "renzo";
   networking.networkmanager.enable = true;
-  networking.nameservers = [ "208.67.222.222" "208.67.220.220" ];
 
 
   #-----------------------------------------------------------------------------
