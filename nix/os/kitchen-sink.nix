@@ -46,7 +46,6 @@
     pkgs.gmrun
     pkgs.gnome-screenshot # screenshot tool
     pkgs.gnumake # make
-    pkgs.google-chrome # The web browser
     pkgs.gparted # partitioning tool
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz

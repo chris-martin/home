@@ -20,6 +20,7 @@
     ./touchpad.nix
     ./steam.nix
     ./dns.nix
+    ./web-browsers.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
