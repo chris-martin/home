@@ -155,10 +155,6 @@
 !/.stack/config.yaml
 !/.stack/shell.nix
 
-!/.xmonad/
-/.xmonad/*
-!/.xmonad/xmonad.hs
-
 !/nix/
 /nix/os/config.nix
 /nix/os/hardware.nix

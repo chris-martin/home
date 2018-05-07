@@ -16,6 +16,7 @@ let
     ede = pkgs.callPackages ./pkgs/ede { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
+    my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
     rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
     rollandin-emilie = pkgs.callPackage ./pkgs/rollandin-emilie { };
