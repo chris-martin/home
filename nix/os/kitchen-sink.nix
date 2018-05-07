@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  hardware.u2f.enable = true; # enable yubikey
+
   environment.systemPackages = [
     #pkgs.abcde # audio CD ripping
     pkgs.ack
