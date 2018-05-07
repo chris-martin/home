@@ -4,9 +4,11 @@
     #pkgs.abcde # audio CD ripping
     pkgs.ack
     pkgs.alock
+    pkgs.alsaUtils
     #pkgs.alsamixer # audio controls
     pkgs.android-udev-rules
     pkgs.ansifilter
+    pkgs.audacity
     pkgs.arcanist
     pkgs.astyle
     pkgs.atom # text editor
@@ -26,6 +28,7 @@
     pkgs.ffmpegthumbnailer # enables video thumbnails in Nautilus
     pkgs.file-roller # zip GUI
     pkgs.fish # shell
+    pkgs.FractalArt
     pkgs.fullwidth # converts strings to their fullwidth forms
     pkgs.gcc # C compiler
     pkgs.ghcid # Haskell GHCi daemon
@@ -54,7 +57,10 @@
     pkgs.iw # wireless network manager
     pkgs.jmtpfs # Android filesystem mounting
     pkgs.kcolorchooser
+    pkgs.kdenlive
+    pkgs.libav
     pkgs.libnotify
+    pkgs.libreoffice
     pkgs.lsof # list open files
     pkgs.man
     pkgs.meld # diff tool
@@ -83,6 +89,7 @@
     pkgs.silver-searcher # the "ag" command
     pkgs.solaar
     pkgs.sshfsFuse # SSH mount
+    pkgs.steam
     pkgs.stack # Haskell build tool
     #pkgs.stack2nix
     pkgs.stylish-haskell # Haskell code formatter
