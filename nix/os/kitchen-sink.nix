@@ -22,6 +22,7 @@
     pkgs.choose-exe # Chooses random elements from a stream
     pkgs.cryptsetup # LUKS disk encryption
     pkgs.curl
+    pkgs.dmenu
     pkgs.doctest
     pkgs.entr
     pkgs.eog # "eye of gnome" image viewer
