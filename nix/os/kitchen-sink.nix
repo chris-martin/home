@@ -49,6 +49,7 @@
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
     pkgs.ghc
+    pkgs.gnome-terminal
     pkgs.gnumake
     pkgs.gnupg
     pkgs.hindent
@@ -70,6 +71,7 @@
     pkgs.moreutils
     pkgs.mpv # video player
     pkgs.mtools
+    pkgs.nautilus
     pkgs.ncdu
     pkgs.nix-prefetch-scripts
     pkgs.nix-repl # REPL for the Nix language
@@ -99,6 +101,7 @@
     pkgs.tesseract # OCR
     #pkgs.text-replace
     pkgs.tmux
+    pkgs.totem
     pkgs.transmission_gtk # bittorrent
     pkgs.tree
     pkgs.wordlist # password generator
