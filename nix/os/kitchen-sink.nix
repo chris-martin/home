@@ -80,6 +80,7 @@
     pkgs.nodejs # javascript repl
     pkgs.obs-studio
     pkgs.okular # PDF viewer
+    pkgs.pandoc
     pkgs.pandora # internet music
     pkgs.pass
     pkgs.pciutils
