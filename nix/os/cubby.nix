@@ -20,6 +20,7 @@
     ./steam.nix
     ./dns.nix
     ./web-browsers.nix
+    ./display.nix
     ./cubby-display.nix
   ];
 

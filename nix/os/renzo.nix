@@ -21,6 +21,7 @@
     ./steam.nix
     ./dns.nix
     ./web-browsers.nix
+    ./display.nix
     ./renzo-display.nix
   ];
 

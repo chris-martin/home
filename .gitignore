@@ -19,9 +19,6 @@
 !/.config/
 /.config/*
 !/.config/autostart/
-!/.config/dconf/
-/.config/dconf/*
-!/.config/dconf/setup-*.sh
 !/.config/git/
 /.config/git/gitk
 !/.config/python/
