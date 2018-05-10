@@ -9,6 +9,7 @@
     pkgs.lsof
     pkgs.man_db
     pkgs.openssl
+    pkgs.parted
     pkgs.tmux
     pkgs.tree
     pkgs.vim
