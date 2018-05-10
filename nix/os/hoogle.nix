@@ -10,6 +10,8 @@
     p.atomic-modify
     p.base16-bytestring
     p.binary
+    p.blaze-html
+    p.blaze-markup
     #p.bricks
     p.bytestring
     p.choose
@@ -40,6 +42,7 @@
     p.loc
     p.loc-test
     p.lucid
+    p.markdown
     p.memory
     p.mtl
     p.multi-instance
