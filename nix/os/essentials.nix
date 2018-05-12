@@ -8,6 +8,7 @@
     pkgs.htop
     pkgs.lsof
     pkgs.man_db
+    pkgs.networkmanager
     pkgs.openssl
     pkgs.parted
     pkgs.tmux
