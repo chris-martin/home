@@ -115,6 +115,7 @@
     pkgs.wget
     pkgs.which
     pkgs.xclip # CLI utility for the X clipboard
+    pkgs.xorg.xev
     pkgs.xkill # kill X windows by clicking on them
     pkgs.yi-chris-martin
     pkgs.zip
