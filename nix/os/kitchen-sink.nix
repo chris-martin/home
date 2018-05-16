@@ -34,6 +34,7 @@
     pkgs.FractalArt
     pkgs.fullwidth # converts strings to their fullwidth forms
     pkgs.gcc # C compiler
+    pkgs.gnome3.gedit
     pkgs.ghcid # Haskell GHCi daemon
     pkgs.ghostscript
     pkgs.gimp # umage editor
