@@ -89,6 +89,7 @@
     p.wai
     p.warp
     p.wreq
+    p.xmonad
     p.yi-core
     p.yi-keymap-cua
     p.yi-keymap-vim
