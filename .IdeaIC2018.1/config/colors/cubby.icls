@@ -1,17 +1,23 @@
 <scheme name="cubby" version="142" parent_scheme="Default">
-  <option name="FONT_SCALE" value="1.4166666" />
+  <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
     <property name="created">2017-05-21T03:57:46</property>
     <property name="ide">Idea</property>
     <property name="ideVersion">2017.1.1.0.0</property>
-    <property name="modified">2017-12-31T12:28:11</property>
+    <property name="modified">2018-05-26T18:03:59</property>
     <property name="originalScheme">renzo copy</property>
   </metaInfo>
-  <option name="EDITOR_FONT_SIZE" value="14" />
-  <option name="EDITOR_FONT_NAME" value="Fira Code" />
+  <font>
+    <option name="EDITOR_FONT_NAME" value="Fira Code" />
+    <option name="EDITOR_FONT_SIZE" value="16" />
+  </font>
+  <font>
+    <option name="EDITOR_FONT_NAME" value="Consolas" />
+    <option name="EDITOR_FONT_SIZE" value="16" />
+  </font>
   <option name="EDITOR_LIGATURES" value="true" />
   <option name="CONSOLE_FONT_NAME" value="DejaVu Sans Mono" />
-  <option name="CONSOLE_FONT_SIZE" value="13" />
+  <option name="CONSOLE_FONT_SIZE" value="9" />
   <colors>
     <option name="MODIFIED_LINES_COLOR" value="b51ce8" />
   </colors>
