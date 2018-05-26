@@ -55,6 +55,7 @@
     pkgs.gnumake
     pkgs.gnupg
     pkgs.hindent
+    pkgs.hlint
     pkgs.htop
     pkgs.imagemagick # CLI image editor
     pkgs.inkscape # SVG editor
