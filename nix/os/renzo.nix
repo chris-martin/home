@@ -23,6 +23,7 @@
     ./web-browsers.nix
     ./display.nix
     ./renzo-display.nix
+    ./xmonad.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
