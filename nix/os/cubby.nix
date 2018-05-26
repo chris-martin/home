@@ -22,6 +22,7 @@
     ./web-browsers.nix
     ./display.nix
     ./cubby-display.nix
+    ./ledger.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
