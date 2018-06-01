@@ -55,6 +55,7 @@
     pkgs.gnumake
     pkgs.gnupg
     pkgs.hindent
+    pkgs.hlint
     pkgs.htop
     pkgs.imagemagick # CLI image editor
     pkgs.inkscape # SVG editor
@@ -116,6 +117,7 @@
     pkgs.which
     pkgs.xclip # CLI utility for the X clipboard
     pkgs.xorg.xev
+    pkgs.xournal # PDF editor
     pkgs.xkill # kill X windows by clicking on them
     pkgs.yi-chris-martin
     pkgs.zip

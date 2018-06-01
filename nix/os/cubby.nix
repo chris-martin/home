@@ -22,6 +22,8 @@
     ./web-browsers.nix
     ./display.nix
     ./cubby-display.nix
+    ./ledger.nix
+    ./xmonad.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
@@ -48,7 +50,9 @@
 
   services.localtime.enable = true;
 
-  environment.etc."fuse.conf".text = "user_allow_other";
+  environment.etc."fuse.conf".text = ''
+    user_allow_other
+  '';
 
   system.stateVersion = "18.03";
 

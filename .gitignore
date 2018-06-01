@@ -159,6 +159,10 @@
 /nix/.idea
 /nix/nixpkgs/
 
+!/.xmonad/
+/.xmonad/*
+!/.xmonad/xmonad.hs
+
 !/.idea/
 /.idea/*
 !/.idea/chris.iml
