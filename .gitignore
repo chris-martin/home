@@ -5,7 +5,6 @@
 !/bin/
 !/.darcs
 !/dropbox
-!/.emacs
 !/.gitignore
 !/.latexmkrc
 !/.password-store
@@ -74,10 +73,9 @@
 !/.atom/grammar-config
 !/.atom/grammar-config/*
 
-!/emacs/
 !/.emacs.d/
-/.emacs.d/*
-!/.emacs.d/init.el
+/.emacs.d/autosave
+/.emacs.d/backup
 
 !/.ghc/
 /.ghc/*
