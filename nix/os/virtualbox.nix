@@ -1,8 +1,9 @@
+{ pkgs, ... }:
 {
   virtualisation.virtualbox.host = {
-    enable = false;
+    enable = true;
     enableHardening = false;
     addNetworkInterface = true;
-    headless = true;
   };
+  environment.systemPackages = [ pkgs.virtualbox ];
 }
