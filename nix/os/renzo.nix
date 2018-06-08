@@ -24,6 +24,7 @@
     ./display.nix
     ./renzo-display.nix
     ./xmonad.nix
+    ./ledger.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
