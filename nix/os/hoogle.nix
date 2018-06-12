@@ -21,6 +21,7 @@
     p.containers
     p.cryptonite
     p.data-forest
+    p.Decimal
     p.directory
     #p.ede
     p.either-list-functions
