@@ -63,6 +63,7 @@
     p.path-text-utf8
     p.postgresql-simple
     #p.postmark
+    p.profunctors
     p.QuickCheck
     p.random
     #p.reflex
