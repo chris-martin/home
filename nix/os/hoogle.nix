@@ -28,6 +28,7 @@
     p.filemanip
     p.fizzbuzz-as-a-service
     p.gd
+    p.gtk3
     p.hashable
     p.hedgehog
     #p.hex-text
