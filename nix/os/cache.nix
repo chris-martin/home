@@ -1,4 +1,3 @@
-{ pkgs }:
 let
   mkCache = url: key: { inherit url key; };
 
@@ -15,6 +14,6 @@ let
 
 in
   {
-    nix.binaryCaches          = pkgs.lib.map (x: x.url) all;
-    nix.binaryCachePublicKeys = pkgs.lib.map (x: x.key) all;
+    nix.binaryCaches          = builtins.map (x: x.url) all;
+    nix.binaryCachePublicKeys = builtins.map (x: x.key) all;
   }
