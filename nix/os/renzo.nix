@@ -9,7 +9,6 @@
 
   imports = [
     ./hardware.nix
-    ./secret.nix
     ./essentials.nix
     ./kitchen-sink.nix
     ./locale.nix
