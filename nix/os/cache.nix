@@ -10,7 +10,10 @@ let
   chris-martin = mkCache "https://chris-martin.cachix.org"
     "chris-martin.cachix.org-1:O/29OCGL8P7qk/NmEaZzzZk3DDmUfa9nGA74OrX9/1g=";
 
-  all = [ default cachix chris-martin ];
+  reflex = mkCache "https://nixcache.reflex-frp.org"
+    "ryantrinkle.com-1:JJiAKaRv9mWgpVAz8dwewnZe0AzzEAzPkagE9SP5NWI=";
+
+  all = [ default cachix chris-martin reflex ];
 
 in
   {
