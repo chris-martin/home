@@ -23,6 +23,7 @@
     ./cubby-display.nix
     ./ledger.nix
     ./xmonad.nix
+    ./cache.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
