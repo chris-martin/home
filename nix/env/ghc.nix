@@ -14,5 +14,6 @@ pkgs.runCommand "ghc-env" {
     pkgs.haskell.compiler.ghc822
     pkgs.automake
     pkgs.autoconf
+    pkgs.gmp
   ];
 } ""
