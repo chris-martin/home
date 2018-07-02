@@ -41,9 +41,6 @@
   networking.networkmanager.enable = true;
 
   networking.firewall.allowPing = true;
-  networking.firewall.allowedTCPPorts = [
-    51413 # bittorrent
-  ];
 
   services.redshift.enable = true;
   services.redshift.provider = "geoclue2";
