@@ -45,6 +45,7 @@
     p.loc-test
     p.lucid
     p.markdown
+    p.megaparsec
     p.memory
     p.mtl
     p.multi-instance
@@ -58,6 +59,7 @@
     #p.pam
     p.pandoc
     p.pandoc-types
+    p.parser-combinators
     p.partial-semigroup
     p.partial-semigroup-hedgehog
     p.partial-semigroup-test
