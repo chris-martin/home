@@ -24,6 +24,7 @@
     ./ledger.nix
     ./xmonad.nix
     ./cache.nix
+    ./nix.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
@@ -52,9 +53,6 @@
   '';
 
   system.stateVersion = "18.03";
-
-  # https://stackoverflow.com/questions/33180784
-  nix.extraOptions = "binary-caches-parallel-connections = 5";
 
 
   #-----------------------------------------------------------------------------
