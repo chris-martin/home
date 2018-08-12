@@ -137,13 +137,13 @@
 !/.mozilla/firefox/chris/chrome
 
 !/.sbt/
-/.sbt/boot/
-/.sbt/0.13/dependency/
-/.sbt/0.13/staging/
-/.sbt/0.13/target/
-/.sbt/0.13/plugins/target/
-/.sbt/0.13/plugins/project/target/
-/.sbt/launchers
+/.sbt/*
+!/.sbt/0.13
+/.sbt/0.13/*
+!/.sbt/0.13/global.sbt
+!/.sbt/0.13/plugins
+/.sbt/0.13/plugins/*
+!/.sbt/0.13/plugins/build.sbt
 
 !/.stack/
 /.stack/*
