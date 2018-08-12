@@ -69,6 +69,7 @@
     pkgs.libreoffice
     pkgs.lsof # list open files
     pkgs.man
+    pkgs.manpages
     pkgs.meld # diff tool
     pkgs.moc # "music on console" CLI music player
     pkgs.moreutils
