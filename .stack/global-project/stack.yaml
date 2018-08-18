@@ -7,4 +7,4 @@
 # http://docs.haskellstack.org/en/stable/yaml_configuration/
 #
 packages: []
-resolver: lts-12.0
+resolver: lts-12.6
