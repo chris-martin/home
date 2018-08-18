@@ -13,6 +13,9 @@ let
   reflex = mkCache "https://nixcache.reflex-frp.org"
     "ryantrinkle.com-1:JJiAKaRv9mWgpVAz8dwewnZe0AzzEAzPkagE9SP5NWI=";
 
+  fastcut = mkCache "https://fastcut.cachix.org"
+    "fastcut.cachix.org-1:rx+KHtBKDFr4AQbFuUV7u+mDpzt+A6UhNaqRFq/dXqc=";
+
   all = [ default cachix chris-martin reflex ];
 
 in
