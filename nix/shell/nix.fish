@@ -20,7 +20,7 @@ function nix
     sudo env \
       NIX_PATH="$NIX_PATH" \
       NIXOS_CONFIG="$NIXOS_CONFIG" \
-      nixos-rebuild switch
+      nixos-rebuild switch --option substituters 'https://cache.nixos.org'
 
   case packages
     nix-env -q

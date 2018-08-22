@@ -16,7 +16,12 @@ let
   fastcut = mkCache "https://fastcut.cachix.org"
     "fastcut.cachix.org-1:rx+KHtBKDFr4AQbFuUV7u+mDpzt+A6UhNaqRFq/dXqc=";
 
-  all = [ default cachix chris-martin reflex ];
+  all = [
+    default
+    #cachix
+    #chris-martin
+    #reflex
+  ];
 
 in
   {
