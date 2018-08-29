@@ -18,9 +18,8 @@ let
 
   all = [
     default
-    #cachix
-    #chris-martin
-    #reflex
+    cachix
+    chris-martin
   ];
 
 in
