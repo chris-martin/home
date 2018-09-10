@@ -54,6 +54,7 @@
     pkgs.gnome-terminal
     pkgs.gnumake
     pkgs.gnupg
+    pkgs.guvcview # for recording from a webcam
     pkgs.hindent
     pkgs.hlint
     pkgs.htop
