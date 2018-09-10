@@ -31,7 +31,7 @@
     pkgs.ffmpegthumbnailer # enables video thumbnails in Nautilus
     pkgs.file-roller # zip GUI
     pkgs.fish # shell
-    pkgs.FractalArt
+    #pkgs.FractalArt
     pkgs.fullwidth # converts strings to their fullwidth forms
     pkgs.gcc # C compiler
     pkgs.gnome3.gedit

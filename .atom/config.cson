@@ -15,14 +15,12 @@
       "spell-check"
       "welcome"
       "autocomplete-elixir"
-      "language-elixir"
       "gofmt"
       "godoc"
       "go-get"
       "go-config"
       "builder-go"
       "autocomplete-go"
-      "haskell-ghc-mod"
       "haskell-pointfree"
       "ide-haskell"
       "ide-haskell-hasktags"
@@ -40,7 +38,6 @@
       "navigator-go"
       "linter"
       "language-scala"
-      "git-plus"
       "hard-wrap"
     ]
     ignoredNames: [
