@@ -6,6 +6,7 @@
   services.hoogle.packages = p: [
     p.acme-functors
     p.aeson
+    #p.aeson-decode
     p.async
     p.atomic-modify
     p.base16-bytestring
