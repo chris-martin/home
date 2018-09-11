@@ -22,7 +22,6 @@ let
     p.containers
     p.MonadRandom
     p.optparse-applicative
-    p.stdenv
     p.text
     p.vector
   ]);
