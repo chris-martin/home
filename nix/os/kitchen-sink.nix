@@ -92,7 +92,7 @@
     pkgs.pdftk
     pkgs.psmisc # contains killall
     pkgs.pssh
-    pkgs.python35Packages.ipython # Python REPL
+    pkgs.python36Packages.ipython # Python REPL
     pkgs.rlwrap
     pkgs.rip-cd
     pkgs.rsync
