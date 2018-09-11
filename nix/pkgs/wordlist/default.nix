@@ -13,13 +13,18 @@ let
   src = fetchFromGitHub {
     owner = "chris-martin";
     repo = "wordlist";
-    rev = "8f52db02096e37be56fb8f7bc62ed081cb72708b";
-    sha256 = "1mchlw9sh7qbfh1nsiylkxlv3n4qshnv9ljfdinszfcyr861x0la";
+    rev = "bffe047d925a4e4be8eada58ffbcd61068294ebd";
+    sha256 = "1sih80s6hfnhsjb386ga0rgcyhgf4hsg3fsa95vxyvr4mzfacm40";
   };
 
-  haskellAndPackages = haskell.packages.ghc802.ghcWithPackages (p: with p; [
-    base containers MonadRandom optparse-applicative stdenv text
-    hpack
+  haskellAndPackages = haskell.packages.ghc843.ghcWithPackages (p: [
+    p.base
+    p.containers
+    p.MonadRandom
+    p.optparse-applicative
+    p.stdenv
+    p.text
+    p.vector
   ]);
 
 in stdenv.mkDerivation {
@@ -28,7 +33,6 @@ in stdenv.mkDerivation {
   buildInputs = [ makeWrapper haskellAndPackages ];
   installPhase = ''
     cd wordlist
-    hpack
     runhaskell Setup.hs configure
     runhaskell Setup.hs build
     mkdir -p $out/bin
