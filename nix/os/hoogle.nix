@@ -41,14 +41,14 @@
     p.lens
     p.lens-aeson
     #p.loc
-    p.loc-test
+    #p.loc-test
     p.lucid
     p.markdown
     p.megaparsec
     p.memory
     p.mtl
-    p.multi-instance
-    p.mvar-lock
+    #p.multi-instance
+    #p.mvar-lock
     p.neat-interpolation
     p.network-uri
     #p.one-line-aeson-text
@@ -59,9 +59,9 @@
     p.pandoc
     p.pandoc-types
     p.parser-combinators
-    p.partial-semigroup
-    p.partial-semigroup-hedgehog
-    p.partial-semigroup-test
+    #p.partial-semigroup
+    #p.partial-semigroup-hedgehog
+    #p.partial-semigroup-test
     p.path-text-utf8
     p.postgresql-simple
     #p.postmark
