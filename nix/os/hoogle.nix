@@ -77,9 +77,9 @@
     p.scotty
     p.stm
     #p.stm-containers
-    p.stripe-core
-    p.stripe-haskell
-    p.stripe-http-streams
+    #p.stripe-core
+    #p.stripe-haskell
+    #p.stripe-http-streams
     p.template
     p.text
     p.text-replace
