@@ -98,7 +98,7 @@
     pkgs.rsync
     pkgs.scrot # screenshot tool
     pkgs.silver-searcher # the "ag" command
-    pkgs.solaar
+    #pkgs.solaar
     pkgs.sshfsFuse # SSH mount
     pkgs.stack # Haskell build tool
     #pkgs.stack2nix
