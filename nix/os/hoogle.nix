@@ -38,8 +38,6 @@
     p.http-client-tls
     p.http-conduit
     p.http-types
-    p.human-parse
-    p.human-text
     p.lens
     p.lens-aeson
     #p.loc
