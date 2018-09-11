@@ -8,7 +8,7 @@
     p.aeson
     #p.aeson-decode
     p.async
-    p.atomic-modify
+    #p.atomic-modify
     p.base16-bytestring
     p.binary
     p.blaze-html
@@ -21,13 +21,13 @@
     p.conduit-combinators
     p.containers
     p.cryptonite
-    p.data-forest
+    #p.data-forest
     p.Decimal
     p.directory
     #p.ede
-    p.either-list-functions
+    #p.either-list-functions
     p.filemanip
-    p.fizzbuzz-as-a-service
+    #p.fizzbuzz-as-a-service
     p.gd
     p.gtk3
     p.hashable
@@ -42,7 +42,7 @@
     p.human-text
     p.lens
     p.lens-aeson
-    p.loc
+    #p.loc
     p.loc-test
     p.lucid
     p.markdown
