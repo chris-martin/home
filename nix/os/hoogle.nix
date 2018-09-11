@@ -82,13 +82,13 @@
     #p.stripe-http-streams
     p.template
     p.text
-    p.text-replace
+    #p.text-replace
     p.time
     p.transformers
     p.turtle
     p.unordered-containers
     p.utf8-string
-    p.validation
+    #p.validation
     p.var-monad
     p.vector
     p.wai
