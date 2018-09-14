@@ -46,6 +46,7 @@
     p.markdown
     p.megaparsec
     p.memory
+    p.monad-gen
     p.mtl
     #p.multi-instance
     #p.mvar-lock
