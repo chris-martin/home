@@ -115,6 +115,7 @@
 !/.local/share/backgrounds/*
 !/.local/share/fonts/
 !/.local/share/fonts/*
+/.local/share/fonts/**/.uuid
 !/.local/share/npm/
 /.local/share/npm/*
 !/.local/share/npm/node_modules/
