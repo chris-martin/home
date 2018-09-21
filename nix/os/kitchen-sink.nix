@@ -16,6 +16,7 @@
     pkgs.atom # text editor
     pkgs.awscli
     pkgs.baobab # disk usage inspector
+    pkgs.binutils
     pkgs.cabal-install
     pkgs.cabal2nix
     pkgs.cheese # Camera GUI
