@@ -10,6 +10,7 @@
     pkgs.man_db
     pkgs.networkmanager
     pkgs.openssl
+    pkgs.p7zip
     pkgs.parted
     pkgs.tmux
     pkgs.tree
