@@ -32,6 +32,10 @@
 /.config/fish/*
 !/.config/fish/*.fish
 
+!/.config/gtk-*/
+/.config/gtk-*/*
+!/.config/gtk-*/*.css
+
 !/.config/LightTable/
 /.config/LightTable/*
 !/.config/LightTable/User

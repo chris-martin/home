@@ -1,0 +1,8 @@
+/* Terminal padding for presentation
+
+VteTerminal,
+TerminalScreen,
+vte-terminal {
+    padding: 100px 200px;
+}
+*/
