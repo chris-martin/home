@@ -82,6 +82,7 @@
     #p.stripe-haskell
     #p.stripe-http-streams
     p.template
+    p.test-framework
     p.text
     #p.text-replace
     p.time
