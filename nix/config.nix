@@ -85,6 +85,8 @@ let
       #steam
       #stylish-haskell
       ;
+    haskell-ci = unstable.haskell.lib.justStaticExecutables
+      unstable.haskellPackages.haskell-ci;
   };
 
   # all of the package overrides
