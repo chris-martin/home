@@ -31,6 +31,9 @@
 
   nix.trustedUsers = [ "@wheel" ];
 
+  nix.maxJobs = 8;
+  nix.buildCores = 0;
+
   time.timeZone = "America/New_York";
 
   services.openssh = {
