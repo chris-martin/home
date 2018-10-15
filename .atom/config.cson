@@ -10,6 +10,7 @@
   core:
     audioBeep: false
     automaticallyUpdate: false
+    closeDeletedFileTabs: true
     disabledPackages: [
       "exception-reporting"
       "spell-check"
