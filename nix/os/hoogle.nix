@@ -28,6 +28,7 @@
     #p.either-list-functions
     p.filemanip
     #p.fizzbuzz-as-a-service
+    p.foldl
     p.gd
     p.gtk3
     p.hashable
