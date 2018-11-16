@@ -83,7 +83,6 @@
     #p.stripe-haskell
     #p.stripe-http-streams
     p.template
-    p.termonad
     p.test-framework
     p.text
     #p.text-replace
