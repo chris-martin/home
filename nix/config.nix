@@ -56,6 +56,7 @@ let
         "nix-deploy"
         "pandoc-sidenote"
         "sws"
+        "termonad"
       ];
       f = x: {
         name = x;
