@@ -46,7 +46,7 @@
 
   environment.etc."fuse.conf".text = "user_allow_other";
 
-  system.stateVersion = "18.03";
+  system.stateVersion = "18.09";
 
 
   #-----------------------------------------------------------------------------
