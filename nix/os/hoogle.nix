@@ -23,6 +23,7 @@
     p.cryptonite
     #p.data-forest
     p.Decimal
+    p.diagrams
     p.directory
     #p.ede
     #p.either-list-functions
