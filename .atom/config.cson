@@ -40,6 +40,7 @@
       "linter"
       "language-scala"
       "hard-wrap"
+      "ide-haskell-hie"
     ]
     ignoredNames: [
       ".aws"
