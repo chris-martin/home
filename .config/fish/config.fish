@@ -5,7 +5,8 @@ set -x HOSTNAME (hostname)
 set fish_user_paths       \
   $HOME/bin               \
   $HOME/.local/bin        \
-  $HOME/.nix-profile/bin
+  $HOME/.nix-profile/bin  \
+  $HOME/haskell/xin/.nix/xin/bin
 
 set -x EDITOR     yi
 set -x GIT_EDITOR yi
