@@ -32,7 +32,7 @@
 
   nix.trustedUsers = [ "@wheel" ];
 
-  time.timeZone = "America/Chicago";
+  time.timeZone = "America/Denver";
 
   networking.hostName = "renzo";
   networking.networkmanager.enable = true;
