@@ -34,7 +34,7 @@
   nix.maxJobs = 8;
   nix.buildCores = 0;
 
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Denver";
 
   services.openssh = {
     enable = true;
