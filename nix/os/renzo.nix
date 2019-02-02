@@ -104,8 +104,10 @@
   '';
 
   # https://github.com/NixOS/nixpkgs/issues/24184
-  services.xserver.displayManager.sessionCommands = ''
-    amixer -c 0 cset 'numid=10' 1
-  '';
+  services.acpid.enable = true;
+  services.acpid.handlers.fixHeadphoneNoise = {
+    event = "jack/headphone HEADPHONE plug";
+    action = "${pkgs.alsaUtils}/bin/amixer -c0 sset 'Headphone Mic Boost' 10dB";
+  };
 
 }
