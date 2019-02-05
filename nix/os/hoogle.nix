@@ -85,6 +85,7 @@
     #p.stripe-core
     #p.stripe-haskell
     #p.stripe-http-streams
+    p.these
     p.template
     p.test-framework
     p.text
