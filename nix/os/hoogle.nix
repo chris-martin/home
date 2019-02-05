@@ -66,6 +66,7 @@
     #p.partial-semigroup-hedgehog
     #p.partial-semigroup-test
     p.path-text-utf8
+    p.pipes
     p.postgresql-simple
     #p.postmark
     p.profunctors
