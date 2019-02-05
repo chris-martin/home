@@ -78,6 +78,7 @@
     p.resourcet
     #p.rss
     p.safe-exceptions
+    p.safe-money
     p.scotty
     p.stm
     #p.stm-containers
