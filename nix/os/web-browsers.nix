@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = [
-    pkgs.firefox-bin
+    pkgs.firefox
     pkgs.google-chrome
   ];
   services.xserver.displayManager.sessionCommands = ''
