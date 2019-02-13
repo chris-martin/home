@@ -67,6 +67,9 @@
     #p.partial-semigroup-test
     p.path-text-utf8
     p.pipes
+    p.pipes-attoparsec
+    p.pipes-bytestring
+    p.pipes-http
     p.postgresql-simple
     #p.postmark
     p.profunctors
