@@ -15,6 +15,8 @@ let
     acherus-militant = pkgs.callPackage ./pkgs/acherus-militant { };
     ede = pkgs.callPackages ./pkgs/ede { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
+    haskell-ci = pkgs.haskell.lib.justStaticExecutables
+      (pkgs.haskellPackages.callPackage ./pkgs/haskell-ci/haskell-ci.nix { });
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
@@ -51,7 +53,6 @@ let
         "doctest"
         "FractalArt"
         "ghcid"
-        "haskell-ci"
         "hoogle"
         "hindent"
         "nix-deploy"
@@ -76,6 +77,7 @@ let
       #ghc
       #ghcid
       #gtetrinet
+      haskell-ci
       #intellij
       #nix-deploy
       #nixUnstable
