@@ -40,6 +40,7 @@
     p.http-client-tls
     p.http-conduit
     p.http-types
+    p.ini
     p.lens
     p.lens-aeson
     #p.loc
