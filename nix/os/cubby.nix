@@ -51,6 +51,8 @@
 
   services.localtime.enable = true;
 
+  services.dictd.enable = true;
+
   environment.etc."fuse.conf".text = ''
     user_allow_other
   '';
