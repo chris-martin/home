@@ -6,9 +6,9 @@
   services.hoogle.packages = p: [
     p.acme-functors
     p.aeson
-    #p.aeson-decode
+    p.aeson-decode
     p.async
-    #p.atomic-modify
+    p.atomic-modify
     p.base16-bytestring
     p.binary
     p.blaze-html
@@ -21,12 +21,12 @@
     p.conduit-combinators
     p.containers
     p.cryptonite
-    #p.data-forest
+    p.data-forest
     p.Decimal
     p.diagrams
     p.directory
-    #p.ede
-    #p.either-list-functions
+    p.ede
+    p.either-list-functions
     p.filemanip
     #p.fizzbuzz-as-a-service
     p.foldl
@@ -34,7 +34,7 @@
     p.gtk3
     p.hashable
     p.hedgehog
-    #p.hex-text
+    p.hex-text
     #p.html-entities
     p.http-client
     p.http-client-tls
@@ -52,10 +52,10 @@
     p.monad-gen
     p.mtl
     #p.multi-instance
-    #p.mvar-lock
+    p.mvar-lock
     p.neat-interpolation
     p.network-uri
-    #p.one-line-aeson-text
+    p.one-line-aeson-text
     p.one-liner
     p.optparse-applicative
     p.optparse-generic
@@ -65,19 +65,16 @@
     p.parser-combinators
     #p.partial-semigroup
     #p.partial-semigroup-hedgehog
-    #p.partial-semigroup-test
     p.path-text-utf8
     p.pipes
     p.pipes-attoparsec
     p.pipes-bytestring
     p.pipes-http
     p.postgresql-simple
-    #p.postmark
+    p.postmark
     p.profunctors
     p.QuickCheck
     p.random
-    #p.reflex
-    #p.reflex-dom
     p.resource-pool
     p.resourcet
     #p.rss
@@ -86,9 +83,10 @@
     p.scotty
     p.stm
     #p.stm-containers
-    #p.stripe-core
-    #p.stripe-haskell
-    #p.stripe-http-streams
+    #p.stripe-concepts
+    #p.stripe-scotty
+    #p.stripe-signature
+    #p.stripe-wreq
     p.these
     p.template
     p.test-framework
