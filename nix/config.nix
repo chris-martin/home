@@ -115,6 +115,6 @@ let
     { packageOverrides = unstable-package-overrides; };
 
   # the package set from the 'unstable' channel
-  unstable = import <unstable> { config = config-for-unstable; };
+  unstable = import <nixpkgs-unstable> { config = config-for-unstable; };
 
 in config
