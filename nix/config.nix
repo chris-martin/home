@@ -97,7 +97,7 @@ let
   package-overrides = pkgs:
     unstable-package-overrides pkgs //
     from-unstable pkgs //
-    { nixpkgs-unstable = unstable; };
+    { nixpkgs-unstable = unstable; ghc = pkgs.haskell.compiler.ghc863; };
 
   # the full nixpkgs configuration
   config =
