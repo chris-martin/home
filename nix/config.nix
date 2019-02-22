@@ -82,6 +82,7 @@ let
       #nix-deploy
       #nixUnstable
       #nodePackages
+      obs-studio
       #secp256k1
       stack
       #stack2nix
