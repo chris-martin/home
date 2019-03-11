@@ -5,7 +5,7 @@ let
     allowUnfree = true;
     chromium = {
       enablePepperFlash = true;
-      enablePepperPDF = true;
+      #enablePepperPDF = true;
       enableWideVine = true;
     };
   };
@@ -28,7 +28,7 @@ let
     text-replace = pkgs.callPackage ./pkgs/text-replace { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
     yi-chris-martin = pkgs.haskell.lib.justStaticExecutables
-      (pkgs.haskellPackages.callPackage ../yi/yi.nix { });
+      (pkgs.haskell.packages.ghc844.callPackage ../yi/yi.nix { });
   };
 
   # slightly more convenient aliases for packages defined in nixpkgs

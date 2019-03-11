@@ -6,27 +6,27 @@
   services.hoogle.packages = p: [
     p.acme-functors
     p.aeson
-    p.aeson-decode
+    #p.aeson-decode
     p.async
-    p.atomic-modify
+    #p.atomic-modify
     p.base16-bytestring
     p.binary
     p.blaze-html
     p.blaze-markup
     #p.bricks
     p.bytestring
-    p.choose
-    p.choose-exe
+    #p.choose
+    #p.choose-exe
     p.cookie
     p.conduit-combinators
     p.containers
     p.cryptonite
-    p.data-forest
+    #p.data-forest
     p.Decimal
     p.diagrams
     p.directory
     p.ede
-    p.either-list-functions
+    #p.either-list-functions
     p.filemanip
     #p.fizzbuzz-as-a-service
     p.foldl
@@ -52,7 +52,7 @@
     p.monad-gen
     p.mtl
     #p.multi-instance
-    p.mvar-lock
+    #p.mvar-lock
     p.neat-interpolation
     p.network-uri
     p.one-line-aeson-text
@@ -70,6 +70,8 @@
     p.pipes-attoparsec
     p.pipes-bytestring
     p.pipes-http
+    p.pipes-safe
+    #p.pipes-text
     p.postgresql-simple
     p.postmark
     p.profunctors
@@ -79,7 +81,7 @@
     p.resourcet
     #p.rss
     p.safe-exceptions
-    p.safe-money
+    #p.safe-money
     p.scotty
     p.stm
     #p.stm-containers
@@ -104,11 +106,11 @@
     p.warp
     p.wreq
     p.xmonad
-    p.yi-core
-    p.yi-keymap-cua
-    p.yi-keymap-vim
-    p.yi-misc-modes
-    p.yi-mode-haskell
-    p.yi-mode-javascript
+    #p.yi-core
+    #p.yi-keymap-cua
+    #p.yi-keymap-vim
+    #p.yi-misc-modes
+    #p.yi-mode-haskell
+    #p.yi-mode-javascript
   ];
 }
