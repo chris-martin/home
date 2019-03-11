@@ -20,7 +20,7 @@
     pkgs.cabal-install
     pkgs.cabal2nix
     pkgs.cheese # Camera GUI
-    pkgs.choose-exe # Chooses random elements from a stream
+    #pkgs.choose-exe # Chooses random elements from a stream
     pkgs.cryptsetup # LUKS disk encryption
     pkgs.curl
     pkgs.dmenu
@@ -74,7 +74,7 @@
     pkgs.lsof # list open files
     pkgs.man
     pkgs.manpages
-    pkgs.meld # diff tool
+    #pkgs.meld # diff tool
     pkgs.moc # "music on console" CLI music player
     pkgs.moreutils
     pkgs.mpv # video player
@@ -106,7 +106,7 @@
     pkgs.stack # Haskell build tool
     #pkgs.stack2nix
     pkgs.stylish-haskell # Haskell code formatter
-    pkgs.sublime # text editor
+    #pkgs.sublime # text editor
     #pkgs.sws
     pkgs.tesseract # OCR
     #pkgs.text-replace
