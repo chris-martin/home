@@ -17,7 +17,7 @@ let
     sha256 = "0pv91i5j6paivwiacbd36hix6c2xnx0d4g2pahcz8mmh1wp6dpdf";
   };
 
-  haskellAndPackages = haskell.packages.ghc863.ghcWithPackages (p: [
+  haskellAndPackages = haskell.packages.ghc864.ghcWithPackages (p: [
     p.base
     p.containers
     p.MonadRandom
