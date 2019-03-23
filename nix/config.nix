@@ -28,7 +28,7 @@ let
     text-replace = pkgs.callPackage ./pkgs/text-replace { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
     yi-chris-martin = pkgs.haskell.lib.justStaticExecutables
-      (pkgs.haskell.packages.ghc844.callPackage ../yi/yi.nix { });
+      (oldpkgs.haskell.packages.ghc844.callPackage ../yi/yi.nix { });
   };
 
   # slightly more convenient aliases for packages defined in nixpkgs
@@ -117,5 +117,7 @@ let
 
   # the package set from the 'unstable' channel
   unstable = import <nixpkgs-unstable> { config = config-for-unstable; };
+
+  oldpkgs = import <nixos-18.09> { config = config-for-unstable; };
 
 in config
