@@ -19,6 +19,8 @@
     pkgs.binutils
     pkgs.cabal-install
     pkgs.cabal2nix
+    pkgs.cachix
+    pkgs.calibre
     pkgs.cheese # Camera GUI
     #pkgs.choose-exe # Chooses random elements from a stream
     pkgs.cryptsetup # LUKS disk encryption
@@ -28,10 +30,12 @@
     pkgs.entr
     pkgs.eog # "eye of gnome" image viewer
     pkgs.evince # PDF viewer
+    pkgs.exercism
     pkgs.ffmpeg
     pkgs.ffmpegthumbnailer # enables video thumbnails in Nautilus
     pkgs.file-roller # zip GUI
     pkgs.fish # shell
+    pkgs.fontforge
     #pkgs.FractalArt
     pkgs.fullwidth # converts strings to their fullwidth forms
     pkgs.gcc # C compiler
@@ -55,23 +59,29 @@
     pkgs.gnome-terminal
     pkgs.gnumake
     pkgs.gnupg
+    pkgs.go
     pkgs.google-chrome
     pkgs.guvcview # for recording from a webcam
     pkgs.haskell-ci
     pkgs.hindent
     pkgs.hlint
+    pkgs.hpack
     pkgs.htop
     pkgs.imagemagick # CLI image editor
     pkgs.inkscape # SVG editor
     pkgs.intellij # IntelliJ IDEa
+    pkgs.inxi
     pkgs.iw # wireless network manager
     pkgs.jmtpfs # Android filesystem mounting
+    pkgs.jq
     pkgs.kcolorchooser
     pkgs.kdenlive
+    pkgs.konsole
     pkgs.libav
     pkgs.libnotify
     pkgs.libreoffice
     pkgs.lsof # list open files
+    pkgs.lynx
     pkgs.man
     pkgs.manpages
     #pkgs.meld # diff tool
@@ -121,6 +131,7 @@
     pkgs.vim # text editor
     pkgs.wget
     pkgs.which
+    pkgs.woff2
     pkgs.xclip # CLI utility for the X clipboard
     pkgs.xorg.xev
     pkgs.xournal # PDF editor
