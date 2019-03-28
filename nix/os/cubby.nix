@@ -25,6 +25,7 @@
     ./xmonad.nix
     ./cache.nix
     ./nix.nix
+    ./direnv.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
