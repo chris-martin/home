@@ -27,6 +27,8 @@
     pkgs.curl
     pkgs.dmenu
     pkgs.doctest
+    pkgs.elmPackages.elm
+    pkgs.elmPackages.elm-format
     pkgs.entr
     pkgs.eog # "eye of gnome" image viewer
     pkgs.evince # PDF viewer
