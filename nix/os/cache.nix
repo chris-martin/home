@@ -20,7 +20,7 @@ let
     default
     cachix
     chris-martin
-    komposition
+    #komposition
   ];
 
 in
