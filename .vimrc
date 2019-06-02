@@ -66,5 +66,3 @@ filetype plugin on
 
 set ttymouse=xterm2
 set mouse=a
-
-autocmd Filetype haskell setlocal cc=81
