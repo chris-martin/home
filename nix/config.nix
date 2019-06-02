@@ -19,6 +19,7 @@ let
     haskell-ci = pkgs.haskell.lib.justStaticExecutables
       (pkgs.haskellPackages.callPackage ./pkgs/haskell-ci/haskell-ci.nix { });
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
+    my-latex = pkgs.callPackage ./pkgs/my-latex { };
     my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
     rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
