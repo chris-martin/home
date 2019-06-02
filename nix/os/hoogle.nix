@@ -35,6 +35,7 @@
     p.hashable
     p.hedgehog
     p.hex-text
+    #p.hnix
     #p.html-entities
     p.http-client
     p.http-client-tls
