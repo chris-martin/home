@@ -13,6 +13,7 @@ let
   # packages defined locally that aren't in nixpkgs
   new-packages = pkgs: {
     acherus-militant = pkgs.callPackage ./pkgs/acherus-militant { };
+    birdfont = pkgs.callPackage ./pkgs/birdfont { };
     ede = pkgs.callPackages ./pkgs/ede { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     haskell-ci = pkgs.haskell.lib.justStaticExecutables
