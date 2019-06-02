@@ -76,23 +76,10 @@ let
   from-unstable = pkgs: {
     inherit (unstable)
       cabal-install
-      #cabal2nix
-      #doctest
-      #firefox
-      #ghc
-      #ghcid
-      #gtetrinet
       haskell-ci
-      #intellij
-      #nix-deploy
-      #nixUnstable
-      #nodePackages
       obs-studio
-      #secp256k1
       stack
-      #stack2nix
-      #steam
-      #stylish-haskell
+      stylish-haskell
       ;
     #haskell-ci = unstable.haskell.lib.justStaticExecutables
     #  unstable.haskellPackages.haskell-ci;
