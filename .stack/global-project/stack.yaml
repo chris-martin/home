@@ -7,4 +7,6 @@
 # http://docs.haskellstack.org/en/stable/yaml_configuration/
 #
 packages: []
-resolver: lts-13.14
+resolver: lts-13.17
+extra-deps:
+  - texrunner-0.0.1.2@sha256:e4ba747a3c059c727953b9596e45e867d5305b55132b6040b03ebd9cbb5feb8c
