@@ -53,6 +53,7 @@
   networking.networkmanager.enable = true;
 
   networking.firewall.allowPing = true;
+  networking.firewall.allowedTCPPorts = [ 8000 ];
 
   services.redshift.enable = true;
   services.redshift.provider = "geoclue2";
