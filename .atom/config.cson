@@ -41,6 +41,7 @@
       "language-scala"
       "hard-wrap"
       "ide-haskell-hie"
+      "github"
     ]
     ignoredNames: [
       ".aws"
@@ -74,11 +75,10 @@
     autoIndentOnPaste: false
     backUpBeforeSaving: true
     fontFamily: "\"Fira Code\""
-    fontSize: 16
+    fontSize: 26
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
-    softWrapAtPreferredLineLength: true
     zoomFontWhenCtrlScrolling: false
   "haskell-ghc-mod": {}
   "ide-haskell-hie":
