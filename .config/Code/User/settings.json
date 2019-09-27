@@ -16,7 +16,11 @@
     },
     "editor.mouseWheelZoom": true,
     "editor.minimap.enabled": false,
+    "editor.quickSuggestions": false,
+    "editor.wordBasedSuggestions": false,
     "workbench.colorTheme": "Visual Studio Light",
     "breadcrumbs.enabled": true,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "workbench.tree.indent": 28,
+    "explorer.confirmDragAndDrop": false
 }
