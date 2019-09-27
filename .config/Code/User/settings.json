@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "hic.executablePath": "./ghcide.sh",
@@ -22,5 +22,7 @@
     "breadcrumbs.enabled": true,
     "git.autofetch": true,
     "workbench.tree.indent": 28,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.wrappingIndent": "deepIndent"
 }
