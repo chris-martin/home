@@ -1,0 +1,21 @@
+{
+    "window.zoomLevel": 2,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "hic.executablePath": "./ghcide.sh",
+    "hic.arguments": "",
+    "editor.fontSize": 10,
+    "files.autoSave": "onWindowChange",
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/.stack": true,
+        "**/.stack-work": true,
+        "**/dist": true,
+        "**/dist-newstyle": true
+    },
+    "editor.mouseWheelZoom": true,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Visual Studio Light",
+    "breadcrumbs.enabled": true
+}

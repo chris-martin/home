@@ -30,6 +30,12 @@
 !/.config/user-dirs.conf
 !/.config/user-dirs.dirs
 
+!/.config/Code
+/.config/Code/*
+!/.config/Code/User
+/.config/Code/User/*
+!/.config/Code/User/settings.json
+
 !/.config/fish/
 /.config/fish/*
 !/.config/fish/*.fish
