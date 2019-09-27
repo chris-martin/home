@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "hic.executablePath": "./ghcide.sh",
@@ -17,5 +17,6 @@
     "editor.mouseWheelZoom": true,
     "editor.minimap.enabled": false,
     "workbench.colorTheme": "Visual Studio Light",
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "git.autofetch": true
 }
