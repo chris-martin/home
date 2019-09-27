@@ -34,6 +34,7 @@
 /.config/Code/*
 !/.config/Code/User
 /.config/Code/User/*
+!/.config/Code/User/keybindings.json
 !/.config/Code/User/settings.json
 
 !/.config/fish/
