@@ -24,5 +24,18 @@
     "workbench.tree.indent": 28,
     "explorer.confirmDragAndDrop": false,
     "files.trimTrailingWhitespace": true,
-    "editor.wrappingIndent": "deepIndent"
+    "editor.wrappingIndent": "deepIndent",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.autoIndent": false,
+    "actionButtons": {
+        "reloadButton": null,
+        "commands": [
+            {
+                "name": "hs-nix-modules",
+                "singleInstance": true,
+                "command": "make hs-nix-modules"
+            }
+        ]
+    },
+    "todohighlight.keywordsPattern": "\\bTODO\\b|\\b[Tt][Oo][Dd][Oo](?= *[:-])|\\[ *[Tt][Oo][Dd][Oo] *\\]|\\( *[Tt][Oo][Dd][Oo] *\\)"
 }

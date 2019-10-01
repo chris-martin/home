@@ -105,5 +105,9 @@
     "key": "alt+down",
     "command": "-editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+q",
+    "command": "paragraphHardWrapper.wrap"
   }
 ]
