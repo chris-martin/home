@@ -2,8 +2,6 @@
     "window.zoomLevel": 0,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "hic.executablePath": "./ghcide.sh",
-    "hic.arguments": "",
     "editor.fontSize": 10,
     "files.autoSave": "onWindowChange",
     "editor.tabSize": 2,
@@ -37,5 +35,9 @@
             }
         ]
     },
-    "todohighlight.keywordsPattern": "\\bTODO\\b|\\b[Tt][Oo][Dd][Oo](?= *[:-])|\\[ *[Tt][Oo][Dd][Oo] *\\]|\\( *[Tt][Oo][Dd][Oo] *\\)"
+    "todohighlight.keywordsPattern": "\\bTODO\\b|\\b[Tt][Oo][Dd][Oo](?= *[:\\-\\r\\n])|\\[ *[Tt][Oo][Dd][Oo] *\\]|\\( *[Tt][Oo][Dd][Oo] *\\)",
+    "editor.dragAndDrop": false,
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.mode": "none",
+    "update.showReleaseNotes": false
 }
