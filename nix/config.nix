@@ -16,6 +16,8 @@ let
     birdfont = pkgs.callPackage ./pkgs/birdfont { };
     ede = pkgs.callPackages ./pkgs/ede { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
+    #ghc = (pkgs.callPackage ./haskell {}).ghc;
+    #ghcide = (pkgs.callPackage ./haskell {}).ghcide;
     haskell-ci = pkgs.haskell.lib.justStaticExecutables
       (pkgs.haskellPackages.callPackage ./pkgs/haskell-ci/haskell-ci.nix { });
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
@@ -25,7 +27,10 @@ let
     rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
     rollandin-emilie = pkgs.callPackage ./pkgs/rollandin-emilie { };
     slack-latex = pkgs.callPackage ./pkgs/slack-latex { };
-    stylish-haskell = pkgs.callPackage ./pkgs/stylish-haskell { };
+    steam-run =
+        (pkgs.steam.override {
+          nativeOnly = true;
+        }).run;
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
     text-replace = pkgs.callPackage ./pkgs/text-replace { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
@@ -51,6 +56,7 @@ let
   haskell-apps = pkgs:
     let
       package-names = [
+        "cabal-bounds"
         "choose-exe"
         "doctest"
         "FractalArt"
@@ -62,7 +68,9 @@ let
         "hpack"
         "nix-deploy"
         "pandoc-sidenote"
+        "shu-thing"
         "sws"
+        "stylish-haskell"
       ];
       f = x: {
         name = x;
@@ -76,10 +84,11 @@ let
   from-unstable = pkgs: {
     inherit (unstable)
       cabal-install
-      haskell-ci
+      #haskell-ci
       obs-studio
       stack
       stylish-haskell
+      sws
       ;
   };
 

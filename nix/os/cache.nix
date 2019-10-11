@@ -16,11 +16,15 @@ let
   komposition = mkCache "https://komposition.cachix.org"
     "komposition.cachix.org-1:nzWESzP0bEENshGnqQYN8+mic6JOxw2APw/AJAXhF3Y=";
 
+  hercules-ci = mkCache "https://hercules-ci.cachix.org"
+    "hercules-ci.cachix.org-1:ZZeDl9Va+xe9j+KqdzoBZMFJHVQ42Uu/c/1/KMC5Lw0=";
+
   all = [
     default
     cachix
     chris-martin
     #komposition
+    hercules-ci
   ];
 
 in

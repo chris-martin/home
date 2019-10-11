@@ -15,6 +15,8 @@
     p.blaze-markup
     #p.bricks
     p.bytestring
+    #p.Chart
+    #p.Chart-cairo
     #p.choose
     #p.choose-exe
     p.cookie
@@ -74,7 +76,7 @@
     p.pipes-safe
     #p.pipes-text
     p.postgresql-simple
-    p.postmark
+    #p.postmark
     p.profunctors
     p.QuickCheck
     p.random
@@ -84,6 +86,7 @@
     p.safe-exceptions
     #p.safe-money
     p.scotty
+    #p.semialign
     p.stm
     #p.stm-containers
     #p.stripe-concepts

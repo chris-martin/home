@@ -33,6 +33,7 @@
     ./cache.nix
     ./nix.nix
     ./direnv.nix
+    ./minecraft-server.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
@@ -56,7 +57,7 @@
   networking.firewall.allowedTCPPorts = [ 8000 ];
 
   services.redshift.enable = true;
-  services.redshift.provider = "geoclue2";
+  location.provider = "geoclue2";
 
   services.localtime.enable = true;
 
@@ -66,7 +67,7 @@
     user_allow_other
   '';
 
-  system.stateVersion = "19.03";
+  system.stateVersion = "19.09";
 
 
   #-----------------------------------------------------------------------------

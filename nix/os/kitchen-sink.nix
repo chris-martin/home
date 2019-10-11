@@ -58,13 +58,14 @@
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
     pkgs.ghc
+    pkgs.ghcide
     pkgs.gnome-terminal
     pkgs.gnumake
     pkgs.gnupg
     pkgs.go
     pkgs.google-chrome
     pkgs.guvcview # for recording from a webcam
-    pkgs.haskell-ci
+    #pkgs.haskell-ci
     #pkgs.hindent
     pkgs.hlint
     pkgs.hpack
@@ -107,7 +108,8 @@
     pkgs.pdftk
     pkgs.psmisc # contains killall
     pkgs.pssh
-    pkgs.python36Packages.ipython # Python REPL
+    pkgs.python3
+    pkgs.python3Packages.ipython # Python REPL
     pkgs.rlwrap
     pkgs.rip-cd
     pkgs.rsync
@@ -119,7 +121,7 @@
     #pkgs.stack2nix
     pkgs.stylish-haskell # Haskell code formatter
     #pkgs.sublime # text editor
-    #pkgs.sws
+    pkgs.sws
     pkgs.tesseract # OCR
     #pkgs.text-replace
     pkgs.tmux
