@@ -41,6 +41,7 @@
     #pkgs.FractalArt
     pkgs.fullwidth # converts strings to their fullwidth forms
     pkgs.gcc # C compiler
+    pkgs.gnome3.dconf-editor
     pkgs.gnome3.gedit
     pkgs.ghcid # Haskell GHCi daemon
     pkgs.ghostscript
@@ -58,7 +59,7 @@
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
     pkgs.ghc
-    pkgs.ghcide
+    #pkgs.ghcide
     pkgs.gnome-terminal
     pkgs.gnumake
     pkgs.gnupg
