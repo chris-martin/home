@@ -33,6 +33,7 @@
     #p.fizzbuzz-as-a-service
     p.foldl
     p.gd
+    p.ghc-prim
     p.gtk3
     p.hashable
     p.hedgehog
@@ -60,6 +61,7 @@
     p.network-uri
     p.one-line-aeson-text
     p.one-liner
+    p.opaleye
     p.optparse-applicative
     p.optparse-generic
     #p.pam
