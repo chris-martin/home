@@ -134,6 +134,7 @@
     pkgs.unetbootin
     pkgs.unzip
     pkgs.vim # text editor
+    pkgs.vscode
     pkgs.wget
     pkgs.which
     pkgs.woff2
