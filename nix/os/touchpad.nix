@@ -1,11 +1,12 @@
 { ... }:
 {
-  services.xserver.synaptics.enable = true;
-  services.xserver.synaptics.minSpeed = "0.8";
-  services.xserver.synaptics.maxSpeed = "1.4";
-  services.xserver.synaptics.accelFactor = "0.05";
-  services.xserver.synaptics.tapButtons = false;
-  services.xserver.synaptics.twoFingerScroll = true;
+  #services.xserver.libinput.minSpeed = "0.2";
+  #services.xserver.libinput.maxSpeed = "0.8";
 
-  services.xserver.libinput.enable = false;
+  services.xserver.libinput.enable = true;
+  services.xserver.libinput.accelSpeed = "0.01";
+  services.xserver.libinput.tapping = false;
+  services.xserver.libinput.scrollMethod = "twofinger";
+  services.xserver.libinput.naturalScrolling = false;
+  services.xserver.libinput.horizontalScrolling = true;
 }
