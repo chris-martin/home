@@ -40,7 +40,7 @@
   networking.firewall.allowPing = true;
 
   services.redshift.enable = true;
-  services.redshift.provider = "geoclue2";
+  location.provider = "geoclue2";
 
   services.localtime.enable = true;
 
