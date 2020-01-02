@@ -1,4 +1,5 @@
 {
+    "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
     "window.zoomLevel": 0,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
