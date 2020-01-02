@@ -84,6 +84,7 @@ let
       stack
       stylish-haskell
       sws
+      vscode
       ;
   };
 
