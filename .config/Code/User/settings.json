@@ -8,10 +8,11 @@
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
     "files.exclude": {
-        "**/.stack": true,
-        "**/.stack-work": true,
-        "**/dist": true,
-        "**/dist-newstyle": true
+      "**/.history": true,
+      "**/.stack": true,
+      "**/.stack-work": true,
+      "**/dist": true,
+      "**/dist-newstyle": true
     },
     "editor.mouseWheelZoom": true,
     "editor.minimap.enabled": false,
