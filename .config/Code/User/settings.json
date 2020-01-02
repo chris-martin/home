@@ -51,5 +51,8 @@
     "editor.dragAndDrop": false,
     "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "none",
-    "update.showReleaseNotes": false
+    "update.showReleaseNotes": false,
+    "editor.detectIndentation": false,
+    "vs-color-picker.autoLaunch": false,
+    "editor.parameterHints.enabled": false
 }
