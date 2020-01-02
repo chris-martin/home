@@ -14,4 +14,5 @@ echo "If this hangs indefinitely, you may need to SSH to the host to accept the 
 echo "Mounting..."
 echo "$PASSWORD" | \
   sshfs "$USER"@"$HOST": "$MOUNT" \
+  -oKexAlgorithms=+diffie-hellman-group1-sha1 \
   -o ServerAliveInterval=30,password_stdin,allow_other && echo -e 'Done.'
