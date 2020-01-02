@@ -218,5 +218,17 @@
   {
     "key": "ctrl+s",
     "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill"
   }
 ]
