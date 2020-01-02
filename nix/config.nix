@@ -3,11 +3,6 @@ let
   # all of the configuration except the package overrides
   config-without-overrides = {
     allowUnfree = true;
-    chromium = {
-      enablePepperFlash = true;
-      #enablePepperPDF = true;
-      enableWideVine = true;
-    };
   };
 
   # packages defined locally that aren't in nixpkgs
