@@ -34,6 +34,16 @@
                 "name": "hs-nix-modules",
                 "singleInstance": true,
                 "command": "make hs-nix-modules"
+            },
+            {
+                "name": "make screen",
+                "singleInstance": true,
+                "command": "make screen"
+            },
+            {
+                "name": "cabal haddock",
+                "singleInstance": true,
+                "command": "cabal haddock"
             }
         ]
     },
