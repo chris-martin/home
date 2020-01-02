@@ -130,6 +130,16 @@
   },
   {
     "key": "alt+p",
+    "command": "editor.action.replaceOne",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+shift+1",
+    "command": "-editor.action.replaceOne",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "alt+p",
     "command": "search.action.replace",
     "when": "matchFocus && replaceActive && searchViewletVisible"
   },
@@ -137,6 +147,29 @@
     "key": "ctrl+shift+1",
     "command": "-search.action.replace",
     "when": "matchFocus && replaceActive && searchViewletVisible"
+  },
+  {
+    "key": "alt+p",
+    "command": "-keybindings.editor.toggleSortByPrecedence",
+    "when": "inKeybindings"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "editor.action.replaceAll",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+alt+enter",
+    "command": "-editor.action.replaceAll",
+    "when": "editorFocus && findWidgetVisible"
   },
   {
     "key": "ctrl+enter",
@@ -149,61 +182,41 @@
     "when": "replaceActive && searchViewletVisible && !findWidgetVisible"
   },
   {
-    "key": "ctrl+shift+r",
-    "command": "workbench.action.replaceInFiles"
+    "key": "alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+h",
-    "command": "-workbench.action.replaceInFiles"
+    "key": "ctrl+shift+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
   },
   {
     "key": "alt+down",
-    "command": "editor.action.nextMatchFindAction",
-    "when": "editorFocus"
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
   },
   {
-    "key": "f3",
-    "command": "-editor.action.nextMatchFindAction",
-    "when": "editorFocus"
+    "key": "ctrl+shift+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
   },
   {
-    "key": "alt+up",
-    "command": "editor.action.previousMatchFindAction",
-    "when": "editorFocus"
+    "key": "shift+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
   },
   {
-    "key": "shift+f3",
-    "command": "-editor.action.previousMatchFindAction",
-    "when": "editorFocus"
+    "key": "ctrl+s",
+    "command": "-workbench.action.files.save"
   },
   {
-    "key": "alt+p",
-    "command": "editor.action.replaceOne",
-    "when": "editorFocus && findWidgetVisible"
-  },
-  {
-    "key": "ctrl+shift+1",
-    "command": "-editor.action.replaceOne",
-    "when": "editorFocus && findWidgetVisible"
-  },
-  {
-    "key": "ctrl+enter",
-    "command": "search.action.replaceAllInFile",
-    "when": "fileMatchFocus && replaceActive && searchViewletVisible"
-  },
-  {
-    "key": "ctrl+shift+1",
-    "command": "-search.action.replaceAllInFile",
-    "when": "fileMatchFocus && replaceActive && searchViewletVisible"
-  },
-  {
-    "key": "ctrl+enter",
-    "command": "search.action.replaceAllInFolder",
-    "when": "folderMatchFocus && replaceActive && searchViewletVisible"
-  },
-  {
-    "key": "ctrl+shift+1",
-    "command": "-search.action.replaceAllInFolder",
-    "when": "folderMatchFocus && replaceActive && searchViewletVisible"
+    "key": "ctrl+s",
+    "command": "workbench.action.files.saveAll"
   }
 ]
