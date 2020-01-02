@@ -10,3 +10,5 @@ nix:
   packages:
     - postgresql
     - zlib
+
+recommend-stack-upgrade: false
