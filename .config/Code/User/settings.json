@@ -26,7 +26,7 @@
     "files.trimTrailingWhitespace": true,
     "editor.wrappingIndent": "deepIndent",
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.autoIndent": "none",
+    "editor.autoIndent": "keep",
     "actionButtons": {
         "reloadButton": null,
         "commands": [
