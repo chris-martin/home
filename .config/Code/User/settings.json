@@ -31,6 +31,11 @@
         "reloadButton": null,
         "commands": [
             {
+                "name": "make",
+                "singleInstance": true,
+                "command": "make"
+            },
+            {
                 "name": "hs-nix-modules",
                 "singleInstance": true,
                 "command": "make hs-nix-modules"
