@@ -41,6 +41,11 @@
                 "command": "make hs-nix-modules"
             },
             {
+                "name": "make stylish-haskell",
+                "singleInstance": true,
+                "command": "make stylish-haskell"
+            },
+            {
                 "name": "make screen",
                 "singleInstance": true,
                 "command": "make screen"
