@@ -255,5 +255,9 @@
     "key": "shift+f3",
     "command": "-editor.action.previousMatchFindAction",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
   }
 ]
