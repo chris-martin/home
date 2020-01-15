@@ -259,5 +259,29 @@
   {
     "key": "ctrl+q",
     "command": "-workbench.action.quit"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.continue",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.start",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "f5",
+    "command": "-vscode-postgres.runQuery",
+    "when": "editorLangId == 'postgres'"
+  },
+  {
+    "key": "f5",
+    "command": "workbench.action.reloadWindow"
   }
 ]
