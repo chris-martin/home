@@ -22,6 +22,7 @@
     pkgs.cachix
     pkgs.calibre
     pkgs.cheese # Camera GUI
+    pkgs.chromium
     #pkgs.choose-exe # Chooses random elements from a stream
     pkgs.cryptsetup # LUKS disk encryption
     pkgs.curl
