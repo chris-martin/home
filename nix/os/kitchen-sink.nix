@@ -140,6 +140,7 @@
     pkgs.wget
     pkgs.which
     pkgs.woff2
+    pkgs.vscode
     pkgs.xclip # CLI utility for the X clipboard
     pkgs.xorg.xev
     pkgs.xournal # PDF editor
