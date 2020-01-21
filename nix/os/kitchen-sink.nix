@@ -127,6 +127,7 @@
     pkgs.stylish-haskell # Haskell code formatter
     #pkgs.sublime # text editor
     #pkgs.sws
+    pkgs.system-config-printer
     pkgs.tesseract # OCR
     #pkgs.text-replace
     pkgs.tmux
