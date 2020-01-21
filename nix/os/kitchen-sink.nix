@@ -117,6 +117,7 @@
     pkgs.rlwrap
     pkgs.rip-cd
     pkgs.rsync
+    pkgs.sassc
     pkgs.scrot # screenshot tool
     pkgs.silver-searcher # the "ag" command
     #pkgs.solaar
