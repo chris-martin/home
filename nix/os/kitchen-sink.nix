@@ -121,6 +121,7 @@
     pkgs.silver-searcher # the "ag" command
     #pkgs.solaar
     pkgs.sshfsFuse # SSH mount
+    pkgs.socat
     pkgs.stack # Haskell build tool
     #pkgs.stack2nix
     pkgs.stylish-haskell # Haskell code formatter
