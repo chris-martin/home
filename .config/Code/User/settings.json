@@ -64,5 +64,7 @@
     "update.showReleaseNotes": false,
     "editor.detectIndentation": false,
     "vs-color-picker.autoLaunch": false,
-    "editor.parameterHints.enabled": false
+    "editor.parameterHints.enabled": false,
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingBrackets": "never"
 }
