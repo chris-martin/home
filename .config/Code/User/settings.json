@@ -66,5 +66,7 @@
     "vs-color-picker.autoLaunch": false,
     "editor.parameterHints.enabled": false,
     "editor.autoClosingQuotes": "never",
-    "editor.autoClosingBrackets": "never"
+    "editor.autoClosingBrackets": "never",
+    "explorer.confirmDelete": false,
+    "explorer.enableDragAndDrop": false
 }
