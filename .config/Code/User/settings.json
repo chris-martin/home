@@ -68,5 +68,6 @@
     "editor.autoClosingQuotes": "never",
     "editor.autoClosingBrackets": "never",
     "explorer.confirmDelete": false,
-    "explorer.enableDragAndDrop": false
+    "explorer.enableDragAndDrop": false,
+    "workbench.panel.defaultLocation": "right"
 }
