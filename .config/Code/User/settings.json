@@ -71,5 +71,7 @@
     "explorer.enableDragAndDrop": false,
     "workbench.panel.defaultLocation": "right",
     "editor.autoClosingOvertype": "never",
-    "editor.find.seedSearchStringFromSelection": false
+    "editor.find.seedSearchStringFromSelection": false,
+    "terminal.integrated.scrollback": 10000,
+    "explorer.autoReveal": false
 }
