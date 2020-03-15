@@ -1,15 +1,10 @@
-{ mkDerivation, base, containers, fetchgit, hedgehog
-, neat-interpolation, optparse-applicative, parsec, stdenv, text
+{ mkDerivation, base, containers, hedgehog, neat-interpolation
+, optparse-applicative, parsec, stdenv, text
 }:
 mkDerivation {
   pname = "text-replace";
-  version = "0.0.0.1";
-  src = fetchgit {
-    url = "https://github.com/chris-martin/text-replace";
-    sha256 = "1q6w40pkch8bbpc1mb8f2lx115d5yk60ycdpm4y558df87d7fhfw";
-    rev = "d19857a64b09210207cb864620da34e3a34650c8";
-  };
-  postUnpack = "sourceRoot+=/text-replace; echo source root reset to $sourceRoot";
+  version = "0.0.0.6";
+  sha256 = "8e89b9564b62fabae10ea60320e399bf23bab4f078e6bc61b02c135c50101916";
   isLibrary = true;
   isExecutable = true;
   libraryHaskellDepends = [ base containers ];
