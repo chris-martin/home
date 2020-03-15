@@ -130,7 +130,7 @@
     #pkgs.sws
     pkgs.system-config-printer
     pkgs.tesseract # OCR
-    #pkgs.text-replace
+    pkgs.text-replace
     pkgs.tmux
     pkgs.totem
     pkgs.transmission_gtk # bittorrent
