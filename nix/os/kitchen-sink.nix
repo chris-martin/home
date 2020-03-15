@@ -68,7 +68,7 @@
     pkgs.go
     pkgs.google-chrome
     pkgs.guvcview # for recording from a webcam
-    #pkgs.haskell-ci
+    pkgs.haskell-ci
     #pkgs.hindent
     pkgs.hlint
     pkgs.hpack
