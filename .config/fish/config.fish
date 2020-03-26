@@ -22,6 +22,12 @@ alias node 'env NODE_NO_READLINE=1 rlwrap node'
 
 alias ls 'ls --color --group-directories-first'
 
+alias clip 'xclip -selection clipboard'
+
+function td
+  cd (mktemp -d)
+end
+
 function alias2 --argument alias command
   alias "$alias" "$command"
 
