@@ -54,6 +54,11 @@
                 "name": "cabal haddock",
                 "singleInstance": true,
                 "command": "cabal haddock"
+            },
+            {
+                "name": "stack haddock",
+                "singleInstance": true,
+                "command": "stack haddock"
             }
         ]
     },
