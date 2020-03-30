@@ -6,7 +6,7 @@ nix:
   enable: true
   pure: true
   add-gc-roots: true
-  path: [/home/chris/nix/path]
+  path: [/home/chris/nix/path/nixpkgs-unstable]
   packages:
     - postgresql
     - zlib
