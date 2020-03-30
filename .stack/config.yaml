@@ -4,7 +4,7 @@
 #
 nix:
   enable: true
-  pure: false
+  pure: true
   add-gc-roots: true
   path: [/home/chris/nix/path]
   packages:
