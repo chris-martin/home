@@ -284,5 +284,13 @@
   {
     "key": "f5",
     "command": "workbench.action.reloadWindow"
+  },
+  {
+    "key": "ctrl+alt+z",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+k z",
+    "command": "-workbench.action.toggleZenMode"
   }
 ]
