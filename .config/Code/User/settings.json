@@ -1,9 +1,9 @@
 {
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "editor.fontSize": 18,
+    "editor.fontSize": 10,
     "files.autoSave": "onWindowChange",
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
