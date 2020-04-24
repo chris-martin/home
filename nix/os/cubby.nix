@@ -7,6 +7,11 @@
 {
   nixpkgs.config = import ../config.nix;
 
+  services.printing.enable = true;
+  services.printing.drivers = [ pkgs.brlaser pkgs.brgenml1lpr pkgs.brgenml1cupswrapper ];
+
+  services.postfix.enable = true;
+
   services.monero = {
     #enable = true;
     #mining.enable = true;
@@ -33,7 +38,7 @@
     ./cache.nix
     ./nix.nix
     ./direnv.nix
-    ./minecraft-server.nix
+    #./minecraft-server.nix
   ];
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";

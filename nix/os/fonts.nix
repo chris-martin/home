@@ -3,7 +3,7 @@
   fonts.enableFontDir = true;
   fonts.enableGhostscriptFonts = true;
 
-  i18n.consoleFont = "Fira Mono";
+  console.font = "Fira Mono";
 
   fonts.fonts = [
     pkgs.corefonts
