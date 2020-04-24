@@ -33,6 +33,5 @@ in
 
       meta = with stdenv.lib; {
         description = "Radio on the internet";
-        license = licenses.gpl; # The icon license is GPL
       };
     }
