@@ -11,10 +11,9 @@ let
     birdfont = pkgs.callPackage ./pkgs/birdfont { };
     ede = pkgs.callPackages ./pkgs/ede { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
-    #ghc = (pkgs.callPackage ./haskell {}).ghc;
-    #ghcide = (pkgs.callPackage ./haskell {}).ghcide;
-    haskell-ci = pkgs.haskell.lib.justStaticExecutables
-      (pkgs.haskellPackages.callPackage ./pkgs/haskell-ci/haskell-ci.nix { });
+    ghc = (unstable.callPackage ./haskell {}).ghc;
+    ghcide = pkgs.callPackage ./pkgs/ghcide {};
+    gopherclient = pkgs.libsForQt5.callPackage ./pkgs/gopherclient { };
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     my-latex = pkgs.callPackage ./pkgs/my-latex { };
     my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };
@@ -56,6 +55,7 @@ let
         "doctest"
         "FractalArt"
         "ghcid"
+        "haskell-ci"
         "hfmt"
         "hoogle"
         "hindent"
@@ -65,7 +65,7 @@ let
         "pandoc-sidenote"
         "shu-thing"
         "sws"
-        "stylish-haskell"
+        #"stylish-haskell"
       ];
       f = x: {
         name = x;
@@ -79,10 +79,14 @@ let
   from-unstable = pkgs: {
     inherit (unstable)
       cabal-install
-      #haskell-ci
+      cabal2nix
+      ghc
+      haskell-ci
+      minecraft
+      minecraft-server
       obs-studio
       stack
-      stylish-haskell
+      #stylish-haskell
       sws
       vscode
       ;
@@ -97,7 +101,9 @@ let
   # the full nixpkgs configuration
   config =
     config-without-overrides //
-    { packageOverrides = package-overrides; };
+    { packageOverrides = package-overrides;
+      android_sdk.accept_license = true;
+    };
 
   # the package overrides for the 'unstable' channel
   unstable-package-overrides = pkgs:

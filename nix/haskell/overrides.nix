@@ -27,8 +27,8 @@ grab = self.callPackage (
     { mkDerivation, base, criterion, hedgehog, stdenv }:
     mkDerivation {
       pname = "grab";
-      version = "0.0.0.1";
-      sha256 = "2e33eeb08aea96355257961ce734eabbfe99378e5a04c203218a7034ca4351cb";
+      version = "0.0.0.4";
+      sha256 = "44ca2087a4a20d400cc59759d78fca7a946710f894d264b931826b3155aa5679";
       libraryHaskellDepends = [ base ];
       testHaskellDepends = [ base hedgehog ];
       benchmarkHaskellDepends = [ base criterion ];
@@ -42,8 +42,8 @@ grab-form = self.callPackage (
     { mkDerivation, base, containers, grab, hedgehog, stdenv, text }:
     mkDerivation {
       pname = "grab-form";
-      version = "0.0.0.1";
-      sha256 = "d706986367e95fe47186af4363457aa1e3103ec76cbafd78cf80e76e8f3bef5d";
+      version = "0.0.0.4";
+      sha256 = "c59605b2f367bbc1324261d518cccdd6ef0ae511d9f74c63d0c94fe926600832";
       libraryHaskellDepends = [ base containers grab text ];
       testHaskellDepends = [ base containers hedgehog text ];
       homepage = "https://github.com/typeclasses/grab";

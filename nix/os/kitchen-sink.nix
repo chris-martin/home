@@ -45,7 +45,9 @@
     pkgs.gcc # C compiler
     pkgs.gnome3.dconf-editor
     pkgs.gnome3.gedit
+    pkgs.ghc
     pkgs.ghcid # Haskell GHCi daemon
+    pkgs.ghcide # Haskell IDE
     pkgs.ghostscript
     pkgs.gimp # umage editor
     pkgs.gitAndTools.gitFull
@@ -56,12 +58,12 @@
     pkgs.glib.dev # provides the "gio" command
     pkgs.gmrun
     pkgs.gnome-screenshot # screenshot tool
+    pkgs.gnucash # accounting
     pkgs.gnumake # make
+    pkgs.gopher
     pkgs.gparted # partitioning tool
     pkgs.gptfdisk # partitioning tool
     pkgs.graphviz
-    pkgs.ghc
-    #pkgs.ghcide
     pkgs.gnome-terminal
     pkgs.gnumake
     pkgs.gnupg
@@ -125,10 +127,11 @@
     pkgs.socat
     pkgs.stack # Haskell build tool
     #pkgs.stack2nix
-    pkgs.stylish-haskell # Haskell code formatter
+    #pkgs.stylish-haskell # Haskell code formatter
     #pkgs.sublime # text editor
     #pkgs.sws
     pkgs.system-config-printer
+    pkgs.telnet
     pkgs.tesseract # OCR
     pkgs.text-replace
     pkgs.tmux

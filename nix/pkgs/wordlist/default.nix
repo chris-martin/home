@@ -13,11 +13,11 @@ let
   src = fetchFromGitHub {
     owner = "chris-martin";
     repo = "wordlist";
-    rev = "aee6558c7f9312b20cc1d12414ddc298d20f8c66";
-    sha256 = "0pv91i5j6paivwiacbd36hix6c2xnx0d4g2pahcz8mmh1wp6dpdf";
+    rev = "82f79e811a4d54ec821bd4398cfc2cbefa6099ad";
+    sha256 = "03hhldr149hff9czd2ri52q9llgkxdy70fvfphplqbbd81bqa8wk";
   };
 
-  haskellAndPackages = haskell.packages.ghc864.ghcWithPackages (p: [
+  haskellAndPackages = haskell.packages.ghc882.ghcWithPackages (p: [
     p.base
     p.containers
     p.MonadRandom
