@@ -12,6 +12,7 @@
 "data-default-class"
 "diagrams-svg"
 "directory"
+"doctest"
 "generic-deriving"
 "hashable"
 "hedgehog"
