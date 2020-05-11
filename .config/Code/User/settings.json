@@ -1,9 +1,9 @@
 {
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "editor.fontSize": 10,
+    "editor.fontSize": 20,
     "files.autoSave": "onWindowChange",
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
@@ -15,7 +15,6 @@
       "**/dist-newstyle": true
     },
     "editor.mouseWheelZoom": true,
-    "editor.minimap.enabled": false,
     "editor.quickSuggestions": false,
     "editor.wordBasedSuggestions": false,
     "workbench.colorTheme": "Visual Studio Light",
@@ -79,5 +78,7 @@
     "editor.find.seedSearchStringFromSelection": false,
     "terminal.integrated.scrollback": 10000,
     "explorer.autoReveal": false,
-    "terminal.integrated.fontSize": 18
+    "terminal.integrated.fontSize": 18,
+    "diffEditor.renderSideBySide": false,
+    "editor.minimap.enabled": false
 }
