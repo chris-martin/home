@@ -72,11 +72,10 @@
   #  Boot
   #-----------------------------------------------------------------------------
 
-  boot.initrd.luks.devices = [{
-    name   = "root";
+  boot.initrd.luks.devices.root = {
     device = "/dev/nvme0n1p3";
     preLVM = true;
-  }];
+  };
 
   boot.loader.grub.device = "/dev/nvme0n1";
   boot.loader.systemd-boot.enable = false;
