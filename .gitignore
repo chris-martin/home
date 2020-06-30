@@ -149,15 +149,6 @@
 /.mozilla/firefox/chris/*
 !/.mozilla/firefox/chris/chrome
 
-!/.sbt/
-/.sbt/*
-!/.sbt/0.13
-/.sbt/0.13/*
-!/.sbt/0.13/global.sbt
-!/.sbt/0.13/plugins
-/.sbt/0.13/plugins/*
-!/.sbt/0.13/plugins/build.sbt
-
 !/.stack/
 /.stack/*
 !/.stack/config.yaml
