@@ -65,7 +65,8 @@
   networking.firewall.allowedTCPPorts = [ 8000 ];
 
   services.redshift.enable = true;
-  location.provider = "geoclue2";
+  location.latitude = 47.53;
+  location.longitude = -114.1;
 
   services.localtime.enable = true;
 
