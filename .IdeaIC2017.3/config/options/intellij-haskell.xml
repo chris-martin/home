@@ -1,6 +1,0 @@
-<application>
-  <component name="HaskellConfiguration">
-    <option name="hindentPath" value="$USER_HOME$/.nix-profile/bin/hindent" />
-    <option name="stylishHaskellPath" value="$USER_HOME$/.nix-profile/bin/stylish-haskell" />
-  </component>
-</application>
