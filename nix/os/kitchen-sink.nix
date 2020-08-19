@@ -155,5 +155,6 @@
     pkgs.xkill # kill X windows by clicking on them
     pkgs.yi-chris-martin
     pkgs.zip
+    pkgs.zoom-us
   ];
 }
