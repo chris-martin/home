@@ -31,6 +31,8 @@
 "pandoc-highlighting-extensions"
 "pandoc-types"
 "path"
+"pipes"
+"pipes-safe"
 "postgresql-simple"
 "pretty-show"
 "process"
