@@ -59,6 +59,8 @@
     #p.multi-instance
     #p.mvar-lock
     p.neat-interpolation
+    p.network
+    p.network-simple
     p.network-uri
     p.one-line-aeson-text
     p.one-liner
