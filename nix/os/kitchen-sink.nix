@@ -94,6 +94,7 @@
     pkgs.manpages
     #pkgs.meld # diff tool
     pkgs.minecraft
+    pkgs.mlt
     pkgs.moc # "music on console" CLI music player
     pkgs.moreutils
     pkgs.mpv # video player
