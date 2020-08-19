@@ -86,6 +86,7 @@
     p.profunctors
     p.QuickCheck
     p.random
+    p.relude
     p.resource-pool
     p.resourcet
     #p.rss
