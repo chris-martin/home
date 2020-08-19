@@ -48,8 +48,8 @@
     p.ini
     p.lens
     p.lens-aeson
-    #p.loc
-    #p.loc-test
+    p.loc
+    p.loc-test
     p.lucid
     p.markdown
     p.megaparsec
@@ -69,7 +69,7 @@
     p.pandoc
     p.pandoc-types
     p.parser-combinators
-    #p.partial-semigroup
+    p.partial-semigroup
     #p.partial-semigroup-hedgehog
     p.path-text-utf8
     p.pipes
