@@ -19,12 +19,20 @@ let
   hercules-ci = mkCache "https://hercules-ci.cachix.org"
     "hercules-ci.cachix.org-1:ZZeDl9Va+xe9j+KqdzoBZMFJHVQ42Uu/c/1/KMC5Lw0=";
 
+  ghcide-nix = mkCache "https://ghcide-nix.cachix.org"
+    "ghcide-nix.cachix.org-1:ibAY5FD+XWLzbLr8fxK6n8fL9zZe7jS+gYeyxyWYK5c=";
+
+  typeclasses = mkCache "https://typeclasses.cachix.org"
+    "typeclasses.cachix.org-1:K8vVpme/5SO7t3YIlr+B0O9daHgHN56u2U0uIT1w+N8=";
+
   all = [
     default
     cachix
     chris-martin
     #komposition
-    hercules-ci
+    #hercules-ci
+    ghcide-nix
+    typeclasses
   ];
 
 in
