@@ -65,6 +65,7 @@
     p.one-line-aeson-text
     p.one-liner
     p.opaleye
+    p.optics
     p.optparse-applicative
     p.optparse-generic
     #p.pam
