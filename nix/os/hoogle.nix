@@ -33,6 +33,7 @@
     p.filemanip
     #p.fizzbuzz-as-a-service
     p.foldl
+    p.fsnotify
     p.gd
     p.ghc-prim
     p.gtk3
