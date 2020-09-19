@@ -15,6 +15,7 @@
 "directory"
 "doctest"
 "generic-deriving"
+"hakyll"
 "hashable"
 "hedgehog"
 "http-types"
