@@ -14,6 +14,7 @@
 "diagrams-svg"
 "directory"
 "doctest"
+"fsnotify"
 "generic-deriving"
 "hakyll"
 "hashable"
