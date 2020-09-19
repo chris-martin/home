@@ -18,6 +18,7 @@
 "hakyll"
 "hashable"
 "hedgehog"
+"http-conduit"
 "http-types"
 "ini"
 "interprocess"
