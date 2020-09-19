@@ -116,6 +116,7 @@
     p.wai
     p.warp
     p.wreq
+    p.X11
     p.xmonad
     #p.yi-core
     #p.yi-keymap-cua
