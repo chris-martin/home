@@ -38,6 +38,7 @@
 "pandoc-types"
 "path"
 "pipes"
+"pipes-parse"
 "pipes-safe"
 "postgresql-simple"
 "pretty-show"
