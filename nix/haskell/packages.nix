@@ -7,6 +7,7 @@
 "aws-cloudfront-signed-cookies"
 "binary"
 "bytestring"
+"cassava"
 "containers"
 "cookie"
 "data-default-class"
