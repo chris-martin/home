@@ -65,7 +65,7 @@
             }
         ]
     },
-    "todohighlight.keywordsPattern": "\\bTODO\\b|\\b[Tt][Oo][Dd][Oo](?= *[:\\-\\r\\n])|\\[ *[Tt][Oo][Dd][Oo] *\\]|\\( *[Tt][Oo][Dd][Oo] *\\)",
+    "todohighlight.keywordsPattern": "\\bTODO\\b|\\b[Tt][Oo][Dd][Oo](?= *[:\\-\\r\\n])|\\[ *[Tt][Oo][Dd][Oo] *\\]|\\( *[Tt][Oo][Dd][Oo] *\\)|\\b_[Tt][Oo][Dd][Oo]\\b",
     "editor.dragAndDrop": false,
     "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "none",
