@@ -25,6 +25,7 @@
 "ini"
 "interprocess"
 "lucid"
+"math-functions"
 "modern-uri"
 "monad-gen"
 "mtl"
