@@ -42,6 +42,7 @@
 "pipes"
 "pipes-parse"
 "pipes-safe"
+#"pipes-text"
 "postgresql-simple"
 "pretty-show"
 "process"
