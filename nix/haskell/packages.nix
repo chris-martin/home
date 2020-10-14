@@ -17,7 +17,7 @@
 "doctest"
 "fsnotify"
 "generic-deriving"
-"hakyll"
+#"hakyll"
 "hashable"
 "hedgehog"
 "http-conduit"
