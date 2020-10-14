@@ -29,6 +29,7 @@
 "modern-uri"
 "monad-gen"
 "mtl"
+"mwc-random"
 "neat-interpolation"
 "network-uri"
 "one-line-aeson-text"
