@@ -2,6 +2,7 @@
 
 "aeson"
 "aeson-optics"
+"appendmap"
 "async"
 "attoparsec"
 "aws-cloudfront-signed-cookies"
