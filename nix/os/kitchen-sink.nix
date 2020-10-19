@@ -53,6 +53,7 @@
     pkgs.gitAndTools.gitFull
     pkgs.gitAndTools.git-bz
     pkgs.gitAndTools.git-extras
+    pkgs.github-cli
     pkgs.gksu
     pkgs.glances
     pkgs.glib.dev # provides the "gio" command
