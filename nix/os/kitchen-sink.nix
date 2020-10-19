@@ -109,6 +109,7 @@
     pkgs.nodejs # javascript repl
     pkgs.obs-studio
     pkgs.okular # PDF viewer
+    pkgs.ormolu
     pkgs.pandoc
     pkgs.pandora # internet music
     pkgs.pass
