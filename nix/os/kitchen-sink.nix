@@ -148,6 +148,7 @@
     pkgs.vim # text editor
     pkgs.vscode
     pkgs.wget
+    pkgs.wine
     pkgs.which
     pkgs.woff2
     pkgs.vscode
