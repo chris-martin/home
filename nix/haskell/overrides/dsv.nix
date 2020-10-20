@@ -1,18 +1,12 @@
 { mkDerivation, attoparsec, base, bytestring, cassava, containers
-, doctest, fetchgit, foldl, hedgehog, pipes, pipes-bytestring
-, pipes-safe, safe-exceptions, stdenv, template-haskell, text
-, validation, vector
+, doctest, foldl, hedgehog, pipes, pipes-bytestring, pipes-safe
+, safe-exceptions, stdenv, template-haskell, text, validation
+, vector
 }:
 mkDerivation {
   pname = "dsv";
-  version = "0.0.0.1";
-  src = fetchgit {
-    url = "https://github.com/typeclasses/dsv";
-    sha256 = "1swlda2adqnk2wzywds6wza04z95nlaij6k1q6xi98cf33jccljk";
-    rev = "3c4ccea5a8fea84bc93cda07dfd92bd408f2be21";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/dsv; echo source root reset to $sourceRoot";
+  version = "1.0.0.0";
+  sha256 = "f6052004fef544155daf8a238d28545867ee3b539a265c3b3f3e2a8791ba4e3a";
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
     attoparsec base bytestring cassava containers foldl pipes
