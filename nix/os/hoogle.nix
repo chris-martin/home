@@ -29,7 +29,6 @@
     p.Decimal
     p.diagrams
     p.directory
-    p.ede
     #p.either-list-functions
     p.filemanip
     #p.fizzbuzz-as-a-service
