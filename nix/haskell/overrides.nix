@@ -9,7 +9,7 @@ optics = self.callPackage (import ./overrides/optics.nix) {};
 optics-core = self.callPackage (import ./overrides/optics-core.nix) {};
 optics-extra = self.callPackage (import ./overrides/optics-extra.nix) {};
 optics-th = self.callPackage (import ./overrides/optics-th.nix) {};
-sized-based = self.callPackage (import ./overrides/sized-based.nix) {};
+size-based = self.callPackage (import ./overrides/size-based.nix) {};
 stripe-concepts = self.callPackage (import ./overrides/stripe-concepts.nix) {};
 stripe-wreq = self.callPackage (import ./overrides/stripe-wreq.nix) {};
 
