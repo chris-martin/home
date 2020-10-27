@@ -80,7 +80,6 @@ let
       cabal-install
       cabal2nix
       ghc
-      haskell-ci
       minecraft
       minecraft-server
       obs-studio
