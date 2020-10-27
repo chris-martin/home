@@ -38,7 +38,6 @@ let
       inherit (pkgs.gnome3) cheese;
       inherit (pkgs.gnome3) eog;
       inherit (pkgs.gnome3) file-roller;
-      inherit (pkgs.python27Packages) glances;
       inherit (pkgs.gnome3) gnome-screenshot;
       inherit (pkgs.gnome3) gnome-terminal;
       intellij = pkgs.jetbrains.idea-community;
