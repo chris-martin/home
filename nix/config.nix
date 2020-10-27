@@ -9,7 +9,6 @@ let
   new-packages = pkgs: {
     acherus-militant = pkgs.callPackage ./pkgs/acherus-militant { };
     birdfont = pkgs.callPackage ./pkgs/birdfont { };
-    ede = pkgs.callPackages ./pkgs/ede { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     ghc = (unstable.callPackage ./haskell {}).ghc;
     ghcide = pkgs.callPackage ./pkgs/ghcide {};
