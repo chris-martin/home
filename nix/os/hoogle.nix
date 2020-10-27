@@ -8,6 +8,7 @@
     p.aeson
     #p.aeson-decode
     #p.aeson-optics
+    p.appendmap
     p.async
     #p.atomic-modify
     p.base16-bytestring
