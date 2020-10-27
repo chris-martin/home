@@ -12,5 +12,6 @@ optics-th = self.callPackage (import ./overrides/optics-th.nix) {};
 size-based = self.callPackage (import ./overrides/size-based.nix) {};
 stripe-concepts = self.callPackage (import ./overrides/stripe-concepts.nix) {};
 stripe-wreq = self.callPackage (import ./overrides/stripe-wreq.nix) {};
+svg-builder = self.callPackage (import ./overrides/svg-builder.nix) {};
 
 }
