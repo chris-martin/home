@@ -74,9 +74,11 @@
     p.pandoc
     p.pandoc-types
     p.parser-combinators
-    p.partial-semigroup
+    #p.partial-semigroup
     #p.partial-semigroup-hedgehog
-    p.path-text-utf8
+    p.path
+    p.path-io
+    #p.path-text-utf8
     p.pipes
     p.pipes-attoparsec
     p.pipes-bytestring
@@ -112,7 +114,7 @@
     p.turtle
     p.unordered-containers
     p.utf8-string
-    #p.validation
+    p.validation
     p.var-monad
     p.vector
     p.wai
