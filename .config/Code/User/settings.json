@@ -84,5 +84,6 @@
     "explorer.autoReveal": false,
     "terminal.integrated.fontSize": 18,
     "diffEditor.renderSideBySide": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.sash.size": 12
 }
