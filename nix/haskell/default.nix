@@ -2,7 +2,7 @@
 
 let
 
-  compilerVersion = "ghc883";
+  compilerVersion = "ghc8101";
   packages = import ./packages.nix;
   haskellPackages = haskell.packages.${compilerVersion}.override { overrides = import ./overrides.nix; };
 
