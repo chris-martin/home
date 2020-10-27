@@ -5,6 +5,7 @@ dsv = self.callPackage (import ./overrides/dsv.nix) {};
 grab = self.callPackage (import ./overrides/grab.nix) {};
 grab-form = self.callPackage (import ./overrides/grab-form.nix) {};
 hs-nix-modules = self.callPackage (import ./overrides/hs-nix-modules.nix) {};
+monoid-extras = self.callPackage (import ./overrides/monoid-extras.nix) {};
 optics = self.callPackage (import ./overrides/optics.nix) {};
 optics-core = self.callPackage (import ./overrides/optics-core.nix) {};
 optics-extra = self.callPackage (import ./overrides/optics-extra.nix) {};
