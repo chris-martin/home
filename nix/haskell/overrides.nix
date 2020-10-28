@@ -1,5 +1,6 @@
 self: super: {
 
+active = self.callPackage (import ./overrides/active.nix) {};
 aeson-optics = self.callPackage (import ./overrides/aeson-optics.nix) {};
 dsv = self.callPackage (import ./overrides/dsv.nix) {};
 dual-tree = self.callPackage (import ./overrides/dual-tree.nix) {};
