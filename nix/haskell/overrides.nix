@@ -3,6 +3,7 @@ self: super: {
 active = self.callPackage (import ./overrides/active.nix) {};
 aeson-optics = self.callPackage (import ./overrides/aeson-optics.nix) {};
 diagrams-core = self.callPackage (import ./overrides/diagrams-core.nix) {};
+diagrams-lib = self.callPackage (import ./overrides/diagrams-lib.nix) {};
 dsv = self.callPackage (import ./overrides/dsv.nix) {};
 dual-tree = self.callPackage (import ./overrides/dual-tree.nix) {};
 grab = self.callPackage (import ./overrides/grab.nix) {};
