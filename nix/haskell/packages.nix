@@ -13,7 +13,7 @@
 "cookie"
 "data-default-class"
 "derive-storable"
-"diagrams-svg"
+#"diagrams-svg"
 "directory"
 "doctest"
 "dsv"
