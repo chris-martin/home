@@ -2,6 +2,7 @@ self: super: {
 
 aeson-optics = self.callPackage (import ./overrides/aeson-optics.nix) {};
 dsv = self.callPackage (import ./overrides/dsv.nix) {};
+dual-tree = self.callPackage (import ./overrides/dual-tree.nix) {};
 grab = self.callPackage (import ./overrides/grab.nix) {};
 grab-form = self.callPackage (import ./overrides/grab-form.nix) {};
 hs-nix-modules = self.callPackage (import ./overrides/hs-nix-modules.nix) {};
