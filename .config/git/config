@@ -30,5 +30,7 @@
   tool = vimdiff
 [push]
   default = tracking
+[pull]
+  rebase = false
 [bz]
   browser = chromium
