@@ -73,7 +73,7 @@
     pkgs.hlint
     pkgs.hpack
     pkgs.htop
-    pkgs.imagemagick # CLI image editor
+    pkgs.imagemagick7 # CLI image editor
     pkgs.inkscape # SVG editor
     pkgs.intellij # IntelliJ IDEa
     pkgs.inxi
