@@ -32,7 +32,6 @@
     pkgs.eog # "eye of gnome" image viewer
     pkgs.evince # PDF viewer
     pkgs.exercism
-    pkgs.feedreader
     pkgs.ffmpeg-full
     pkgs.ffmpegthumbnailer # enables video thumbnails in Nautilus
     pkgs.file-roller # zip GUI
