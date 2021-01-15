@@ -233,7 +233,7 @@
     "when": "terminalFocus"
   },
   {
-    "key": "down",
+    "key": "enter",
     "command": "editor.action.nextMatchFindAction",
     "when": "editorFocus && findInputFocussed"
   },
@@ -246,6 +246,21 @@
     "key": "up",
     "command": "editor.action.previousMatchFindAction",
     "when": "editorFocus && findInputFocussed"
+  },
+  {
+    "key": "up",
+    "command": "editor.action.previousMatchFindAction",
+    "when": "editorFocus && replaceInputFocussed"
+  },
+  {
+    "key": "down",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus && findInputFocussed"
+  },
+  {
+    "key": "down",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus && replaceInputFocussed"
   },
   {
     "key": "shift+enter",
