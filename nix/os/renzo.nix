@@ -28,6 +28,9 @@
     ./nix.nix
   ];
 
+  programs.gnupg.agent.enable = true;
+  programs.gnupg.agent.enableSSHSupport = true;
+
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
   nix.trustedUsers = [ "@wheel" ];
