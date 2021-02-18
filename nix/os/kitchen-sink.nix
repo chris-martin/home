@@ -83,7 +83,6 @@
     pkgs.kcolorchooser
     pkgs.kdenlive
     pkgs.konsole
-    pkgs.libav
     pkgs.libnotify
     pkgs.libreoffice
     pkgs.lsof # list open files
