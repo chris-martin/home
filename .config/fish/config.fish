@@ -40,6 +40,10 @@ function alias2 --argument alias command
   )"
 end
 
+function hsnix --argument pkg
+  cabal2nix "cabal://$pkg" > "$pkg.nix"
+end
+
 source ~/nix/shell/nix.fish
 source ~/.config/fish/bitcoin.fish
 source ~/.config/fish/git.fish
