@@ -13,7 +13,10 @@
     pkgs.lato
     pkgs.google-fonts
     pkgs.inconsolata
+    pkgs.profont
     pkgs.rollandin-emilie
+    pkgs.source-sans-pro
+    pkgs.source-serif-pro
     pkgs.symbola
     pkgs.ubuntu_font_family
     pkgs.unifont
