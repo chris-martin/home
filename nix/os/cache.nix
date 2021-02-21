@@ -10,15 +10,6 @@ let
   chris-martin = mkCache "https://chris-martin.cachix.org"
     "chris-martin.cachix.org-1:O/29OCGL8P7qk/NmEaZzzZk3DDmUfa9nGA74OrX9/1g=";
 
-  reflex = mkCache "https://nixcache.reflex-frp.org"
-    "ryantrinkle.com-1:JJiAKaRv9mWgpVAz8dwewnZe0AzzEAzPkagE9SP5NWI=";
-
-  komposition = mkCache "https://komposition.cachix.org"
-    "komposition.cachix.org-1:nzWESzP0bEENshGnqQYN8+mic6JOxw2APw/AJAXhF3Y=";
-
-  hercules-ci = mkCache "https://hercules-ci.cachix.org"
-    "hercules-ci.cachix.org-1:ZZeDl9Va+xe9j+KqdzoBZMFJHVQ42Uu/c/1/KMC5Lw0=";
-
   ghcide-nix = mkCache "https://ghcide-nix.cachix.org"
     "ghcide-nix.cachix.org-1:ibAY5FD+XWLzbLr8fxK6n8fL9zZe7jS+gYeyxyWYK5c=";
 
@@ -29,8 +20,6 @@ let
     default
     cachix
     chris-martin
-    #komposition
-    #hercules-ci
     ghcide-nix
     typeclasses
   ];
