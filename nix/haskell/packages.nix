@@ -19,6 +19,7 @@
 "dsv"
 "fsnotify"
 "generic-deriving"
+"GLUT"
 #"hakyll"
 "hashable"
 "hedgehog"
