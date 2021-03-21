@@ -132,6 +132,7 @@
     pkgs.system-config-printer
     pkgs.telnet
     pkgs.tesseract # OCR
+    (pkgs.texlive.combine { inherit (pkgs.texlive) scheme-small; })
     pkgs.text-replace
     pkgs.tmux
     pkgs.totem
