@@ -55,6 +55,7 @@
 "pretty-show"
 "process"
 "profunctors"
+"regex-applicative"
 "relude"
 "resource-pool"
 "resourcet"
