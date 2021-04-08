@@ -24,6 +24,7 @@
     #pkgs.choose-exe # Chooses random elements from a stream
     pkgs.cryptsetup # LUKS disk encryption
     pkgs.curl
+    pkgs.discord
     pkgs.dmenu
     pkgs.doctest
     pkgs.elmPackages.elm
