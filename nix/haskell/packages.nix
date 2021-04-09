@@ -72,6 +72,7 @@
 "text"
 "time"
 "transformers"
+"trifecta"
 #"turtle"
 "unix"
 "unordered-containers"
