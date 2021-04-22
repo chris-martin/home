@@ -29,6 +29,7 @@
 "http-types"
 "ini"
 "interprocess"
+"list-transformer"
 #"lucid"
 #"math-functions"
 "megaparsec"
