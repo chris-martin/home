@@ -67,7 +67,7 @@
     ]
     projectHome: "/home/chris/"
     themes: [
-      "atom-dark-ui"
+      "one-dark-ui"
       "atom-dark-syntax"
     ]
   editor:
@@ -75,7 +75,7 @@
     autoIndentOnPaste: false
     backUpBeforeSaving: true
     fontFamily: "\"Fira Code\""
-    fontSize: 26
+    fontSize: 21
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
