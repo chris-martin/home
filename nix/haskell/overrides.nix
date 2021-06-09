@@ -24,5 +24,6 @@ random = self.callPackage (import ./overrides/random.nix) {};
 #stripe-concepts = self.callPackage (import ./overrides/stripe-concepts.nix) {};
 #stripe-wreq = self.callPackage (import ./overrides/stripe-wreq.nix) {};
 #svg-builder = self.callPackage (import ./overrides/svg-builder.nix) {};
+text-replace = self.callPackage (import ./overrides/text-replace.nix) {};
 
 }

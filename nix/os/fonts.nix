@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  fonts.enableFontDir = true;
+  fonts.fontDir.enable = true;
   fonts.enableGhostscriptFonts = true;
 
   console.font = "Fira Mono";
