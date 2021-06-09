@@ -69,7 +69,6 @@
     pkgs.go
     pkgs.google-chrome
     pkgs.guvcview # for recording from a webcam
-    pkgs.haskell-ci
     #pkgs.hindent
     pkgs.hlint
     pkgs.hpack
@@ -134,7 +133,7 @@
     pkgs.telnet
     pkgs.tesseract # OCR
     (pkgs.texlive.combine { inherit (pkgs.texlive) scheme-small; })
-    pkgs.text-replace
+    # pkgs.text-replace
     pkgs.tmux
     pkgs.totem
     pkgs.transmission_gtk # bittorrent

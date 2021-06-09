@@ -12,30 +12,25 @@
     p.async
     #p.atomic-modify
     p.base16-bytestring
-    p.binary
     p.blaze-html
     p.blaze-markup
     #p.bricks
-    p.bytestring
     #p.Chart
     #p.Chart-cairo
     #p.choose
     #p.choose-exe
     p.cookie
     p.conduit-combinators
-    p.containers
     p.cryptonite
     #p.data-forest
     p.Decimal
     p.diagrams
-    p.directory
     #p.either-list-functions
     p.filemanip
     #p.fizzbuzz-as-a-service
     p.foldl
     p.fsnotify
     p.gd
-    p.ghc-prim
     p.gtk3
     p.hashable
     p.hedgehog
@@ -56,7 +51,6 @@
     p.megaparsec
     p.memory
     p.monad-gen
-    p.mtl
     #p.multi-instance
     #p.mvar-lock
     p.neat-interpolation
@@ -97,7 +91,6 @@
     #p.safe-money
     p.scotty
     #p.semialign
-    p.stm
     #p.stm-containers
     #p.stripe-concepts
     #p.stripe-scotty
@@ -106,10 +99,7 @@
     p.these
     p.template
     p.test-framework
-    p.text
     #p.text-replace
-    p.time
-    p.transformers
     p.turtle
     p.unordered-containers
     p.utf8-string

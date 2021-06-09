@@ -25,7 +25,6 @@ let
           nativeOnly = true;
         }).run;
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
-    text-replace = pkgs.callPackage ./pkgs/text-replace { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
     yi-chris-martin = pkgs.haskell.lib.justStaticExecutables
       (oldpkgs.haskell.packages.ghc844.callPackage ../yi/yi.nix { });
@@ -53,7 +52,6 @@ let
         "doctest"
         "FractalArt"
         "ghcid"
-        "haskell-ci"
         "hfmt"
         "hoogle"
         "hindent"
@@ -64,6 +62,7 @@ let
         "shu-thing"
         "sws"
         #"stylish-haskell"
+        # "text-replace"
       ];
       f = x: {
         name = x;
