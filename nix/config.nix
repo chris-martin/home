@@ -76,7 +76,7 @@ let
   from-unstable = pkgs: {
     inherit (unstable)
       cabal-install
-      cabal2nix
+      #cabal2nix
       ghc
       minecraft
       minecraft-server
