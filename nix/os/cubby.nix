@@ -40,7 +40,7 @@
     ./xmonad.nix
     ./cache.nix
     ./nix.nix
-    ./direnv.nix
+    #./direnv.nix
     #./minecraft-server.nix
   ];
 
