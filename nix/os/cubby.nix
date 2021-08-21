@@ -64,11 +64,10 @@
   networking.firewall.allowPing = true;
   networking.firewall.allowedTCPPorts = [ 8000 ];
 
-  services.redshift.enable = true;
-  location.latitude = 47.53;
-  location.longitude = -114.1;
+  # services.redshift.enable = true;
+  location.provider = "geoclue2";
 
-  services.localtime.enable = true;
+  #services.localtime.enable = true;
 
   services.dictd.enable = true;
 

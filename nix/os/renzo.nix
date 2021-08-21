@@ -42,10 +42,10 @@
 
   networking.firewall.allowPing = true;
 
-  services.redshift.enable = true;
+  #services.redshift.enable = true;
   location.provider = "geoclue2";
 
-  services.localtime.enable = true;
+  #services.localtime.enable = true;
 
   environment.etc."fuse.conf".text = ''
     user_allow_other
