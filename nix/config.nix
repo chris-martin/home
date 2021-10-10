@@ -11,7 +11,6 @@ let
     birdfont = pkgs.callPackage ./pkgs/birdfont { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     ghc = (unstable.callPackage ./haskell {}).ghc;
-    ghcide = pkgs.callPackage ./pkgs/ghcide {};
     gopherclient = pkgs.libsForQt5.callPackage ./pkgs/gopherclient { };
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     my-latex = pkgs.callPackage ./pkgs/my-latex { };
