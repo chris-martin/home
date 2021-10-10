@@ -61,7 +61,6 @@ let
         "pandoc-sidenote"
         "shu-thing"
         "sws"
-        #"stylish-haskell"
         # "text-replace"
       ];
       f = x: {
