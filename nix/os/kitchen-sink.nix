@@ -45,7 +45,6 @@
     pkgs.gnome3.gedit
     pkgs.ghc
     pkgs.ghcid # Haskell GHCi daemon
-    pkgs.ghcide # Haskell IDE
     pkgs.ghostscript
     pkgs.gimp # umage editor
     pkgs.gitAndTools.gitFull
