@@ -7,6 +7,9 @@
 {
   nixpkgs.config = import ../config.nix;
 
+  # https://github.com/NixOS/nixpkgs/issues/103746
+  #services.xserver.displayManager.autoLogin = { enable = true; user = "chris"; };
+
   programs.gnupg.agent.enable = true;
   programs.gnupg.agent.enableSSHSupport = true;
 
