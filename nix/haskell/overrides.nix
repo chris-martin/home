@@ -1,4 +1,4 @@
-self: super: {
+haskell: self: super: {
 
 #active = self.callPackage (import ./overrides/active.nix) {};
 aeson = self.callPackage (import ./overrides/aeson.nix) {};
@@ -25,5 +25,6 @@ random = self.callPackage (import ./overrides/random.nix) {};
 #stripe-wreq = self.callPackage (import ./overrides/stripe-wreq.nix) {};
 #svg-builder = self.callPackage (import ./overrides/svg-builder.nix) {};
 text-replace = self.callPackage (import ./overrides/text-replace.nix) {};
+vector = haskell.lib.dontCheck super.vector; # tests OOM on renzo
 
 }

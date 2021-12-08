@@ -4,7 +4,7 @@ let
 
   compilerVersion = "ghc8107";
   packages = import ./packages.nix;
-  haskellPackages = haskell.packages.${compilerVersion}.override { overrides = import ./overrides.nix; };
+  haskellPackages = haskell.packages.${compilerVersion}.override { overrides = import ./overrides.nix haskell; };
 
 in
 
