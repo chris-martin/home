@@ -65,7 +65,7 @@
   networking.networkmanager.enable = true;
 
   networking.firewall.allowPing = true;
-  networking.firewall.allowedTCPPorts = [ 8000 ];
+  networking.firewall.allowedTCPPorts = [ 8000 5901 ];
 
   # services.redshift.enable = true;
   location.provider = "geoclue2";
@@ -81,6 +81,23 @@
   '';
 
   system.stateVersion = "19.09";
+
+  systemd.services.tigervnc = {
+    enable = true;
+    wantedBy = ["default.target"];
+    serviceConfig = {
+      User = "chris";
+      ExecStart = "${pkgs.writeShellApplication {
+        name = "tigervnc";
+        runtimeInputs = [pkgs.tigervnc pkgs.openbox];
+        text = ''
+          Xvnc :1 -PasswordFile /home/chris/.vnc/passwd &
+          env DISPLAY=":1" PATH="/etc/profiles/per-user/chris/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:$PATH" openbox --config-file ${./openbox.xml}
+          fg
+        '';
+      }}/bin/tigervnc";
+    };
+  };
 
 
   #-----------------------------------------------------------------------------
