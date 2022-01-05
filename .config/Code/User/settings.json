@@ -85,5 +85,12 @@
     "terminal.integrated.fontSize": 18,
     "diffEditor.renderSideBySide": false,
     "editor.minimap.enabled": false,
-    "workbench.sash.size": 12
+    "workbench.sash.size": 12,
+    "haskell.plugin.hlint.diagnosticsOn": false,
+    "[haskell]": {
+      "editor.defaultFormatter": "haskell.haskell"
+    },
+    "haskell.formattingProvider": "stylish-haskell",
+    "window.zoomLevel": -1,
+    "editor.autoSurround": "never"
 }
