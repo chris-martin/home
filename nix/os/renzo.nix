@@ -17,13 +17,10 @@
     ./hoogle.nix
     ./avahi.nix
     ./touchpad.nix
-    ./steam.nix
     ./dns.nix
     ./web-browsers.nix
     ./display.nix
     ./renzo-display.nix
-    ./xmonad.nix
-    ./ledger.nix
     ./cache.nix
     ./nix.nix
   ];
