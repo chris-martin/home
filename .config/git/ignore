@@ -35,3 +35,6 @@ ghcid.txt
 
 # PID files contain IDs of running processes
 *.pid
+
+# Nix
+.nix-gc-roots
