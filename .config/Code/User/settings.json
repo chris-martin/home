@@ -29,6 +29,8 @@
     "editor.wrappingIndent": "deepIndent",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.autoIndent": "keep",
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
     "actionButtons": {
         "reloadButton": null,
         "commands": [
