@@ -17,6 +17,7 @@
       "**/dist": true,
       "**/dist-newstyle": true
     },
+    "search.searchOnType": false,
     "editor.mouseWheelZoom": true,
     "editor.quickSuggestions": false,
     "editor.wordBasedSuggestions": false,
