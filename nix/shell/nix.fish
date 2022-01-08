@@ -17,6 +17,10 @@ function nix
     nix-channel --update
 
   case rebuild-os
+    env \
+      NIX_PATH="$NIX_PATH" \
+      NIXOS_CONFIG="$NIXOS_CONFIG" \
+      nixos-rebuild build; and \
     sudo env \
       NIX_PATH="$NIX_PATH" \
       NIXOS_CONFIG="$NIXOS_CONFIG" \
