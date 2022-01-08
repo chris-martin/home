@@ -1,6 +1,5 @@
 {
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
-    "window.zoomLevel": -1,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "editor.fontSize": 20,
@@ -91,6 +90,7 @@
       "editor.defaultFormatter": "haskell.haskell"
     },
     "haskell.formattingProvider": "stylish-haskell",
-    "window.zoomLevel": -1,
-    "editor.autoSurround": "never"
+    "editor.autoSurround": "never",
+    "haskell.openDocumentationInHackage": false,
+    "haskell.openSourceInHackage": false
 }
