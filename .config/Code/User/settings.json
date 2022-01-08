@@ -21,7 +21,7 @@
     "editor.quickSuggestions": false,
     "editor.wordBasedSuggestions": false,
     "workbench.colorTheme": "Visual Studio Light",
-    "breadcrumbs.enabled": true,
+    "breadcrumbs.enabled": false,
     "git.autofetch": true,
     "workbench.tree.indent": 28,
     "explorer.confirmDragAndDrop": false,
