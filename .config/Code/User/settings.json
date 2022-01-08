@@ -2,6 +2,8 @@
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.confirmOnKill": "always",
     "editor.fontSize": 20,
     "files.autoSave": "onWindowChange",
     "editor.tabSize": 2,
