@@ -220,10 +220,6 @@
     "command": "workbench.action.files.saveAll"
   },
   {
-    "key": "ctrl+t",
-    "command": "workbench.action.terminal.new"
-  },
-  {
     "key": "ctrl+shift+`",
     "command": "-workbench.action.terminal.new"
   },
@@ -307,5 +303,15 @@
   {
     "key": "ctrl+k z",
     "command": "-workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
   }
 ]
