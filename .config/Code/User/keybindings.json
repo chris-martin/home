@@ -318,5 +318,15 @@
     "key": "ctrl+shift+c",
     "command": "-workbench.action.terminal.openNativeConsole",
     "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+end",
+    "command": "-cursorBottom",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+home",
+    "command": "-cursorTop",
+    "when": "textInputFocus"
   }
 ]
