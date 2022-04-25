@@ -1,4 +1,12 @@
 {
+    "todohighlight.include": [
+        "**/*.md",
+        "**/*.txt",
+        "**/*.hs",
+        "**/*.hsc",
+        "**/*.hs.boot",
+        "**/*.hsc.boot"
+    ],
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
