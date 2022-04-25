@@ -20,8 +20,7 @@ let
     slack-latex = pkgs.callPackage ./pkgs/slack-latex { };
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
-    yi-chris-martin = pkgs.haskell.lib.justStaticExecutables
-      (oldpkgs.haskell.packages.ghc844.callPackage ../yi/yi.nix { });
+    yi-chris-martin = (oldpkgs.haskell.packages.ghc844.callPackage ../yi/yi.nix { });
   };
 
   # slightly more convenient aliases for packages defined in nixpkgs
@@ -59,7 +58,7 @@ let
       ];
       f = x: {
         name = x;
-        value = pkgs.haskell.lib.justStaticExecutables
+        value = 
                   pkgs.haskellPackages.${x};
       };
     in
