@@ -8,14 +8,14 @@ let
   # packages defined locally that aren't in nixpkgs
   new-packages = pkgs: {
     acherus-militant = pkgs.callPackage ./pkgs/acherus-militant { };
-    birdfont = pkgs.callPackage ./pkgs/birdfont { };
+    #birdfont = pkgs.callPackage ./pkgs/birdfont { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     ghc = (unstable.callPackage ./haskell {}).ghc;
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     my-latex = pkgs.callPackage ./pkgs/my-latex { };
-    my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };
+    #my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
-    rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
+    #rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
     rollandin-emilie = pkgs.callPackage ./pkgs/rollandin-emilie { };
     slack-latex = pkgs.callPackage ./pkgs/slack-latex { };
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
@@ -30,8 +30,8 @@ let
       inherit (pkgs.gnome3) eog;
       inherit (pkgs.gnome3) file-roller;
       inherit (pkgs.gnome3) gnome-screenshot;
-      inherit (pkgs.gnome3) gnome-terminal;
-      intellij = pkgs.jetbrains.idea-community;
+      #inherit (pkgs.gnome3) gnome-terminal;
+      #intellij = pkgs.jetbrains.idea-community;
       inherit (pkgs.gnome3) nautilus;
       inherit (pkgs.gnome3) totem;
       inherit (pkgs.xorg) xkill;
@@ -41,7 +41,7 @@ let
     let
       package-names = [
         "cabal-bounds"
-        "choose-exe"
+        #"choose-exe"
         "doctest"
         "FractalArt"
         "ghcid"
@@ -50,9 +50,7 @@ let
         "hindent"
         "hlint"
         "hpack"
-        "nix-deploy"
-        "pandoc-sidenote"
-        "shu-thing"
+        #"shu-thing"
         "sws"
         # "text-replace"
       ];
