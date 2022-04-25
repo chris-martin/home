@@ -11,7 +11,6 @@ let
     birdfont = pkgs.callPackage ./pkgs/birdfont { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
     ghc = (unstable.callPackage ./haskell {}).ghc;
-    gopherclient = pkgs.libsForQt5.callPackage ./pkgs/gopherclient { };
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     my-latex = pkgs.callPackage ./pkgs/my-latex { };
     my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };
@@ -19,10 +18,6 @@ let
     rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
     rollandin-emilie = pkgs.callPackage ./pkgs/rollandin-emilie { };
     slack-latex = pkgs.callPackage ./pkgs/slack-latex { };
-    steam-run =
-        (pkgs.steam.override {
-          nativeOnly = true;
-        }).run;
     tetrinetx = pkgs.callPackage ./pkgs/tetrinetx { };
     wordlist = pkgs.callPackage ./pkgs/wordlist { };
     yi-chris-martin = pkgs.haskell.lib.justStaticExecutables
