@@ -25,6 +25,11 @@
     ./nix.nix
   ];
 
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.brlaser pkgs.brgenml1lpr pkgs.brgenml1cupswrapper ];
+  };
+
   programs.gnupg.agent.enable = true;
   programs.gnupg.agent.enableSSHSupport = true;
 
