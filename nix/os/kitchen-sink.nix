@@ -67,7 +67,7 @@
     #pkgs.google-chrome
     pkgs.graphviz
     #pkgs.guvcview # for recording from a webcam
-    (pkgs.haskell-language-server.override { supportedGhcVersions = ["8107" "901"]; })
+    (pkgs.haskell-language-server.override { supportedGhcVersions = ["8107"]; })
     #pkgs.hindent
     pkgs.hlint
     pkgs.hpack

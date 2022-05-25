@@ -68,6 +68,7 @@ let
       cabal-install
       #cabal2nix
       ghc
+      haskell-language-server
       minecraft
       minecraft-server
       obs-studio
