@@ -59,7 +59,7 @@
     #pkgs.gopher
     #pkgs.gparted # partitioning tool
     #pkgs.gptfdisk # partitioning tool
-    pkgs.gnome-terminal
+    pkgs.gnome3.gnome-terminal
     pkgs.gnucash # accounting
     pkgs.gnumake # make
     pkgs.gnupg
