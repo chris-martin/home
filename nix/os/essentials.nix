@@ -7,7 +7,7 @@
     pkgs.gptfdisk
     pkgs.htop
     pkgs.lsof
-    pkgs.man_db
+    pkgs.man-db
     pkgs.networkmanager
     pkgs.openssl
     pkgs.p7zip
