@@ -87,7 +87,7 @@
     pkgs.lsof # list open files
     #pkgs.lynx
     pkgs.man
-    pkgs.manpages
+    pkgs.man-pages
     #pkgs.meld # diff tool
     #pkgs.minecraft
     #pkgs.mlt
