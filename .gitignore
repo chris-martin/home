@@ -24,7 +24,6 @@
 /.config/git/gitk
 !/.config/python/
 !/.config/stylebot.json
-!/.config/sublime/
 !/.config/systemd/
 !/.config/tmux/
 !/.config/user-dirs.conf
@@ -46,32 +45,6 @@
 !/.config/gtk-*/*.css
 
 !/.config/nix/
-
-!/.config/sublime-text-2/
-/.config/sublime-text-2/*
-!/.config/sublime-text-2/Packages/
-/.config/sublime-text-2/Packages/*
-!/.config/sublime-text-2/Packages/User/
-/.config/sublime-text-2/Packages/User/*
-!/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap
-!/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
-!/.config/sublime-text-2/Packages/User/Haskell.sublime-settings
-!/.config/sublime-text-2/Packages/User/nix.sublime-settings
-!/.config/sublime-text-2/Packages/User/purescript.sublime-settings
-!/.config/sublime-text-2/Packages/User/Markdown Extended.sublime-settings
-
-!/.config/sublime-text-3/
-/.config/sublime-text-3/*
-!/.config/sublime-text-3/Packages/
-/.config/sublime-text-3/Packages/*
-!/.config/sublime-text-3/Packages/User/
-/.config/sublime-text-3/Packages/User/*
-!/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap
-!/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-!/.config/sublime-text-3/Packages/User/Haskell.sublime-settings
-!/.config/sublime-text-3/Packages/User/nix.sublime-settings
-!/.config/sublime-text-3/Packages/User/purescript.sublime-settings
-!/.config/sublime-text-3/Packages/User/Markdown Extended.sublime-settings
 
 !/.atom/
 /.atom/*

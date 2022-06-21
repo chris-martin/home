@@ -1,7 +1,0 @@
-[
-    { "keys": ["ctrl+y"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
-    { "keys": ["alt+right"], "command": "next_view" },
-    { "keys": ["alt+left"], "command": "prev_view" },
-    { "keys": ["shift+tab"], "command": "unindent" },
-    { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" }
-]
