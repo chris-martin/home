@@ -170,6 +170,7 @@
       "Monoid",
       "monoidal",
       "monoids",
+      "monomomorphic",
       "Moronuki",
       "Naur",
       "newtype",
@@ -208,6 +209,7 @@
       "unsnoc",
       "unwords",
       "viewl",
+      "witherable",
       "wreq"
     ],
     "enableTelemetry": false
