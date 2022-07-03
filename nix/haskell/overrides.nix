@@ -1,7 +1,7 @@
 haskell: self: super: {
 
 #active = self.callPackage (import ./overrides/active.nix) {};
-aeson = haskell.lib.dontCheck super.aeson; # tests OOM on renzo
+#aeson = haskell.lib.dontCheck super.aeson; # tests OOM on renzo
 #aeson = self.callPackage (import ./overrides/aeson.nix) {};
 #aeson-optics = self.callPackage (import ./overrides/aeson-optics.nix) {};
 #diagrams-core = self.callPackage (import ./overrides/diagrams-core.nix) {};
@@ -25,7 +25,7 @@ aeson = haskell.lib.dontCheck super.aeson; # tests OOM on renzo
 #stripe-concepts = self.callPackage (import ./overrides/stripe-concepts.nix) {};
 #stripe-wreq = self.callPackage (import ./overrides/stripe-wreq.nix) {};
 #svg-builder = self.callPackage (import ./overrides/svg-builder.nix) {};
-text-replace = self.callPackage (import ./overrides/text-replace.nix) {};
-vector = haskell.lib.dontCheck super.vector; # tests OOM on renzo
+#text-replace = self.callPackage (import ./overrides/text-replace.nix) {};
+#vector = haskell.lib.dontCheck super.vector; # tests OOM on renzo
 
 }
