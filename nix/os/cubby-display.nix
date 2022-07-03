@@ -4,6 +4,7 @@
 
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.autoLogin = { enable = true; user = "chris"; };
 
   #services.xserver.desktopManager.default = "none";
   #services.xserver.desktopManager.xterm.enable = false;
