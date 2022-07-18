@@ -8,9 +8,9 @@ set fish_user_paths       \
   $HOME/.nix-profile/bin  \
   $HOME/xin/.nix/xin/bin
 
-set -x EDITOR     yi
-set -x GIT_EDITOR yi
-alias e           yi
+set -x EDITOR     vim
+set -x GIT_EDITOR vim
+alias e           vim
 
 set -x GOPATH ~/go
 

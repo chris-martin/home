@@ -111,11 +111,5 @@
     p.wreq
     p.X11
     p.xmonad
-    #p.yi-core
-    #p.yi-keymap-cua
-    #p.yi-keymap-vim
-    #p.yi-misc-modes
-    #p.yi-mode-haskell
-    #p.yi-mode-javascript
   ];
 }
