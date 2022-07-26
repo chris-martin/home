@@ -105,6 +105,4 @@ let
   # the package set from the 'unstable' channel
   unstable = import <nixpkgs-unstable> { config = config-for-unstable; };
 
-  oldpkgs = import <nixos-18.09> { config = config-for-unstable; };
-
 in config
