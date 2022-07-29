@@ -233,5 +233,6 @@
       "witherable",
       "wreq"
     ],
-    "enableTelemetry": false
+    "enableTelemetry": false,
+    "editor.minimap.enabled": false
 }
