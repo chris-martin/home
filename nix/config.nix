@@ -10,7 +10,7 @@ let
     acherus-militant = pkgs.callPackage ./pkgs/acherus-militant { };
     #birdfont = pkgs.callPackage ./pkgs/birdfont { };
     fullwidth = pkgs.callPackage ./pkgs/fullwidth { };
-    ghc = (unstable.callPackage ./haskell {}).ghc;
+    #ghc = (unstable.callPackage ./haskell {}).ghc;
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     my-latex = pkgs.callPackage ./pkgs/my-latex { };
     #my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };

@@ -43,7 +43,9 @@
     #pkgs.gcc # C compiler
     #pkgs.gnome3.dconf-editor
     pkgs.gnome3.gedit
-    pkgs.ghc
+    pkgs.haskell.compiler.ghc8107
+    pkgs.haskell.compiler.ghc902
+    pkgs.haskell.compiler.ghc922
     pkgs.ghcid # Haskell GHCi daemon
     #pkgs.ghostscript
     pkgs.gimp # umage editor
