@@ -1,6 +1,35 @@
 { pkgs, ... }:
+let
+  haskellStuff =
+    let
+
+      # things that cabal can't install on its own due to native dependencies
+      troublesomePackages = p: [ p.digest p.postgresql-libpq p.zlib ];
+
+      compilers =
+        [
+          (pkgs.haskell.packages.ghc8107.ghcWithPackages troublesomePackages)
+          (pkgs.haskell.packages.ghc902.ghcWithPackages troublesomePackages)
+          (pkgs.haskell.packages.ghc924.ghcWithPackages troublesomePackages)
+        ];
+
+      hls = pkgs.haskell-language-server.override {
+        supportedGhcVersions = ["8107" "902" "924"];
+      };
+    in
+      compilers ++ [
+        hls
+        pkgs.cabal-install
+        pkgs.cabal2nix
+        pkgs.ghcid
+        pkgs.hindent
+        pkgs.hlint
+        pkgs.hpack
+        pkgs.stack
+      ];
+in
 {
-  environment.systemPackages = [
+  environment.systemPackages = haskellStuff ++ [
     #pkgs.abcde # audio CD ripping
     #pkgs.ack
     #pkgs.alock
@@ -15,8 +44,6 @@
     #pkgs.awscli
     pkgs.baobab # disk usage inspector
     #pkgs.binutils
-    pkgs.cabal-install
-    pkgs.cabal2nix
     pkgs.cachix
     #pkgs.calibre
     #pkgs.cheese # Camera GUI
@@ -43,10 +70,6 @@
     #pkgs.gcc # C compiler
     #pkgs.gnome3.dconf-editor
     pkgs.gnome3.gedit
-    pkgs.haskell.compiler.ghc8107
-    pkgs.haskell.compiler.ghc902
-    pkgs.haskell.compiler.ghc922
-    pkgs.ghcid # Haskell GHCi daemon
     #pkgs.ghostscript
     pkgs.gimp # umage editor
     pkgs.gitAndTools.gitFull
@@ -69,10 +92,6 @@
     #pkgs.google-chrome
     #pkgs.graphviz
     #pkgs.guvcview # for recording from a webcam
-    (pkgs.haskell-language-server.override { supportedGhcVersions = ["8107"]; })
-    #pkgs.hindent
-    pkgs.hlint
-    pkgs.hpack
     pkgs.htop
     pkgs.imagemagick7 # CLI image editor
     pkgs.inkscape # SVG editor
@@ -125,7 +144,6 @@
     #pkgs.solaar
     #pkgs.sshfsFuse # SSH mount
     #pkgs.socat
-    pkgs.stack # Haskell build tool
     #pkgs.stack2nix
     #pkgs.stylish-haskell # Haskell code formatter
     #pkgs.sublime # text editor
