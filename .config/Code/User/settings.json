@@ -244,5 +244,6 @@
       "wreq"
     ],
     "enableTelemetry": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "none"
 }
