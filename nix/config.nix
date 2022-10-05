@@ -64,10 +64,10 @@ let
   # the packages that we cherry-pick from the 'unstable' channel
   from-unstable = pkgs: {
     inherit (unstable)
-      cabal-install
+      #cabal-install
       #cabal2nix
       ghc
-      haskell-language-server
+      #haskell-language-server
       minecraft
       minecraft-server
       obs-studio
