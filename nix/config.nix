@@ -13,7 +13,6 @@ let
     #ghc = (unstable.callPackage ./haskell {}).ghc;
     jetrix = pkgs.callPackage ./pkgs/jetrix { };
     my-latex = pkgs.callPackage ./pkgs/my-latex { };
-    #my-xmonad = pkgs.callPackage ./pkgs/my-xmonad { };
     pandora = pkgs.callPackage ./pkgs/pandora { };
     #rip-cd = pkgs.callPackage ./pkgs/rip-cd { };
     rollandin-emilie = pkgs.callPackage ./pkgs/rollandin-emilie { };
