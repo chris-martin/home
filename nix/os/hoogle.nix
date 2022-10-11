@@ -110,6 +110,5 @@
     p.warp
     p.wreq
     p.X11
-    p.xmonad
   ];
 }

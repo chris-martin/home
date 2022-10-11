@@ -40,7 +40,6 @@
     ./display.nix
     ./cubby-display.nix
     ./ledger.nix
-    ./xmonad.nix
     ./cache.nix
     ./nix.nix
     #./direnv.nix
