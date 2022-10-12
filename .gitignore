@@ -117,14 +117,6 @@
 /.mozilla/firefox/chris/*
 !/.mozilla/firefox/chris/chrome
 
-!/.stack/
-/.stack/*
-!/.stack/config.yaml
-!/.stack/shell.nix
-!/.stack/global-project/
-/.stack/global-project/*
-!/.stack/global-project/stack.yaml
-
 !/nix/
 /nix/os/config.nix
 /nix/os/hardware.nix
