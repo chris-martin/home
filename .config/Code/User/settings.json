@@ -248,5 +248,6 @@
     ],
     "enableTelemetry": false,
     "editor.minimap.enabled": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "editor.suggestOnTriggerCharacters": false
 }
