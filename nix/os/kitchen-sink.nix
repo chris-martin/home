@@ -4,7 +4,7 @@ let
     let
 
       # things that cabal can't install on its own due to native dependencies
-      troublesomePackages = p: [ p.digest p.postgresql-libpq p.zlib ];
+      troublesomePackages = p: [ p.digest p.postgresql-libpq p.unix p.zlib ];
 
       compilers =
         [
