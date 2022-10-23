@@ -166,6 +166,7 @@ in
     pkgs.wget
     #pkgs.wine
     pkgs.which
+    pkgs.whois
     #pkgs.woff2
     pkgs.vscode
     pkgs.xclip # CLI utility for the X clipboard
