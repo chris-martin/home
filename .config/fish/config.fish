@@ -4,6 +4,7 @@ set -x HOSTNAME (hostname)
 
 set fish_user_paths       \
   $HOME/bin               \
+  $HOME/.cabal/bin        \
   $HOME/.local/bin        \
   $HOME/.nix-profile/bin  \
   $HOME/xin/.nix/xin/bin
