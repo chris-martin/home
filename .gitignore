@@ -46,14 +46,6 @@
 
 !/.config/nix/
 
-!/.atom/
-/.atom/*
-!/.atom/config.cson
-!/.atom/keymap.cson
-!/.atom/styles.less
-!/.atom/grammar-config
-!/.atom/grammar-config/*
-
 !/.emacs.d/
 /.emacs.d/autosave
 /.emacs.d/backup
