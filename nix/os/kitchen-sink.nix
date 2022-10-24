@@ -3,21 +3,18 @@ let
   unstable = pkgs.nixpkgs-unstable;
   haskellStuff =
     let
-      pkgs = unstable;
-
-      # things that cabal can't install on its own due to native dependencies
-      troublesomePackages = p: [ p.digest p.postgresql-libpq p.unix p.zlib ];
-
+      #pkgs = unstable;
+ 
       compilers =
         [
-          (pkgs.haskell.packages.ghc8107.ghcWithPackages troublesomePackages)
-          (pkgs.haskell.packages.ghc902.ghcWithPackages troublesomePackages)
-          (pkgs.haskell.packages.ghc924.ghcWithPackages troublesomePackages)
-          (pkgs.haskell.packages.ghc942.ghcWithPackages troublesomePackages)
+          (pkgs.haskell.packages.ghc8107.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc902.ghcWithPackages  (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc924.ghcWithPackages  (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          #(pkgs.haskell.packages.ghc942.ghcWithPackages  (p: [ p.digest                    p.unix p.zlib ]))
         ];
 
       hls = pkgs.haskell-language-server.override {
-        supportedGhcVersions = ["8107" "902" "924" "942"];
+        supportedGhcVersions = ["8107" "902" "924" /*"942"*/];
       };
     in
       compilers ++ [
