@@ -20,7 +20,7 @@ let
       compilers ++ [
         hls
         pkgs.cabal-install
-        pkgs.cabal2nix
+        unstable.cabal2nix
         pkgs.ghcid
         pkgs.hindent
         pkgs.hlint
