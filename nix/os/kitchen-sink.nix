@@ -119,6 +119,7 @@ in
     pkgs.nautilus
     #pkgs.ncdu
     #pkgs.netcat-gnu
+    pkgs.niv
     #pkgs.nix-prefetch-scripts
     #pkgs.nix-repl # REPL for the Nix language
     #pkgs.nixops # the Nix ops tool
