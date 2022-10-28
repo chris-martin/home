@@ -293,10 +293,6 @@
     "when": "editorLangId == 'postgres'"
   },
   {
-    "key": "f5",
-    "command": "workbench.action.reloadWindow"
-  },
-  {
     "key": "ctrl+alt+z",
     "command": "workbench.action.toggleZenMode"
   },
@@ -348,5 +344,24 @@
     "key": "ctrl+o",
     "command": "-workbench.action.files.openLocalFile",
     "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "f5",
+    "command": "haskell.commands.restartServer"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "f5",
+    "command": "-debug.openView",
+    "when": "!debuggersAvailable"
   }
 ]
