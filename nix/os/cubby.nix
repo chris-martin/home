@@ -7,6 +7,8 @@
 {
   nixpkgs.config = import ../config.nix;
 
+  services.r53-ddns = { enable = true; zoneID = "ZYH50EMOKUVH6"; domain = "chris-martin.org"; hostname = "home"; environmentFile = "/home/chris/secrets/ddns"; };
+
   # https://github.com/NixOS/nixpkgs/issues/103746
   #services.xserver.displayManager.autoLogin = { enable = true; user = "chris"; };
 
