@@ -8,9 +8,9 @@ let
       compilers =
         [
           (pkgs.haskell.packages.ghc8107.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
-          (pkgs.haskell.packages.ghc902.ghcWithPackages  (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
-          (pkgs.haskell.packages.ghc924.ghcWithPackages  (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
-          #(pkgs.haskell.packages.ghc942.ghcWithPackages  (p: [ p.digest                    p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc902.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc924.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          (unstable.haskell.packages.ghc942.ghcWithPackages (p: [ p.digest p.unix p.zlib ]))
         ];
 
       hls = pkgs.haskell-language-server.override {
