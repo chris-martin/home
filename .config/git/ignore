@@ -22,6 +22,7 @@ ideaHaskellLib
 .stack-work
 dist-newstyle
 ghcid.txt
+cabal.project.local
 
 # Emacs
 .projectile
