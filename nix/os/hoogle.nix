@@ -33,6 +33,9 @@
     p.gd
     p.gtk3
     p.hashable
+    p.hasql
+    p.hasql-notifications
+    p.hasql-transaction
     p.hedgehog
     p.hex-text
     #p.hnix
@@ -84,6 +87,7 @@
     p.QuickCheck
     p.random
     p.relude
+    p.rel8
     p.resource-pool
     p.resourcet
     #p.rss
