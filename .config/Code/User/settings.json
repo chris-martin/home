@@ -32,7 +32,6 @@
       "other": "off"
     },
     "editor.wordBasedSuggestions": false,
-    "workbench.colorTheme": "Visual Studio Light",
     "breadcrumbs.enabled": false,
     "git.autofetch": true,
     "workbench.tree.indent": 28,
