@@ -11,10 +11,10 @@
     p.appendmap
     p.async
     #p.atomic-modify
+    p.aws-cloudfront-signed-cookies
     p.base16-bytestring
     p.blaze-html
     p.blaze-markup
-    #p.bricks
     #p.Chart
     #p.Chart-cairo
     #p.choose
@@ -22,10 +22,10 @@
     p.cookie
     p.conduit-combinators
     p.cryptonite
-    #p.data-forest
+    p.data-forest
     p.Decimal
     p.diagrams
-    #p.either-list-functions
+    p.either-list-functions
     p.filemanip
     #p.fizzbuzz-as-a-service
     p.foldl
