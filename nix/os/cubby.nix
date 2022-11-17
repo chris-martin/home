@@ -112,6 +112,7 @@
       extraGroups = ["wheel"];
       uid = 1000;
       openssh.authorizedKeys.keys = import ./keys.nix;
+      shell = pkgs.fish;
     };
     julie = {
       isNormalUser = true;
