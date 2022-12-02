@@ -34,3 +34,5 @@
   rebase = false
 [bz]
   browser = chromium
+[init]
+	defaultBranch = master
