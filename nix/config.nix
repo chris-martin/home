@@ -74,6 +74,7 @@ let
       #stylish-haskell
       sws
       vscode
+      wezterm
       ;
   };
 
