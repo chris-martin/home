@@ -11,6 +11,7 @@
     p.appendmap
     p.async
     #p.atomic-modify
+    p.attoparsec
     p.aws-cloudfront-signed-cookies
     p.base16-bytestring
     p.blaze-html
@@ -34,6 +35,7 @@
     p.gtk3
     p.hashable
     p.hasql
+    #p.hasql-dynamic-statements
     p.hasql-notifications
     p.hasql-transaction
     p.hedgehog
