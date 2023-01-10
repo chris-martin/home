@@ -48,7 +48,7 @@
     p.lens
     p.lens-aeson
     p.loc
-    p.loc-test
+    #p.loc-test
     p.lucid
     p.markdown
     p.megaparsec

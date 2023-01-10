@@ -50,10 +50,10 @@
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
-  nix.trustedUsers = [ "@wheel" ];
+  nix.settings.trustedUsers = [ "@wheel" ];
 
-  nix.maxJobs = 8;
-  nix.buildCores = 0;
+  nix.settings.maxJobs = 8;
+  nix.settings.buildCores = 0;
 
   time.timeZone = "America/Denver";
 

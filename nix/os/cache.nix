@@ -22,6 +22,6 @@ let
 
 in
   {
-    nix.binaryCaches          = builtins.map (x: x.url) all;
-    nix.binaryCachePublicKeys = builtins.map (x: x.key) all;
+    nix.settings.binaryCaches          = builtins.map (x: x.url) all;
+    nix.settings.binaryCachePublicKeys = builtins.map (x: x.key) all;
   }
