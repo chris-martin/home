@@ -363,5 +363,9 @@
     "key": "f5",
     "command": "-debug.openView",
     "when": "!debuggersAvailable"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
   }
 ]
