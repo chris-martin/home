@@ -337,5 +337,6 @@
     "workbench.startupEditor": "none",
     "editor.suggestOnTriggerCharacters": false,
     "editor.fontSize": 12,
-    "terminal.integrated.fontSize": 12
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.enableMultiLinePasteWarning": false
 }
