@@ -6,13 +6,13 @@ let
       compilers =
         [
           (pkgs.haskell.packages.ghc8107.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
-          (pkgs.haskell.packages.ghc902.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
-          (pkgs.haskell.packages.ghc924.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
-          (pkgs.haskell.packages.ghc942.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc90.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc92.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc94.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
         ];
 
       hls = pkgs.haskell-language-server.override {
-        supportedGhcVersions = ["8107" "902" "924" "942"];
+        supportedGhcVersions = ["810" "90" "92" "94"];
       };
     in
       compilers ++ [
