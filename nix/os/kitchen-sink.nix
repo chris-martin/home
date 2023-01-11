@@ -19,11 +19,11 @@ let
         hls
         pkgs.cabal-install
         unstable.cabal2nix
-        pkgs.ghcid
-        pkgs.hindent
-        pkgs.hlint
-        pkgs.hpack
-        pkgs.stack
+        #pkgs.ghcid
+        #pkgs.hindent
+        #pkgs.hlint
+        #pkgs.hpack
+        #pkgs.stack
       ];
 in
 {
@@ -162,6 +162,7 @@ in
     pkgs.unzip
     pkgs.vim # text editor
     pkgs.vscode
+    pkgs.wezterm
     pkgs.wget
     #pkgs.wine
     pkgs.which
