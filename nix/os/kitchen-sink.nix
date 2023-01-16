@@ -154,6 +154,7 @@ in
     # pkgs.text-replace
     pkgs.tmux
     pkgs.totem
+    pkgs.traceroute
     #pkgs.transmission_gtk # bittorrent
     pkgs.tree
     pkgs.wordlist # password generator
