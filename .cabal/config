@@ -1,0 +1,11 @@
+repository hackage.haskell.org
+  url: https://hackage.haskell.org/
+
+remote-repo-cache: /home/chris/.cabal/packages
+extra-prog-path: /home/chris/.cabal/bin
+build-summary: /home/chris/.cabal/logs/build.log
+remote-build-reporting: none
+jobs: $ncpus
+installdir: /home/chris/.cabal/bin
+username: chris_martin
+password-command: hackage-password
