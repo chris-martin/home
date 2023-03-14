@@ -3,6 +3,7 @@ let
   unstable = pkgs.nixpkgs-unstable;
   haskellStuff =
     let
+      pkgs = unstable;
       compilers =
         [
           (pkgs.haskell.packages.ghc94.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
