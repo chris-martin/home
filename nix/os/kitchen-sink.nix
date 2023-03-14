@@ -141,6 +141,7 @@ in
     #pkgs.sassc
     pkgs.scrot # screenshot tool
     pkgs.silver-searcher # the "ag" command
+    pkgs.slack
     #pkgs.solaar
     pkgs.sshfs-fuse # SSH mount
     #pkgs.socat
