@@ -6,8 +6,8 @@ let
       pkgs = unstable;
       compilers =
         [
-          (pkgs.haskell.packages.ghc94.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
-          (pkgs.haskell.packages.ghc92.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc94.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.sdl2 p.unix p.zlib ]))
+          (pkgs.haskell.packages.ghc92.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.sdl2 p.unix p.zlib ]))
           (pkgs.haskell.packages.ghc90.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
           (pkgs.haskell.packages.ghc8107.ghcWithPackages (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]))
         ];
