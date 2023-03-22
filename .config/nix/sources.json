@@ -1,0 +1,38 @@
+{
+    "nixos-22.05": {
+        "branch": "nixos-22.05",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0874168639713f547c05947c76124f78441ea46c",
+        "sha256": "0gw5l5bj3zcgxhp7ki1jafy6sl5nk4vr43hal94lhi15kg2vfmfy",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/0874168639713f547c05947c76124f78441ea46c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixos-22.11": {
+        "branch": "nixos-22.11",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e2c97799da5f5cd87adfa5017fba971771e123ef",
+        "sha256": "0qff1r8k0m19z1ppzb8gk5xrnlvabjdl3pqwpc3y5bm15qxzk25s",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/e2c97799da5f5cd87adfa5017fba971771e123ef.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixos-22.11-small": {
+        "branch": "nixos-22.11-small",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "17dbc4a9814081be1d56b1bd3f2a8735fbfc6301",
+        "sha256": "043lhllkac5vpq3v9ch401kwwghn2cy6awiji44wqna12w79pnzr",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/17dbc4a9814081be1d56b1bd3f2a8735fbfc6301.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}

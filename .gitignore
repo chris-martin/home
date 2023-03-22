@@ -43,6 +43,10 @@
 !/.config/gtk-*/*.css
 
 !/.config/nix/
+!/.config/nixpkgs/
+!/.config/nixos/
+!/.config/nix-path/
+!/.config/nix-flakes/
 
 !/.emacs.d/
 /.emacs.d/autosave
