@@ -11,7 +11,7 @@
     pkgs.fira-code
     pkgs.fira-mono
     pkgs.lato
-    pkgs.google-fonts
+    # pkgs.google-fonts
     pkgs.inconsolata
     pkgs.profont
     pkgs.rollandin-emilie

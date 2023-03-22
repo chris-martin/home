@@ -31,7 +31,6 @@
     ./hardware.nix
     ./essentials.nix
     ./kitchen-sink.nix
-    ./locale.nix
     ./fonts.nix
     ./keyboard.nix
     ./hoogle.nix

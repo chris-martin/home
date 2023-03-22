@@ -107,10 +107,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "alt+q",
-    "command": "paragraphHardWrapper.wrap"
-  },
-  {
     "key": "ctrl+b",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"

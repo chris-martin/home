@@ -10,19 +10,19 @@
   imports = [
     ./hardware.nix
     ./essentials.nix
-    ./kitchen-sink.nix
-    ./locale.nix
+    # ./kitchen-sink.nix
     ./fonts.nix
     ./keyboard.nix
-    ./hoogle.nix
+    # ./hoogle.nix
     ./avahi.nix
     ./touchpad.nix
     ./dns.nix
-    ./web-browsers.nix
+    # ./web-browsers.nix
     ./display.nix
     ./renzo-display.nix
     ./cache.nix
     ./nix.nix
+    <home-manager/nixos>
   ];
 
   services.printing = {
@@ -33,7 +33,7 @@
   programs.gnupg.agent.enable = true;
   programs.gnupg.agent.enableSSHSupport = true;
 
-  users.defaultUserShell = "/run/current-system/sw/bin/bash";
+  users.defaultUserShell = "/run/current-system/sw/bin/fish";
 
   nix.settings.trusted-users = [ "@wheel" ];
 
@@ -44,10 +44,7 @@
 
   networking.firewall.allowPing = true;
 
-  #services.redshift.enable = true;
   location.provider = "geoclue2";
-
-  #services.localtime.enable = true;
 
   environment.etc."fuse.conf".text = ''
     user_allow_other
@@ -71,6 +68,7 @@
     ];
     uid = 1000;
   };
+  home-manager.users.chris = import ../home.nix;
 
 
   #-----------------------------------------------------------------------------
