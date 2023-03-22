@@ -37,10 +37,6 @@
 !/.config/Code/User/keybindings.json
 !/.config/Code/User/settings.json
 
-!/.config/fish/
-/.config/fish/*
-!/.config/fish/*.fish
-
 !/.config/gtk-*/
 /.config/gtk-*/*
 !/.config/gtk-*/*.css
