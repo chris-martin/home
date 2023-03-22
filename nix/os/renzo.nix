@@ -35,7 +35,7 @@
 
   users.defaultUserShell = "/run/current-system/sw/bin/bash";
 
-  nix.settings.trustedUsers = [ "@wheel" ];
+  nix.settings.trusted-users = [ "@wheel" ];
 
   time.timeZone = "America/Denver";
 
