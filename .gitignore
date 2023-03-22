@@ -47,6 +47,7 @@
 !/.config/nixos/
 !/.config/nix-path/
 !/.config/nix-flakes/
+!/.config/home-manager/
 
 !/.emacs.d/
 /.emacs.d/autosave
