@@ -22,7 +22,8 @@
 /.config/*
 !/.config/autostart/
 !/.config/git/
-/.config/git/gitk
+/.config/git/*
+!/.config/git/ignore
 !/.config/python/
 !/.config/stylebot.json
 !/.config/systemd/
