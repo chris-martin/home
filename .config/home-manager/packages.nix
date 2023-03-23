@@ -33,7 +33,7 @@ in
         pkgs.tree # list files hierarchically
         pkgs.which # path lookup
         pkgs.whois # network domain lookup
-        (builtins.getFlake "github:chris-martin/wordlist/5e7b4641248758b0433f37633f77095c0094aa00").defaultPackage.x86_64-linux # password generator
+#        (builtins.getFlake "github:chris-martin/wordlist/5e7b4641248758b0433f37633f77095c0094aa00").defaultPackage.x86_64-linux # password generator
         pkgs.xclip # clipboard tool
         pkgs.xkill # kill X windows by clicking on them
         pkgs.zip pkgs.unzip # file compression

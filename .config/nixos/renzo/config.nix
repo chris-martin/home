@@ -1,11 +1,14 @@
 { config, pkgs, ... }:
 
 {
-    nixpkgs.config = import ../config.nix;
+    nixpkgs.config = import /home/chris/.config/nixpkgs/config.nix;
 
     imports = [
       ./audio.nix
+      ./boot.nix
+      ./display.nix
       ./kernel.nix
+      ./hardware.nix
       ./networking.nix
       ./nix.nix
       ./users.nix

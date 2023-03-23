@@ -1,1 +1,0 @@
-cubby/config.nix
