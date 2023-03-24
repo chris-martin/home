@@ -8,6 +8,7 @@
         ./fish.nix
         ./git.nix
         ./packages.nix
+        ./ssh.nix
         ./vim.nix
         ./vscode.nix
     ];
