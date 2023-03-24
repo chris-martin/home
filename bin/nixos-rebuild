@@ -1,3 +1,0 @@
-#! /usr/bin/env bash
-
-sudo env NIX_PATH=/home/chris/nix/path /run/current-system/sw/bin/nixos-rebuild "$@"
