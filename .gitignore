@@ -46,10 +46,6 @@
 !/.config/nix-flakes/
 !/.config/home-manager/
 
-!/.emacs.d/
-/.emacs.d/autosave
-/.emacs.d/backup
-
 !/.kde/
 /.kde/*
 !/.kde/env/
