@@ -5,9 +5,11 @@
     programs.firefox.enable = true;
     programs.home-manager.enable = true;
     imports = [
+        ./modules/cabal.nix
         ./modules/ghci.nix
         ./modules/haskeline.nix
 
+        ./cabal.nix
         ./fish.nix
         ./fonts.nix
         ./ghci.nix

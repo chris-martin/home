@@ -24,7 +24,7 @@ in
     config = mkIf cfg.enable (mkMerge [
 
         {
-            home.file.".haskeline".text = concatStringsSep "\n" [
+            home.file.".haskeline".text = concatStrings [
                 ''
                     historyDuplicates: ${cfg.history-duplicates}
                 ''

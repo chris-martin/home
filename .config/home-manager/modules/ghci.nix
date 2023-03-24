@@ -14,12 +14,12 @@ in
                 description = "If enabled, write GHCi config file.";
             };
             prompt = mkOption {
-                type = types.nullOr types.string;
+                type = types.nullOr types.str;
                 default = null;
                 description = "Command prompt";
             };
-            prompt-continue = mkOption {
-                type = types.nullOr types.string;
+            promptContinue = mkOption {
+                type = types.nullOr types.str;
                 default = null;
                 description = "Command prompt for subsequent lines after the first";
             };
@@ -34,12 +34,12 @@ in
     config = mkIf cfg.enable (mkMerge [
 
         {
-            home.file.".ghc/ghci.conf".text = concatStringsSep "\n" [
+            home.file.".ghc/ghci.conf".text = concatStrings [
                 (optionalString (cfg.prompt != null) ''
                     :set prompt "${cfg.prompt}"
                 '')
-                (optionalString (cfg.prompt-continue != null) ''
-                    :set prompt-cont "${cfg.prompt-continue}"
+                (optionalString (cfg.promptContinue != null) ''
+                    :set prompt-cont "${cfg.promptContinue}"
                 '')
                 (optionalString cfg.multiline ''
                     :set +m
