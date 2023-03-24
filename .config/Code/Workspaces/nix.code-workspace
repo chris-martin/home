@@ -1,19 +1,19 @@
 {
 	"folders": [
     {
-      "path": ".config/nix"
+      "path": "/home/chris/.config/nix"
     },
     {
-      "path": ".config/nixos"
+      "path": "/home/chris/.config/nixos"
     },
     {
-      "path": ".config/nixpkgs"
+      "path": "/home/chris/.config/nixpkgs"
     },
     {
-      "path": ".config/home-manager"
+      "path": "/home/chris/.config/home-manager"
     },
     {
-      "path": ".config/nix-flakes"
+      "path": "/home/chris/.config/nix-flakes"
     }
   ],
   "settings": {}
