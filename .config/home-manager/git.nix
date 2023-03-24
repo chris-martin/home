@@ -1,10 +1,10 @@
+{ pkgs, ... }:
 {
     programs.git = {
         enable = true;
         userName = "Chris Martin";
         userEmail = "ch.martin@gmail.com";
         extraConfig = {
-            core.excludesfile = "~/.config/git/ignore";
             pager.log = "less -c -+F";
             diff.tool = "vimdiff";
             diff.guitool = "meld";
@@ -29,5 +29,35 @@
             pull.rebase = "false";
             init.defaultBranch = "master";
         };
+        ignores = [
+
+            # Visual Studio Code
+            ".vscode" ".history"
+
+            # Haskell
+            ".cabal-sandbox" ".stack-work" "dist-newstyle" "ghcid.txt" "cabal.project.local"
+
+            # Nix
+            ".nix-gc-roots"
+
+            # IntelliJ
+            "*.ipr" "*.swp" ".idea" "*.iml" "ideaHaskellLib" ".ideaHaskellLib"
+
+            # Vagrant
+            ".vagrant"
+
+            # Python
+            "*.pyc" "*.egg"
+
+            # Emacs
+            ".projectile"
+
+            # Sublime
+            "*.sublime-workspace"
+
+            # PID files contain IDs of running processes
+            "*.pid"
+
+        ];
     };
 }
