@@ -45,17 +45,6 @@
 !/.config/nix-flakes/
 !/.config/home-manager/
 
-!/.kde/
-/.kde/*
-!/.kde/env/
-!/.kde/env/*
-!/.kde/share/
-/.kde/share/*
-!/.kde/share/apps
-/.kde/share/apps/*
-!/.kde/share/apps/konsole/
-!/.kde/share/apps/konsole/**
-
 !/.local/
 /.local/*
 !/.local/bin/
