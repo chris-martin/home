@@ -18,7 +18,9 @@
       <local-nixos-modules/dns.nix>
       <local-nixos-modules/essentials.nix>
       <local-nixos-modules/fonts.nix>
+      <local-nixos-modules/fuse.nix>
       <local-nixos-modules/keyboard.nix>
+      <local-nixos-modules/location.nix>
       <local-nixos-modules/nix.nix>
       <local-nixos-modules/printing.nix>
       <local-nixos-modules/ssh.nix>
@@ -28,11 +30,6 @@
     ];
 
     users.defaultUserShell = "/run/current-system/sw/bin/fish";
-    time.timeZone = "America/Denver";
-    location.provider = "geoclue2";
     services.dictd.enable = true;
-    environment.etc."fuse.conf".text = ''
-        user_allow_other
-    '';
     system.stateVersion = "19.09";
 }
