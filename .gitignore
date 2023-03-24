@@ -18,8 +18,6 @@
 !/.config/
 /.config/*
 !/.config/autostart/
-!/.config/git/
-/.config/git/*
 !/.config/python/
 !/.config/stylebot.json
 !/.config/systemd/
