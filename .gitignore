@@ -71,10 +71,6 @@
 !/.kde/share/apps/konsole/
 !/.kde/share/apps/konsole/**
 
-!/.lein/
-/.lein/*
-!/.lein/profiles.clj
-
 !/.local/
 /.local/*
 !/.local/bin/
