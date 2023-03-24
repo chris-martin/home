@@ -73,10 +73,6 @@
 !/.local/share/fonts/*
 /.local/share/fonts/**/.uuid
 
-!/.moc/
-/.moc/*
-!/.moc/config
-
 !/.mozilla
 /.mozilla/*
 !/.mozilla/firefox
