@@ -20,5 +20,6 @@
         ./tmux.nix
         ./vim.nix
         ./vscode.nix
+        ./xdg.nix
     ];
 }

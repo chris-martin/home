@@ -14,8 +14,6 @@
 !/.config/python/
 !/.config/stylebot.json
 !/.config/systemd/
-!/.config/user-dirs.conf
-!/.config/user-dirs.dirs
 
 !/.config/Code
 /.config/Code/*
