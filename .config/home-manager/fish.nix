@@ -19,6 +19,9 @@
         '';
         shellAbbrs = {
 
+            # nix
+            rebuild = "nixos-rebuild switch";
+
             # git
             add = "git add";
             amend = "git commit --amend";
