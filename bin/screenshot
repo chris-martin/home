@@ -1,4 +1,0 @@
-#!/usr/bin/env fish
-set dir $HOME/screenshots
-mkdir --parents $dir
-scrot $dir/(date -Iseconds).png
