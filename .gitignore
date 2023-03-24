@@ -51,10 +51,6 @@
 /.emacs.d/autosave
 /.emacs.d/backup
 
-!/.gradle/
-/.gradle/*
-!/.gradle/gradle.properties
-
 !/.kde/
 /.kde/*
 !/.kde/env/
