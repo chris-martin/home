@@ -1,0 +1,20 @@
+{
+	"folders": [
+    {
+      "path": ".config/nix"
+    },
+    {
+      "path": ".config/nixos"
+    },
+    {
+      "path": ".config/nixpkgs"
+    },
+    {
+      "path": ".config/home-manager"
+    },
+    {
+      "path": ".config/nix-flakes"
+    }
+  ],
+  "settings": {}
+}

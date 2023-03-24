@@ -37,6 +37,7 @@
 /.config/Code/User/*
 !/.config/Code/User/keybindings.json
 !/.config/Code/User/settings.json
+!/.config/Code/Workspaces
 
 !/.config/gtk-*/
 /.config/gtk-*/*
