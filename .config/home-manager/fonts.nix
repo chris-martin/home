@@ -10,6 +10,7 @@
         pkgs.merriweather
         pkgs.monoid
         pkgs.hasklig
+        pkgs.helvetica-neue-lt-std
         pkgs.inconsolata
         pkgs.luculent
         pkgs.profont
