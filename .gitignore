@@ -48,11 +48,3 @@
 !/.local/share/fonts/
 !/.local/share/fonts/*
 /.local/share/fonts/**/.uuid
-
-!/.mozilla
-/.mozilla/*
-!/.mozilla/firefox
-/.mozilla/firefox/*
-!/.mozilla/firefox/chris
-/.mozilla/firefox/chris/*
-!/.mozilla/firefox/chris/chrome
