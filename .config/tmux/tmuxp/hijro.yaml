@@ -1,7 +1,0 @@
-session_name: hijro
-windows:
-  - name: trireme
-    shell_command_before:
-      - cd ~/hijro/haskell
-    panes:
-      - git st
