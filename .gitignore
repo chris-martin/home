@@ -10,7 +10,6 @@
 !/.audacity-files
 !/.darcs
 !/.gitignore
-!/.haskeline
 !/.latexmkrc
 !/.password-store
 !/code

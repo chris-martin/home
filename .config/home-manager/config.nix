@@ -6,11 +6,13 @@
     programs.home-manager.enable = true;
     imports = [
         ./modules/ghci.nix
+        ./modules/haskeline.nix
 
         ./fish.nix
         ./fonts.nix
         ./ghci.nix
         ./git.nix
+        ./haskeline.nix
         ./packages.nix
         ./ssh.nix
         ./tmux.nix
