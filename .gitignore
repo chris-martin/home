@@ -17,6 +17,7 @@
 !/.tmux.conf
 !/.tmuxp
 !/.vimrc
+!/code
 
 !/.config/
 /.config/*
