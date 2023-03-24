@@ -105,7 +105,3 @@
 /nix/os/secret.nix
 /nix/.idea
 /nix/nixpkgs/
-
-!/.xmonad/
-/.xmonad/*
-!/.xmonad/xmonad.hs
