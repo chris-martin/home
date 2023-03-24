@@ -6,7 +6,6 @@
 
             set --export EDITOR vim
             set --export GIT_EDITOR vim
-            set --export NIX_BUILD_SHELL /run/current-system/sw/bin/fish
 
             complete -f -c oseary -a mount -n __fish_oseary_needs_command -d "Mount the NAS"
             complete -f -c oseary -a umount -n __fish_oseary_needs_command -d "Unmount the NAS"
