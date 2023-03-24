@@ -21,7 +21,7 @@
         shellAbbrs = {
 
             # nix
-            rebuild = "nixos-rebuild switch";
+            rebuild = "sudo nixos-rebuild switch";
 
             # git
             add = "git add";
