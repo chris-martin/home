@@ -6,6 +6,7 @@
     programs.home-manager.enable = true;
     imports = [
         ./fish.nix
+        ./fonts.nix
         ./git.nix
         ./packages.nix
         ./ssh.nix
