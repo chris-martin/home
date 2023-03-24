@@ -51,10 +51,6 @@
 /.emacs.d/autosave
 /.emacs.d/backup
 
-!/.ghc/
-/.ghc/*
-!/.ghc/ghci.conf
-
 !/.gradle/
 /.gradle/*
 !/.gradle/gradle.properties
