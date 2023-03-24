@@ -54,7 +54,6 @@
 !/.ghc/
 /.ghc/*
 !/.ghc/ghci.conf
-!/.ghc/imports.hs
 
 !/.gradle/
 /.gradle/*
