@@ -376,5 +376,6 @@
     "editor.suggestOnTriggerCharacters": false,
     "editor.fontSize": 12,
     "terminal.integrated.fontSize": 12,
-    "terminal.integrated.enableMultiLinePasteWarning": false
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "git.openRepositoryInParentFolders": "always"
 }
