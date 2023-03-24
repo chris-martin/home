@@ -29,7 +29,6 @@ in
         pkgs.psmisc # contains killall
         pkgs.rsync # move files locally or via network
         pkgs.silver-searcher # file searching, the "ag" command
-        pkgs.tmux # terminal multiplexer
         pkgs.tree # list files hierarchically
         pkgs.which # path lookup
         pkgs.whois # network domain lookup

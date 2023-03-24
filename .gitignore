@@ -14,7 +14,6 @@
 !/.haskeline
 !/.latexmkrc
 !/.password-store
-!/.tmux.conf
 !/.tmuxp
 !/.vimrc
 !/code
@@ -29,6 +28,7 @@
 !/.config/stylebot.json
 !/.config/systemd/
 !/.config/tmux/
+/.config/tmux/tmux.conf
 !/.config/user-dirs.conf
 !/.config/user-dirs.dirs
 

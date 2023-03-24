@@ -10,6 +10,7 @@
         ./git.nix
         ./packages.nix
         ./ssh.nix
+        ./tmux.nix
         ./vim.nix
         ./vscode.nix
     ];
