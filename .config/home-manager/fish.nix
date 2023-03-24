@@ -41,19 +41,6 @@
             trash = "gio trash";
         };
         functions = {
-            # Set tab completion for the alias that works like the full command
-            # https://github.com/fish-shell/fish-shell/issues/393#issuecomment-12689588
-            alias2 = {
-                argumentNames = "alias command";
-                body = ''
-                    alias "$alias" "$command"
-                    complete -c $alias -a "(
-                      set -l cmd (commandline -op);
-                      set -e cmd[1];
-                      complete -C\"$command \$cmd\";
-                    )"
-                '';
-            };
             hsnix = {
                 argumentNames = "pkg";
                 body = ''
