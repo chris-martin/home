@@ -18,6 +18,8 @@
             set --export NIXPKGS_CONFIG "/home/chris/.config/nixpkgs/config.nix"
         '';
         shellAbbrs = {
+
+            # git
             add = "git add";
             amend = "git commit --amend";
             staged = "git diff --cached";
@@ -34,6 +36,12 @@
             revert = "git revert";
             show = "git show";
             stash = "git stash";
+
+            # systemctl
+            start = "sudo systemctl start";
+            restart = "sudo systemctl restart";
+            stop = "sudo systemctl stop";
+
         };
         shellAliases = {
             clip = "xclip -selection clipboard";
