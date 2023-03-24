@@ -22,7 +22,6 @@
             # git
             add = "git add";
             amend = "git commit --amend";
-            staged = "git diff --cached";
             cherry = "git cherry-pick";
             ci = "git commit";
             clone = "git clone";
@@ -35,11 +34,12 @@
             rebase = "git rebase";
             revert = "git revert";
             show = "git show";
+            staged = "git diff --cached";
             stash = "git stash";
 
             # systemctl
-            start = "sudo systemctl start";
             restart = "sudo systemctl restart";
+            start = "sudo systemctl start";
             stop = "sudo systemctl stop";
 
         };
