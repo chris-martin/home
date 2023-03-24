@@ -98,10 +98,3 @@
 !/.mozilla/firefox/chris
 /.mozilla/firefox/chris/*
 !/.mozilla/firefox/chris/chrome
-
-!/nix/
-/nix/os/config.nix
-/nix/os/hardware.nix
-/nix/os/secret.nix
-/nix/.idea
-/nix/nixpkgs/
