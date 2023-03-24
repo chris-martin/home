@@ -9,7 +9,6 @@
 !/bin/
 !/.audacity-files
 !/.darcs
-!/dropbox
 !/.gitignore
 !/.haskeline
 !/.latexmkrc
