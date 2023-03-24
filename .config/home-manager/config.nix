@@ -6,10 +6,12 @@
     programs.home-manager.enable = true;
     imports = [
         ./modules/cabal.nix
+        ./modules/darcs.nix
         ./modules/ghci.nix
         ./modules/haskeline.nix
 
         ./cabal.nix
+        ./darcs.nix
         ./fish.nix
         ./fonts.nix
         ./ghci.nix
