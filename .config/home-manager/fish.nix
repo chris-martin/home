@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
     programs.fish = {
         enable = true;
@@ -88,6 +89,22 @@
                 argumentNames = "pkg";
                 body = ''
                     cabal2nix "cabal://$pkg" > "$pkg.nix"
+                '';
+            };
+
+            # Parameters as environment variables:
+            #   USER       username to connect as
+            #   PASSWORD   password of user
+            #   HOST       host to connect to
+            #   MOUNT      filesystem mount point
+            sshfs-mount = {
+                body = ''
+                    echo "If this hangs indefinitely, you may need to SSH to the host to accept the server's public key."
+                    echo "Mounting..."
+                    echo "$PASSWORD" | \
+                        ${pkgs.sshfs}/bin/sshfs "$USER"@"$HOST": "$MOUNT" \
+                        -oKexAlgorithms=+diffie-hellman-group1-sha1 \
+                        -o ServerAliveInterval=30,password_stdin,allow_other && echo -e 'Done.'
                 '';
             };
 
