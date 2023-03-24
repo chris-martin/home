@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-export APP="$1"
-
-find . -not -path '*/\.*' | entr -c -d bash -c 'stack test --fast --haddock && pkill -x -INT "$APP" 2>&1 | fold -w $(tput cols) -s | head -n $(tput lines)'
