@@ -9,6 +9,7 @@
         ./modules/ghci.nix
         ./modules/haskeline.nix
 
+        ./audacity
         ./cabal.nix
         ./darcs.nix
         ./firefox.nix
