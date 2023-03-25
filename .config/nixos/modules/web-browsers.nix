@@ -1,9 +1,7 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = [
-    pkgs.firefox
-  ];
-  services.xserver.displayManager.sessionCommands = ''
-    xdg-settings set default-web-browser firefox.desktop
-  '';
+    environment.systemPackages = [
+        # pkgs.firefox
+    ];
+    services.gnome.gnome-browser-connector.enable = true;
 }

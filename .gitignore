@@ -39,9 +39,6 @@
 !/.local/bin/.keep
 !/.local/share/
 /.local/share/*
-!/.local/share/applications/
-/.local/share/applications/*
-!/.local/share/applications/mimeapps.list
 !/.local/share/backgrounds/
 !/.local/share/backgrounds/*
 !/.local/share/fonts/
