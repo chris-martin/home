@@ -9,7 +9,6 @@
 !/.config/
 /.config/*
 !/.config/autostart/
-!/.config/python/
 !/.config/stylebot.json
 
 !/.config/Code
