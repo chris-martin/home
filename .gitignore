@@ -12,7 +12,6 @@
 !/.config/autostart/
 !/.config/python/
 !/.config/stylebot.json
-!/.config/systemd/
 
 !/.config/Code
 /.config/Code/*
