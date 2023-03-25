@@ -1,14 +1,11 @@
 /*
 
-!/.bash_profile
-!/.bashrc
 !/.gitignore
 !/.password-store
 !/code
 
 !/.config/
 /.config/*
-!/.config/autostart/
 
 !/.config/Code
 /.config/Code/*
@@ -16,7 +13,6 @@
 /.config/Code/User/*
 !/.config/Code/User/keybindings.json
 !/.config/Code/User/settings.json
-!/.config/Code/Workspaces
 
 !/.config/nix/
 !/.config/nixpkgs/
