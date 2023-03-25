@@ -28,6 +28,7 @@
             amend = "git commit --amend";
             cherry = "git cherry-pick";
             ci = "git commit";
+            ci-empty = "git ci --allow-empty -m empty";
             clone = "git clone";
             co = "git checkout";
             fetch = "git fetch";
