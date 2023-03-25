@@ -41,6 +41,3 @@
 /.local/share/*
 !/.local/share/backgrounds/
 !/.local/share/backgrounds/*
-!/.local/share/fonts/
-!/.local/share/fonts/*
-/.local/share/fonts/**/.uuid
