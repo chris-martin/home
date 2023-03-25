@@ -27,9 +27,6 @@
 
 !/.local/
 /.local/*
-!/.local/bin/
-/.local/bin/*
-!/.local/bin/.keep
 !/.local/share/
 /.local/share/*
 !/.local/share/backgrounds/
