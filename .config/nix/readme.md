@@ -24,6 +24,7 @@ Favorite packages from nixpkgs:
 - `ghostscript`
 - `gimp` -- image editor
 - `gitAndTools.gitFull`
+- `git-filter-repo`
 - `gksu`
 - `glances`
 - `gmrun`
