@@ -10,6 +10,7 @@
         ./modules/haskeline.nix
 
         ./audacity
+        ./backgrounds
         ./cabal.nix
         ./darcs.nix
         ./firefox.nix

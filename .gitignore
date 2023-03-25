@@ -29,5 +29,3 @@
 /.local/*
 !/.local/share/
 /.local/share/*
-!/.local/share/backgrounds/
-!/.local/share/backgrounds/*
