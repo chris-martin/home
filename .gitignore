@@ -21,10 +21,6 @@
 !/.config/Code/User/settings.json
 !/.config/Code/Workspaces
 
-!/.config/gtk-*/
-/.config/gtk-*/*
-!/.config/gtk-*/*.css
-
 !/.config/nix/
 !/.config/nixpkgs/
 !/.config/nixos/
