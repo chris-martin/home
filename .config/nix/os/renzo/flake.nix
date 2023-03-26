@@ -4,8 +4,9 @@
     inputs.home-manager.url = github:nix-community/home-manager;
     inputs.localModules.url = path:/home/chris/.config/nix/os/modules;
     inputs.home.url = path:/home/chris/.config/nix/home;
+    inputs.hoogle.url = path:/home/chris/.config/nix/hoogle;
 
-    outputs = { self, nixpkgs, localModules, home, home-manager, nixpkgs-unstable }@args: {
+    outputs = { self, nixpkgs, localModules, home, home-manager, nixpkgs-unstable, hoogle }@args: {
         nixosConfigurations.renzo = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {
@@ -14,6 +15,7 @@
             };
             modules = [
                 home-manager.nixosModule
+                hoogle.nixosModule
 
                 ./audio.nix
                 ./boot.nix

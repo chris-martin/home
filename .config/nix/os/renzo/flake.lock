@@ -31,6 +31,21 @@
         "type": "github"
       }
     },
+    "hoogle": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1679870091,
+        "narHash": "sha256-apavqQmBlC3aDeto43UiJtjnqcEwX6MXIKXgqWJu2VU=",
+        "path": "/home/chris/.config/nix/hoogle",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/chris/.config/nix/hoogle",
+        "type": "path"
+      }
+    },
     "localModules": {
       "locked": {
         "lastModified": 1679867443,
@@ -77,6 +92,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1679797994,
+        "narHash": "sha256-Kr/O/UlfqAtoFmkZeAaphsxogeaN8a/IugBApFzPfpk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f9d1bb572e08ec432ae46c78581919d837a90f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1679748960,
         "narHash": "sha256-BP8XcYHyj1NxQi04RpyNW8e7KiXSoI+Fy1tXIK2GfdA=",
         "owner": "NixOS",
@@ -95,8 +126,9 @@
       "inputs": {
         "home": "home",
         "home-manager": "home-manager",
+        "hoogle": "hoogle",
         "localModules": "localModules",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }
     },
