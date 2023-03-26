@@ -17,7 +17,6 @@
 !/.config/nix/
 !/.config/nixos/
 !/.config/nix-path/
-!/.config/nix-flakes/
 !/.config/home-manager/
 
 !/.local/

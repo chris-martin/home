@@ -8,9 +8,6 @@
     },
     {
       "path": "/home/chris/.config/home-manager"
-    },
-    {
-      "path": "/home/chris/.config/nix-flakes"
     }
   ],
   "settings": {}

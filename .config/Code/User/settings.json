@@ -377,5 +377,6 @@
     "editor.fontSize": 12,
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "git.openRepositoryInParentFolders": "always"
+    "git.openRepositoryInParentFolders": "always",
+    "window.zoomLevel": 1
 }
