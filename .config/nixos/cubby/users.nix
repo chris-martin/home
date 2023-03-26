@@ -17,6 +17,6 @@
       };
   };
 
-  home-manager.users.chris = import /home/chris/.config/home-manager/config.nix;
+  home-manager.users.chris = import /home/chris/.config/nix/home/config.nix;
 
 }

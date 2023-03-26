@@ -5,9 +5,6 @@
     },
     {
       "path": "/home/chris/.config/nixos"
-    },
-    {
-      "path": "/home/chris/.config/home-manager"
     }
   ],
   "settings": {}
