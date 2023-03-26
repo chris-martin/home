@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
     nixpkgs.config.allowUnfree = true;
     home.stateVersion = "22.11";
@@ -19,7 +19,7 @@
         ./ghci.nix
         ./git.nix
         ./haskeline.nix
-        ./packages.nix
+        (let f = import ./packages.nix; in args: f (args // { inherit pkgs; pkgsUnstable = import <nixpkgs-unstable> config; }))
         ./ssh.nix
         ./tmux.nix
         ./vim.nix

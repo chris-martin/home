@@ -1,7 +1,4 @@
-{ pkgs, config, ... }:
-let
-    pkgs' = import <nixpkgs-unstable> config;
-in
+{ pkgs, pkgsUnstable, ... }:
 {
     home.packages = [
 
@@ -15,7 +12,7 @@ in
         # Command-line
 
         pkgs.bash pkgs.fish # shells
-        pkgs'.cabal2nix # generates Nix expressions for Haskell packages
+        pkgsUnstable.cabal2nix # generates Nix expressions for Haskell packages
         pkgs.cachix # set up and use Nix binary caches hosted by Cachix
         pkgs.cryptsetup # LUKS
         pkgs.curl pkgs.wget # HTTP clients
