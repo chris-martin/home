@@ -1,10 +1,18 @@
 {
-    inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-22.11;
-    inputs.nixpkgs-unstable.url = github:NixOS/nixpkgs/nixos-unstable;
-    inputs.home-manager.url = github:nix-community/home-manager;
-    inputs.localModules.url = path:/home/chris/.config/nix/os/modules;
-    inputs.home.url = path:/home/chris/.config/nix/home;
-    inputs.hoogle.url = path:/home/chris/.config/nix/hoogle;
+    input = {
+        # Generally where most stuff comes from
+        nixpkgs.url = github:NixOS/nixpkgs/nixos-22.11;
+
+        # For a few packages where the very latest thing is needed
+        nixpkgs-unstable.url = github:NixOS/nixpkgs/nixos-unstable;
+
+        # Where home-manager and all its options come from
+        home-manager.url = github:nix-community/home-manager;
+
+        localModules.url = path:/home/chris/.config/nix/os/modules;
+        home.url = path:/home/chris/.config/nix/home;
+        hoogle.url = path:/home/chris/.config/nix/hoogle;
+    };
 
     outputs = { self, nixpkgs, localModules, home, home-manager, nixpkgs-unstable, hoogle }@args: {
         nixosConfigurations.renzo = nixpkgs.lib.nixosSystem {
