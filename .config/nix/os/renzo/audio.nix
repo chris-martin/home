@@ -1,8 +1,7 @@
 { pkgs, ... }:
 {
     hardware = {
-        pulseaudio.enable = true;
-        pulseaudio.package = pkgs.pulseaudioFull;
+        pulseaudio = { enable = true; package = pkgs.pulseaudioFull; };
         bluetooth.enable = false;
     };
 
@@ -12,9 +11,11 @@
     '';
 
     # https://github.com/NixOS/nixpkgs/issues/24184
-    services.acpid.enable = true;
-    services.acpid.handlers.fixHeadphoneNoise = {
-        event = "jack/headphone HEADPHONE plug";
-        action = "${pkgs.alsaUtils}/bin/amixer -c0 sset 'Headphone Mic Boost' 10dB";
+    services.acpid = {
+        enable = true;
+        handlers.fixHeadphoneNoise = {
+            event = "jack/headphone HEADPHONE plug";
+            action = "${pkgs.alsaUtils}/bin/amixer -c0 sset 'Headphone Mic Boost' 10dB";
+        };
     };
 }

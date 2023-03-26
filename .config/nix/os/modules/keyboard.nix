@@ -1,5 +1,7 @@
 { ... }:
 {
-  services.xserver.autoRepeatDelay = 250;
-  services.xserver.autoRepeatInterval = 50;
+    services.xserver = {
+        autoRepeatDelay = 250;
+        autoRepeatInterval = 50;
+    };
 }

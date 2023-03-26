@@ -1,5 +1,7 @@
 {
-    networking.hostName = "renzo";
-    networking.networkmanager.enable = true;
-    networking.firewall.allowPing = true;
+    networking = {
+        hostName = "renzo";
+        networkmanager.enable = true;
+        firewall.allowPing = true;
+    };
 }

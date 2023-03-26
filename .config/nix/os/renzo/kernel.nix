@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
-    boot.kernelPackages = pkgs.linuxPackages_latest;
-    boot.kernelModules  = ["snd-hda-intel"];
-    boot.kernelParams = ["pci=nocrs"];
+    boot = {
+        kernelPackages = pkgs.linuxPackages_latest;
+        kernelModules  = ["snd-hda-intel"];
+        kernelParams = ["pci=nocrs"];
+    };
 }

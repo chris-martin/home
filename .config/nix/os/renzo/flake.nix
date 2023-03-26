@@ -1,5 +1,5 @@
 {
-    input = {
+    inputs = {
         # Generally where most stuff comes from
         nixpkgs.url = github:NixOS/nixpkgs/nixos-22.11;
 

@@ -48,8 +48,8 @@
     },
     "localModules": {
       "locked": {
-        "lastModified": 1679867443,
-        "narHash": "sha256-Y51YSedVr0A1KMrOFKGDW8UNWrLYiBV6h5Vb1hsoh6c=",
+        "lastModified": 1679871314,
+        "narHash": "sha256-zBuZ/lFVLTaVRIV/OFUn+f9QRjsGzXUIG1jBAI7nZJk=",
         "path": "/home/chris/.config/nix/os/modules",
         "type": "path"
       },
