@@ -19,7 +19,7 @@
         ./ghci.nix
         ./git.nix
         ./haskeline.nix
-        (let f = import ./packages.nix; in args: f (args // { inherit pkgs; pkgsUnstable = import <nixpkgs-unstable> config; }))
+        ./packages.nix
         ./ssh.nix
         ./tmux.nix
         ./vim.nix

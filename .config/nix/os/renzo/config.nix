@@ -22,6 +22,7 @@
       <local-nixos-modules/fuse.nix>
       <local-nixos-modules/keyboard.nix>
       <local-nixos-modules/location.nix>
+      <local-nixos-modules/home.nix>
       <local-nixos-modules/nix.nix>
       <local-nixos-modules/printing.nix>
       <local-nixos-modules/ssh.nix>

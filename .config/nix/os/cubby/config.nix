@@ -19,6 +19,7 @@
       <local-nixos-modules/essentials.nix>
       <local-nixos-modules/fonts.nix>
       <local-nixos-modules/fuse.nix>
+      <local-nixos-modules/home.nix>
       <local-nixos-modules/keyboard.nix>
       <local-nixos-modules/location.nix>
       <local-nixos-modules/nix.nix>
