@@ -3,6 +3,12 @@
         auto-optimise-store = true;
         nix-path = [ "/home/chris/.config/nix-path" ];
         experimental-features = [ "nix-command" "flakes" ];
+        trusted-substituters = [
+            "https://cache.nixos.org"
+            "https://cachix.cachix.org"
+            "https://chris-martin.cachix.org"
+            "https://typeclasses.cachix.org"
+        ];
         trusted-public-keys = [
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
             "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
