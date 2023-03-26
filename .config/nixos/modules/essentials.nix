@@ -22,7 +22,7 @@
     pkgs.wget # HTTP client
     pkgs.which
     pkgs.whois
-    pkgs.xkill # kill X windows by clicking on them
+    pkgs.xorg.xkill # kill X windows by clicking on them
     pkgs.zip
     pkgs.unzip
   ];

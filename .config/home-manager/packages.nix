@@ -8,9 +8,9 @@ in
         # Graphical
 
         pkgs.baobab # disk usage analyzer
-        pkgs.eog # image viewer
+        pkgs.gnome3.eog # image viewer
         pkgs.evince # PDF viewer
-        pkgs.file-roller # file compression
+        pkgs.gnome3.file-roller # file compression
 
         # Command-line
 
@@ -35,7 +35,7 @@ in
         pkgs.whois # network domain lookup
         (builtins.getFlake "github:chris-martin/wordlist/5e7b4641248758b0433f37633f77095c0094aa00").defaultPackage.x86_64-linux # password generator
         pkgs.xclip # clipboard tool
-        pkgs.xkill # kill X windows by clicking on them
+        pkgs.xorg.xkill # kill X windows by clicking on them
         pkgs.zip pkgs.unzip # file compression
     ];
 }
