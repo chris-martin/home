@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-    nixpkgs.config = import /home/chris/.config/nixpkgs/config.nix;
+    nixpkgs.config.allowUnfree = true;
     home.stateVersion = "22.11";
     programs.home-manager.enable = true;
     imports = [

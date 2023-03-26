@@ -16,7 +16,6 @@
             set --export HOSTNAME (hostname)
             set --export NIX_PATH "/home/chris/.config/nix-path"
             set --export NIXOS_CONFIG "/home/chris/.config/nixos/config.nix"
-            set --export NIXPKGS_CONFIG "/home/chris/.config/nixpkgs/config.nix"
         '';
         shellAbbrs = {
 

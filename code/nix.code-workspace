@@ -7,9 +7,6 @@
       "path": "/home/chris/.config/nixos"
     },
     {
-      "path": "/home/chris/.config/nixpkgs"
-    },
-    {
       "path": "/home/chris/.config/home-manager"
     },
     {

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-    nixpkgs.config = import /home/chris/.config/nixpkgs/config.nix;
+    nixpkgs.config.allowUnfree = true;
 
     imports = [
       ./audio.nix
