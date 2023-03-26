@@ -20,7 +20,7 @@
         shellAbbrs = {
 
             # nix
-            rebuild = "sudo nixos-rebuild switch";
+            rebuild = "sudo nixos-rebuild --flake /home/chris/.config/nix/os/renzo switch";
 
             # git
             add = "git add";
