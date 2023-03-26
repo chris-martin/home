@@ -19,7 +19,7 @@
 
         defaultPackage.x86_64-linux = pkgs.symlinkJoin {
             name = "haskell";
-            paths = [ ghc-8-10 ghc-9-0 ghc-9-2 ghc-9-4 hls cabal ];
+            paths = [ ghc-9-4 ghc-9-2 ghc-9-0 ghc-8-10 hls cabal ];
         };
     };
 }
