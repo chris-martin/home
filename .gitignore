@@ -14,7 +14,6 @@
 !/.config/Code/User/settings.json
 
 !/.config/nix/
-!/.config/nix-path/
 
 !/.local/
 /.local/*
