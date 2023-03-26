@@ -30,6 +30,7 @@ in
         pkgs.rsync # move files locally or via network
         pkgs.silver-searcher # file searching, the "ag" command
         pkgs.tree # list files hierarchically
+        pkgs.wezterm # terminal emulator
         pkgs.which # path lookup
         pkgs.whois # network domain lookup
         (builtins.getFlake "github:chris-martin/wordlist/5e7b4641248758b0433f37633f77095c0094aa00").defaultPackage.x86_64-linux # password generator
