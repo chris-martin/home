@@ -5,8 +5,8 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1679943095,
-        "narHash": "sha256-YJ0SXw7kejDk8ZVLhtivOVfNiTMgnon/21Sf7mSc6EM=",
+        "lastModified": 1679946494,
+        "narHash": "sha256-ymsdcdvjZG6Y0Z25ydQmYTLKdSg+FSingBVSMacUTwM=",
         "path": "/home/chris/.config/nix/firefox",
         "type": "path"
       },
@@ -17,8 +17,8 @@
     },
     "home": {
       "locked": {
-        "lastModified": 1679942556,
-        "narHash": "sha256-2APSFrDzkgMDpHSl9G5pMky7ZTnbmeHxyj34dOO0Cj8=",
+        "lastModified": 1679942922,
+        "narHash": "sha256-VdR2hM7ELhf1YqT7Sex0BA/+tRcAgq2nvi/qmYft/Mg=",
         "path": "/home/chris/.config/nix/home",
         "type": "path"
       },
@@ -75,15 +75,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1679943018,
-        "narHash": "sha256-pCXp1npmzzPdt4T70mOhiFbwofebIB+9DvMeu4v4MC0=",
+        "lastModified": 1679748960,
+        "narHash": "sha256-BP8XcYHyj1NxQi04RpyNW8e7KiXSoI+Fy1tXIK2GfdA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e74d28259dbe6ed0fe47a24a3204ca085621de16",
+        "rev": "da26ae9f6ce2c9ab380c0f394488892616fc5a6a",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-22.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -154,15 +155,16 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1679875356,
-        "narHash": "sha256-NKmOIPQ0bUNADzXcdXJYvJSAXTBNxX1+5nMc5a5JlkM=",
+        "lastModified": 1679748960,
+        "narHash": "sha256-BP8XcYHyj1NxQi04RpyNW8e7KiXSoI+Fy1tXIK2GfdA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "fb087c790444dd79a04d0797154baf2aa01d170c",
+        "rev": "da26ae9f6ce2c9ab380c0f394488892616fc5a6a",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-22.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -199,8 +201,8 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1679942556,
-        "narHash": "sha256-lW/6P5BaXnrYF8iGUPmPirzXk+WrYvAdHIir487cGBE=",
+        "lastModified": 1679946480,
+        "narHash": "sha256-8+CY4kigffYUBPA7Q5mDfVuMPhqpESQ2EInGfYiOdYQ=",
         "path": "/home/chris/.config/nix/vscode",
         "type": "path"
       },
