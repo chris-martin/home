@@ -17,8 +17,8 @@
     },
     "home": {
       "locked": {
-        "lastModified": 1679896140,
-        "narHash": "sha256-LGey8Gu0EEPCTr9fkBrtH67KS6pntA16cIKqcCM27WQ=",
+        "lastModified": 1679899098,
+        "narHash": "sha256-i+m9CduyD3C0H0alXcEdDpo9nPzF1bfZs7KfzsLxsWg=",
         "path": "/home/chris/.config/nix/home",
         "type": "path"
       },
