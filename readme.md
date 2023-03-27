@@ -3,6 +3,16 @@ This directory lives at `/home/chris/.config/nix`.
 Each directory herein is a [flake](https://nixos.wiki/wiki/Flakes).
 
 
+## Working with
+
+For example, to update the `home` config:
+
+```fish
+fish> nix flake lock --update-input home /home/chris/.config/nix/(hostname)
+fish> sudo nixos-rebuild --flake /home/chris/.config/nix/(hostname) switch
+```
+
+
 ## Notes
 
 Favorite packages from nixpkgs:

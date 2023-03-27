@@ -13,7 +13,7 @@
         ./backgrounds
         ./cabal.nix
         ./darcs.nix
-        ./fish.nix
+        ./fish
         ./fonts.nix
         ./ghci.nix
         ./git.nix
