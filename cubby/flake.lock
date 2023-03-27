@@ -5,8 +5,8 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1679937479,
-        "narHash": "sha256-FvB5dUaUEcC2NJPJXaPmhc+Py2MtGRhcZxTGoA2K4wA=",
+        "lastModified": 1679942556,
+        "narHash": "sha256-QTpex2YaaJqupaHCB6MSM2yKVd1DS0qCk0AzmX2buhs=",
         "path": "/home/chris/.config/nix/firefox",
         "type": "path"
       },
@@ -17,8 +17,8 @@
     },
     "home": {
       "locked": {
-        "lastModified": 1679939277,
-        "narHash": "sha256-6xQmjDPfQJ92zGdFPTndZOCFkp2AZzfK3tbXMm1hoic=",
+        "lastModified": 1679942556,
+        "narHash": "sha256-2APSFrDzkgMDpHSl9G5pMky7ZTnbmeHxyj34dOO0Cj8=",
         "path": "/home/chris/.config/nix/home",
         "type": "path"
       },
@@ -51,8 +51,8 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1679937479,
-        "narHash": "sha256-j4N2hn+ymgRdCjEvPyvizzS0uMscWs+iW0fRGHD2CmA=",
+        "lastModified": 1679942556,
+        "narHash": "sha256-U8AtgxlxAzpNjLGOamEl5XrV2VuUfYDIKN8yDeK3yOQ=",
         "path": "/home/chris/.config/nix/hoogle",
         "type": "path"
       },
@@ -63,8 +63,8 @@
     },
     "nixosBase": {
       "locked": {
-        "lastModified": 1679937479,
-        "narHash": "sha256-fNFSbeVbjfAV/G6w+wo+KPkENExY47mvGWZ30g4iNd8=",
+        "lastModified": 1679942556,
+        "narHash": "sha256-yhmnDlz0qhwcEl+5cBtfe4LjiJk++tJOboS9rPIkT3g=",
         "path": "/home/chris/.config/nix/nixos-base",
         "type": "path"
       },
@@ -199,8 +199,8 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1679937479,
-        "narHash": "sha256-fgpprQZufNIsvGB0l4RWn1lFfQ1v77IUtjnyYgdSh8w=",
+        "lastModified": 1679942556,
+        "narHash": "sha256-lW/6P5BaXnrYF8iGUPmPirzXk+WrYvAdHIir487cGBE=",
         "path": "/home/chris/.config/nix/vscode",
         "type": "path"
       },
