@@ -1,42 +1,47 @@
 { config, lib, pkgs, ... }:
 with lib;
-let
-  cfg = config.programs.darcs;
-in
-{
-    imports = [];
+let cfg = config.programs.darcs;
+in {
+  imports = [ ];
 
-    options = {
-        programs.darcs = {
-            enable = mkOption {
-                type = types.bool;
-                default = false;
-                description = "If enabled, write Darcs config files.";
-            };
-            authors = mkOption {
-                type = types.listOf types.str;
-                default = [];
-                example = ''
-                    [ "Fred Bloggs <fred@example.net>" ]
-                '';
-            };
-            boring = mkOption {
-                type = types.listOf types.str;
-                default = [];
-                description = "File patterns to ignore";
-            };
-        };
+  options = {
+    programs.darcs = {
+      enable = mkOption {
+        type = types.bool;
+        default = false;
+        description = "If enabled, install Darcs and config files.";
+      };
+      package = mkOption {
+        type = types.package;
+        default = pkgs.darcs;
+        defaultText = literalExpression "pkgs.darcs";
+        description = "The Darcs package to use.";
+      };
+      authors = mkOption {
+        type = types.listOf types.str;
+        default = [ ];
+        example = ''
+          [ "Fred Bloggs <fred@example.net>" ]
+        '';
+      };
+      boring = mkOption {
+        type = types.listOf types.str;
+        default = [ ];
+        description = "File patterns to ignore";
+      };
     };
+  };
 
-    config = mkIf cfg.enable (mkMerge [
+  config = mkIf cfg.enable (mkMerge [
+    { home.packages = [ cfg.package ]; }
 
-        {
-            home.file.".darcs/author".text = concatStringsSep "\n" cfg.authors;
-        }
+    (mkIf (cfg.authors != [ ]) {
+      home.file.".darcs/author".text = concatStringsSep "\n" cfg.authors;
+    })
 
-        {
-            home.file.".darcs/boring".text = concatStringsSep "\n" cfg.boring;
-        }
+    (mkIf (cfg.boring != [ ]) {
+      home.file.".darcs/boring".text = concatStringsSep "\n" cfg.boring;
+    })
 
-    ]);
+  ]);
 }
