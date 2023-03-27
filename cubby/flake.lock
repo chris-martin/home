@@ -17,8 +17,8 @@
     },
     "home": {
       "locked": {
-        "lastModified": 1679948033,
-        "narHash": "sha256-B4KCZjZiwUiO9nGxXiSuZ/ivxPYIjzCyl7yhPAsXJMc=",
+        "lastModified": 1679952945,
+        "narHash": "sha256-p0tzvcP2uDShMFRQKJI5KVvVects/V7JOHSq3LMI8Tk=",
         "path": "/home/chris/.config/nix/home",
         "type": "path"
       },
@@ -201,8 +201,8 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1679946480,
-        "narHash": "sha256-8+CY4kigffYUBPA7Q5mDfVuMPhqpESQ2EInGfYiOdYQ=",
+        "lastModified": 1679951522,
+        "narHash": "sha256-1dwixZDBoEJ+uEkVHyjDo1mFe2KHtpr7nRfBQiUeZEY=",
         "path": "/home/chris/.config/nix/vscode",
         "type": "path"
       },

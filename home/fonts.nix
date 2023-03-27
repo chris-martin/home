@@ -9,6 +9,7 @@
     pkgs.merriweather
     pkgs.monoid
     (pkgs.google-fonts.override { fonts = [ "BioRhyme" ]; })
+    (pkgs.google-fonts.override { fonts = [ "Bitter" ]; })
     pkgs.hasklig
     pkgs.helvetica-neue-lt-std
     pkgs.inconsolata
