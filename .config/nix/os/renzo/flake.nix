@@ -18,19 +18,24 @@
         hoogle.url = path:/home/chris/.config/nix/hoogle;
     };
 
-    outputs = { self, nixpkgs, localModules, home, home-manager, nixpkgs-unstable, hoogle, ... }@args: {
-        nixosConfigurations.renzo = nixpkgs.lib.nixosSystem {
+    outputs = inputs:
+      let
+        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+        pkgsUnstable = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux;
+      in
+      {
+        nixosConfigurations.renzo = inputs.nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {
-                inherit home;
-                pkgsUnstable = nixpkgs.legacyPackages.x86_64-linux;
+                inherit (inputs) home;
+                inherit pkgsUnstable;
                 localFlakes = {
-                    inherit (args) firefox vscode;
+                    inherit (inputs) firefox vscode;
                 };
             };
             modules = [
-                home-manager.nixosModule
-                hoogle.nixosModule
+                inputs.home-manager.nixosModule
+                inputs.hoogle.nixosModule
 
                 ./audio.nix
                 ./boot.nix
@@ -42,20 +47,20 @@
                 ./nix.nix
                 ./users.nix
 
-                (localModules.path + /avahi.nix)
-                (localModules.path + /cache.nix)
-                (localModules.path + /display.nix)
-                (localModules.path + /dns.nix)
-                (localModules.path + /essentials.nix)
-                (localModules.path + /fonts.nix)
-                (localModules.path + /fuse.nix)
-                (localModules.path + /keyboard.nix)
-                (localModules.path + /location.nix)
-                (localModules.path + /nix.nix)
-                (localModules.path + /printing.nix)
-                (localModules.path + /ssh.nix)
-                (localModules.path + /touchpad.nix)
-                (localModules.path + /web-browsers.nix)
+                (inputs.localModules.path + /avahi.nix)
+                (inputs.localModules.path + /cache.nix)
+                (inputs.localModules.path + /display.nix)
+                (inputs.localModules.path + /dns.nix)
+                (inputs.localModules.path + /essentials.nix)
+                (inputs.localModules.path + /fonts.nix)
+                (inputs.localModules.path + /fuse.nix)
+                (inputs.localModules.path + /keyboard.nix)
+                (inputs.localModules.path + /location.nix)
+                (inputs.localModules.path + /nix.nix)
+                (inputs.localModules.path + /printing.nix)
+                (inputs.localModules.path + /ssh.nix)
+                (inputs.localModules.path + /touchpad.nix)
+                (inputs.localModules.path + /web-browsers.nix)
             ];
         };
     };
