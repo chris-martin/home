@@ -1,5 +1,5 @@
 {
-    environment.etc."fuse.conf".text = ''
-        user_allow_other
-    '';
+  environment.etc."fuse.conf".text = ''
+    user_allow_other
+  '';
 }

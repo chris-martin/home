@@ -1,6 +1,6 @@
 {
-    programs.haskeline = {
-        enable = true;
-        history-duplicates = "IgnoreAll";
-    };
+  programs.haskeline = {
+    enable = true;
+    history-duplicates = "IgnoreAll";
+  };
 }

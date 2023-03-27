@@ -1,5 +1,1 @@
-{
-    outputs = { self }: {
-        config = ./config.nix;
-    };
-}
+{ outputs = { self }: { config = ./config.nix; }; }

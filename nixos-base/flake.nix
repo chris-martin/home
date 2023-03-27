@@ -1,5 +1,1 @@
-{
-    outputs = { self }: {
-        path = ./.;
-    };
-}
+{ outputs = { self }: { path = ./.; }; }

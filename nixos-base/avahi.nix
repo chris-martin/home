@@ -1,8 +1,10 @@
-{ ... }:
-{
-    services.avahi = {
-        enable = true;
-        nssmdns = true;
-        publish = { enable = true; addresses = true; };
+{ ... }: {
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    publish = {
+      enable = true;
+      addresses = true;
     };
+  };
 }

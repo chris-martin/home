@@ -1,7 +1,6 @@
-{ firefox }:
-{
-    programs.firefox = {
-        enable = true;
-        package = firefox;
-    };
+{ firefox }: {
+  programs.firefox = {
+    enable = true;
+    package = firefox;
+  };
 }

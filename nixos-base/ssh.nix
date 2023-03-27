@@ -1,13 +1,13 @@
 { config, pkgs, ... }:
 
 {
-    programs.gnupg.agent = {
-        enable = true;
-        enableSSHSupport = true;
-    };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
-    services.openssh = {
-        enable = true;
-        passwordAuthentication = false;
-    };
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = false;
+  };
 }
