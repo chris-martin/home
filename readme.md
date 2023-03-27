@@ -5,7 +5,16 @@ Each directory herein is a [flake](https://nixos.wiki/wiki/Flakes).
 My two machines are [cubby](./cubby) and [renzo](./renzo).
 
 
-## Working with
+## Resources
+
+* [My Substack post introducing Flakes](https://typeclasses.substack.com/p/flakes-nixos-desktop)
+* [Home Manager manual](https://nix-community.github.io/home-manager/)
+* [Home Manager configuration options](https://nix-community.github.io/home-manager/options.html)
+* [NixOS options search](https://search.nixos.org/options)
+* [Nix packages search](https://search.nixos.org/packages)
+
+
+## A few example commands
 
 For example, to update the `home` config:
 
@@ -15,7 +24,7 @@ fish> sudo nixos-rebuild --flake /home/chris/.config/nix/(hostname) switch
 ```
 
 
-## Notes
+## Notes about packages
 
 Favorite packages from nixpkgs:
 
