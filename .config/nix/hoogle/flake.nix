@@ -7,7 +7,7 @@
         inherit (haskellPackages) ghcWithHoogle;
       in
         {
-            nixosModule = import ./hoogle.nix { inherit haskellPackages; };
+            nixosModule = import ./nixos-module.nix { inherit haskellPackages; };
             defaultPackage.x86_64-linux = ghcWithHoogle (import ./packages.nix);
         };
 }

@@ -4,12 +4,11 @@
       let
           system = "x86_64-linux";
           pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-          inherit (pkgs) minecraft-server;
+          inherit (pkgs) vscode;
       in
           {
-              nixosModule = import ./nixos-module.nix {
-                  inherit minecraft-server;
+              homeModule = import ./home-module.nix {
+                  inherit pkgs;
               };
-              defaultPackage.${system} = minecraft-server;
           };
 }

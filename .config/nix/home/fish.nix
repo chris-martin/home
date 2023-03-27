@@ -13,9 +13,6 @@
         '';
         shellInit = ''
             set fish_user_paths /home/chris/bin /home/chris/.cabal/bin /home/chris/.local/bin /home/chris/.nix-profile/bin
-            set --export HOSTNAME (hostname)
-            set --export NIX_PATH "/home/chris/.config/nix-path"
-            set --export NIXOS_CONFIG "/home/chris/.config/nixos/config.nix"
         '';
         shellAbbrs = {
 

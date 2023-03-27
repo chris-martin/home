@@ -12,14 +12,18 @@
         localModules.url = path:/home/chris/.config/nix/os/modules;
         home.url = path:/home/chris/.config/nix/home;
         hoogle.url = path:/home/chris/.config/nix/hoogle;
+        vscode.url = path:/home/chris/.config/nix/vscode;
     };
 
-    outputs = { self, nixpkgs, localModules, home, home-manager, nixpkgs-unstable, hoogle }@args: {
+    outputs = { self, nixpkgs, localModules, home, home-manager, nixpkgs-unstable, hoogle, ... }@args: {
         nixosConfigurations.renzo = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {
                 inherit home;
                 pkgsUnstable = nixpkgs.legacyPackages.x86_64-linux;
+                localFlakes = {
+                    inherit (args) vscode;
+                };
             };
             modules = [
                 home-manager.nixosModule

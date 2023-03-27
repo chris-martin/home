@@ -2,8 +2,8 @@
   "nodes": {
     "home": {
       "locked": {
-        "lastModified": 1679866806,
-        "narHash": "sha256-iHS3rZgOBT4/0CPRBPbnjLcQX1JbpkYfjlIH/PrvyFs=",
+        "lastModified": 1679875291,
+        "narHash": "sha256-WG6gw9lN/vLFHaQYHZ3TjaNLLvhCeBp5HJiUa4dnhns=",
         "path": "/home/chris/.config/nix/home",
         "type": "path"
       },
@@ -122,6 +122,21 @@
         "type": "github"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1679875356,
+        "narHash": "sha256-NKmOIPQ0bUNADzXcdXJYvJSAXTBNxX1+5nMc5a5JlkM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fb087c790444dd79a04d0797154baf2aa01d170c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home": "home",
@@ -129,7 +144,8 @@
         "hoogle": "hoogle",
         "localModules": "localModules",
         "nixpkgs": "nixpkgs_3",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "vscode": "vscode"
       }
     },
     "utils": {
@@ -145,6 +161,21 @@
         "owner": "numtide",
         "repo": "flake-utils",
         "type": "github"
+      }
+    },
+    "vscode": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1679876966,
+        "narHash": "sha256-fgpprQZufNIsvGB0l4RWn1lFfQ1v77IUtjnyYgdSh8w=",
+        "path": "/home/chris/.config/nix/vscode",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/chris/.config/nix/vscode",
+        "type": "path"
       }
     }
   },
