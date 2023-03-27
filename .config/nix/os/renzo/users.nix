@@ -7,5 +7,6 @@
             "systemd-journal" "wheel" "vboxusers" "video"
         ];
         uid = 1000;
+        openssh.authorizedKeys.keys = import ../keys.nix;
     };
 }
