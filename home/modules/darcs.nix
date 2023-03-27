@@ -17,7 +17,7 @@ in {
         defaultText = literalExpression "pkgs.darcs";
         description = "The Darcs package to use.";
       };
-      authors = mkOption {
+      author = mkOption {
         type = types.listOf types.str;
         default = [ ];
         example = ''
@@ -35,8 +35,8 @@ in {
   config = mkIf cfg.enable (mkMerge [
     { home.packages = [ cfg.package ]; }
 
-    (mkIf (cfg.authors != [ ]) {
-      home.file.".darcs/author".text = concatStringsSep "\n" cfg.authors;
+    (mkIf (cfg.author != [ ]) {
+      home.file.".darcs/author".text = concatStringsSep "\n" cfg.author;
     })
 
     (mkIf (cfg.boring != [ ]) {
