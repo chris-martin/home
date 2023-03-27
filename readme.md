@@ -1,6 +1,6 @@
-## What's in this directory
+This directory lives at `/home/chris/.config/nix`.
 
-Each directory within this one is a flake.
+Each directory herein is a [flake](https://nixos.wiki/wiki/Flakes).
 
 
 ## Notes
