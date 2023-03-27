@@ -1,3 +1,10 @@
+## What's in this directory
+
+Each directory within this one is a flake.
+
+
+## Notes
+
 Favorite packages from nixpkgs:
 
 - `abcde` -- audio CD ripping

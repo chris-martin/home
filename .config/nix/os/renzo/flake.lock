@@ -61,15 +61,15 @@
         "type": "path"
       }
     },
-    "localModules": {
+    "nixosBase": {
       "locked": {
-        "lastModified": 1679871314,
-        "narHash": "sha256-zBuZ/lFVLTaVRIV/OFUn+f9QRjsGzXUIG1jBAI7nZJk=",
-        "path": "/home/chris/.config/nix/os/modules",
+        "lastModified": 1679895888,
+        "narHash": "sha256-fNFSbeVbjfAV/G6w+wo+KPkENExY47mvGWZ30g4iNd8=",
+        "path": "/home/chris/.config/nix/nixos-base",
         "type": "path"
       },
       "original": {
-        "path": "/home/chris/.config/nix/os/modules",
+        "path": "/home/chris/.config/nix/nixos-base",
         "type": "path"
       }
     },
@@ -173,7 +173,7 @@
         "home": "home",
         "home-manager": "home-manager",
         "hoogle": "hoogle",
-        "localModules": "localModules",
+        "nixosBase": "nixosBase",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "vscode": "vscode"

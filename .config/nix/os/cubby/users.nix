@@ -5,7 +5,6 @@
             description = "Chris Martin";
             extraGroups = ["wheel"];
             uid = 1000;
-            openssh.authorizedKeys.keys = import ../keys.nix;
         };
         julie = {
             isNormalUser = true;

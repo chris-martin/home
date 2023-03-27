@@ -12,6 +12,7 @@
       ./nix.nix
       ./users.nix
 
+      <local-nixos-modules/authorized-keys.nix>
       <local-nixos-modules/avahi.nix>
       <local-nixos-modules/cache.nix>
       <local-nixos-modules/display.nix>

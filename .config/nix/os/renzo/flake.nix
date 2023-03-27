@@ -13,7 +13,7 @@
         firefox.url = path:/home/chris/.config/nix/firefox;
         vscode.url = path:/home/chris/.config/nix/vscode;
 
-        localModules.url = path:/home/chris/.config/nix/os/modules;
+        nixosBase.url = path:/home/chris/.config/nix/nixos-base;
         home.url = path:/home/chris/.config/nix/home;
         hoogle.url = path:/home/chris/.config/nix/hoogle;
     };
@@ -47,20 +47,21 @@
                 ./nix.nix
                 ./users.nix
 
-                (inputs.localModules.path + /avahi.nix)
-                (inputs.localModules.path + /cache.nix)
-                (inputs.localModules.path + /display.nix)
-                (inputs.localModules.path + /dns.nix)
-                (inputs.localModules.path + /essentials.nix)
-                (inputs.localModules.path + /fonts.nix)
-                (inputs.localModules.path + /fuse.nix)
-                (inputs.localModules.path + /keyboard.nix)
-                (inputs.localModules.path + /location.nix)
-                (inputs.localModules.path + /nix.nix)
-                (inputs.localModules.path + /printing.nix)
-                (inputs.localModules.path + /ssh.nix)
-                (inputs.localModules.path + /touchpad.nix)
-                (inputs.localModules.path + /web-browsers.nix)
+                (inputs.nixosBase.path + /authorized-keys.nix)
+                (inputs.nixosBase.path + /avahi.nix)
+                (inputs.nixosBase.path + /cache.nix)
+                (inputs.nixosBase.path + /display.nix)
+                (inputs.nixosBase.path + /dns.nix)
+                (inputs.nixosBase.path + /essentials.nix)
+                (inputs.nixosBase.path + /fonts.nix)
+                (inputs.nixosBase.path + /fuse.nix)
+                (inputs.nixosBase.path + /keyboard.nix)
+                (inputs.nixosBase.path + /location.nix)
+                (inputs.nixosBase.path + /nix.nix)
+                (inputs.nixosBase.path + /printing.nix)
+                (inputs.nixosBase.path + /ssh.nix)
+                (inputs.nixosBase.path + /touchpad.nix)
+                (inputs.nixosBase.path + /web-browsers.nix)
             ];
         };
     };
