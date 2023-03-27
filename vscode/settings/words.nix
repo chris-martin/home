@@ -231,6 +231,7 @@
   "syscalls"
   "tbody"
   "terminfo"
+  "tesseract"
   "thead"
   "tufte"
   "typeclass"
