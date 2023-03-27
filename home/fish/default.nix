@@ -14,7 +14,6 @@
       restart = "sudo systemctl restart";
       start = "sudo systemctl start";
       stop = "sudo systemctl stop";
-
     };
     shellAliases = {
       clip = "xclip -selection clipboard";
