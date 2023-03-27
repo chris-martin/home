@@ -1,14 +1,8 @@
 /*
 
 !/.gitignore
-!/.password-store
 
 !/.config/
 /.config/*
 
 !/.config/nix/
-
-!/.local/
-/.local/*
-!/.local/share/
-/.local/share/*
