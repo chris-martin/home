@@ -219,6 +219,7 @@
   "subdir"
   "subparser"
   "subparsers"
+  "Substack"
   "substate"
   "subtractable"
   "Subtyping"
