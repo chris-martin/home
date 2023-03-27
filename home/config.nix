@@ -9,7 +9,6 @@
     ./modules/haskeline.nix
 
     ./audacity
-    ./backgrounds
     ./cabal.nix
     ./darcs.nix
     ./fish
