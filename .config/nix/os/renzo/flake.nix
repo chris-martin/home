@@ -9,10 +9,13 @@
         # Where home-manager and all its options come from
         home-manager.url = github:nix-community/home-manager;
 
+        # localFlakes
+        firefox.url = path:/home/chris/.config/nix/firefox;
+        vscode.url = path:/home/chris/.config/nix/vscode;
+
         localModules.url = path:/home/chris/.config/nix/os/modules;
         home.url = path:/home/chris/.config/nix/home;
         hoogle.url = path:/home/chris/.config/nix/hoogle;
-        vscode.url = path:/home/chris/.config/nix/vscode;
     };
 
     outputs = { self, nixpkgs, localModules, home, home-manager, nixpkgs-unstable, hoogle, ... }@args: {
@@ -22,7 +25,7 @@
                 inherit home;
                 pkgsUnstable = nixpkgs.legacyPackages.x86_64-linux;
                 localFlakes = {
-                    inherit (args) vscode;
+                    inherit (args) firefox vscode;
                 };
             };
             modules = [

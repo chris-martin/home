@@ -13,7 +13,6 @@
         ./backgrounds
         ./cabal.nix
         ./darcs.nix
-        ./firefox.nix
         ./fish.nix
         ./fonts.nix
         ./ghci.nix
@@ -25,6 +24,7 @@
         ./vim.nix
         ./xdg.nix
 
+        localFlakes.firefox.homeModule
         localFlakes.vscode.homeModule
     ];
 }
