@@ -1,7 +1,6 @@
 {
   imports = [
-    ../nixos-base
-    ../hoogle
+    ../base
 
     ./audio.nix
     ./boot.nix

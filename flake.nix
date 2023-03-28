@@ -55,13 +55,13 @@
         inherit system;
         specialArgs = { inherit home-manager; };
         modules = [
-          ./nixos-modules/${hostname}
+          ./os/${hostname}
           inputs."home-manager-${hostname}".nixosModule
           {
             home-manager = {
               extraSpecialArgs = { inherit nixpkgs; };
               users.chris = {
-                imports = [ ./home-modules/chris.nix ];
+                imports = [ ./home/chris.nix ];
                 programs.firefox.package = nixpkgs.for."firefox".firefox;
                 programs.vscode.package = nixpkgs.for."vscode".vscode;
               };

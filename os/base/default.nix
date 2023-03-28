@@ -30,6 +30,7 @@
     };
   };
   services.dictd.enable = true;
+  services.hoogle.packages = import ./hoogle-packages.nix;
   services.hoogle.port = 13723;
   services.monero.mining.address =
     "427YsNgWdfJ9VraWsLC6h4Rygqq1VozD8Q6JC2DoPcHzbRxo6xjtWHyF7B1PBYsqFN8R37itSYthm6xiaDxGoFdFLKnDMn7";
