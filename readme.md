@@ -1,7 +1,5 @@
 This directory lives at `/home/chris/.config/nix`.
 
-Each directory herein is a [flake](https://nixos.wiki/wiki/Flakes).
-
 My two machines are [cubby](./cubby) and [renzo](./renzo).
 
 
