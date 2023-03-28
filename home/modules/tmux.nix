@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   programs.tmux = {
     enable = true;
 
@@ -12,7 +12,7 @@
 
     prefix = "C-a";
 
-    extraConfig = pkgs.lib.strings.concatStringsSep "\n\n" [
+    extraConfig = lib.concatStringsSep "\n\n" [
 
       # Use shift-left and shift-right to move between tabs
       ''

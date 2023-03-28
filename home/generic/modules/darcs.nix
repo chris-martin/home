@@ -1,3 +1,8 @@
+/*
+
+https://github.com/nix-community/home-manager/pull/3812
+
+*/
 { config, lib, pkgs, ... }:
 with lib;
 let cfg = config.programs.darcs;

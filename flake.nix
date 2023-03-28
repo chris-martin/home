@@ -40,37 +40,43 @@
         config.allowUnfree = true;
       };
 
-      mkNixos = hostname: let
-        home-manager = inputs."home-manager-${hostname}";
-        nixpkgs.for = {
-          firefox = import inputs."nixpkgs-for-firefox-${hostname}" nixpkgsConfig;
-          vscode = import inputs."nixpkgs-for-vscode-${hostname}" nixpkgsConfig;
-          hoogle = import inputs."nixpkgs-for-hoogle-${hostname}" nixpkgsConfig;
-        };
-        nixpkgs.from = {
-          stable = import inputs."nixpkgs-from-stable-${hostname}" nixpkgsConfig;
-          unstable = import inputs."nixpkgs-from-unstable-${hostname}" nixpkgsConfig;
-        };
-      in inputs."nixpkgs-for-nixos-${hostname}".lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit home-manager; };
-        modules = [
-          ./os/${hostname}
-          home-manager.nixosModule
-          {
-            home-manager = {
-              extraSpecialArgs = { inherit nixpkgs; };
-              users.chris = {
-                imports = [ ./home/chris.nix ];
-                programs.firefox.package = nixpkgs.for."firefox".firefox;
-                programs.vscode.package = nixpkgs.for."vscode".vscode;
+      mkNixos = hostname:
+        let
+          home-manager = inputs."home-manager-${hostname}";
+          nixpkgs.for = {
+            firefox =
+              import inputs."nixpkgs-for-firefox-${hostname}" nixpkgsConfig;
+            vscode =
+              import inputs."nixpkgs-for-vscode-${hostname}" nixpkgsConfig;
+            hoogle =
+              import inputs."nixpkgs-for-hoogle-${hostname}" nixpkgsConfig;
+          };
+          nixpkgs.from = {
+            stable =
+              import inputs."nixpkgs-from-stable-${hostname}" nixpkgsConfig;
+            unstable =
+              import inputs."nixpkgs-from-unstable-${hostname}" nixpkgsConfig;
+          };
+        in inputs."nixpkgs-for-nixos-${hostname}".lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit home-manager; };
+          modules = [
+            ./os/${hostname}
+            home-manager.nixosModule
+            {
+              home-manager = {
+                extraSpecialArgs = { inherit nixpkgs; };
+                users.chris = {
+                  imports = [ ./home ];
+                  programs.firefox.package = nixpkgs.for."firefox".firefox;
+                  programs.vscode.package = nixpkgs.for."vscode".vscode;
+                };
               };
-            };
-            services.hoogle.haskellPackages =
-              nixpkgs.for."hoogle".haskellPackages;
-          }
-        ];
-      };
+              services.hoogle.haskellPackages =
+                nixpkgs.for."hoogle".haskellPackages;
+            }
+          ];
+        };
 
     in {
       nixosConfigurations = {

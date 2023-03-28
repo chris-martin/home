@@ -1,11 +1,12 @@
 { pkgs, ... }: {
 
   imports = [
-    ./essentials.nix
-    ./cache.nix
-    ./authorized-keys.nix
-    ./display.nix
-    ./nix.nix
+    ./modules/authorized-keys.nix
+    ./modules/cache.nix
+    ./modules/display.nix
+    ./modules/essentials.nix
+    ./modules/hoogle
+    ./modules/nix.nix
   ];
 
   console.font = "Fira Mono";
@@ -42,11 +43,7 @@
 
   services.dictd.enable = true;
 
-  services.hoogle = {
-    enable = true;
-    packages = import ./hoogle-packages.nix;
-    port = 13723;
-  };
+  services.hoogle.enable = true;
 
   services.monero.mining = {
     address =
@@ -61,8 +58,7 @@
 
   services.printing = {
     enable = true;
-    drivers =
-      [ pkgs.brlaser pkgs.brgenml1lpr pkgs.brgenml1cupswrapper ];
+    drivers = [ pkgs.brlaser pkgs.brgenml1lpr pkgs.brgenml1cupswrapper ];
   };
 
   services.xserver = {

@@ -1,4 +1,5 @@
 { config, ... }: {
+
   xdg.userDirs = {
     enable = true;
     createDirectories = false;
@@ -11,6 +12,7 @@
     templates = "${config.home.homeDirectory}/templates";
     videos = "${config.home.homeDirectory}/videos";
   };
+
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {

@@ -1,13 +1,16 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   programs.vim = {
+
     enable = true;
+
     settings = {
       ignorecase = true;
       smartcase = true;
       shiftwidth = 2;
       tabstop = 2;
     };
-    extraConfig = pkgs.lib.strings.concatStringsSep "\n\n" [
+
+    extraConfig = lib.concatStringsSep "\n\n" [
       "set lbr"
 
       # Rename : to ; so you can type it more easily without shift
