@@ -6,5 +6,13 @@ in {
       os-update = "nix flake lock ${os-flake} --update-input";
       os-inputs = "nix flake info ${os-flake}";
     };
+    functions = {
+      os-update = {
+        argumentNames = "input";
+        body = ''
+          nix flake lock ${os-flake} --update-input $input
+        '';
+      };
+    };
   };
 }

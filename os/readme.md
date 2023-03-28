@@ -10,7 +10,10 @@ More information:
 
 For example, to update `hoogle` on `cubby`:
 
-```fish
-~/.config/nix/os> nix flake lock --update-input nixpkgs-for-hoogle-cubby
-~/.config/nix/os> sudo nixos-rebuild --flake . switch --builders '@../builders'
-```
+    > nix flake lock --update-input nixpkgs-for-hoogle-cubby ~/.config/nix/os
+    > sudo nixos-rebuild --flake ~/.config/nix/os switch
+
+Equivalently, using [fish](./home/modules/fish) shortcuts:
+
+    > os-update nixpkgs-for-hoogle-cubby
+    > os-switch
