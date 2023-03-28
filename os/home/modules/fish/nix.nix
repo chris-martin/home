@@ -1,4 +1,4 @@
-let os-flake = "/home/chris/.config/nix";
+let os-flake = "/home/chris/.config/nix/os";
 in {
   programs.fish = {
     shellAbbrs = {

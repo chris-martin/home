@@ -61,7 +61,7 @@
           inherit system;
           specialArgs = { inherit home-manager; };
           modules = [
-            ./os/${hostname}
+            ./${hostname}
             home-manager.nixosModule
             {
               home-manager = {

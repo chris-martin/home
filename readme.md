@@ -1,25 +1,9 @@
 This directory lives at `/home/chris/.config/nix`.
 
-My two machines are [cubby](./cubby) and [renzo](./renzo).
+More information:
 
-
-## Resources
-
+* See the readme files in the subdirectories
 * [My Substack post introducing Flakes](https://typeclasses.substack.com/p/flakes-nixos-desktop)
-* [Home Manager manual](https://nix-community.github.io/home-manager/)
-* [Home Manager configuration options](https://nix-community.github.io/home-manager/options.html)
-* [NixOS options search](https://search.nixos.org/options)
-* [Nix packages search](https://search.nixos.org/packages)
-
-
-## A few example commands
-
-For example, to update the `home` config:
-
-```fish
-fish> nix flake lock --update-input home /home/chris/.config/nix/(hostname)
-fish> sudo nixos-rebuild --flake /home/chris/.config/nix/(hostname) switch
-```
 
 
 ## Notes about packages
