@@ -7,10 +7,6 @@
     home-manager-cubby.url = "github:nix-community/home-manager";
     home-manager-renzo.url = "github:nix-community/home-manager";
 
-    # Firefox
-    nixpkgs-for-firefox-cubby.url = "github:NixOS/nixpkgs/nixos-22.11";
-    nixpkgs-for-firefox-renzo.url = "github:NixOS/nixpkgs/nixos-22.11";
-
     # Hoogle
     nixpkgs-for-hoogle-cubby.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-for-hoogle-renzo.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -44,8 +40,6 @@
         let
           home-manager = inputs."home-manager-${hostname}";
           nixpkgs.for = {
-            firefox =
-              import inputs."nixpkgs-for-firefox-${hostname}" nixpkgsConfig;
             vscode =
               import inputs."nixpkgs-for-vscode-${hostname}" nixpkgsConfig;
             hoogle =
@@ -68,7 +62,6 @@
                 extraSpecialArgs = { inherit nixpkgs; };
                 users.chris = {
                   imports = [ ./home ];
-                  programs.firefox.package = nixpkgs.for."firefox".firefox;
                   programs.vscode.package = nixpkgs.for."vscode".vscode;
                 };
               };

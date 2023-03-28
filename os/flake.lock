@@ -54,38 +54,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-for-firefox-cubby": {
-      "locked": {
-        "lastModified": 1679748960,
-        "narHash": "sha256-BP8XcYHyj1NxQi04RpyNW8e7KiXSoI+Fy1tXIK2GfdA=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "da26ae9f6ce2c9ab380c0f394488892616fc5a6a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-22.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-for-firefox-renzo": {
-      "locked": {
-        "lastModified": 1679748960,
-        "narHash": "sha256-BP8XcYHyj1NxQi04RpyNW8e7KiXSoI+Fy1tXIK2GfdA=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "da26ae9f6ce2c9ab380c0f394488892616fc5a6a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-22.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-for-hoogle-cubby": {
       "locked": {
         "lastModified": 1679944645,
@@ -282,8 +250,6 @@
       "inputs": {
         "home-manager-cubby": "home-manager-cubby",
         "home-manager-renzo": "home-manager-renzo",
-        "nixpkgs-for-firefox-cubby": "nixpkgs-for-firefox-cubby",
-        "nixpkgs-for-firefox-renzo": "nixpkgs-for-firefox-renzo",
         "nixpkgs-for-hoogle-cubby": "nixpkgs-for-hoogle-cubby",
         "nixpkgs-for-hoogle-renzo": "nixpkgs-for-hoogle-renzo",
         "nixpkgs-for-lib": "nixpkgs-for-lib",

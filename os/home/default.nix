@@ -30,8 +30,6 @@
     boring = [ "^.idea$" ".iml$" "^.stack-work$" ];
   };
 
-  programs.firefox.enable = true;
-
   programs.ghci = {
     enable = true;
     prompt = "\\n\\ESC[1;35m\\x03BB> \\ESC[m";
