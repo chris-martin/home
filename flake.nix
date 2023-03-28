@@ -56,7 +56,7 @@
         specialArgs = { inherit home-manager; };
         modules = [
           ./os/${hostname}
-          inputs."home-manager-${hostname}".nixosModule
+          home-manager.nixosModule
           {
             home-manager = {
               extraSpecialArgs = { inherit nixpkgs; };

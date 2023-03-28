@@ -1,41 +1,73 @@
-{
+{ pkgs, lib, config, ... }: {
+
   imports = [
     ../base
+    ./audio.nix
+    ./display.nix
   ];
+
   boot = {
+    cleanTmpDir = true;
+    extraModulePackages = [ ];
+    initrd = {
+      availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" ];
+      luks.devices.root = {
+        device = "/dev/nvme0n1p3";
+        preLVM = true;
+      };
+    };
+    kernelModules = [ "kvm-intel" "snd-hda-intel" ];
     kernelPackages = pkgs.linuxPackages_latest;
-    kernelModules = [ "snd-hda-intel" ];
     kernelParams = [ "pci=nocrs" ];
+    loader = {
+      grub.device = "/dev/nvme0n1";
+      systemd-boot.enable = false;
+    };
   };
+
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/82b44344-492e-4e6f-8bdf-e9f92d98c4ca";
+      fsType = "ext4";
+    };
+
+    "/boot" = {
+      device = "/dev/disk/by-uuid/6490-0447";
+      fsType = "vfat";
+    };
+  };
+
+  hardware.enableRedistributableFirmware = lib.mkDefault true;
+
+  networking = {
+    hostName = "renzo";
+    networkmanager.enable = true;
+    firewall.allowPing = true;
+  };
+
+  nix.settings = {
+    trusted-users = [ "@wheel" ];
+    max-jobs = 1;
+  };
+
+  swapDevices = [ ];
 
   system.stateVersion = "19.03";
 
-          ./audio.nix
-          ./boot.nix
-          ./display.nix
-          ./kernel.nix
-          ./hardware.nix
-          ./misc.nix
-          ./networking.nix
-          ./nix.nix
-          ./users.nix
-
-          (inputs.nixosBase.path + /authorized-keys.nix)
-          (inputs.nixosBase.path + /avahi.nix)
-          (inputs.nixosBase.path + /cache.nix)
-          (inputs.nixosBase.path + /display.nix)
-          (inputs.nixosBase.path + /dns.nix)
-          (inputs.nixosBase.path + /essentials.nix)
-          (inputs.nixosBase.path + /fonts.nix)
-          (inputs.nixosBase.path + /fuse.nix)
-          (inputs.nixosBase.path + /keyboard.nix)
-          (inputs.nixosBase.path + /location.nix)
-          (inputs.nixosBase.path + /nix.nix)
-          (inputs.nixosBase.path + /printing.nix)
-          (inputs.nixosBase.path + /ssh.nix)
-          (inputs.nixosBase.path + /touchpad.nix)
-          (inputs.nixosBase.path + /web-browsers.nix)
-        ];
-      };
-    };
+  users.extraUsers.chris = {
+    isNormalUser = true;
+    description = "Chris Martin";
+    extraGroups = [
+      "audio"
+      "disk"
+      "docker"
+      "networkmanager"
+      "plugdev"
+      "systemd-journal"
+      "wheel"
+      "vboxusers"
+      "video"
+    ];
+    uid = 1000;
+  };
 }

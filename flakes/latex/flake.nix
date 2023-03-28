@@ -9,10 +9,7 @@
       let pkgs = import nixpkgs { system = "x86_64-linux"; };
       in pkgs.texlive.combine {
         inherit (pkgs.texlive)
-
-          adjustbox collectbox framed leaflet merriweather scheme-medium xetex
-
-        ;
+          adjustbox collectbox framed leaflet merriweather scheme-medium xetex;
       };
 
   };

@@ -4,10 +4,10 @@
   programs.home-manager.enable = true;
   programs.firefox.enable = true;
   imports = [
-    ./modules/cabal.nix
-    ./modules/darcs.nix
-    ./modules/ghci.nix
-    ./modules/haskeline.nix
+    ./generic/cabal.nix
+    ./generic/darcs.nix
+    ./generic/ghci.nix
+    ./generic/haskeline.nix
 
     ./cabal.nix
     ./darcs.nix
@@ -20,8 +20,7 @@
     ./ssh.nix
     ./tmux.nix
     ./vim.nix
+    ./vscode
     ./xdg.nix
-
-    (import ./vscode { pkgs = nixpkgs.for.vscode; })
   ];
 }
