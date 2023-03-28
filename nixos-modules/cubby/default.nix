@@ -13,8 +13,6 @@
     ./users.nix
   ];
 
-  nixpkgs.config.allowUnfree = true;
-  services.dictd.enable = true;
   services.hoogle.enable = true;
   system.stateVersion = "19.09";
 }

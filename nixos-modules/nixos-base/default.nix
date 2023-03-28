@@ -18,6 +18,7 @@
   };
   location.provider = "geoclue2";
   networking.nameservers = [ "1.1.1.1" "8.8.8.8" "8.8.4.4" ];
+  nixpkgs.config.allowUnfree = true;
   programs.gnupg.agent.enable = true;
   programs.gnupg.agent.enableSSHSupport = true;
   services.avahi = {
@@ -28,6 +29,7 @@
       addresses = true;
     };
   };
+  services.dictd.enable = true;
   services.hoogle.port = 13723;
   services.monero.mining.address =
     "427YsNgWdfJ9VraWsLC6h4Rygqq1VozD8Q6JC2DoPcHzbRxo6xjtWHyF7B1PBYsqFN8R37itSYthm6xiaDxGoFdFLKnDMn7";
