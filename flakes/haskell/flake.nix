@@ -6,8 +6,6 @@
   outputs = { self, nixpkgs }:
     let pkgs = import nixpkgs { system = "x86_64-linux"; };
     in rec {
-      ghc-8-10 = pkgs.haskell.packages.ghc8107.ghcWithPackages
-        (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]);
       ghc-9-0 = pkgs.haskell.packages.ghc90.ghcWithPackages
         (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]);
       ghc-9-2 = pkgs.haskell.packages.ghc92.ghcWithPackages
@@ -24,14 +22,14 @@
       ]);
 
       hls = pkgs.haskell-language-server.override {
-        supportedGhcVersions = [ "810" "90" "92" "94" ];
+        supportedGhcVersions = [ "90" "92" "94" ];
       };
 
       cabal = pkgs.cabal-install;
 
       defaultPackage.x86_64-linux = pkgs.symlinkJoin {
         name = "haskell";
-        paths = [ ghc-9-4 ghc-9-2 ghc-9-0 ghc-8-10 hls cabal ];
+        paths = [ ghc-9-4 ghc-9-2 ghc-9-0 hls cabal ];
       };
     };
 }
