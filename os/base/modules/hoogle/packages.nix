@@ -83,6 +83,7 @@ with p; [
   safe-exceptions
   safe-money
   scotty
+  sdl2
   semialign
   stm-containers
   stripe-concepts
@@ -99,6 +100,8 @@ with p; [
   validation
   var-monad
   vector
+  vulkan
+  vulkan-utils
   wai
   warp
   wreq
