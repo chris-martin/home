@@ -31,6 +31,8 @@ with p; [
   hedgehog
   hex-text
   hnix
+  hspec
+  hspec-hedgehog
   html-entities
   http-client
   http-client-tls
