@@ -1,7 +1,6 @@
 {
   nix.settings = {
     auto-optimise-store = true;
-    nix-path = [ "/home/chris/.config/nix-path" ];
     experimental-features = [ "nix-command" "flakes" ];
     trusted-substituters = [
       "https://cache.nixos.org"
