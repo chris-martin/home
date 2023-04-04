@@ -240,6 +240,8 @@
   "typeclasses"
   "unbuffered"
   "Uncategorized"
+  "uncoincidental"
+  "uncoincidentally"
   "uncons"
   "uncurry"
   "unfinalized"
