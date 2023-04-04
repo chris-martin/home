@@ -1,0 +1,1 @@
+vscode/settings/words.nix
