@@ -9,6 +9,7 @@
   "animalia"
   "anyclass"
   "applicatives"
+  "arity"
   "asum"
   "Asynchrony"
   "atraversal"
