@@ -146,6 +146,7 @@
   "nixpkgs"
   "Noether"
   "nonstrict"
+  "nonstrictness"
   "nonterminating"
   "nontermination"
   "nullary"
