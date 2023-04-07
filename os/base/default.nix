@@ -23,6 +23,8 @@
 
   location.provider = "geoclue2";
 
+  networking.firewall.allowPing = true;
+
   networking.nameservers = [ "1.1.1.1" "8.8.8.8" "8.8.4.4" ];
 
   nixpkgs.config.allowUnfree = true;
