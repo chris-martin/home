@@ -60,10 +60,7 @@
             {
               home-manager = {
                 extraSpecialArgs = { inherit nixpkgs; };
-                users.chris = {
-                  imports = [ ./home ];
-                  programs.vscode.package = nixpkgs.for."vscode".vscode;
-                };
+                users.chris.imports = [ ./home ];
               };
               services.hoogle.haskellPackages =
                 nixpkgs.for."hoogle".haskellPackages;
