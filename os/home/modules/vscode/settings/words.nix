@@ -49,6 +49,8 @@
   "cryptonite"
   "datatypes"
   "dbname"
+  "deallocate"
+  "deallocated"
   "deallocation"
   "declutter"
   "deepseq"
