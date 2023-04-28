@@ -52,6 +52,7 @@
     nixpkgs.from.stable.monoid
     (nixpkgs.from.stable.google-fonts.override { fonts = [ "BioRhyme" ]; })
     (nixpkgs.from.stable.google-fonts.override { fonts = [ "Bitter" ]; })
+    (nixpkgs.from.stable.google-fonts.override { fonts = [ "Overlock SC" ]; })
     (nixpkgs.from.stable.google-fonts.override { fonts = [ "Redacted Script" ]; })
     nixpkgs.from.stable.hasklig
     nixpkgs.from.stable.helvetica-neue-lt-std
