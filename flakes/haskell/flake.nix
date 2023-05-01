@@ -13,11 +13,17 @@
       ghc-9-4 = pkgs.haskell.packages.ghc94.ghcWithPackages (p: [
         p.digest
         p.postgresql-libpq
-        p.relude
+        # p.relude
         p.sdl2
         p.unix
         p.vulkan
         p.vulkan-utils
+        p.zlib
+      ]);
+      ghc-9-6 = pkgs.haskell.packages.ghc96.ghcWithPackages (p: [
+        p.digest
+        # p.relude
+        p.unix
         p.zlib
       ]);
 
@@ -29,7 +35,7 @@
 
       defaultPackage.x86_64-linux = pkgs.symlinkJoin {
         name = "haskell";
-        paths = [ ghc-9-4 ghc-9-2 ghc-9-0 hls cabal ];
+        paths = [ ghc-9-6 ghc-9-4 ghc-9-2 ghc-9-0 hls cabal ];
       };
     };
 }
