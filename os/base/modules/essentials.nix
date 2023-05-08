@@ -2,6 +2,7 @@
   environment.systemPackages = [
     pkgs.bash # shell
     pkgs.curl # HTTP client
+    pkgs.fira-mono
     pkgs.fish # shell
     pkgs.gparted # partitioning tool
     pkgs.gptfdisk # partitioning tool

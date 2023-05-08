@@ -4,7 +4,7 @@
     nixpkgs-for-lib.url = "github:NixOS/nixpkgs/nixos-22.11";
 
     # Home-manager
-    home-manager-cubby.url = "github:nix-community/home-manager";
+    home-manager-cubby.url = "github:nix-community/home-manager/release-22.11";
     home-manager-renzo.url = "github:nix-community/home-manager";
 
     # Hoogle
