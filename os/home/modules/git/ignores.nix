@@ -38,4 +38,7 @@
   # PID files contain IDs of running processes
   "*.pid"
 
+  # direnv
+  ".direnv"
+
 ]
