@@ -16,6 +16,8 @@
 
   fonts.fontconfig.enable = true;
 
+  programs.direnv.enable = true;
+
   programs.cabal = {
     enable = true;
     installDirectory = "/home/chris/.cabal/bin";
