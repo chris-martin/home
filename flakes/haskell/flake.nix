@@ -9,15 +9,13 @@
       ghc-9-0 = pkgs.haskell.packages.ghc90.ghcWithPackages
         (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]);
       ghc-9-2 = pkgs.haskell.packages.ghc92.ghcWithPackages
-        (p: [ p.digest p.postgresql-libpq p.sdl2 p.unix p.zlib ]);
+        (p: [ p.digest p.postgresql-libpq p.unix p.zlib ]);
       ghc-9-4 = pkgs.haskell.packages.ghc94.ghcWithPackages (p: [
         p.digest
         p.postgresql-libpq
         # p.relude
         p.sdl2
         p.unix
-        p.vulkan
-        p.vulkan-utils
         p.zlib
       ]);
       ghc-9-6 = pkgs.haskell.packages.ghc96.ghcWithPackages (p: [
