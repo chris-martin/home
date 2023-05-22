@@ -13,7 +13,6 @@
       };
     };
     kernelModules = [ "kvm-intel" "snd-hda-intel" ];
-    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "pci=nocrs" ];
     loader = {
       grub.device = "/dev/nvme0n1";
