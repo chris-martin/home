@@ -13,7 +13,7 @@
       ]);
 
       hls = pkgs.haskell-language-server.override {
-        supportedGhcVersions = [/* "90" "92" */ "94" "96" ];
+        supportedGhcVersions = [ "810" "90" "92" "94" "96" ];
       };
 
       cabal = pkgs.cabal-install;
