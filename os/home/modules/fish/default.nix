@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [ ./git.nix ./nix.nix ./oseary.nix ];
 
@@ -14,11 +15,12 @@
       restart = "sudo systemctl restart";
       start = "sudo systemctl start";
       stop = "sudo systemctl stop";
+      trash = "gio trash";
+      clip = "xclip -selection clipboard";
     };
     shellAliases = {
-      clip = "xclip -selection clipboard";
       ls = "ls --color --group-directories-first";
-      trash = "gio trash";
+      alert = "${pkgs.xmppc}/bin/xmppc -m message chat chris-mobile@xmpp.typeclasses.com";
     };
     functions = {
       hsnix = {
