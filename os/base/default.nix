@@ -9,7 +9,7 @@
     ./modules/nix.nix
   ];
 
-  console.font = "Fira Mono";
+  #console.font = "Fira Mono";
 
   environment.etc."fuse.conf".text = ''
     user_allow_other
@@ -55,7 +55,7 @@
 
   services.openssh = {
     enable = true;
-    passwordAuthentication = false;
+    settings.PasswordAuthentication = false;
   };
 
   services.printing = {
