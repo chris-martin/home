@@ -46,6 +46,7 @@ lib.foldl' lib.mergeAttrs { } [
       "**/*.o" = true;
       "**/dist" = true;
       "**/dist-newstyle" = true;
+      "**/.direnv" = true;
     };
   }
   {
