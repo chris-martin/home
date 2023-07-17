@@ -3,7 +3,7 @@
   imports = [ ../base ];
 
   boot = {
-    cleanTmpDir = true;
+    tmp.cleanOnBoot = true;
     extraModulePackages = [ ];
     initrd = {
       availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" ];
