@@ -109,4 +109,6 @@
       uid = 1001;
     };
   };
+
+  virtualisation.docker.enable = true;
 }
