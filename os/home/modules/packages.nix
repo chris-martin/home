@@ -7,7 +7,6 @@
     nixpkgs.from.stable.baobab # disk usage analyzer
     nixpkgs.from.stable.gnome3.eog # image viewer
     nixpkgs.from.stable.evince # PDF viewer
-    nixpkgs.from.stable.gnome3.gedit # text editor
     nixpkgs.from.stable.gnome3.file-roller # file compression
 
     # Command-line
