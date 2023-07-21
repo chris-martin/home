@@ -1,9 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, nixpkgs, ... }:
 {
   imports = [ ./git.nix ./nix.nix ./oseary.nix ];
 
   programs.fish = {
     enable = true;
+    package = nixpkgs.from.stable.fish;
     interactiveShellInit = ''
       set fish_greeting
       set --export EDITOR vim

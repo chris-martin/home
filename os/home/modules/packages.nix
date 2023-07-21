@@ -22,8 +22,6 @@
     nixpkgs.from.stable.gnupg # encryption
     nixpkgs.from.stable.htop # view list of running processes
     nixpkgs.from.stable.lsof # list open files
-    nixpkgs.from.stable.man
-    nixpkgs.from.stable.man-db # documentation
     nixpkgs.from.stable.niv # nix version manager
     nixpkgs.from.stable.pass # password manager
     nixpkgs.from.stable.psmisc # contains killall

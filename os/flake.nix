@@ -26,6 +26,9 @@
     # Unstable, general-purpose
     nixpkgs-from-unstable-cubby.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-from-unstable-renzo.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    # Docker
+    nixpkgs-for-docker.url = "github:NixOS/nixpkgs/nixos-22.11";
   };
   outputs = inputs:
     let
@@ -44,6 +47,8 @@
               import inputs."nixpkgs-for-vscode-${hostname}" nixpkgsConfig;
             hoogle =
               import inputs."nixpkgs-for-hoogle-${hostname}" nixpkgsConfig;
+            docker =
+              import inputs."nixpkgs-for-docker" nixpkgsConfig;
           };
           nixpkgs.from = {
             stable =
@@ -53,7 +58,7 @@
           };
         in inputs."nixpkgs-for-nixos-${hostname}".lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit home-manager; };
+          specialArgs = { inherit home-manager nixpkgs; };
           modules = [
             ./${hostname}
             home-manager.nixosModule

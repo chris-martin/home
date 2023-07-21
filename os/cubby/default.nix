@@ -1,6 +1,6 @@
-{ config, lib, pkgs, ... }: {
+{ config, lib, pkgs, nixpkgs, ... }: {
 
-  imports = [ ../base ];
+  imports = [ ../base (import ./freckle.nix { inherit nixpkgs; }) ];
 
   boot = {
     tmp.cleanOnBoot = true;
@@ -100,7 +100,7 @@
     chris = {
       isNormalUser = true;
       description = "Chris Martin";
-      extraGroups = [ "wheel" ];
+      extraGroups = [ "wheel" "docker" ];
       uid = 1000;
     };
     julie = {
@@ -109,6 +109,4 @@
       uid = 1001;
     };
   };
-
-  virtualisation.docker.enable = true;
 }
