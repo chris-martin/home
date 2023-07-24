@@ -13,6 +13,9 @@
     127.0.0.1 sso.localhost.com
   '';
 
+  # So that docker can see the host
+  networking.firewall.allowedTCPPorts = [ 3000 ];
+
   virtualisation.docker = {
     enable = true;
     package = nixpkgs.for.docker.docker;
