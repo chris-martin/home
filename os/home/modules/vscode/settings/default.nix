@@ -36,18 +36,6 @@ lib.foldl' lib.mergeAttrs { } [
   {
     "files.autoSave" = "onWindowChange";
     "files.trimTrailingWhitespace" = true;
-    "files.exclude" = {
-      "**/.history" = true;
-      "**/.stack" = true;
-      "**/.stack-work" = true;
-      "**/*.dyn_hi" = true;
-      "**/*.dyn_o" = true;
-      "**/*.hi" = true;
-      "**/*.o" = true;
-      "**/dist" = true;
-      "**/dist-newstyle" = true;
-      "**/.direnv" = true;
-    };
   }
   {
     "workbench.tree.indent" = 28;
