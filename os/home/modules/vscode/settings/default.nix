@@ -3,6 +3,7 @@ lib.foldl' lib.mergeAttrs { } [
   (import ./editor.nix)
   (import ./explorer.nix)
   (import ./haskell.nix)
+  (import ./search.nix)
   (import ./terminal.nix)
   { "cSpell.userWords" = import ./words.nix; }
   {
@@ -50,8 +51,5 @@ lib.foldl' lib.mergeAttrs { } [
   {
     "git.autofetch" = true;
     "git.openRepositoryInParentFolders" = "always";
-  }
-  {
-    "search.useIgnoreFiles" = true;
   }
 ]
