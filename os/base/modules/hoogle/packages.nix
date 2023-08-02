@@ -41,6 +41,7 @@ with p; [
   ini
   lens
   lens-aeson
+  libsystemd-journal
   loc
   lucid
   markdown
