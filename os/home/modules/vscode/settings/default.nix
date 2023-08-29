@@ -52,4 +52,7 @@ lib.foldl' lib.mergeAttrs { } [
     "git.autofetch" = true;
     "git.openRepositoryInParentFolders" = "always";
   }
+  {
+    "javascript.autoClosingTags" = false;
+  }
 ]
