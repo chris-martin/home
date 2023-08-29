@@ -2,7 +2,7 @@
   nix.settings = {
     auto-optimise-store = true;
     experimental-features = [ "nix-command" "flakes" ];
-    trusted-substituters = [
+    substituters = [
       "https://cache.nixos.org"
       "https://cachix.cachix.org"
       "https://chris-martin.cachix.org"
