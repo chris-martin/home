@@ -2,7 +2,6 @@
   "editor.autoClosingBrackets" = "never";
   "editor.autoClosingOvertype" = "never";
   "editor.autoClosingQuotes" = "never";
-  "editor.autoIndent" = "keep";
   "editor.autoSurround" = "never";
   "editor.detectIndentation" = false;
   "editor.dragAndDrop" = false;
