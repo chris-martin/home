@@ -11,6 +11,8 @@ let
       "chris-martin.cachix.org-1:O/29OCGL8P7qk/NmEaZzzZk3DDmUfa9nGA74OrX9/1g=";
     typeclasses = mkCache "https://typeclasses.cachix.org"
       "typeclasses.cachix.org-1:K8vVpme/5SO7t3YIlr+B0O9daHgHN56u2U0uIT1w+N8=";
+    freckle = mkCache "https://freckle.cachix.org"
+      "freckle.cachix.org-1:ziOBjgCjI4qmEBRuQHJQI8fwRPr3tGaoVus2k0umGiE=";
     all = [ default cachix chris-martin typeclasses ];
   };
 
