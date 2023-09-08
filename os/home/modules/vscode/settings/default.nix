@@ -36,6 +36,11 @@ lib.foldl' lib.mergeAttrs { } [
   }
   {
     "files.autoSave" = "onWindowChange";
+    "files.exclude" = {
+      "**/*.hie" = true;
+      "**/*.stack-work" = true;
+      "**/*.stack-work-*" = true;
+    };
     "files.trimTrailingWhitespace" = true;
   }
   {
