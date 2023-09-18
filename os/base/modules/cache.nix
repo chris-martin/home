@@ -13,11 +13,11 @@ let
       "typeclasses.cachix.org-1:K8vVpme/5SO7t3YIlr+B0O9daHgHN56u2U0uIT1w+N8=";
     freckle = mkCache "https://freckle.cachix.org"
       "freckle.cachix.org-1:ziOBjgCjI4qmEBRuQHJQI8fwRPr3tGaoVus2k0umGiE=";
-    all = [ default cachix chris-martin typeclasses ];
+    all = [ default cachix chris-martin typeclasses freckle ];
   };
 
 in {
-  nix.settings.binary-caches = builtins.map (x: x.url) caches.all;
-  nix.settings.binary-cache-public-keys = builtins.map (x: x.key) caches.all;
+  nix.settings.substituters = builtins.map (x: x.url) caches.all;
+  nix.settings.trusted-public-keys = builtins.map (x: x.key) caches.all;
   environment.systemPackages = [ pkgs.cachix ];
 }
