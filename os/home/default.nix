@@ -10,7 +10,6 @@
     ./modules/packages.nix
     ./modules/tmux.nix
     ./modules/vim.nix
-    ./modules/vscode
     ./modules/xdg.nix
   ];
 
