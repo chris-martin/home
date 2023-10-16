@@ -150,38 +150,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-for-vscode-cubby": {
-      "locked": {
-        "lastModified": 1693231525,
-        "narHash": "sha256-Zmh8m0HHcgGBDth6jdJPmc4UAAP0L4jQmqIztywF1Iw=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "c540061ac8d72d6e6d99345bd2d590c82b2f58c1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-23.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-for-vscode-renzo": {
-      "locked": {
-        "lastModified": 1689326639,
-        "narHash": "sha256-79zi0t83Dcc2dE0NuYZ+2hqtKXZN1yWVq5mtx8D2d7Y=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "9fdfaeb7b96f05e869f838c73cde8d98c640c649",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-23.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-from-stable-cubby": {
       "locked": {
         "lastModified": 1693231525,
@@ -272,8 +240,6 @@
         "nixpkgs-for-lib": "nixpkgs-for-lib",
         "nixpkgs-for-nixos-cubby": "nixpkgs-for-nixos-cubby",
         "nixpkgs-for-nixos-renzo": "nixpkgs-for-nixos-renzo",
-        "nixpkgs-for-vscode-cubby": "nixpkgs-for-vscode-cubby",
-        "nixpkgs-for-vscode-renzo": "nixpkgs-for-vscode-renzo",
         "nixpkgs-from-stable-cubby": "nixpkgs-from-stable-cubby",
         "nixpkgs-from-stable-renzo": "nixpkgs-from-stable-renzo",
         "nixpkgs-from-unstable-cubby": "nixpkgs-from-unstable-cubby",

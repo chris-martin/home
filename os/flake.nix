@@ -15,10 +15,6 @@
     nixpkgs-for-nixos-cubby.url = "github:NixOS/nixpkgs/nixos-23.05";
     nixpkgs-for-nixos-renzo.url = "github:NixOS/nixpkgs/nixos-23.05";
 
-    # VSCode
-    nixpkgs-for-vscode-cubby.url = "github:NixOS/nixpkgs/nixos-23.05";
-    nixpkgs-for-vscode-renzo.url = "github:NixOS/nixpkgs/nixos-23.05";
-
     # Stable, general-purpose
     nixpkgs-from-stable-cubby.url = "github:NixOS/nixpkgs/nixos-23.05";
     nixpkgs-from-stable-renzo.url = "github:NixOS/nixpkgs/nixos-23.05";
@@ -43,8 +39,6 @@
         let
           home-manager = inputs."home-manager-${hostname}";
           nixpkgs.for = {
-            vscode =
-              import inputs."nixpkgs-for-vscode-${hostname}" nixpkgsConfig;
             hoogle =
               import inputs."nixpkgs-for-hoogle-${hostname}" nixpkgsConfig;
             docker =
