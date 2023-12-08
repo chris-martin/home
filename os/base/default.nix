@@ -18,7 +18,7 @@
   fonts = {
     fontDir.enable = true;
     enableGhostscriptFonts = true;
-    fonts = [ pkgs.corefonts pkgs.fira-mono ];
+    packages = [ pkgs.corefonts pkgs.fira-mono ];
   };
 
   location.provider = "geoclue2";
