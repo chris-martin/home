@@ -1,6 +1,10 @@
 { config, lib, pkgs, nixpkgs, ... }: {
 
-  imports = [ ../base (import ./freckle.nix { inherit nixpkgs; }) ];
+  imports = [ ../base
+    #(import ./freckle.nix { inherit nixpkgs; }) 
+  ];
+
+  virtualisation.podman.enable = true;
 
   boot = {
     tmp.cleanOnBoot = true;

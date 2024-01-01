@@ -5,7 +5,7 @@
 
     # Home-manager
     home-manager-cubby.url = "github:nix-community/home-manager/release-23.11";
-    home-manager-renzo.url = "github:nix-community/home-manager/release-23.05";
+    home-manager-renzo.url = "github:nix-community/home-manager/release-23.11";
 
     # Hoogle
     nixpkgs-for-hoogle-cubby.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -13,11 +13,11 @@
 
     # NixOS
     nixpkgs-for-nixos-cubby.url = "github:NixOS/nixpkgs/nixos-23.11";
-    nixpkgs-for-nixos-renzo.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixpkgs-for-nixos-renzo.url = "github:NixOS/nixpkgs/nixos-23.11";
 
     # Stable, general-purpose
     nixpkgs-from-stable-cubby.url = "github:NixOS/nixpkgs/nixos-23.11";
-    nixpkgs-from-stable-renzo.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixpkgs-from-stable-renzo.url = "github:NixOS/nixpkgs/nixos-23.11";
 
     # Unstable, general-purpose
     nixpkgs-from-unstable-cubby.url = "github:NixOS/nixpkgs/nixos-unstable";
