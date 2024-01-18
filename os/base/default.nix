@@ -5,6 +5,7 @@
     ./modules/cache.nix
     ./modules/display.nix
     ./modules/essentials.nix
+    ./modules/hoogle
     ./modules/nix.nix
   ];
 
@@ -43,6 +44,8 @@
   };
 
   services.dictd.enable = true;
+
+  services.hoogle.enable = true;
 
   services.monero.mining = {
     address =

@@ -4,6 +4,8 @@
     #(import ./freckle.nix { inherit nixpkgs; }) 
   ];
 
+  virtualisation.podman.enable = true;
+
   boot = {
     tmp.cleanOnBoot = true;
     extraModulePackages = [ ];
@@ -61,6 +63,8 @@
   };
 
   powerManagement.cpuFreqGovernor = "powersave";
+
+  services.hoogle.enable = true;
 
   services.minecraft-server = {
     eula = true;
