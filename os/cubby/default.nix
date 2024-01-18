@@ -60,8 +60,6 @@
 
   powerManagement.cpuFreqGovernor = "powersave";
 
-  services.hoogle.enable = true;
-
   services.minecraft-server = {
     eula = true;
     openFirewall = true;

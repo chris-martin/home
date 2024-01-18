@@ -70,38 +70,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-for-hoogle-cubby": {
-      "locked": {
-        "lastModified": 1679944645,
-        "narHash": "sha256-e5Qyoe11UZjVfgRfwNoSU57ZeKuEmjYb77B9IVW7L/M=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4bb072f0a8b267613c127684e099a70e1f6ff106",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-for-hoogle-renzo": {
-      "locked": {
-        "lastModified": 1679865578,
-        "narHash": "sha256-sYQmxxqIYL3QFsRYjW0AufhGur8qWfwoOGPGHRJZlGc=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4361baa782dc3d3b35fd455a1adc370681d9187c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-for-lib": {
       "locked": {
         "lastModified": 1687379288,
@@ -235,8 +203,6 @@
         "home-manager-cubby": "home-manager-cubby",
         "home-manager-renzo": "home-manager-renzo",
         "nixpkgs-for-docker": "nixpkgs-for-docker",
-        "nixpkgs-for-hoogle-cubby": "nixpkgs-for-hoogle-cubby",
-        "nixpkgs-for-hoogle-renzo": "nixpkgs-for-hoogle-renzo",
         "nixpkgs-for-lib": "nixpkgs-for-lib",
         "nixpkgs-for-nixos-cubby": "nixpkgs-for-nixos-cubby",
         "nixpkgs-for-nixos-renzo": "nixpkgs-for-nixos-renzo",

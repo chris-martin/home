@@ -7,10 +7,6 @@
     home-manager-cubby.url = "github:nix-community/home-manager/release-23.05";
     home-manager-renzo.url = "github:nix-community/home-manager/release-23.05";
 
-    # Hoogle
-    nixpkgs-for-hoogle-cubby.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-for-hoogle-renzo.url = "github:NixOS/nixpkgs/nixos-unstable";
-
     # NixOS
     nixpkgs-for-nixos-cubby.url = "github:NixOS/nixpkgs/nixos-23.05";
     nixpkgs-for-nixos-renzo.url = "github:NixOS/nixpkgs/nixos-23.05";
@@ -39,8 +35,6 @@
         let
           home-manager = inputs."home-manager-${hostname}";
           nixpkgs.for = {
-            hoogle =
-              import inputs."nixpkgs-for-hoogle-${hostname}" nixpkgsConfig;
             docker =
               import inputs."nixpkgs-for-docker" nixpkgsConfig;
           };
@@ -50,7 +44,8 @@
             unstable =
               import inputs."nixpkgs-from-unstable-${hostname}" nixpkgsConfig;
           };
-        in inputs."nixpkgs-for-nixos-${hostname}".lib.nixosSystem {
+        in
+        inputs."nixpkgs-for-nixos-${hostname}".lib.nixosSystem {
           inherit system;
           specialArgs = { inherit home-manager nixpkgs; };
           modules = [
@@ -61,13 +56,12 @@
                 extraSpecialArgs = { inherit nixpkgs; };
                 users.chris.imports = [ ./home ];
               };
-              services.hoogle.haskellPackages =
-                nixpkgs.for."hoogle".haskellPackages;
             }
           ];
         };
 
-    in {
+    in
+    {
       nixosConfigurations = {
         cubby = mkNixos "cubby";
         renzo = mkNixos "renzo";
