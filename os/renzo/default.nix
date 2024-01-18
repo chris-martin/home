@@ -56,16 +56,6 @@
     max-jobs = 1;
   };
 
-  # https://github.com/NixOS/nixpkgs/issues/24184
-  services.acpid = {
-    enable = true;
-    handlers.fixHeadphoneNoise = {
-      event = "jack/headphone HEADPHONE plug";
-      action =
-        "${pkgs.alsaUtils}/bin/amixer -c0 sset 'Headphone Mic Boost' 10dB";
-    };
-  };
-
   services.xserver = {
     enable = true;
 
