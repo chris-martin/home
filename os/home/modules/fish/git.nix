@@ -1,8 +1,9 @@
+{ editor }:
 {
   programs.fish = {
 
     interactiveShellInit = ''
-      set --export GIT_EDITOR vim
+      set --export GIT_EDITOR ${editor}
     '';
 
     shellAbbrs = {

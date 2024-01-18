@@ -1,15 +1,14 @@
-{ nixpkgs, config, ... }: {
+{ nixpkgs, editor, ... }: {
   nixpkgs.config.allowUnfree = true;
   home.stateVersion = "22.11";
 
   imports = [
     ./generic
 
-    ./modules/fish
+    (import ./modules/fish { inherit nixpkgs editor; })
     ./modules/git
     ./modules/packages.nix
     ./modules/tmux.nix
-    ./modules/vim.nix
     ./modules/xdg.nix
   ];
 

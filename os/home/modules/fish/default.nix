@@ -1,13 +1,17 @@
-{ pkgs, nixpkgs, ... }:
+{ nixpkgs, editor }:
 {
-  imports = [ ./git.nix ./nix.nix ./oseary.nix ];
+  imports = [
+    (import ./git.nix { inherit editor; })
+    ./nix.nix
+    ./oseary.nix
+  ];
 
   programs.fish = {
     enable = true;
     package = nixpkgs.from.stable.fish;
     interactiveShellInit = ''
       set fish_greeting
-      set --export EDITOR vim
+      set --export EDITOR ${editor}
     '';
     shellInit = ''
       set fish_user_paths /home/chris/bin /home/chris/.cabal/bin /home/chris/.local/bin /home/chris/.nix-profile/bin
@@ -20,8 +24,9 @@
       clip = "xclip -selection clipboard";
     };
     shellAliases = {
+      e = editor;
       ls = "ls --color --group-directories-first";
-      alert = "${pkgs.xmppc}/bin/xmppc -m message chat chris-mobile@xmpp.typeclasses.com";
+      alert = "${nixpkgs.from.stable.xmppc}/bin/xmppc -m message chat chris-mobile@xmpp.typeclasses.com";
     };
     functions = {
       hsnix = {

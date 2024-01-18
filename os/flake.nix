@@ -21,6 +21,8 @@
 
     # Docker
     nixpkgs-for-docker.url = "github:NixOS/nixpkgs/nixos-22.11";
+
+    editor-cdm.url = "github:chris-martin/editor-cdm";
   };
   outputs = inputs:
     let
@@ -54,7 +56,9 @@
             {
               home-manager = {
                 extraSpecialArgs = { inherit nixpkgs; };
-                users.chris.imports = [ ./home ];
+                users.chris.imports = [
+                  (import ./home { inherit nixpkgs; editor = "${inputs.editor-cdm.packages.${system}.editor-cdm}/bin/editor-cdm"; })
+                ];
               };
             }
           ];
