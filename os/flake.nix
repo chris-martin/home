@@ -1,10 +1,10 @@
 {
   inputs = {
     # Nix library functions
-    nixpkgs-for-lib.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs-for-lib.url = "github:NixOS/nixpkgs/nixos-23.05";
 
     # Home-manager
-    home-manager-cubby.url = "github:nix-community/home-manager/release-23.11";
+    home-manager-cubby.url = "github:nix-community/home-manager/release-23.05";
     home-manager-renzo.url = "github:nix-community/home-manager/release-23.05";
 
     # Hoogle
@@ -12,11 +12,11 @@
     nixpkgs-for-hoogle-renzo.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # NixOS
-    nixpkgs-for-nixos-cubby.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs-for-nixos-cubby.url = "github:NixOS/nixpkgs/nixos-23.05";
     nixpkgs-for-nixos-renzo.url = "github:NixOS/nixpkgs/nixos-23.05";
 
     # Stable, general-purpose
-    nixpkgs-from-stable-cubby.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs-from-stable-cubby.url = "github:NixOS/nixpkgs/nixos-23.05";
     nixpkgs-from-stable-renzo.url = "github:NixOS/nixpkgs/nixos-23.05";
 
     # Unstable, general-purpose
