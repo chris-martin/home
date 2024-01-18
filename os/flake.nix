@@ -19,10 +19,8 @@
     nixpkgs-from-unstable-cubby.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-from-unstable-renzo.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    # Docker
-    nixpkgs-for-docker.url = "github:NixOS/nixpkgs/nixos-22.11";
-
     editor-cdm.url = "github:chris-martin/editor-cdm";
+    freckle.url = "github:freckle/flakes?dir=main";
   };
   outputs = inputs:
     let
@@ -36,10 +34,6 @@
       mkNixos = hostname:
         let
           home-manager = inputs."home-manager-${hostname}";
-          nixpkgs.for = {
-            docker =
-              import inputs."nixpkgs-for-docker" nixpkgsConfig;
-          };
           nixpkgs.from = {
             stable =
               import inputs."nixpkgs-from-stable-${hostname}" nixpkgsConfig;
@@ -49,7 +43,7 @@
         in
         inputs."nixpkgs-for-nixos-${hostname}".lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit home-manager nixpkgs; };
+          specialArgs = { inherit home-manager nixpkgs inputs; };
           modules = [
             ./${hostname}
             home-manager.nixosModule

@@ -1,6 +1,9 @@
-{ config, lib, pkgs, nixpkgs, ... }: {
+{ config, lib, pkgs, nixpkgs, inputs, system, ... }: {
 
-  imports = [ ../base (import ./freckle.nix { inherit nixpkgs; }) ];
+  imports = [
+    ../base
+    inputs.freckle.nixosModules.docker-for-local-dev
+  ];
 
   boot = {
     tmp.cleanOnBoot = true;
