@@ -1,5 +1,12 @@
 { nixpkgs, ... }:
 {
+  # Enable Docker
+  virtualisation.docker.enable = true;
+
+  # Allow Docker to see the host
+  networking.firewall.allowedTCPPorts = [ 3000 ];
+
+  # Pretend that localhost.com is a domain that points to our own machine
   networking.extraHosts = ''
     127.0.0.1 localhost.com
     127.0.0.1 api.localhost.com
@@ -13,11 +20,6 @@
     127.0.0.1 sso.localhost.com
   '';
 
-  # So that docker can see the host
-  networking.firewall.allowedTCPPorts = [ 3000 ];
+  virtualisation.docker.package = nixpkgs.for.docker.docker;
 
-  virtualisation.docker = {
-    enable = true;
-    package = nixpkgs.for.docker.docker;
-  };
 }
