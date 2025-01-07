@@ -20,7 +20,6 @@
     nixpkgs-from-unstable-renzo.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     editor-cdm.url = "github:chris-martin/editor-cdm";
-    freckle.url = "github:freckle/flakes?dir=main";
   };
   outputs = inputs:
     let

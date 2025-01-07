@@ -2,8 +2,6 @@
 
   imports = [
     ../base
-    inputs.freckle.nixosModules.docker-for-local-dev
-    inputs.freckle.nixosModules.renaissance-vpn
   ];
 
   boot = {
