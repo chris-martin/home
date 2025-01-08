@@ -7,17 +7,11 @@
 
     (import ./modules/fish { inherit nixpkgs editor; })
     ./modules/git
-    ./modules/packages.nix
     ./modules/tmux.nix
     ./modules/xdg.nix
   ];
 
   fonts.fontconfig.enable = true;
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
 
   programs.cabal = {
     enable = true;
@@ -26,11 +20,6 @@
     passwordCommand = let pkgs = nixpkgs.from.stable; in "${pkgs.writeShellScript "print-hackage-password" ''
       ${pkgs.pass}/bin/pass show computer/haskell/hackage | ${pkgs.coreutils}/bin/head -n1
     ''}";
-  };
-
-  programs.darcs = {
-    author = [ "Chris Martin <ch.martin@gmail.com>" ];
-    boring = [ "^.idea$" ".iml$" "^.stack-work$" ];
   };
 
   programs.ghci = {
@@ -46,7 +35,6 @@
     enable = true;
     matchBlocks = {
       "*".identityFile = "/home/chris/.ssh/default-key";
-      "chris-martin.org".port = 36411;
     };
   };
 

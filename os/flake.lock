@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1736324314,
-        "narHash": "sha256-+qPoef7zRNzyH/ikXfmr7Cl4Bfd9UGY1F2mbgoHG5mQ=",
+        "lastModified": 1736325082,
+        "narHash": "sha256-aYmHQXRoytCoXt04GVML6ueh88ro2JAFnpjI7ZWllmw=",
         "owner": "chris-martin",
         "repo": "cdm-nixos-base",
-        "rev": "dedec89cb71f5ae5a87185cb52d11dcdbe916745",
+        "rev": "a6293ebe541627dc4cf0747e46001be662d8e8bd",
         "type": "github"
       },
       "original": {

@@ -1,11 +1,5 @@
 { pkgs, ... }: {
 
-  fonts = {
-    fontDir.enable = true;
-    enableGhostscriptFonts = true;
-    fonts = [ pkgs.corefonts pkgs.fira-mono ];
-  };
-
   nixpkgs.config.allowUnfree = true;
 
   programs.gnupg.agent = {

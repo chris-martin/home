@@ -1,5 +1,6 @@
 {
   inputs = {
+    # base.url = "/home/chris/cdm-nixos-base";
     base.url = "github:chris-martin/cdm-nixos-base";
 
     # Nix library functions
@@ -49,6 +50,8 @@
             ./${hostname}
             base.authorized-keys
             base.essentials
+            base.extra
+            base.fonts
             base.location
             base.networking
             base.nix
