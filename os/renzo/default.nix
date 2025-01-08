@@ -87,4 +87,6 @@
     ];
     uid = 1000;
   };
+
+  services.gnome.gnome-browser-connector.enable = true;
 }

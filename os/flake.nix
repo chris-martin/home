@@ -1,5 +1,7 @@
 {
   inputs = {
+    base.url = "github:chris-martin/cdm-nixos-base";
+
     # Nix library functions
     nixpkgs-for-lib.url = "github:NixOS/nixpkgs/nixos-23.05";
 
@@ -43,8 +45,14 @@
         inputs."nixpkgs-for-nixos-${hostname}".lib.nixosSystem {
           inherit system;
           specialArgs = { inherit home-manager nixpkgs inputs; };
-          modules = [
+          modules = let base = inputs.base.nixosModules.${system}; in [
             ./${hostname}
+            base.authorized-keys
+            base.essentials
+            base.location
+            base.networking
+            base.nix
+            base.printing
             home-manager.nixosModule
             {
               home-manager = {
