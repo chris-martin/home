@@ -2,14 +2,16 @@
   "nodes": {
     "base": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "editor-cdm": "editor-cdm",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1736325082,
-        "narHash": "sha256-aYmHQXRoytCoXt04GVML6ueh88ro2JAFnpjI7ZWllmw=",
+        "lastModified": 1736326195,
+        "narHash": "sha256-P8SBWYrwzut1Iacmlc2rTV2yeGGDPcWzRsxd/d2szHI=",
         "owner": "chris-martin",
         "repo": "cdm-nixos-base",
-        "rev": "a6293ebe541627dc4cf0747e46001be662d8e8bd",
+        "rev": "5c26b2e75c07d162ef9bc792a3cd688c28422a65",
         "type": "github"
       },
       "original": {
@@ -74,28 +76,9 @@
         "type": "github"
       }
     },
-    "home-manager-cubby": {
+    "home-manager": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3"
-      },
-      "locked": {
-        "lastModified": 1716729631,
-        "narHash": "sha256-IerjU5GUeKc0eW9FPOdlPveSGJ2ZrO+lIfuHPUmUF2I=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "fc4492181833eaaa7a26a8081c0615d95792d825",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "ref": "release-23.05",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
-    "home-manager-renzo": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1716729631,
@@ -115,6 +98,7 @@
     "nix-github-actions": {
       "inputs": {
         "nixpkgs": [
+          "base",
           "editor-cdm",
           "plugins",
           "poetry2nix",
@@ -137,16 +121,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1736061677,
-        "narHash": "sha256-DjkQPnkAfd7eB522PwnkGhOMuT9QVCZspDpJJYyOj60=",
-        "owner": "nixos",
+        "lastModified": 1689844446,
+        "narHash": "sha256-ud/6XYWbXFAJuTTApWyYlFtlc54NAxChS1T9Ns+qT7M=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "cbd8ec4de4469333c82ff40d057350c30e9f7d36",
+        "rev": "2d82894fa1e2d23a22f40275a78bfbb09b92ffde",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-24.11",
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -265,48 +249,32 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1689844446,
-        "narHash": "sha256-ud/6XYWbXFAJuTTApWyYlFtlc54NAxChS1T9Ns+qT7M=",
-        "owner": "NixOS",
+        "lastModified": 1687466461,
+        "narHash": "sha256-oupXI7g7RPzlpGUfAu1xG4KBK53GrZH8/xeKgKDB4+Q=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "2d82894fa1e2d23a22f40275a78bfbb09b92ffde",
+        "rev": "ecb441f22067ba1d6312f4932a7c64efa8d19a7b",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
+        "owner": "nixos",
+        "ref": "nixos-23.05",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1687466461,
-        "narHash": "sha256-oupXI7g7RPzlpGUfAu1xG4KBK53GrZH8/xeKgKDB4+Q=",
+        "lastModified": 1736061677,
+        "narHash": "sha256-DjkQPnkAfd7eB522PwnkGhOMuT9QVCZspDpJJYyOj60=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "ecb441f22067ba1d6312f4932a7c64efa8d19a7b",
+        "rev": "cbd8ec4de4469333c82ff40d057350c30e9f7d36",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-23.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1687466461,
-        "narHash": "sha256-oupXI7g7RPzlpGUfAu1xG4KBK53GrZH8/xeKgKDB4+Q=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "ecb441f22067ba1d6312f4932a7c64efa8d19a7b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-23.05",
+        "ref": "nixos-24.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -314,7 +282,7 @@
     "plugins": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "poetry2nix": "poetry2nix"
       },
       "locked": {
@@ -334,12 +302,14 @@
     "poetry2nix": {
       "inputs": {
         "flake-utils": [
+          "base",
           "editor-cdm",
           "plugins",
           "flake-utils"
         ],
         "nix-github-actions": "nix-github-actions",
         "nixpkgs": [
+          "base",
           "editor-cdm",
           "plugins",
           "nixpkgs"
@@ -362,9 +332,6 @@
     "root": {
       "inputs": {
         "base": "base",
-        "editor-cdm": "editor-cdm",
-        "home-manager-cubby": "home-manager-cubby",
-        "home-manager-renzo": "home-manager-renzo",
         "nixpkgs-for-lib": "nixpkgs-for-lib",
         "nixpkgs-for-nixos-cubby": "nixpkgs-for-nixos-cubby",
         "nixpkgs-for-nixos-renzo": "nixpkgs-for-nixos-renzo",
